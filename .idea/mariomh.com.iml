@@ -4,6 +4,8 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/.yarn" />
+      <excludeFolder url="file://$MODULE_DIR$/dist" />
       <excludePattern pattern=".npmignore" />
       <excludePattern pattern=".yarnrc*" />
       <excludePattern pattern=".pnp*" />
@@ -21,6 +23,8 @@
       <excludePattern pattern=".eslintrc.cjs" />
       <excludePattern pattern="vite.config.ts" />
       <excludePattern pattern="tsconfig.build.json" />
+      <excludePattern pattern="astro.config.mjs" />
+      <excludePattern pattern=".eslintrc.json" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
