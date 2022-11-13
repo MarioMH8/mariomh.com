@@ -1,0 +1,41 @@
+{
+	"name": "@mariomh8/portfolio",
+	"version": "0.0.0",
+	"description": "Mario Menéndez portfolio",
+	"keywords": [
+		"portfolio",
+		"astro",
+		"typescript",
+		"react",
+		"stitches",
+		"design-system",
+		"storybook"
+	],
+	"homepage": "https://github.com/MarioMH8/mariomh.com",
+	"bugs": {
+		"url": "https://github.com/MarioMH8/mariomh.com/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/MarioMH8/mariomh.com"
+	},
+	"author": "MarioMH8",
+	"license": "PRIVATE",
+	"scripts": {
+		"lint": "eslint .",
+		"lint:fix": "eslint --fix .",
+		"typecheck": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@hexatool/eslint-config-typescript": "1.0.0",
+		"@hexatool/tsconfig": "18.0.0",
+		"@types/node": "18.11.7",
+		"eslint": "8.26.0",
+		"typescript": "4.8.4"
+	},
+	"volta": {
+		"node": "18.12.0",
+		"yarn": "3.2.4"
+	},
+	"packageManager": "yarn@3.2.4"
+}
