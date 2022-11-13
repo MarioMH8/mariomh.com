@@ -1,0 +1,5 @@
+{
+  "extends": [
+    "github>MarioMH8/renovate-config"
+  ]
+}
