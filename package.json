@@ -23,19 +23,13 @@
 	"license": "PRIVATE",
 	"scripts": {
 		"build": "astro build",
-		"dev": "astro dev",
 		"lint": "eslint .",
 		"lint:fix": "eslint --fix .",
-		"preview": "astro preview",
-		"start": "astro dev"
+		"start": "astro preview",
+		"start:dev": "astro dev"
 	},
 	"dependencies": {
-		"@astrojs/react": "^1.2.2",
-		"@types/react": "^18.0.21",
-		"@types/react-dom": "^18.0.6",
-		"astro": "1.6.7",
-		"react": "^18.0.0",
-		"react-dom": "^18.0.0"
+		"astro": "1.6.7"
 	},
 	"devDependencies": {
 		"@hexatool/eslint-config-typescript": "1.0.0",
