@@ -1,0 +1,11 @@
+---
+import Error from '../components/Error.astro';
+import BaseLayout from '../layouts/base.astro';
+---
+
+<BaseLayout>
+    <Error
+            code="407"
+            name="Proxy Authentication Required"
+            message="You must be authenticated by a proxy server before the Web server can execute your request."/>
+</BaseLayout>

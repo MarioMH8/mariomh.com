@@ -1,0 +1,11 @@
+---
+import Error from '../components/Error.astro';
+import BaseLayout from '../layouts/base.astro';
+---
+
+<BaseLayout>
+	<Error
+		code="405"
+		name="Method Not Allowed"
+		message="The HTTP verb used to access this page is not allowed."/>
+</BaseLayout>

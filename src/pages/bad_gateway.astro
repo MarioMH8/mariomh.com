@@ -1,0 +1,11 @@
+---
+import Error from '../components/Error.astro';
+import BaseLayout from '../layouts/base.astro';
+---
+
+<BaseLayout>
+	<Error
+		code="502"
+		name="Bad Gateway"
+		message="Web server received an invalid response while acting as a gateway or proxy server."/>
+</BaseLayout>

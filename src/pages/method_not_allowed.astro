@@ -1,0 +1,11 @@
+---
+import Error from '../components/Error.astro';
+import BaseLayout from '../layouts/base.astro';
+---
+
+<BaseLayout>
+	<Error
+		code="503"
+		name="Service Temporarily Unavailable"
+		message="The server is temporarily unable to service your request due to maintenance downtime or capacity problems. Please try again later."/>
+</BaseLayout>
