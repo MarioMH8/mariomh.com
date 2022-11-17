@@ -1,14 +1,14 @@
 <style>
-    #introduction {
+    section {
         width: 100%;
-        height: 110vh;
+        height: 100vh;
         position: relative;
 
 		color: var(--color-white);
         background-color: var(--color-primary);
 
         z-index: 50;
-        padding: 4rem 4rem calc(4rem + 10vh) 4rem;
+        padding: 4rem;
 
 	    display: flex;
 	    flex-direction: column;
@@ -18,45 +18,54 @@
 		-webkit-user-select: none; /* Safari */
 		-ms-user-select: none; /* IE 10 and IE 11 */
 		user-select: none; /* Standard syntax */
+    }
 
-
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+    section::after {
+		width: 100vw;
+		height: calc(5vh + 1px);
+		background-color: var(--color-primary);
+        content: "";
+        margin-left: -4rem;
+	    position: absolute;
+	    bottom: -5vh;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%);
     }
 
     @media only screen and (max-width: 1400px) {
-        #introduction {
+        section {
             height: 80vh;
-            padding: 1.5rem 1.5rem calc(1.5rem + 5vh) 1.5rem;
+            padding: 1.5rem;
+        }
 
-	        -webkit-clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
-	        clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+        section::after {
+            margin-left: -1.5rem;
         }
     }
 
-    .presentation {
+    .introduction {
         width: 100%;
     }
 
 	@media only screen and (min-width: 580px) {
-        .presentation {
+        .introduction {
             width: 85%;
         }
     }
 
 	@media only screen and (min-width: 635px) {
-        .presentation {
+        .introduction {
             width: 68%;
         }
     }
 
 	@media only screen and (min-width: 1000px) {
-        .presentation {
+        .introduction {
             width: 50%;
         }
     }
 
-    .presentation, .link {
+    .introduction, .link {
         margin-left: clamp(0rem, -5rem + 16.66vw, 15rem);
     }
 
@@ -119,9 +128,9 @@
 
 </style>
 
-<section id="introduction">
+<section>
 	<div/>
-	<div class="presentation">
+	<div class="introduction">
         <h1>I'm Mario Menéndez Hidalgo <span class="accent-1">,</span></h1>
         <h4>Full Stack Developer <span class="dot"/> JavaScript lover</h4>
 	</div>

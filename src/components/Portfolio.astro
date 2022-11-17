@@ -1,25 +1,44 @@
 <style>
-    .portfolio {
+    section {
         width: 100%;
-        height: 120vh;
+        height: 106vh;
         position: relative;
 
 		color: var(--color-white);
         background-color: darkslateblue;
 
         z-index: 20;
-        padding: calc(60px + 10vh) 60px calc(60px + 10vh) 60px;
-        margin-top: -10vh;
-
-		-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
+        padding: 4rem;
     }
+
+    section::after {
+		width: 100vw;
+		height: calc(5vh + 1px);
+		background-color: darkslateblue;
+        content: "";
+        margin-left: -4rem;
+	    position: absolute;
+	    bottom: -5vh;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%);
+    }
+
+    @media only screen and (max-width: 1400px) {
+        section {
+            padding: 1.5rem;
+        }
+
+        section::after {
+            margin-left: -1.5rem;
+        }
+    }
+
     #portfolio {
         position: absolute;
         top: 10vh;
     }
 </style>
 
-<div class="portfolio">
+<section>
 	<span id="portfolio"/>
-</div>
+</section>
