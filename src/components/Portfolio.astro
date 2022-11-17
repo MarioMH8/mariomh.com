@@ -1,0 +1,25 @@
+<style>
+    .portfolio {
+        width: 100%;
+        height: 120vh;
+        position: relative;
+
+		color: var(--color-white);
+        background-color: darkslateblue;
+
+        z-index: 20;
+        padding: calc(60px + 10vh) 60px calc(60px + 10vh) 60px;
+        margin-top: -10vh;
+
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
+    }
+    #portfolio {
+        position: absolute;
+        top: 10vh;
+    }
+</style>
+
+<div class="portfolio">
+	<span id="portfolio"/>
+</div>

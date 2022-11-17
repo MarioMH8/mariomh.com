@@ -1,12 +1,28 @@
 ---
-import Hero from '../components/Hero.astro';
-import Second from '../components/Second.astro';
-import Third from '../components/Third.astro';
+import AboutMe from '../components/AboutMe.astro';
+import Introduction from '../components/Introduction.astro';
+import WhatIDo from '../components/WhatIDo.astro';
+import Portfolio from '../components/Portfolio.astro';
+import Social from '../components/Social.astro';
 import BaseLayout from '../layouts/base.astro';
 ---
 
 <BaseLayout>
-  <Hero/>
-  <Second/>
-  <Third/>
+  <Introduction/>
+  <AboutMe/>
+  <WhatIDo/>
+  <!--<Portfolio/>-->
+  <Social/>
 </BaseLayout>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>

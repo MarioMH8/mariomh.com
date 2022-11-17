@@ -1,0 +1,136 @@
+<style>
+    #introduction {
+        width: 100%;
+        height: 110vh;
+        position: relative;
+
+		color: var(--color-white);
+        background-color: var(--color-primary);
+
+        z-index: 50;
+        padding: 4rem 4rem calc(4rem + 10vh) 4rem;
+
+	    display: flex;
+	    flex-direction: column;
+	    -webkit-box-pack: justify;
+	    justify-content: space-between;
+
+		-webkit-user-select: none; /* Safari */
+		-ms-user-select: none; /* IE 10 and IE 11 */
+		user-select: none; /* Standard syntax */
+
+
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+    }
+
+    @media only screen and (max-width: 1400px) {
+        #introduction {
+            height: 80vh;
+            padding: 1.5rem 1.5rem calc(1.5rem + 5vh) 1.5rem;
+
+	        -webkit-clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+	        clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+        }
+    }
+
+    .presentation {
+        width: 100%;
+    }
+
+	@media only screen and (min-width: 580px) {
+        .presentation {
+            width: 85%;
+        }
+    }
+
+	@media only screen and (min-width: 635px) {
+        .presentation {
+            width: 68%;
+        }
+    }
+
+	@media only screen and (min-width: 1000px) {
+        .presentation {
+            width: 50%;
+        }
+    }
+
+    .presentation, .link {
+        margin-left: clamp(0rem, -5rem + 16.66vw, 15rem);
+    }
+
+    h1 {
+		font-weight: var(--font-weight-bold);
+		line-height: var(--size-3xl);
+    }
+
+    h4 {
+        margin-top: var(--size-xl);
+        line-height: var(--size-lg);
+    }
+
+    .accent-1 {
+        color: var(--color-accent-1)
+    }
+
+    .dot {
+        color: var(--color-accent-2);
+
+        display: inline-block;
+        font-size: var(--size-3xl);
+        vertical-align: middle;
+        margin-right: .5rem;
+        margin-left: .5rem;
+    }
+
+    .dot:before {
+        content: "·";
+    }
+
+    .link {
+	    display: flex;
+	    -webkit-box-align: center;
+	    align-items: center;
+	    margin-bottom: var(--size-lg);
+	    gap: var(--size-lg);
+    }
+
+    .link div {
+	    color: var(--color-accent-3);
+        border-radius: 50%;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        min-height: var(--size-3xl);
+        min-width: var(--size-3xl);
+        padding: var(--size-xs);
+        box-shadow: rgb(254 148 31 / 50%) 1px 1px 20px;
+        background-color: var(--color-white)
+    }
+
+    .link svg {
+        height: var(--size-xl);
+        width: var(--size-xl);
+        fill: currentColor;
+    }
+
+</style>
+
+<section id="introduction">
+	<div/>
+	<div class="presentation">
+        <h1>I'm Mario Menéndez Hidalgo <span class="accent-1">,</span></h1>
+        <h4>Full Stack Developer <span class="dot"/> JavaScript lover</h4>
+	</div>
+	<a class="link" href="#about">
+		<div>
+			<svg focusable="false" viewBox="0 0 24 24">
+				<path d="M12 5.83L15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"></path>
+			</svg>
+		</div>
+		Scroll down
+	</a>
+</section>

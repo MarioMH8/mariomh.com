@@ -1,0 +1,25 @@
+<style>
+    .whatido {
+        width: 100%;
+        height: 120vh;
+        position: relative;
+
+		color: var(--color-white);
+        background-color: darkslateblue;
+
+        z-index: 30;
+        padding: calc(60px + 10vh) 60px calc(60px + 10vh) 60px;
+        margin-top: -10vh;
+
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
+    }
+    #whatido {
+        position: absolute;
+        top: 10vh;
+    }
+</style>
+
+<div class="whatido">
+	<span id="whatido"/>
+</div>
