@@ -1,0 +1,51 @@
+<style>
+    #menu, #menu nav {
+        transition: all 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    #menu {
+	    z-index: 100;
+        position: fixed;
+		top: var(--size-4xl);
+		right: var(--size-4xl);
+        background-color: var(--color-white);
+    }
+
+    #menu.close {
+        border-radius: 50%;
+		width: 0;
+		height: 0;
+    }
+
+    #menu nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    #menu.close nav {
+        opacity: 0
+    }
+
+    #menu nav {
+        transition: all 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    #menu.opened {
+        width: max(100vw, 100vh);
+        height: max(100vw, 100vh);
+        border-radius: 0;
+		top: 0;
+		right: 0;
+    }
+</style>
+
+<div id="menu" class="close">
+	<nav>
+		 <ul>
+	        <li><a href="#">Inicio</a></li>
+	        <li><a href="#">Sobre nosotros</a></li>
+	        <li><a href="#">Contacto</a></li>
+	      </ul>
+	</nav>
+
+</button>
