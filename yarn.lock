@@ -632,6 +632,7 @@ __metadata:
   dependencies:
     "@hexatool/eslint-config-typescript": 1.0.0
     astro: 1.6.7
+    atropos: 1.0.2
     eslint: 8.26.0
     typescript: 4.8.4
   languageName: unknown
@@ -1312,6 +1313,13 @@ __metadata:
   bin:
     astro: astro.js
   checksum: 9000e746eed9a0ab5ec8fcd5d18945e0b8cec09873081970eb7b19de3a9c0af78bf03dd1326992c096557daa98683dbd95adf1976cf3c29c4cd3c4772dd86efd
+  languageName: node
+  linkType: hard
+
+"atropos@npm:1.0.2":
+  version: 1.0.2
+  resolution: "atropos@npm:1.0.2"
+  checksum: b4bd3f76807f0a0c9001fd9216411df5988c47ffebdb6b6137ec0f1537b11d069600c9d795d75f0154b61a89c1e58bad2fb370138c39c3c3b0ccceff003cdd1c
   languageName: node
   linkType: hard
 

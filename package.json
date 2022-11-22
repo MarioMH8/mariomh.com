@@ -29,7 +29,8 @@
 		"start:dev": "astro dev"
 	},
 	"dependencies": {
-		"astro": "1.6.7"
+		"astro": "1.6.7",
+		"atropos": "1.0.2"
 	},
 	"devDependencies": {
 		"@hexatool/eslint-config-typescript": "1.0.0",
