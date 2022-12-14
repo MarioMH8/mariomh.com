@@ -11,7 +11,7 @@ import SocialIcons from './SocialIcons.astro';
 		color: var(--color-white);
         background-color: var(--color-primary);
 
-        z-index: 50;
+        z-index: 5;
         padding: 4rem;
 
 	    display: flex;
@@ -128,9 +128,15 @@ import SocialIcons from './SocialIcons.astro';
         fill: currentColor;
     }
 
+    #index {
+        position: absolute;
+        top: 0;
+    }
+
 </style>
 
 <section>
+	<span id="index"/>
 	<div/>
 	<div class="introduction">
         <h1>I'm Mario Menéndez Hidalgo <span class="accent-1">,</span></h1>
