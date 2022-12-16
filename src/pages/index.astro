@@ -1,26 +1,28 @@
 ---
 import AboutMe from '../components/AboutMe.astro';
 import Introduction from '../components/Introduction.astro';
+import Menu from '../components/Menu.astro';
 import Portfolio from '../components/Portfolio.astro';
 import Social from '../components/Social.astro';
 import BaseLayout from '../layouts/base.astro';
 ---
 
 <BaseLayout>
-  <Introduction/>
-  <AboutMe/>
-  <Portfolio/>
-  <Social/>
+	<Menu/>
+	<Introduction/>
+	<AboutMe/>
+	<Portfolio/>
+	<Social/>
 </BaseLayout>
 
 <script>
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+		anchor.addEventListener('click', function (e) {
+			e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+			document.querySelector(this.getAttribute('href')).scrollIntoView({
+				behavior: 'smooth'
+			});
+		});
+	});
 </script>

@@ -1,45 +1,45 @@
 <style>
-    section {
-        width: 100%;
-        height: 106vh;
-        position: relative;
+	section {
+		width: 100%;
+		height: 106vh;
+		position: relative;
 
 		color: var(--color-white);
-        background-color: cornflowerblue;
+		background-color: cornflowerblue;
 
-        z-index: 4;
-        padding: 4rem;
-        padding-top: calc(4rem + 5vh + 1px);
-    }
+		z-index: 4;
+		padding: 4rem;
+		padding-top: calc(4rem + 5vh + 1px);
+	}
 
-    section::after {
+	section::after {
 		width: 100vw;
-        max-width:100%;
+		max-width: 100%;
 		height: calc(5vh + 1px);
 		background-color: cornflowerblue;
-        content: "";
-        margin-left: -4rem;
-	    position: absolute;
-	    bottom: -5vh;
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0%);
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0%);
-    }
+		content: "";
+		margin-left: -4rem;
+		position: absolute;
+		bottom: -5vh;
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0%);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0%);
+	}
 
-    @media only screen and (max-width: 1400px) {
-        section {
-            padding: 1.5rem;
-            padding-top: calc(1.5rem + 5vh + 1px);
-        }
+	@media only screen and (max-width: 1400px) {
+		section {
+			padding: 1.5rem;
+			padding-top: calc(1.5rem + 5vh + 1px);
+		}
 
-        section::after {
-            margin-left: -1.5rem;
-        }
-    }
+		section::after {
+			margin-left: -1.5rem;
+		}
+	}
 
-    #about {
-        position: absolute;
-        top: 5vh;
-    }
+	#about {
+		position: absolute;
+		top: 5vh;
+	}
 </style>
 
 <section>
