@@ -24,9 +24,10 @@ const clz = [position, isFirst].join(' ');
 		max-width: 100%;
 		height: calc(5vh + 1px);
 		content: "";
-		margin-left: calc(var(--section-left-padding) * -1);
 		position: absolute;
 		top: -5vh;
+		left: 0;
+		right: 0;
 	}
 
 	section.right::after,
@@ -35,9 +36,10 @@ const clz = [position, isFirst].join(' ');
 		max-width: 100%;
 		height: calc(5vh + 1px);
 		content: "";
-		margin-left: calc(var(--section-left-padding) * -1);
 		position: absolute;
 		bottom: -5vh;
+		left: 0;
+		right: 0;
 	}
 
 	section.left::after {
@@ -55,10 +57,6 @@ const clz = [position, isFirst].join(' ');
 			padding: var(--size-2xl);
 			padding-left: var(--section-left-padding-mobile);
 			min-height: 75vh;
-		}
-
-		section::after {
-			margin-left: calc(var(--section-left-padding-mobile) * -1);
 		}
 	}
 </style>
