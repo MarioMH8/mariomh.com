@@ -3,14 +3,7 @@ import Section from './common/Section.astro'
 ---
 <style>
 	:global(#about) {
-		color: var(--color-white);
-
 		z-index: 4;
-
-		display: flex;
-		flex-direction: column;
-		-webkit-box-pack: justify;
-		justify-content: space-between;
 	}
 
 	:global(#about),
@@ -21,4 +14,5 @@ import Section from './common/Section.astro'
 </style>
 
 <Section id="about" left>
+	<h1 class="title word"># Sobre m<span class="i color-accent-3">i</span></h1>
 </Section>
