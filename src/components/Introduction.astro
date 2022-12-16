@@ -1,189 +1,157 @@
 ---
-import Menu from './Menu.astro';
+import Section from './common/Section.astro'
 ---
-
 <style>
-    section {
-        width: 100%;
-        height: 100vh;
-        position: relative;
+	:global(#index) {
+		color: var(--color-white);
+		background-color: var(--color-primary);
 
-        color: var(--color-white);
-        background-color: var(--color-primary);
+		z-index: 5;
 
-        z-index: 5;
-        padding: 4rem;
+		display: flex;
+		flex-direction: column;
+		-webkit-box-pack: justify;
+		justify-content: space-between;
+	}
+	:global(#index):after {
+		background-color: var(--color-primary);
+	}
 
-        display: flex;
-        flex-direction: column;
-        -webkit-box-pack: justify;
-        justify-content: space-between;
-    }
+	.introduction {
+		width: 100%;
+	}
 
-    section::after {
-        width: 100vw;
-        max-width: 100%;
-        height: calc(5vh + 1px);
-        background-color: var(--color-primary);
-        content: "";
-        margin-left: -4rem;
-        position: absolute;
-        bottom: -5vh;
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%);
-    }
+	@media only screen and (min-width: 630px) {
+		.introduction {
+			width: 85%;
+		}
+	}
 
-    @media only screen and (max-width: 1400px) {
-        section {
-            height: 75vh;
-            padding: 1.5rem;
-        }
+	@media only screen and (min-width: 850px) {
+		.introduction {
+			width: 70%;
+		}
+	}
 
-        section::after {
-            margin-left: -1.5rem;
-        }
-    }
+	@media only screen and (min-width: 1200px) {
+		.introduction {
+			width: 55%;
+		}
+	}
 
-    .introduction {
-        width: 100%;
-    }
+	h1 {
+		font-weight: var(--font-weight-bold);
+		line-height: var(--size-4xl);
+	}
 
-    @media only screen and (min-width: 580px) {
-        .introduction {
-            width: 85%;
-        }
-    }
+	h2 {
+		font-size: var(--size-lg) !important;
+		margin-top: var(--size-xl);
+		line-height: var(--size-lg);
+	}
 
-    @media only screen and (min-width: 635px) {
-        .introduction {
-            width: 68%;
-        }
-    }
+	.dot {
+		color: var(--color-accent-1);
 
-    @media only screen and (min-width: 1000px) {
-        .introduction {
-            width: 50%;
-        }
-    }
+		display: inline-block;
+		font-size: var(--size-3xl);
+		vertical-align: middle;
+		margin-right: .5rem;
+		margin-left: .5rem;
+	}
 
-    .introduction, .link-wrapper {
-        margin-left: clamp(0rem, -5rem + 16.66vw, 15rem);
-    }
+	.tilde {
+		position: relative;
+	}
 
-    h1 {
-        font-weight: var(--font-weight-bold);
-        line-height: var(--size-4xl);
-    }
+	.word {
+		white-space: nowrap;
+	}
 
-    h2 {
-        font-size: var(--size-lg) !important;
-        margin-top: var(--size-xl);
-        line-height: var(--size-lg);
-    }
+	.tilde:after {
+		position: absolute;
+		left: 0;
+		overflow: hidden;
+	}
 
-    .dot {
-        color: var(--color-accent-1);
+	.i1:after {
+		content: 'i';
+		height: 28%;
+		color: var(--color-accent-1);
+	}
 
-        display: inline-block;
-        font-size: var(--size-3xl);
-        vertical-align: middle;
-        margin-right: .5rem;
-        margin-left: .5rem;
-    }
+	.e:after {
+		content: 'é';
+		height: 30%;
+		color: var(--color-accent-2);
+	}
 
-    .tilde {
-        position: relative;
-    }
+	.i2:after {
+		content: 'i';
+		height: 28%;
+		color: var(--color-accent-3);
+	}
 
-    .word {
-        white-space: nowrap;
-    }
+	.link {
+		display: flex;
+		-webkit-box-align: center;
+		align-items: center;
+		gap: var(--size-lg);
+		max-width: calc(var(--size-base) * 10.2);
+	}
 
-    .tilde:after {
-        position: absolute;
-        left: 0;
-        overflow: hidden;
-    }
+	.link span {
+		color: var(--color-accent-3);
+		border: 1px solid var(--color-accent-3);
+		border-radius: 50%;
+		display: flex;
+		-webkit-box-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		align-items: center;
+		min-height: var(--size-3xl);
+		min-width: var(--size-3xl);
+		padding: var(--size-xs);
+		background-color: var(--color-white);
+		transition: box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
 
-    .i1:after {
-        content: 'i';
-        height: 28%;
-        color: var(--color-accent-1);
-    }
+	.link:hover span {
+		box-shadow: rgb(254 148 31 / 50%) 1px 1px 20px;
+	}
 
-    .e:after {
-        content: 'é';
-        height: 30%;
-        color: var(--color-accent-2);
-    }
+	.link svg {
+		height: var(--size-xl);
+		width: var(--size-xl);
+		fill: currentColor;
+	}
 
-    .i2:after {
-        content: 'i';
-        height: 28%;
-        color: var(--color-accent-3);
-    }
-
-    .link {
-        display: flex;
-        -webkit-box-align: center;
-        align-items: center;
-        gap: var(--size-lg);
-        max-width: calc(var(--size-base) * 10.2);
-    }
-
-    .link span {
-        color: var(--color-accent-3);
-        border: 1px solid var(--color-accent-3);
-        border-radius: 50%;
-        display: flex;
-        -webkit-box-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        align-items: center;
-        min-height: var(--size-3xl);
-        min-width: var(--size-3xl);
-        padding: var(--size-xs);
-        background-color: var(--color-white);
-        transition: box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .link:hover span {
-        box-shadow: rgb(254 148 31 / 50%) 1px 1px 20px;
-    }
-
-    .link svg {
-        height: var(--size-xl);
-        width: var(--size-xl);
-        fill: currentColor;
-    }
-
-    #index {
-        position: absolute;
-        top: 0;
-    }
+	#index {
+		position: absolute;
+		top: 0;
+	}
 
 </style>
 
-<section>
-    <Menu/>
-    <span id="index"/>
-    <div/>
-    <div class="introduction">
-        <h1>I'm
-            <span class="word">Mar<span class="tilde i1">i</span>o</span>
-            <span class="word">Men<span class="tilde e">&eacute;</span>ndez</span>
-            <span class="word">H<span class="tilde i2">i</span>dalgo</span>
-        </h1>
-        <h2>Full Stack Developer <span class="dot">·</span> JavaScript lover</h2>
-    </div>
-    <div class="link-wrapper">
-        <a class="link" href="#about">
-            <span>
-                <svg focusable="false" viewBox="0 0 24 24">
-                    <path d="M12 5.83L15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"></path>
-                </svg>
-            </span>
-            Scroll down
-        </a>
-    </div>
-</section>
+<Section id="index" right>
+	<div/>
+	<div class="introduction">
+		<h1>Soy
+			<span class="word">Mar<span class="tilde i1">i</span>o</span>
+			<span class="word">Men<span class="tilde e">&eacute;</span>ndez</span>
+			<span class="word">H<span class="tilde i2">i</span>dalgo</span>
+		</h1>
+		<h2>Desarrollador Full Stack <span class="dot">·</span> Amante de JavaScript</h2>
+	</div>
+	<div class="link-wrapper">
+		<a class="link" href="#about">
+			<span>
+				<svg focusable="false" viewBox="0 0 24 24">
+					<path
+						d="M12 5.83L15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"></path>
+				</svg>
+			</span>
+			Scroll down
+		</a>
+	</div>
+</Section>
