@@ -4,7 +4,6 @@ import Section from './common/Section.astro'
 <style>
 	:global(#index) {
 		color: var(--color-white);
-		background-color: var(--color-primary);
 
 		z-index: 5;
 
@@ -13,7 +12,10 @@ import Section from './common/Section.astro'
 		-webkit-box-pack: justify;
 		justify-content: space-between;
 	}
-	:global(#index):after {
+
+	:global(#index),
+	:global(#index):after,
+	:global(#index):before {
 		background-color: var(--color-primary);
 	}
 
@@ -128,7 +130,7 @@ import Section from './common/Section.astro'
 
 </style>
 
-<Section id="index" right>
+<Section id="index" right first>
 	<div/>
 	<div class="introduction">
 		<h1>Soy

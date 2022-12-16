@@ -1,5 +1,8 @@
 ---
-const { id, left, right } = Astro.props;
+const { id, left, right, first } = Astro.props;
+const position = left ? 'left' : right ? 'right' : '';
+const isFirst = first ? 'first' : '';
+const clz = [position, isFirst].join(' ');
 ---
 <style>
 	section {
@@ -10,6 +13,20 @@ const { id, left, right } = Astro.props;
 		position: relative;
 		padding: var(--size-3xl);
 		padding-left: var(--section-left-padding);
+	}
+
+	section:not(.first) {
+		margin-top: 5vh;
+	}
+
+	section:not(.first):before {
+		width: 100vw;
+		max-width: 100%;
+		height: calc(5vh + 1px);
+		content: "";
+		margin-left: calc(var(--section-left-padding) * -1);
+		position: absolute;
+		top: -5vh;
 	}
 
 	section.right::after,
@@ -47,6 +64,6 @@ const { id, left, right } = Astro.props;
 </style>
 
 
-<section id={id} class={left ? 'left' : right ? 'right' : ''}>
+<section id={id} class={clz}>
 	<slot/>
 </section>
