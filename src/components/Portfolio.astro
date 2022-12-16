@@ -1,5 +1,6 @@
 ---
 import Section from './common/Section.astro'
+import ProjectCard from './common/ProjectCard.astro'
 ---
 <style>
 	:global(#portfolio) {
@@ -11,8 +12,40 @@ import Section from './common/Section.astro'
 	:global(#portfolio):before {
 		background-color: darkslateblue;
 	}
+
+	.project-roll {
+
+		display: flex;
+		flex-direction: row;
+		-webkit-box-pack: justify;
+		justify-content: flex-start;
+		gap: var(--size-xl);
+		overflow-y: hidden;
+		overflow-x: scroll;
+	}
 </style>
 
 <Section id="portfolio" right>
 	<h1 class="title word"># Portfol<span class="i color-accent-1">i</span>o</h1>
+	<div class="project-roll no-scrollbar">
+		<ProjectCard>
+
+		</ProjectCard>
+		<ProjectCard>
+
+		</ProjectCard>
+		<ProjectCard>
+
+		</ProjectCard>
+		<ProjectCard>
+
+		</ProjectCard>
+		<ProjectCard>
+
+		</ProjectCard>
+		<ProjectCard>
+
+		</ProjectCard>
+	</div>
+	<div></div>
 </Section>

@@ -204,14 +204,20 @@
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
+	}
 
-		/* Hide scrollbar for IE, Edge and Firefox */
+	body::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.no-scrollbar {
 		-ms-overflow-style: none; /* IE and Edge */
 		scrollbar-width: none; /* Firefox */
 	}
 
 	/* Hide scrollbar for Chrome, Safari and Opera */
-	body::-webkit-scrollbar {
+	.no-scrollbar::-webkit-scrollbar {
 		display: none;
 	}
 
@@ -246,6 +252,10 @@
 	.title {
 		font-weight: var(--font-weight-bold);
 		line-height: var(--size-4xl);
+	}
+
+	.content {
+		font-size: var(--size-lg);
 	}
 
 	.title .e:after,
