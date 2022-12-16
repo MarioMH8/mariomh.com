@@ -8,11 +8,19 @@ const clz = [position, isFirst].join(' ');
 	section {
 		--section-left-padding: calc(var(--size-3xl) + clamp(0rem,-5rem + 16.66vw,15rem));
 		--section-left-padding-mobile: calc(var(--size-2xl) + clamp(0rem,-5rem + 16.66vw,15rem));
+
 		width: 100%;
 		min-height: 100vh;
 		position: relative;
 		padding: var(--size-3xl);
 		padding-left: var(--section-left-padding);
+
+		display: flex;
+		flex-direction: column;
+		-webkit-box-pack: justify;
+		justify-content: space-between;
+
+		color: var(--color-white);
 	}
 
 	section:not(.first) {
