@@ -52,8 +52,8 @@ __metadata:
   linkType: hard
 
 "@astrojs/markdown-remark@npm:^1.1.3":
-  version: 1.1.3
-  resolution: "@astrojs/markdown-remark@npm:1.1.3"
+  version: 1.2.0
+  resolution: "@astrojs/markdown-remark@npm:1.2.0"
   dependencies:
     "@astrojs/micromark-extension-mdx-jsx": ^1.0.3
     "@astrojs/prism": ^1.0.0
@@ -79,7 +79,7 @@ __metadata:
     unist-util-map: ^3.1.1
     unist-util-visit: ^4.1.0
     vfile: ^5.3.2
-  checksum: 1d8aa5226f2b746e004fb18db0b50086a674b7e31da502dea6182925f48d14972879d5be3771614ea06cc9c8872bcd0b217a69676c6bf18d5b18d534ee151553
+  checksum: 4d09375281c045510f4132ec3498474d0ff89bfdd975efc53060c5700ce05e6639fd8cf0fa3269d11269b0c1866ce70eed3e8cc84221489e44a04e44bf2808ed
   languageName: node
   linkType: hard
 
@@ -1069,16 +1069,15 @@ __metadata:
   linkType: hard
 
 "@vscode/emmet-helper@npm:^2.8.4":
-  version: 2.8.4
-  resolution: "@vscode/emmet-helper@npm:2.8.4"
+  version: 2.8.6
+  resolution: "@vscode/emmet-helper@npm:2.8.6"
   dependencies:
     emmet: ^2.3.0
     jsonc-parser: ^2.3.0
     vscode-languageserver-textdocument: ^1.0.1
     vscode-languageserver-types: ^3.15.1
-    vscode-nls: ^5.0.0
     vscode-uri: ^2.1.2
-  checksum: 8a0c8fec803832bd7283c6c9d6f57d8cd8c88bcad598c104e3c0d6e1a7a02f785d9cc7bc39e8fe61823548410cd59b11ae11ee987c0c927fd657f52c73335cea
+  checksum: c205b8cccea90d5710adf68c771dbb8eb919a3bc83dc207e74003eeb5aa9a934ff3cacc587056f271386e077a3cc4c9bcaf09140d774fa9007495d64bc643b4e
   languageName: node
   linkType: hard
 
@@ -2631,11 +2630,11 @@ __metadata:
   linkType: hard
 
 "fastq@npm:^1.6.0":
-  version: 1.14.0
-  resolution: "fastq@npm:1.14.0"
+  version: 1.15.0
+  resolution: "fastq@npm:1.15.0"
   dependencies:
     reusify: ^1.0.4
-  checksum: da2c05ec1446ef77b8ba2b76619c90d483404f5087e71e77469fbee797280a1f4ef26a63be15b2377198bc20d09fdf25c7d6e1e492a1e568a29dfdd9bcb7538c
+  checksum: 0170e6bfcd5d57a70412440b8ef600da6de3b2a6c5966aeaf0a852d542daff506a0ee92d6de7679d1de82e644bce69d7a574a6c93f0b03964b5337eed75ada1a
   languageName: node
   linkType: hard
 
@@ -3674,22 +3673,22 @@ __metadata:
   linkType: hard
 
 "json5@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "json5@npm:1.0.1"
+  version: 1.0.2
+  resolution: "json5@npm:1.0.2"
   dependencies:
     minimist: ^1.2.0
   bin:
     json5: lib/cli.js
-  checksum: e76ea23dbb8fc1348c143da628134a98adf4c5a4e8ea2adaa74a80c455fc2cdf0e2e13e6398ef819bfe92306b610ebb2002668ed9fc1af386d593691ef346fc3
+  checksum: 866458a8c58a95a49bef3adba929c625e82532bcff1fe93f01d29cb02cac7c3fe1f4b79951b7792c2da9de0b32871a8401a6e3c5b36778ad852bf5b8a61165d7
   languageName: node
   linkType: hard
 
 "json5@npm:^2.1.3, json5@npm:^2.2.1":
-  version: 2.2.2
-  resolution: "json5@npm:2.2.2"
+  version: 2.2.3
+  resolution: "json5@npm:2.2.3"
   bin:
     json5: lib/cli.js
-  checksum: 9a878d66b72157b073cf0017f3e5d93ec209fa5943abcb38d37a54b208917c166bd473c26a24695e67a016ce65759aeb89946592991f8f9174fb96c8e2492683
+  checksum: 2a7436a93393830bce797d4626275152e37e877b265e94ca69c99e3d20c2b9dab021279146a39cdb700e71b2dd32a4cebd1514cd57cee102b1af906ce5040349
   languageName: node
   linkType: hard
 
@@ -6440,13 +6439,6 @@ __metadata:
   bin:
     installServerIntoExtension: bin/installServerIntoExtension
   checksum: f564417bf08f5400e8381b6d0defb4e7242a04525696b1728b05524b89932047af625fac07715b4d36307e1de599cbef54d240c15101fe831aaface431f21e1b
-  languageName: node
-  linkType: hard
-
-"vscode-nls@npm:^5.0.0":
-  version: 5.2.0
-  resolution: "vscode-nls@npm:5.2.0"
-  checksum: c9f43c0f85000b3008fc4a3a8fc122e580f4f0402a77186c6c0f3219ca8ac258f4893c7a563d66f097a6da09951d7f5a7e6295d3e21dcbaec707937c9089b5a8
   languageName: node
   linkType: hard
 
