@@ -23,9 +23,9 @@ __metadata:
   linkType: hard
 
 "@astrojs/compiler@npm:^1.0.1":
-  version: 1.1.0
-  resolution: "@astrojs/compiler@npm:1.1.0"
-  checksum: f31ea14ff1ab9dc9021c6a37529caa9cb1bc34ce7c9904817db09afafc17c03910313f4c80692552a62c05c75845c01a1d0060a2c4e803e42e0253f3b3ac7b4a
+  version: 1.1.1
+  resolution: "@astrojs/compiler@npm:1.1.1"
+  checksum: 378ebbe61bdae269c4e6b3179dc39627f87c23248cff1cedfea1b72450bca2c0128f65a6c5297e903a9d1de75df5f7df89753bdb538157a614966408688a3f59
   languageName: node
   linkType: hard
 
@@ -100,11 +100,11 @@ __metadata:
   linkType: hard
 
 "@astrojs/webapi@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@astrojs/webapi@npm:2.0.0"
+  version: 2.0.1
+  resolution: "@astrojs/webapi@npm:2.0.1"
   dependencies:
-    undici: ^5.14.0
-  checksum: 4336492bb211e3289ac438dab2eb9a06cfde47764ecfc8aa50ea3416636a0013d1192e5637bd112c00f3a88af5543ffc084e650348017a9b263b4fdd8a46deca
+    undici: 5.18.0
+  checksum: 7e0db7f0540f6b71cdb70478737eb2acbb2eb6ece1069b677201ccce23292fd6f96181ee0876d18647d3d8a548cdbbdfc6cc8d42bc02785252e8abe8dcce6108
   languageName: node
   linkType: hard
 
@@ -1521,9 +1521,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001449":
-  version: 1.0.30001451
-  resolution: "caniuse-lite@npm:1.0.30001451"
-  checksum: 48a06a7881093bb4d8a08ed5428f24a1cbdaa544b0a6f0c3614287d4f34b6c853e79a0f608a5bd901c27995f5e951825606fba11e7930251cc422bd61de9d849
+  version: 1.0.30001456
+  resolution: "caniuse-lite@npm:1.0.30001456"
+  checksum: c2cc479962149abd09a25b64699ee7484d9c433db2bad0a489f7b51b09a463c991f6efd7b8e201bc1a1ccf3294263f88503a3adf0a57db9046939ee7e58b76a6
   languageName: node
   linkType: hard
 
@@ -1882,9 +1882,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.284":
-  version: 1.4.295
-  resolution: "electron-to-chromium@npm:1.4.295"
-  checksum: 66fff1341d3c94c2ccd1f2a39cffdb92118304f4b949d3194427e7022d6a6bd8c482b5c4afd9dce210117ba20cac01c1a1466089f5a862fe9c563113b86ff829
+  version: 1.4.302
+  resolution: "electron-to-chromium@npm:1.4.302"
+  checksum: aa764494f9a5b6916ba9f311c0204b2c73449addba18cc55d43e84e8c4465732af9cd6560a8efeb32f3c5a928299030e41352e5b3a081e9e56b086d5be618f45
   languageName: node
   linkType: hard
 
@@ -2340,11 +2340,11 @@ __metadata:
   linkType: hard
 
 "esquery@npm:^1.4.0":
-  version: 1.4.0
-  resolution: "esquery@npm:1.4.0"
+  version: 1.4.2
+  resolution: "esquery@npm:1.4.2"
   dependencies:
     estraverse: ^5.1.0
-  checksum: a0807e17abd7fbe5fbd4fab673038d6d8a50675cdae6b04fbaa520c34581be0c5fa24582990e8acd8854f671dd291c78bb2efb9e0ed5b62f33bac4f9cf820210
+  checksum: 2f4ad89c5aafaca61cc2c15e256190f0d6deb4791cae6552d3cb4b1eb8867958cdf27a56aaa3272ff17435e3eaa19ee0d4129fac336ca6373d7354d7b5da7966
   languageName: node
   linkType: hard
 
@@ -2889,8 +2889,8 @@ __metadata:
   linkType: hard
 
 "hast-util-from-parse5@npm:^7.0.0":
-  version: 7.1.1
-  resolution: "hast-util-from-parse5@npm:7.1.1"
+  version: 7.1.2
+  resolution: "hast-util-from-parse5@npm:7.1.2"
   dependencies:
     "@types/hast": ^2.0.0
     "@types/unist": ^2.0.0
@@ -2899,7 +2899,7 @@ __metadata:
     vfile: ^5.0.0
     vfile-location: ^4.0.0
     web-namespaces: ^2.0.0
-  checksum: 79431243b65d6fb327988614b3d8addd805cdf620599ce194dce91c1a1c99dc356bfb25494821445ecff49edc3ec3f2ce0b151f5e401e2984fed81a4178b7e79
+  checksum: 7b4ed5b508b1352127c6719f7b0c0880190cf9859fe54ccaf7c9228ecf623d36cef3097910b3874d2fe1aac6bf4cf45d3cc2303daac3135a05e9ade6534ddddb
   languageName: node
   linkType: hard
 
@@ -3586,9 +3586,9 @@ __metadata:
   linkType: hard
 
 "lru-cache@npm:^7.7.1":
-  version: 7.14.1
-  resolution: "lru-cache@npm:7.14.1"
-  checksum: d72c6713c6a6d86836a7a6523b3f1ac6764768cca47ec99341c3e76db06aacd4764620e5e2cda719a36848785a52a70e531822dc2b33fb071fa709683746c104
+  version: 7.16.1
+  resolution: "lru-cache@npm:7.16.1"
+  checksum: 64618e3ed4fd1203afedd9bbf5247921b1419f8e3100f20e58e5f04e741f8287bd7d04fefaad332411bb53b3a73445714b235de750cf5d310cba1fa23bd82795
   languageName: node
   linkType: hard
 
@@ -5020,8 +5020,8 @@ __metadata:
   linkType: hard
 
 "rollup@npm:^3.10.0":
-  version: 3.15.0
-  resolution: "rollup@npm:3.15.0"
+  version: 3.17.1
+  resolution: "rollup@npm:3.17.1"
   dependencies:
     fsevents: ~2.3.2
   dependenciesMeta:
@@ -5029,7 +5029,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 1a75b09503f705b594dcfebf65b9e1ca4536e3facdf5716e10d4272697b4bb7e6bd8ab35be1b3fe1271f864d4c4a75d012bd77cbe7a55579d5138258b9e85c23
+  checksum: 3c6076eba228a6623b886929154ebbb9ddfb6a044e567456eeb6257b5235f4fd740655836b539155b1b25697f38f5d189bf81b9ce0624ce5aafc6c8620bd80c0
   languageName: node
   linkType: hard
 
@@ -5628,12 +5628,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:^5.14.0":
+"undici@npm:5.18.0":
   version: 5.18.0
   resolution: "undici@npm:5.18.0"
   dependencies:
     busboy: ^1.6.0
   checksum: 74e0f357c376c745fcca612481a5742866ae36086ad387e626255f4c4a15fc5357d9d0fa4355271b6a633d50f5556c3e85720844680c44861c66e23afca7245f
+  languageName: node
+  linkType: hard
+
+"undici@npm:^5.14.0":
+  version: 5.20.0
+  resolution: "undici@npm:5.20.0"
+  dependencies:
+    busboy: ^1.6.0
+  checksum: 25412a785b2bd0b12f0bb0ec47ef00aa7a611ca0e570cb7af97cffe6a42e0d78e4b15190363a43771e9002defc3c6647c1b2d52201b3f64e2196819db4d150d3
   languageName: node
   linkType: hard
 
@@ -5826,8 +5835,8 @@ __metadata:
   linkType: hard
 
 "vite@npm:^4.0.3":
-  version: 4.1.1
-  resolution: "vite@npm:4.1.1"
+  version: 4.1.2
+  resolution: "vite@npm:4.1.2"
   dependencies:
     esbuild: ^0.16.14
     fsevents: ~2.3.2
@@ -5859,7 +5868,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: aad14b660b69068f6596ab7e760dd71642862996328e404a4d265e090ae0d06c7064cf8415ffb135cd8b79d5157dc1dcb48b56386caaa96a474fb53bdd8cac3d
+  checksum: c3d92b7ab59095498e80e70a7847c7a4c4fd7f16f859c57dc93c0dc09ec57584819a929924e8d8858bdde157f0386ec37322bdb064da7f8f4854c8aa22d0beec
   languageName: node
   linkType: hard
 
@@ -5899,20 +5908,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vscode-jsonrpc@npm:8.0.2":
-  version: 8.0.2
-  resolution: "vscode-jsonrpc@npm:8.0.2"
-  checksum: 9d055fd4c87ef1093b0eecb5370bfaf3402179b6639149b6d0f7e0bde60cf580091c7e07b0caff868f10f90331b17e7383c087217c077fdd1b5ae7bc23b72f77
+"vscode-jsonrpc@npm:8.1.0":
+  version: 8.1.0
+  resolution: "vscode-jsonrpc@npm:8.1.0"
+  checksum: 8980037cc0014802e6ac1e5dfcff9a65e8292727096dfd23c92d2039c0c45de74a00d6ee06938cf1a671286dd8258a5f418cf048c26ad0fcb0c44f96c9e0f278
   languageName: node
   linkType: hard
 
-"vscode-languageserver-protocol@npm:3.17.2, vscode-languageserver-protocol@npm:^3.17.1":
-  version: 3.17.2
-  resolution: "vscode-languageserver-protocol@npm:3.17.2"
+"vscode-languageserver-protocol@npm:3.17.3, vscode-languageserver-protocol@npm:^3.17.1":
+  version: 3.17.3
+  resolution: "vscode-languageserver-protocol@npm:3.17.3"
   dependencies:
-    vscode-jsonrpc: 8.0.2
-    vscode-languageserver-types: 3.17.2
-  checksum: f4a05d3a631af315a32a3700953c2117fa4e5c44bc03764154c6605da9cbbcb50a1b01b46f11b2f6948916d01b4948bebf1a84c135fc73b27fa839c58d0847ab
+    vscode-jsonrpc: 8.1.0
+    vscode-languageserver-types: 3.17.3
+  checksum: ffea508b2efd7f4853f1cef5e5eac58672f0ae71a9ec275ad37a4a2a24cdc3ff023f941e759951aee01c79da3f3279f10e034f19d875f081eb387181241bd836
   languageName: node
   linkType: hard
 
@@ -5923,21 +5932,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vscode-languageserver-types@npm:3.17.2, vscode-languageserver-types@npm:^3.15.1, vscode-languageserver-types@npm:^3.17.1, vscode-languageserver-types@npm:^3.17.2":
-  version: 3.17.2
-  resolution: "vscode-languageserver-types@npm:3.17.2"
-  checksum: ef2d862d22f622b64de0f428773d50a5928ec6cdd485960a7564ebe4fd4a3c8bcd956f29eb15bc45a0f353846e62f39f6c764d2ab85ce774b8724411ba84342f
+"vscode-languageserver-types@npm:3.17.3, vscode-languageserver-types@npm:^3.15.1, vscode-languageserver-types@npm:^3.17.1, vscode-languageserver-types@npm:^3.17.2":
+  version: 3.17.3
+  resolution: "vscode-languageserver-types@npm:3.17.3"
+  checksum: fbc8221297261f659a6482875ff2a419dc9d55965dc53745797da569ff9f819cd832e6f2699017baadd946548bbfe212e3f6971f3d960f12dc0ee9c629dacc07
   languageName: node
   linkType: hard
 
 "vscode-languageserver@npm:^8.0.1":
-  version: 8.0.2
-  resolution: "vscode-languageserver@npm:8.0.2"
+  version: 8.1.0
+  resolution: "vscode-languageserver@npm:8.1.0"
   dependencies:
-    vscode-languageserver-protocol: 3.17.2
+    vscode-languageserver-protocol: 3.17.3
   bin:
     installServerIntoExtension: bin/installServerIntoExtension
-  checksum: f564417bf08f5400e8381b6d0defb4e7242a04525696b1728b05524b89932047af625fac07715b4d36307e1de599cbef54d240c15101fe831aaface431f21e1b
+  checksum: 38810619d0a7c587e7e84fc55d9897a0ac235b80a0a8c0ab1faf4283ec6ca1c25f80c0116bcc54aa99d0d9f202f69119fd8cb1264ffb5825eabf45af9bd6793d
   languageName: node
   linkType: hard
 
