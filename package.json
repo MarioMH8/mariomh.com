@@ -33,7 +33,7 @@
 		"atropos": "1.0.2"
 	},
 	"devDependencies": {
-		"@hexatool/eslint-config-typescript": "1.0.7",
+		"@hexatool/eslint-config-typescript": "1.0.9",
 		"eslint": "8.39.0",
 		"typescript": "4.9.5"
 	},
