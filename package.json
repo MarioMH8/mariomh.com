@@ -34,7 +34,7 @@
 	},
 	"devDependencies": {
 		"@hexatool/eslint-config-typescript": "1.0.9",
-		"eslint": "8.40.0",
+		"eslint": "8.41.0",
 		"typescript": "4.9.5"
 	},
 	"volta": {
