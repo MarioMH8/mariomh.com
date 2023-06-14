@@ -1,26 +1,31 @@
 ---
-import AboutMe from '../components/AboutMe.astro';
-import Introduction from '../components/Introduction.astro';
-import Portfolio from '../components/Portfolio.astro';
-import Social from '../components/Social.astro';
 import BaseLayout from '../layouts/base.astro';
 ---
 
 <BaseLayout>
-  <Introduction/>
-  <AboutMe/>
-  <Portfolio/>
-  <Social/>
+	<section>
+		<img
+			src="favicon.svg"
+			alt="MarioMH icon"
+			height="100"
+			width="100" />
+		<h1>Mario Men&eacute;ndez <br/>Hidalgo</h1>
+	</section>
 </BaseLayout>
 
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+<style>
+	section {
+		width: 100%;
+		height: 100svh;
+		display: flex;
+		flex-flow: row;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+	}
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-</script>
+	h1 {
+		width: fit-content;
+		font-size: 2rem;
+	}
+</style>

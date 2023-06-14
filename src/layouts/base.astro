@@ -1,78 +1,35 @@
 ---
-import GlobalStyles from '../components/GlobalStyles.astro'
+import { SEO } from "astro-seo";
+import GlobalStyles from '../components/common/GlobalStyles.astro'
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="HandheldFriendly" content="true" />
-    <title>MarioMH 👨&zwj;💻 | Full Stack Developer</title>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <meta name="description" content="Mario Menéndez Full Stack Developer">
-    <meta name="application-name" content="mariomh.com">
+	<SEO
+		title="MarioMH | Desarrollador JavaScript"
+		description="MarioMH es un desarrollador Full Stack especializado en JavaScript."
+		openGraph={{
+			basic: {
+				title: "MarioMH desarrollador JavaScript",
+				type: "website",
+				image: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+			}
+		}}
+		twitter={{
+			creator: "@MarioMH8"
+		}}
+	/>
+	<link rel="sitemap" href="/sitemap-index.xml">
 
-	<link rel="canonical" href="https://mariomh.com/">
-
-    <meta name="apple-mobile-web-app-title" content="mariomh.com">
-
-
-	<link rel="alternate icon" type="image/png" href="/images/icon/dark/favicon-32x32.png">
-	<link rel="icon" type="image/svg+xml" href="/images/icon/dark/favicon.svg">
-
-    <meta property="og:url" content="https://mariomh.com/">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="@MarioMH8">
-    <meta name="twitter:domain" content="mariomh.com">
-    <meta name="twitter:image" content="/images/icon/dark/favicon-500x500.png">
-    <meta name="twitter:site" content="@MarioMH8">
-    <meta property="og:locale" content="en_EN">
-    <meta property="og:title" content="MarioMH 👨&zwj;💻 | Full Stack Developer">
-    <meta property="og:image" content="/images/icon/dark/favicon-500x500.png">
-    <meta property="og:description" content="Full Stack Developer">
-    <meta property="og:site_name" content="mariomh.com">
-
-    <meta name="theme-color" content="#1B2235">
-
-    <GlobalStyles/>
-  </head>
-  <body>
-    <main>
-        <slot/>
-    </main>
-  </body>
+	<GlobalStyles/>
+</head>
+<body class="no-scrollbar">
+<main>
+	<slot/>
+</main>
+</body>
 </html>
-
-<script>
-const icons = document.querySelectorAll('[rel="icon"]');
-const alternateIcons = document.querySelectorAll('[rel="alternate icon"]');
-const twitterImage = document.querySelectorAll('[name="twitter:image"]');
-const ogImage = document.querySelectorAll('[property="og:image"]');
-
-function changeIcons(isDark) {
-	const prefix = isDark ? "/images/icon/light" : "/images/icon/dark";
-	icons.forEach(e => {
-		e.href = `${prefix}/favicon.svg`;
-	});
-	alternateIcons.forEach(e => {
-		e.href = `${prefix}/favicon-32x32.png`;
-	});
-	twitterImage.forEach(e => {
-		e.content = `${prefix}/favicon-500x500.png`;
-	});
-	ogImage.forEach(e => {
-		e.content = `${prefix}/favicon-500x500.png`;
-	});
-}
-
-const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-changeIcons(isDark);
-
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-    const isDark = event.matches;
-	changeIcons(isDark);
-});
-
-</script>
