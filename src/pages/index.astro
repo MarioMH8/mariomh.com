@@ -7,8 +7,8 @@ import BaseLayout from '../layouts/base.astro';
 		<img
 			src="favicon.svg"
 			alt="MarioMH icon"
-			height="100"
-			width="100" />
+			height="150"
+			width="150" />
 		<h1>Mario Men&eacute;ndez <br/>Hidalgo</h1>
 	</section>
 </BaseLayout>
@@ -26,6 +26,11 @@ import BaseLayout from '../layouts/base.astro';
 
 	h1 {
 		width: fit-content;
-		font-size: 2rem;
+		font-size: var(--size-xl);
+	}
+
+	img {
+		width: calc( var(--size-xl) * 4.5);
+		height: calc( var(--size-xl) * 4.5);
 	}
 </style>
