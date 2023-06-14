@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-
-# Host
-Host: https://mariomh.com
-
-# Sitemaps
-Sitemap: https://mariomh.com/sitemap.xml
