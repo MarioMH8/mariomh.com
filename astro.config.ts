@@ -28,6 +28,11 @@ export default defineConfig({
             theme_color: '#C6F118',
             background_color: '#FDFFF5',
             display: 'standalone',
+
+			config: {
+				insertAppleTouchLinks: true,
+				insertThemeColorMeta: false,
+			}
         }),
 		prefetch(),
 		compress(),
