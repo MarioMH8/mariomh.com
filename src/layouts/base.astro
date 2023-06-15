@@ -1,4 +1,5 @@
 ---
+import { pwaInfo } from 'virtual:pwa-info';
 import { SEO } from "astro-seo";
 import GlobalStyles from '../components/common/GlobalStyles.astro'
 ---
@@ -27,6 +28,8 @@ import GlobalStyles from '../components/common/GlobalStyles.astro'
 
 	<meta name="theme-color" content="#C6F118" media="(prefers-color-scheme: light)">
 	<meta name="theme-color" content="#001B16" media="(prefers-color-scheme: dark)">
+
+	<script src="/src/pwa.ts"></script>
 
 	<GlobalStyles/>
 </head>
