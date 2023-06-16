@@ -1,7 +1,9 @@
 ---
-import { pwaInfo } from 'virtual:pwa-info';
 import { SEO } from "astro-seo";
-import GlobalStyles from '../components/common/GlobalStyles.astro'
+import AppStyles from '../components/styles/app.astro'
+import FontsStyles from '../components/styles/fonts.astro'
+import ResetStyles from '../components/styles/reset.astro'
+import ScrollbarStyles from '../components/styles/scrollbar.astro'
 ---
 
 <!DOCTYPE html>
@@ -31,7 +33,10 @@ import GlobalStyles from '../components/common/GlobalStyles.astro'
 
 	<script src="/src/pwa.ts"></script>
 
-	<GlobalStyles/>
+	<AppStyles/>
+	<FontsStyles/>
+	<ResetStyles/>
+	<ScrollbarStyles/>
 </head>
 <body class="no-scrollbar">
 <main>
