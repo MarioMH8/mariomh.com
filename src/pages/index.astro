@@ -33,4 +33,16 @@ import BaseLayout from '../layouts/base.astro';
 		width: calc( var(--size-xl) * 4.5);
 		height: calc( var(--size-xl) * 4.5);
 	}
+
+	@media (width <= 576px) {
+
+		h1 {
+			font-size: var(--size-lg);
+		}
+
+		img {
+			width: calc( var(--size-xl) * 3.5);
+			height: calc( var(--size-xl) * 3.5);
+		}
+	}
 </style>
