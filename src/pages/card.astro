@@ -103,6 +103,22 @@ const MAIL_TO = `mailto:${EMAIL}`;
 	.link:hover {
 		border-bottom-color: var(--color-foreground-card);
 	}
+
+	@media (width <= 576px) {
+
+		.name {
+			font-size: var(--size-base);
+		}
+
+		.logo {
+			width: calc( var(--size-xl) * 2);
+			height: calc( var(--size-xl) * 2);
+		}
+
+		.info {
+			gap: unset;
+		}
+	}
 </style>
 
 <script>
