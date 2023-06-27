@@ -1,8 +1,8 @@
 ---
-const {title, className, secondary, transparent} = Astro.props;
-const cls = [secondary ? 'secondary' : transparent ? 'transparent' : ''];
+const {title, className} = Astro.props;
+const cls: string[] = [];
 cls.push(className);
-const clsString = cls.join(' ')
+const clsString = cls.filter(Boolean).join(' ')
 ---
 <button class={clsString} title={title}>
 	<slot/>
@@ -11,11 +11,9 @@ const clsString = cls.join(' ')
 <style>
 	button {
 		background-color: var(--color-primary-300);
-		color: var(--color-primary-600);
+		color: var(--color-primary-500);
 		padding: var(--size-base) var(--size-xl);
 		border-radius: 12px;
-		font-weight: 400;
-		min-width: 150px;
 	}
 
 	button:has(svg) {
@@ -32,23 +30,5 @@ const clsString = cls.join(' ')
 	}
 	button:active {
 		opacity: .8;
-	}
-
-	button.secondary {
-		color: var(--color-primary-200);
-		background-color: var(--color-primary-600);
-		outline-color: var(--color-primary-600);
-		font-weight: var(--font-family-secondary);
-	}
-
-	button.transparent {
-		color: var(--color-primary-300);
-		background-color: transparent;
-		border: 2px solid var(--color-primary-300);
-	}
-	button.transparent:hover {
-		color: var(--color-primary-600);
-		background-color: var(--color-primary-300);
-
 	}
 </style>

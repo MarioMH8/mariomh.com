@@ -65,8 +65,15 @@
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
+	}
 
-		letter-spacing: 1px;
+	img {
+		user-drag: none;
+		-webkit-user-drag: none;
+		user-select: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
 	}
 
 	/* Headings */
@@ -155,6 +162,7 @@
 	/* Font family */
 	.font-secondary {
 		font-family: var(--font-family-secondary);
+		letter-spacing: 1px;
 	}
 
 	/* Display */
@@ -174,5 +182,10 @@
 	}
 	.mr-sm {
 		margin-right: var(--size-sm);
+	}
+
+	/* Utils */
+	.ws-nowrap {
+		white-space: nowrap;
 	}
 </style>
