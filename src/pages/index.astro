@@ -1,17 +1,13 @@
 ---
 import BaseLayout from '../layouts/base.astro';
-import Grid from "../components/grid.astro";
 import Hero from "../features/hero.astro";
-import About from "../features/about.astro";
-import OwnImage from "../features/own-image.astro"
-import Portfolio from "../features/portfolio.astro";
+import Nav from "../features/nav.astro";
+import Container from "../components/container.astro";
 ---
 
 <BaseLayout>
-	<Grid>
+	<Container>
+		<Nav/>
 		<Hero></Hero>
-		<About></About>
-		<OwnImage></OwnImage>
-		<Portfolio></Portfolio>
-	</Grid>
+	</Container>
 </BaseLayout>

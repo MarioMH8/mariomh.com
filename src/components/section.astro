@@ -1,0 +1,17 @@
+---
+const {className, id} = Astro.props;
+const cls = ['container'];
+cls.push(className);
+const clsString = cls.join(' ')
+---
+
+<section id={id} class={clsString}>
+	<slot/>
+</section>
+
+<style>
+	.container {
+		flex-basis: 100%;
+		width: 100%;
+	}
+</style>

@@ -3,7 +3,15 @@
 		--font-family-primary: Archia, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 		--font-family-secondary: DMSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-		--font-weight-base: 200;
+		--font-weight-thin: 100;
+		--font-weight-extra-light: 200;
+		--font-weight-light: 300;
+		--font-weight-normal: 400;
+		--font-weight-medium: 500;
+		--font-weight-semi-bold: 600;
+		--font-weight-bold: 700;
+		--font-weight-extra-bold: 800;
+		--font-weight-heavy: 900;
 
 		--size-2xs: clamp(0.45rem, -0.05vw + 0.46rem, 0.42rem);
 		--size-xs: clamp(0.56rem, 0.01vw + 0.56rem, 0.56rem);
@@ -15,6 +23,8 @@
 		--size-3xl: clamp(2.14rem, 1.86vw + 1.67rem, 3.16rem);
 		--size-4xl: clamp(2.67rem, 2.8vw + 1.97rem, 4.21rem);
 
+		--size-container: 1400px;
+
 		--color-primary-100: #FDFFF5;
 		--color-primary-200: #EEFFA9;
 		--color-primary-300: #C6F118;
@@ -25,63 +35,148 @@
 
 
 		--color-background: var(--color-primary-100);
-		--color-foreground: var(--color-primary-600);
+		--color-foreground: var(--color-primary-500);
+		--color-foreground-secondary: var(--color-primary-400);
 		--color-foreground-shadow: 2px 2px 15px 0 rgb(0, 27, 22);
 		--color-foreground-card: var(--color-primary-100);
 		--color-background-card: var(--color-primary-500);
-        --color-scroll-handle: var(--color-primary-500);
-        --color-scroll-handle-hover: var(--color-primary-600);
+		--color-scroll-handle: var(--color-primary-300);
+		--color-scroll-handle-hover: var(--color-primary-400);
 	}
 
-	/* @media (prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: dark) {
 
-        :root {
+		:root {
 			--color-background: var(--color-primary-600);
 			--color-foreground: var(--color-primary-100);
 			--color-background-card: var(--color-primary-100);
 			--color-foreground-card: var(--color-primary-600);
+			--color-foreground-secondary: var(--color-primary-300);
 		}
-	}*/
+	}
 
-    body {
-        background-color: var(--color-background);
-        font-weight: var(--font-weight-base);
-        font-size: var(--size-base);
-        font-family: var(--font-family-primary);
-        color: var(--color-foreground);
+	body {
+		background-color: var(--color-background);
+		color: var(--color-foreground);
 
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
+		font-weight: var(--font-weight-normal);
+		font-size: var(--size-base);
+		font-family: var(--font-family-primary);
 
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
 
+		letter-spacing: 1px;
+	}
 
-	h6 {
+	/* Headings */
+	h1,h2,h3,h4,h5,h6 {
+		display: block;
+	}
+
+	/* Font size */
+	h6,
+	.text-sm {
 		font-size: var(--size-sm)
 	}
 
-	h5 {
+	h5,
+	.text-base {
 		font-size: var(--size-base)
 	}
 
-	h4 {
+	h4,
+	.text-lg {
 		font-size: var(--size-lg)
 	}
 
-	h3 {
+	h3,
+	.text-xl {
 		font-size: var(--size-xl)
 	}
 
-	h2 {
+	h2,
+	.text-2xl {
 		font-size: var(--size-2xl)
 	}
 
-	h1 {
+	h1,
+	.text-3xl {
 		font-size: var(--size-3xl)
 	}
 
+	.text-4xl {
+		font-size: var(--size-4xl)
+	}
+
+	/* Font weight */
+	.font-thin {
+		font-weight: var(--font-weight-thin);
+	}
+
+	.font-extra-light {
+		font-weight: var(--font-weight-extra-light);
+	}
+
+	.font-light {
+		font-weight: var(--font-weight-light);
+	}
+
+	.font-normal {
+		font-weight: var(--font-weight-normal);
+	}
+
+	.font-medium {
+		font-weight: var(--font-weight-medium);
+	}
+
+	.font-semi-bold {
+		font-weight: var(--font-weight-semi-bold);
+	}
+
+	.font-bold {
+		font-weight: var(--font-weight-bold);
+	}
+
+	.font-extra-bold {
+		font-weight: var(--font-weight-extra-bold);
+	}
+
+	.font-heavy {
+		font-weight: var(--font-weight-heavy);
+	}
+
+
+	/* Font color */
+	.color-secondary {
+		color: var(--color-foreground-secondary);
+	}
+
+	/* Font family */
+	.font-secondary {
+		font-family: var(--font-family-secondary);
+	}
+
+	/* Display */
+	.d-block {
+		display: block;
+	}
+
+	/* Display */
+	.mr-auto {
+		margin-right: auto;
+	}
+	.mt-auto {
+		margin-top: auto;
+	}
+	.mb-sm {
+		margin-bottom: var(--size-sm);
+	}
+	.mr-sm {
+		margin-right: var(--size-sm);
+	}
 </style>

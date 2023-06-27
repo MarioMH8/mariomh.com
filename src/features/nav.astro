@@ -3,9 +3,9 @@ import Logo from "../components/logo.astro";
 import Button from "../components/button.astro";
 ---
 
-<nav>
+<nav class="font-secondary font-normal">
 	<ul>
-		<li><Logo/></li>
+		<li class="mr-auto"><Logo/></li>
 		<li><a title="Ir a la sección sobre mi" href="#about">Sobre mi</a></li>
 		<li><a title="Ir a la sección portfolio" href="#portfolio">Portfolio</a></li>
 		<li><a title="Ir a la sección servicios" href="#services">Servicios</a></li>
@@ -15,25 +15,15 @@ import Button from "../components/button.astro";
 </nav>
 
 <style>
-	nav {
-		font-family: var(--font-family-secondary);
-	}
-
 	nav ul {
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: flex-end;
 		align-items: center;
-		font-weight: 400;
 		gap: var(--size-base);
 	}
 
-	nav li:first-child {
-		margin-right: auto;
-	}
-
 	nav li > a {
-		letter-spacing: 1px;
 		padding: var(--size-sm) var(--size-lg);
 		border-bottom: 2px solid transparent;
 	}
@@ -45,10 +35,6 @@ import Button from "../components/button.astro";
 
 	nav li > a:active {
 		border-bottom-color: var(--color-primary-300);
-	}
-
-	nav li:last-child {
-		margin-right: var(--size-sm);
 	}
 
 	@media (width < 1200px) {
