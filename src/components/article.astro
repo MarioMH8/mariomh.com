@@ -1,0 +1,40 @@
+---
+const {className, id, title} = Astro.props;
+const cls = [];
+cls.push(className);
+const clsString = cls.join(' ')
+---
+
+<article class={className} id={id}>
+	<header>
+		<h2 class="text-lg font-secondary">{title}</h2>
+	</header>
+	<slot/>
+</article>
+
+<style>
+	article {
+		min-height: max(50svh, 40vmax);
+
+		background-color: var(--color-primary-200);
+		border-radius: var(--size-xl);
+		padding: var(--size-3xl);
+
+		position: relative;
+	}
+
+	header {
+		margin-bottom: var(--size-xl);
+	}
+	article:after {
+		content: '';
+		position: absolute;
+		width: 200px;
+		right: -132px;
+		top: -132px;
+		aspect-ratio: 1;
+		color: var(--color-primary-200);
+		background-image: url("/svg/forma01-esquina.svg");
+		background-repeat: no-repeat;
+	}
+</style>

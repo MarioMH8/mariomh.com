@@ -1,6 +1,6 @@
 ---
-const {title, className} = Astro.props;
-const cls: string[] = [];
+const {title, className, secondary} = Astro.props;
+const cls = [secondary ? 'secondary' : ''];
 cls.push(className);
 const clsString = cls.filter(Boolean).join(' ')
 ---
@@ -31,4 +31,12 @@ const clsString = cls.filter(Boolean).join(' ')
 	button:active {
 		opacity: .8;
 	}
+
+	button.secondary {
+		color: var(--color-primary-200);
+		background-color: var(--color-primary-600);
+		outline-color: var(--color-primary-600);
+		font-weight: var(--font-family-secondary);
+	}
 </style>
+

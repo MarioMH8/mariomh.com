@@ -1,0 +1,25 @@
+---
+const {className, id} = Astro.props;
+const cls = ['forma01'];
+cls.push(className);
+const clsString = cls.join(' ')
+---
+
+<div  id={id} class={clsString}>
+	<div>
+		<slot/>
+	</div>
+</div>
+
+<style>
+	.forma01 {
+		background-image: url('/svg/forma01.svg');
+		background-size: cover;
+		background-position: top;
+		background-repeat: no-repeat;
+	}
+	.forma01 > div {
+		margin-top: 28%;
+		margin-left: 28%;
+	}
+</style>

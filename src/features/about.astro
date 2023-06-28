@@ -1,0 +1,86 @@
+---
+import Section from "../components/section.astro";
+import Article from "../components/article.astro";
+import Button from "../components/button.astro";
+---
+
+<Section className="about" id="about">
+	<Article title="Sobre Mi" className="about-me">
+		<p class="text-2xl ls-tight lh-3xl mb-2xl">
+			Soy un desarrollador apasionado por la tecnolog&iacute;a y la b&uacute;squeda de soluciones a todo tipo de proyectos desafiantes.
+		</p>
+		<Button secondary>Cont&aacute;ctame</Button>
+	</Article>
+	<div class="picture">
+		<img src="/images/me.webp" alt="Mario mirando hacia la izquierda con los brazos cruzados">
+	</div>
+</Section>
+
+<style>
+	.about {
+		display: flex;
+		flex-flow: row wrap;
+		position: relative;
+		justify-content: space-evenly;
+		color: var(--color-foreground);
+	}
+
+	.about-me {
+		flex-basis: 50%;
+		min-height: max(50svh, 40vmax);
+	}
+
+	.picture {
+		flex-basis: 50%;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: right;
+		align-items: flex-end;
+	}
+
+	.picture img {
+		opacity: 90%;
+		-webkit-transform: scaleX(-1);
+		transform: scaleX(-1);
+		max-height: 550px;
+	}
+
+	@media (prefers-color-scheme: dark) {
+
+		.about {
+			color: var(--color-primary-500);
+		}
+	}
+
+	@media (width < 1200px) {
+		.about {
+			justify-content: center;
+		}
+
+		.about-me,
+		.picture {
+			flex-basis: 80%;
+		}
+
+		.picture {
+			order: 1;
+			justify-content: center;
+		}
+
+		.picture img {
+			max-width: 75%;
+		}
+
+		.about-me {
+			order: 2;
+		}
+	}
+
+	@media (width < 800px) {
+
+		.about-me,
+		.picture {
+			flex-basis: 95%;
+		}
+	}
+</style>
