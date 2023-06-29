@@ -4,6 +4,7 @@ import AppStyles from '../styles/app.astro'
 import FontsStyles from '../styles/fonts.astro'
 import ResetStyles from '../styles/reset.astro'
 import ScrollbarStyles from '../styles/scrollbar.astro'
+import Wrapper from "../components/wrapper.astro";
 ---
 
 <!DOCTYPE html>
@@ -39,6 +40,8 @@ import ScrollbarStyles from '../styles/scrollbar.astro'
 	<ScrollbarStyles/>
 </head>
 <body>
-<slot/>
+<Wrapper>
+	<slot/>
+</Wrapper>
 </body>
 </html>
