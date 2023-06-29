@@ -32,7 +32,7 @@ import Portfolio from "../features/portfolio.astro";
 			}
 		}))
 	document.querySelectorAll('dialog').forEach(dialog => {
-		dialog.querySelector('button[value="close"]').addEventListener('click', () => {
+		dialog?.querySelector('button[value="close"]').addEventListener('click', () => {
 			dialog.close();
 		})
 	})
