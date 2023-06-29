@@ -44,7 +44,7 @@
 		"astro-webmanifest": "0.6.0",
 		"eslint": "8.43.0",
 		"eslint-plugin-astro": "0.27.2",
-		"typescript": "5.0.4"
+		"typescript": "5.1.6"
 	},
 	"volta": {
 		"node": "20.3.1",
