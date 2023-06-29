@@ -1,11 +1,14 @@
 ---
-const {className, id} = Astro.props;
-const cls = ['container'];
-cls.push(className);
-const clsString = cls.join(' ')
+import type { HTMLAttributes } from 'astro/types'
+
+interface Props extends HTMLAttributes<'section'> {
+
+}
+
+const { class: className, ...attrs} = Astro.props;
 ---
 
-<section id={id} class={clsString}>
+<section class:list={['container', className]} {...attrs}>
 	<slot/>
 </section>
 

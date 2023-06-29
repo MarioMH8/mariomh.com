@@ -1,11 +1,14 @@
 ---
-const {className, id, title} = Astro.props;
-const cls = [];
-cls.push(className);
-const clsString = cls.join(' ')
+import type { HTMLAttributes } from 'astro/types'
+
+interface Props extends HTMLAttributes<'article'> {
+
+}
+
+const { title, ...attrs } = Astro.props;
 ---
 
-<article class={className} id={id}>
+<article {...attrs}>
 	<header>
 		<h2 class="text-lg font-secondary">{title}</h2>
 	</header>

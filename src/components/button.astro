@@ -1,21 +1,16 @@
 ---
 import type { HTMLAttributes } from 'astro/types'
-type Props = HTMLAttributes<'button'>;
-// or extend with an `interface`
-interface Props extends HTMLAttributes<'a'> {
-	className?: string;
+
+interface Props extends HTMLAttributes<'button'> {
 	openModal?: string;
-	secondary?: boolean;
-	link?: boolean;
-	transparent?: boolean;
+	variant: 'secondary' | 'link' | 'transparent';
 }
 
-const { className, secondary, link, transparent, openModal, ...attrs } = Astro.props;
-const cls = [secondary ? 'secondary' : transparent ? 'transparent' : link ? 'link' : ''];
-cls.push(className);
-const clsString = cls.filter(Boolean).join(' ')
+const { class: className, variant, openModal, ...attrs } = Astro.props;
+
 ---
-<button class={clsString} data-trigger={openModal} {...attrs}>
+
+<button class:list={[variant, className]} data-trigger={openModal} {...attrs}>
 	<slot/>
 </button>
 

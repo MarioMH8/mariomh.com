@@ -1,11 +1,13 @@
 ---
-const {className, id} = Astro.props;
-const cls = ['forma01'];
-cls.push(className);
-const clsString = cls.join(' ')
+import {HTMLAttributes} from "astro/types";
+
+type Props = HTMLAttributes<'div'>;
+
+
+const { class: className, ...attrs } = Astro.props;
 ---
 
-<div  id={id} class={clsString}>
+<div class:list={['forma01', className]} {...attrs}>
 	<div>
 		<slot/>
 	</div>

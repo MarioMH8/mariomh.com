@@ -1,4 +1,13 @@
-<main class="container">
+---
+import type { HTMLAttributes } from 'astro/types'
+
+interface Props extends HTMLAttributes<'article'> {
+
+}
+
+const { class: className, ...attrs } = Astro.props;
+---
+<main class:list={['container', className]} {...attrs}>
 	<slot/>
 </main>
 
