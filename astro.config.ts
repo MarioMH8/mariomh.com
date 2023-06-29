@@ -1,6 +1,6 @@
 import prefetch from '@astrojs/prefetch';
 import sitemap from '@astrojs/sitemap';
-import AstroPWA from '@vite-pwa/astro'
+import AstroPWA from '@vite-pwa/astro';
 import { defineConfig } from 'astro/config';
 import compress from 'astro-compress';
 import zip from 'astro-compressor';
@@ -41,7 +41,7 @@ export default defineConfig({
 			registerType: 'autoUpdate',
 			workbox: {
 				globPatterns: ['**/*.{js,css,html,svg,png}'],
-			}
+			},
 		}),
 		compress(),
 		zip(),
