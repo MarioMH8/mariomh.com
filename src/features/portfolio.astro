@@ -1,0 +1,25 @@
+---
+import Section from "../components/section.astro";
+---
+
+<Section className="portfolio" id="portfolio">
+	<h2 class="text-3xl">
+		<span class="text-xl d-block color-secondary font-light font-secondary mb-lg">Porfolio</span>
+		Proyectos recientes
+	</h2>
+</Section>
+
+<style>
+	.portfolio {
+		min-height: max(85svh, 40vmax);
+
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: start;
+	}
+
+	h2 {
+		text-align: center;
+		margin: var(--size-2xl) 0;
+	}
+</style>
