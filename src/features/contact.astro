@@ -1,0 +1,98 @@
+---
+
+import Button from "../components/button.astro";
+---
+
+<dialog data-id="contact">
+	<form method="dialog">
+		<span class="text-2xl mb-2xl">¡Hablemos!</span>
+		<label class="font-secondary">
+			Nombre
+			<input type="text" name="name" placeholder="Jorge Cassanovas" required/>
+		</label>
+		<label class="font-secondary">
+			Email
+			<input type="email" name="email" placeholder="jorge@correo.com" required/>
+		</label>
+		<label class="font-secondary">
+			Mensaje
+			<textarea name="message" placeholder="Buenas Mario, te escribo para comentarte acerca..." required/>
+		</label>
+		<Button type="submit">Enviar</Button>
+		<Button type="reset" value="close" link>Cancelar</Button>
+	</form>
+</dialog>
+
+<style>
+
+	dialog {
+		position: fixed;
+		inset: 0;
+		color: var(--color-primary-500);
+		overflow-y: scroll;
+	}
+
+	dialog[open] {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	form {
+		background-color: var(--color-primary-100);
+		border-radius: var(--size-lg);
+		padding: var(--size-3xl) var(--size-4xl);
+		display: flex;
+		flex-flow: column nowrap;
+		gap: var(--size-xl);
+		width: 95%;
+		max-width: 650px;
+	}
+
+	span {
+		display: block;
+		text-align: center;
+	}
+
+	label {
+		display: flex;
+		flex-flow: column nowrap;
+		gap: var(--size-base);
+		width: 100%;
+	}
+	textarea,
+	input {
+		font-size: calc(var(--size-lg) * .8);
+		border: 1px solid var(--color-primary-500);
+		border-radius: var(--size-sm);
+		padding: var(--size-base);
+	}
+
+	textarea {
+		resize: vertical;
+		max-height: 25vh;
+	}
+
+	textarea::placeholder,
+	input::placeholder {
+		opacity: .5;
+	}
+
+	dialog::backdrop {
+		background: rgb(0 0 0 / 50%);
+		backdrop-filter: blur(10px);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		dialog::backdrop {
+			background: rgb(0 0 0 / 20%);
+		}
+	}
+
+	@media (width < 800px) {
+		form {
+			padding: var(--size-xl);
+		}
+	}
+
+</style>

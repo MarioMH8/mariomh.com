@@ -5,6 +5,7 @@ import Hero from "../features/hero.astro";
 import Footer from "../features/footer.astro";
 import Nav from "../features/nav.astro";
 import Container from "../components/container.astro";
+import Contact from "../features/contact.astro";
 ---
 
 <BaseLayout>
@@ -14,4 +15,23 @@ import Container from "../components/container.astro";
 		<About/>
 		<Footer/>
 	</Container>
+	<Contact/>
 </BaseLayout>
+<script>
+	document
+		.querySelectorAll(`[data-trigger]`)
+		.forEach(b => b.addEventListener('click', event => {
+			const trigger = event.target.dataset.trigger;
+			if (trigger) {
+				const modal = document.querySelector(`[data-id="${trigger}"]`);
+				if (modal) {
+					modal.showModal();
+				}
+			}
+		}))
+	document.querySelectorAll('dialog').forEach(dialog => {
+		dialog.querySelector('button[value="close"]').addEventListener('click', () => {
+			dialog.close();
+		})
+	})
+</script>

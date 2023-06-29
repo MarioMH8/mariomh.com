@@ -1,10 +1,10 @@
 ---
-const {title, className, secondary} = Astro.props;
-const cls = [secondary ? 'secondary' : ''];
+const {title, className, secondary, link, transparent, openModal, value, type} = Astro.props;
+const cls = [secondary ? 'secondary' : transparent ? 'transparent' : link ? 'link' : ''];
 cls.push(className);
 const clsString = cls.filter(Boolean).join(' ')
 ---
-<button class={clsString} title={title}>
+<button class={clsString} title={title} data-trigger={openModal} value={value} type={type}>
 	<slot/>
 </button>
 
@@ -14,6 +14,7 @@ const clsString = cls.filter(Boolean).join(' ')
 		color: var(--color-primary-500);
 		padding: var(--size-base) var(--size-xl);
 		border-radius: 12px;
+		text-align: center;
 	}
 
 	button:has(svg) {
@@ -37,6 +38,28 @@ const clsString = cls.filter(Boolean).join(' ')
 		background-color: var(--color-primary-600);
 		outline-color: var(--color-primary-600);
 		font-weight: var(--font-family-secondary);
+	}
+
+	button.transparent {
+		color: var(--color-primary-300);
+		background-color: transparent;
+		border: 2px solid var(--color-primary-300);
+	}
+	button.transparent:hover {
+		color: var(--color-primary-600);
+		background-color: var(--color-primary-300);
+
+	}
+
+	button.link {
+		color: var(--color-primary-500);
+		background-color: transparent;
+		border: none;
+		outline: none;
+	}
+	button.link:hover {
+		text-decoration: underline;
+
 	}
 </style>
 
