@@ -36,7 +36,7 @@
 	"devDependencies": {
 		"@astrojs/prefetch": "0.2.3",
 		"@astrojs/sitemap": "1.3.3",
-		"@hexatool/eslint-config-typescript": "1.0.10",
+		"@hexatool/eslint-config-typescript": "1.0.11",
 		"@vite-pwa/astro": "0.1.1",
 		"astro-compress": "1.1.48",
 		"astro-compressor": "0.4.0",
