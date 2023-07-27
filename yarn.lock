@@ -2039,7 +2039,7 @@ __metadata:
     "@hexatool/eslint-config-typescript": 1.0.11
     "@vite-pwa/astro": 0.1.1
     astro: 2.6.4
-    astro-compress: 1.1.49
+    astro-compress: 1.1.50
     astro-compressor: 0.4.0
     astro-robots-txt: 0.5.0
     astro-seo: 0.7.4
@@ -2849,19 +2849,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-compress@npm:1.1.49":
-  version: 1.1.49
-  resolution: "astro-compress@npm:1.1.49"
+"astro-compress@npm:1.1.50":
+  version: 1.1.50
+  resolution: "astro-compress@npm:1.1.50"
   dependencies:
     "@types/csso": 5.0.0
     "@types/html-minifier-terser": 7.0.0
     csso: 5.0.5
-    files-pipe: 0.0.7
+    files-pipe: 0.0.8
     html-minifier-terser: 7.2.0
-    sharp: 0.32.1
+    sharp: 0.32.4
     svgo: 3.0.2
-    terser: 5.18.2
-  checksum: ca5dfe77f7c551e46c93c96f5dc062df27adb8c1a0e3e392b949d1d3ce9dd40d2d966b4a3c0a19c985ce4c6d89e8e7bb6002b3f8d5c205fc158c4c45a39540a7
+    terser: 5.19.2
+  checksum: 2ce926825a213b694b70c3b473b04573226b8cb5294e5ee4fe9c74e9009b0c12ed6788cdc4f4abce0ab8799cde9f6875cda69a11d8f54c08236fa411f5c5a956
   languageName: node
   linkType: hard
 
@@ -3024,6 +3024,13 @@ __metadata:
   version: 1.0.5
   resolution: "available-typed-arrays@npm:1.0.5"
   checksum: 20eb47b3cefd7db027b9bbb993c658abd36d4edd3fe1060e83699a03ee275b0c9b216cc076ff3f2db29073225fb70e7613987af14269ac1fe2a19803ccc97f1a
+  languageName: node
+  linkType: hard
+
+"b4a@npm:^1.6.4":
+  version: 1.6.4
+  resolution: "b4a@npm:1.6.4"
+  checksum: 81b086f9af1f8845fbef4476307236bda3d660c158c201db976f19cdce05f41f93110ab6b12fd7a2696602a490cc43d5410ee36a56d6eef93afb0d6ca69ac3b2
   languageName: node
   linkType: hard
 
@@ -3808,7 +3815,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"detect-libc@npm:^2.0.0, detect-libc@npm:^2.0.1":
+"detect-libc@npm:^2.0.0, detect-libc@npm:^2.0.1, detect-libc@npm:^2.0.2":
   version: 2.0.2
   resolution: "detect-libc@npm:2.0.2"
   checksum: 2b2cd3649b83d576f4be7cc37eb3b1815c79969c8b1a03a40a4d55d83bc74d010753485753448eacb98784abf22f7dbd3911fd3b60e29fda28fed2d1a997944d
@@ -4651,20 +4658,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:3.2.12":
-  version: 3.2.12
-  resolution: "fast-glob@npm:3.2.12"
-  dependencies:
-    "@nodelib/fs.stat": ^2.0.2
-    "@nodelib/fs.walk": ^1.2.3
-    glob-parent: ^5.1.2
-    merge2: ^1.3.0
-    micromatch: ^4.0.4
-  checksum: 0b1990f6ce831c7e28c4d505edcdaad8e27e88ab9fa65eedadb730438cfc7cde4910d6c975d6b7b8dc8a73da4773702ebcfcd6e3518e73938bb1383badfe01c2
+"fast-fifo@npm:^1.1.0, fast-fifo@npm:^1.2.0":
+  version: 1.3.0
+  resolution: "fast-fifo@npm:1.3.0"
+  checksum: edc589b818eede61d0048f399daf67cbc5ef736588669482a20f37269b4808356e54ab89676fd8fa59b26c216c11e5ac57335cc70dca54fbbf692d4acde10de6
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.12, fast-glob@npm:^3.2.9, fast-glob@npm:^3.3.0":
+"fast-glob@npm:3.3.1, fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.12, fast-glob@npm:^3.2.9, fast-glob@npm:^3.3.0":
   version: 3.3.1
   resolution: "fast-glob@npm:3.3.1"
   dependencies:
@@ -4725,13 +4726,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"files-pipe@npm:0.0.7":
-  version: 0.0.7
-  resolution: "files-pipe@npm:0.0.7"
+"files-pipe@npm:0.0.8":
+  version: 0.0.8
+  resolution: "files-pipe@npm:0.0.8"
   dependencies:
     deepmerge-ts: 5.1.0
-    fast-glob: 3.2.12
-  checksum: be12f3f39402b567ce2e016f00e51a6c786adf0d28011cca1300a78d30825ee4bcef4409bf4413a35ae360f5364fead5b4c29e3a7bd42dc1313791dbe319a811
+    fast-glob: 3.3.1
+  checksum: 0989e2f9859671639b587a62f2f3e39df7af371a531891d320830a885603c1e5573792e62ee1fa83b2a7f690b2b7b0a9f851b909962e8a5112ca5254832fe4d3
   languageName: node
   linkType: hard
 
@@ -7503,6 +7504,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"queue-tick@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "queue-tick@npm:1.0.1"
+  checksum: 57c3292814b297f87f792fbeb99ce982813e4e54d7a8bdff65cf53d5c084113913289d4a48ec8bbc964927a74b847554f9f4579df43c969a6c8e0f026457ad01
+  languageName: node
+  linkType: hard
+
 "randombytes@npm:^2.1.0":
   version: 2.1.0
   resolution: "randombytes@npm:2.1.0"
@@ -7983,7 +7991,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.3.5, semver@npm:^7.3.7, semver@npm:^7.3.8, semver@npm:^7.5.0":
+"semver@npm:^7.3.5, semver@npm:^7.3.7, semver@npm:^7.3.8, semver@npm:^7.5.4":
   version: 7.5.4
   resolution: "semver@npm:7.5.4"
   dependencies:
@@ -8017,20 +8025,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sharp@npm:0.32.1":
-  version: 0.32.1
-  resolution: "sharp@npm:0.32.1"
+"sharp@npm:0.32.4":
+  version: 0.32.4
+  resolution: "sharp@npm:0.32.4"
   dependencies:
     color: ^4.2.3
-    detect-libc: ^2.0.1
+    detect-libc: ^2.0.2
     node-addon-api: ^6.1.0
     node-gyp: latest
     prebuild-install: ^7.1.1
-    semver: ^7.5.0
+    semver: ^7.5.4
     simple-get: ^4.0.1
-    tar-fs: ^2.1.1
+    tar-fs: ^3.0.4
     tunnel-agent: ^0.6.0
-  checksum: 99f50df380442aa8f3f952dd6f2e27634f9cab249cce47aa7f1a97c468334979ea94d71555f782aae5f5016e44b7832799f1c5ea1cb3ca975c089acd00e62e2e
+  checksum: 52e3cfe8fbba2623a9b935be8a3d00d6993a2c56c775ac5cc89b273826db95f029f68a0029a37f96dcb6790aa2e3c05a02599035535b319f50ab31f5d86a13f0
   languageName: node
   linkType: hard
 
@@ -8270,6 +8278,16 @@ __metadata:
   version: 1.1.0
   resolution: "streamsearch@npm:1.1.0"
   checksum: 1cce16cea8405d7a233d32ca5e00a00169cc0e19fbc02aa839959985f267335d435c07f96e5e0edd0eadc6d39c98d5435fb5bbbdefc62c41834eadc5622ad942
+  languageName: node
+  linkType: hard
+
+"streamx@npm:^2.15.0":
+  version: 2.15.0
+  resolution: "streamx@npm:2.15.0"
+  dependencies:
+    fast-fifo: ^1.1.0
+    queue-tick: ^1.0.1
+  checksum: 6f1dcdc326d57fa4ec0c2aade730b701d28e4e206047c230c6b3f6ac25b28f79809533342dd3e11861237dbd14f3af9ab83be972f569ccdf5eddc5c7ffeb657a
   languageName: node
   linkType: hard
 
@@ -8529,6 +8547,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tar-fs@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "tar-fs@npm:3.0.4"
+  dependencies:
+    mkdirp-classic: ^0.5.2
+    pump: ^3.0.0
+    tar-stream: ^3.1.5
+  checksum: dcf4054f9e92ca0efe61c2b3f612914fb259a47900aa908a63106513a6d006c899b426ada53eb88d9dbbf089b5724c8e90b96a2c4ca6171845fa14203d734e30
+  languageName: node
+  linkType: hard
+
 "tar-stream@npm:^2.1.4":
   version: 2.2.0
   resolution: "tar-stream@npm:2.2.0"
@@ -8539,6 +8568,17 @@ __metadata:
     inherits: ^2.0.3
     readable-stream: ^3.1.1
   checksum: 699831a8b97666ef50021c767f84924cfee21c142c2eb0e79c63254e140e6408d6d55a065a2992548e72b06de39237ef2b802b99e3ece93ca3904a37622a66f3
+  languageName: node
+  linkType: hard
+
+"tar-stream@npm:^3.1.5":
+  version: 3.1.6
+  resolution: "tar-stream@npm:3.1.6"
+  dependencies:
+    b4a: ^1.6.4
+    fast-fifo: ^1.2.0
+    streamx: ^2.15.0
+  checksum: f3627f918581976e954ff03cb8d370551053796b82564f8c7ca8fac84c48e4d042026d0854fc222171a34ff9c682b72fae91be9c9b0a112d4c54f9e4f443e9c5
   languageName: node
   linkType: hard
 
@@ -8575,21 +8615,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"terser@npm:5.18.2":
-  version: 5.18.2
-  resolution: "terser@npm:5.18.2"
-  dependencies:
-    "@jridgewell/source-map": ^0.3.3
-    acorn: ^8.8.2
-    commander: ^2.20.0
-    source-map-support: ~0.5.20
-  bin:
-    terser: bin/terser
-  checksum: 50988412533bfd5a07294df002d772ad5b1277a9d1164dd19c8876a2094ced7b78fcf36cb32122a9a5238ba2597d77178a2385dfc6c4d506622309493f613cf4
-  languageName: node
-  linkType: hard
-
-"terser@npm:^5.0.0, terser@npm:^5.15.1":
+"terser@npm:5.19.2, terser@npm:^5.0.0, terser@npm:^5.15.1":
   version: 5.19.2
   resolution: "terser@npm:5.19.2"
   dependencies:
