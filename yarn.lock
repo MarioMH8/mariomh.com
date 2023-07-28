@@ -2051,7 +2051,7 @@ __metadata:
     astro-robots-txt: 0.5.0
     astro-seo: 0.7.4
     astro-webmanifest: 0.6.0
-    atropos: 1.0.2
+    atropos: 2.0.2
     eslint: 8.46.0
     eslint-plugin-astro: 0.27.2
     typescript: 5.1.6
@@ -3020,10 +3020,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"atropos@npm:1.0.2":
-  version: 1.0.2
-  resolution: "atropos@npm:1.0.2"
-  checksum: b4bd3f76807f0a0c9001fd9216411df5988c47ffebdb6b6137ec0f1537b11d069600c9d795d75f0154b61a89c1e58bad2fb370138c39c3c3b0ccceff003cdd1c
+"atropos@npm:2.0.2":
+  version: 2.0.2
+  resolution: "atropos@npm:2.0.2"
+  checksum: 660e05589a992efac5780c16da7f73bf2e73ab2280d3b8f9c93320237b589d6bc95909673e13a05d256f5abc0dfb8be2a6a9c7860208e8b5970bdb80de298fab
   languageName: node
   linkType: hard
 
