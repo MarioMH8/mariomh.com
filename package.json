@@ -29,7 +29,7 @@
 		"start:dev": "astro dev"
 	},
 	"dependencies": {
-		"astro": "2.6.4",
+		"astro": "2.10.1",
 		"astro-seo": "0.7.5",
 		"atropos": "2.0.2"
 	},
