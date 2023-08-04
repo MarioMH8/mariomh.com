@@ -2042,7 +2042,7 @@ __metadata:
     astro-compress: 1.1.50
     astro-compressor: 0.4.0
     astro-robots-txt: 0.5.0
-    astro-seo: 0.7.4
+    astro-seo: 0.7.5
     astro-webmanifest: 0.6.0
     atropos: 1.0.2
     eslint: 8.46.0
@@ -2898,10 +2898,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-seo@npm:0.7.4":
-  version: 0.7.4
-  resolution: "astro-seo@npm:0.7.4"
-  checksum: 98eac822d8b2aa716065915dbe2aa44e266b1a1a157b2f762a4d257e7425bb378e830bc72070433f4f8af16f221cf0b7cc3eb1e2e563b9c221986569c4ef1d6a
+"astro-seo@npm:0.7.5":
+  version: 0.7.5
+  resolution: "astro-seo@npm:0.7.5"
+  checksum: 0b1b65cfb8481149677fea6ee00b736f89829797d3e0913154e09ed077953e469d29e8d798ca2fd2990fe772aeb7c0352a7c8520f5ebd21a05673489334bb2d3
   languageName: node
   linkType: hard
 
