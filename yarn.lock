@@ -109,12 +109,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/prefetch@npm:0.3.0":
-  version: 0.3.0
-  resolution: "@astrojs/prefetch@npm:0.3.0"
+"@astrojs/prefetch@npm:0.4.0":
+  version: 0.4.0
+  resolution: "@astrojs/prefetch@npm:0.4.0"
   dependencies:
     throttles: ^1.0.1
-  checksum: da0de3a5ef1eb8930817d98505f22ab7f874a7b63ca16dd13d00579d9d47896bae7bcfa73b70ad4adee3e3a96a9b70e2b1743f1a05ff33437c155c34e63f2b08
+  checksum: 0243e469838bc094d73f8e291896bd555cb464f807aeac0002d385fe8146a73e4d5d942121bbcc0d3d287976968b3ee419fdc6fdacff21b2ffe0a56f567478b0
   languageName: node
   linkType: hard
 
@@ -2041,7 +2041,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@mariomh8/portfolio@workspace:."
   dependencies:
-    "@astrojs/prefetch": 0.3.0
+    "@astrojs/prefetch": 0.4.0
     "@astrojs/sitemap": 2.0.2
     "@hexatool/eslint-config-typescript": 1.0.11
     "@vite-pwa/astro": 0.1.1
