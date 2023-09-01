@@ -2044,7 +2044,7 @@ __metadata:
     "@astrojs/prefetch": 0.4.0
     "@astrojs/sitemap": 2.0.2
     "@hexatool/eslint-config-typescript": 1.0.11
-    "@vite-pwa/astro": 0.1.1
+    "@vite-pwa/astro": 0.1.2
     astro: 2.10.1
     astro-compress: 1.1.50
     astro-compressor: 0.4.0
@@ -2572,15 +2572,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vite-pwa/astro@npm:0.1.1":
-  version: 0.1.1
-  resolution: "@vite-pwa/astro@npm:0.1.1"
+"@vite-pwa/astro@npm:0.1.2":
+  version: 0.1.2
+  resolution: "@vite-pwa/astro@npm:0.1.2"
   dependencies:
     vite-plugin-pwa: ">=0.16.3 <1"
   peerDependencies:
-    astro: ^1.6.0 || ^2.0.0
+    astro: ^1.6.0 || ^2.0.0 || ^3.0.0
     vite-plugin-pwa: ">=0.16.3 <1"
-  checksum: d96e20ccd65e6c2d5b1db684b013c57fa757c9d7dcaa776b3a690077b082a76a77b4c695c030e5f442fd6df8a613c57c3e785bd31a47be0902a6504dd017ea6b
+  checksum: deef57fed2d022dec273e5ab6059b3472710d578840a730f15de076ed8ef7614932886f51894d5b691beb3d424476e37531e8e2bd2d94fa5d58db9263e52dea3
   languageName: node
   linkType: hard
 
