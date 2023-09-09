@@ -2044,7 +2044,7 @@ __metadata:
     "@astrojs/prefetch": 0.4.0
     "@astrojs/sitemap": 2.0.2
     "@hexatool/eslint-config-typescript": 1.0.11
-    "@vite-pwa/astro": 0.1.2
+    "@vite-pwa/astro": 0.1.3
     astro: 2.10.1
     astro-compress: 1.1.50
     astro-compressor: 0.4.0
@@ -2572,15 +2572,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vite-pwa/astro@npm:0.1.2":
-  version: 0.1.2
-  resolution: "@vite-pwa/astro@npm:0.1.2"
+"@vite-pwa/astro@npm:0.1.3":
+  version: 0.1.3
+  resolution: "@vite-pwa/astro@npm:0.1.3"
   dependencies:
-    vite-plugin-pwa: ">=0.16.3 <1"
+    vite-plugin-pwa: ">=0.16.5 <1"
   peerDependencies:
     astro: ^1.6.0 || ^2.0.0 || ^3.0.0
-    vite-plugin-pwa: ">=0.16.3 <1"
-  checksum: deef57fed2d022dec273e5ab6059b3472710d578840a730f15de076ed8ef7614932886f51894d5b691beb3d424476e37531e8e2bd2d94fa5d58db9263e52dea3
+    vite-plugin-pwa: ">=0.16.5 <1"
+  checksum: 872a597a6373fcfc1ec9990a5e8c3c34cb4a6f12ad6dee819cdaa37aaab40bf040dd60cc1c58c98f9accdcf8dfac624657518bcd88a165270cbc76054e5c93e6
   languageName: node
   linkType: hard
 
@@ -4687,7 +4687,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:3.3.1, fast-glob@npm:^3.2.12, fast-glob@npm:^3.2.9, fast-glob@npm:^3.3.0":
+"fast-glob@npm:3.3.1, fast-glob@npm:^3.2.12, fast-glob@npm:^3.2.9, fast-glob@npm:^3.3.0, fast-glob@npm:^3.3.1":
   version: 3.3.1
   resolution: "fast-glob@npm:3.3.1"
   dependencies:
@@ -7461,7 +7461,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pretty-bytes@npm:^6.0.0":
+"pretty-bytes@npm:^6.1.1":
   version: 6.1.1
   resolution: "pretty-bytes@npm:6.1.1"
   checksum: 43d29d909d2d88072da2c3d72f8fd0f2d2523c516bfa640aff6e31f596ea1004b6601f4cabc50d14b2cf10e82635ebe5b7d9378f3d5bae1c0067131829421b8a
@@ -9160,20 +9160,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-pwa@npm:>=0.16.3 <1":
-  version: 0.16.4
-  resolution: "vite-plugin-pwa@npm:0.16.4"
+"vite-plugin-pwa@npm:>=0.16.5 <1":
+  version: 0.16.5
+  resolution: "vite-plugin-pwa@npm:0.16.5"
   dependencies:
     debug: ^4.3.4
-    fast-glob: ^3.2.12
-    pretty-bytes: ^6.0.0
+    fast-glob: ^3.3.1
+    pretty-bytes: ^6.1.1
     workbox-build: ^7.0.0
     workbox-window: ^7.0.0
   peerDependencies:
     vite: ^3.1.0 || ^4.0.0
     workbox-build: ^7.0.0
     workbox-window: ^7.0.0
-  checksum: 16810da98ca3d347f2c760024ac2f2ab5d1e61cb7f0157c5f4b75a7e1c8f91442ac304463f1b3e3a5088b4aab4ca464ff8a67f6c996ffdd23e78a2a75c4fc03e
+  checksum: 7e31aa46ad61470871c7644f8369f83bb479fdfbbd7026b8d556cc3eea5f31ec23f6a6b99b2399c11eb952129c4b3d26a30e27c029c381721ba0fcef27159171
   languageName: node
   linkType: hard
 
