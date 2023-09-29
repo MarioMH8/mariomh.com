@@ -2048,7 +2048,7 @@ __metadata:
     astro: 2.10.1
     astro-compress: 1.1.50
     astro-compressor: 0.4.1
-    astro-robots-txt: 0.5.0
+    astro-robots-txt: 1.0.0
     astro-seo: 0.7.5
     astro-webmanifest: 0.6.0
     atropos: 2.0.2
@@ -2902,13 +2902,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-robots-txt@npm:0.5.0":
-  version: 0.5.0
-  resolution: "astro-robots-txt@npm:0.5.0"
+"astro-robots-txt@npm:1.0.0":
+  version: 1.0.0
+  resolution: "astro-robots-txt@npm:1.0.0"
   dependencies:
     valid-filename: ^4.0.0
-    zod: ^3.21.4
-  checksum: d8c2d6fceefc4de3bf7c102ae05d402d0ce3ec8fd6ee8c2d99fff0bbc303acd11b6ff34ef59478c99cb32780179ecdc9611e199484267cc5c89619a059ec902f
+    zod: ^3.22.2
+  checksum: dc1a9efbe993ffd90c1382f39b992bd6cbd62d82bdb392f5476afc5c18bcbf1e712c5e13875344b8793766e09504c0e8e0713309e8b8c32df343f5f31f8d44ea
   languageName: node
   linkType: hard
 
@@ -9687,6 +9687,13 @@ __metadata:
   version: 3.21.4
   resolution: "zod@npm:3.21.4"
   checksum: f185ba87342ff16f7a06686767c2b2a7af41110c7edf7c1974095d8db7a73792696bcb4a00853de0d2edeb34a5b2ea6a55871bc864227dace682a0a28de33e1f
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.22.2":
+  version: 3.22.2
+  resolution: "zod@npm:3.22.2"
+  checksum: 231e2180c8eabb56e88680d80baff5cf6cbe6d64df3c44c50ebe52f73081ecd0229b1c7215b9552537f537a36d9e36afac2737ddd86dc14e3519bdbc777e82b9
   languageName: node
   linkType: hard
 
