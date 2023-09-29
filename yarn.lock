@@ -2047,7 +2047,7 @@ __metadata:
     "@vite-pwa/astro": 0.1.3
     astro: 2.10.1
     astro-compress: 1.1.50
-    astro-compressor: 0.4.0
+    astro-compressor: 0.4.1
     astro-robots-txt: 0.5.0
     astro-seo: 0.7.5
     astro-webmanifest: 0.6.0
@@ -2879,10 +2879,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-compressor@npm:0.4.0":
-  version: 0.4.0
-  resolution: "astro-compressor@npm:0.4.0"
-  checksum: 9c4b7a19e87e6cf8e23d426908405e35776df2409cbf1cf4ebc8a0d2eb0e2f86f628467b9e761b83a513994f2ccd87c6938abf86bc435b3b2cf8d9507f0a8b03
+"astro-compressor@npm:0.4.1":
+  version: 0.4.1
+  resolution: "astro-compressor@npm:0.4.1"
+  checksum: ebcea5231410a3c5fc7a6eba802524627e5af050a286e6b36962afebf1125da9746e511f44b98081afb33b4956581504fa14e5dcb3d655e7e1942fb11e778653
   languageName: node
   linkType: hard
 
