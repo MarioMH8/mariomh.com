@@ -34,7 +34,7 @@
 		"atropos": "2.0.2"
 	},
 	"devDependencies": {
-		"@astrojs/prefetch": "0.4.0",
+		"@astrojs/prefetch": "0.4.1",
 		"@astrojs/sitemap": "2.0.2",
 		"@hexatool/eslint-config-typescript": "1.0.11",
 		"@vite-pwa/astro": "0.1.3",
