@@ -127,13 +127,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/sitemap@npm:2.0.2":
-  version: 2.0.2
-  resolution: "@astrojs/sitemap@npm:2.0.2"
+"@astrojs/sitemap@npm:3.0.3":
+  version: 3.0.3
+  resolution: "@astrojs/sitemap@npm:3.0.3"
   dependencies:
     sitemap: ^7.1.1
-    zod: ^3.17.3
-  checksum: f59319513daa77a1fb4f973c16868e79700eee67345796440ddd443c86684ed789b6d3c36d237870e268727e31b7098a5c3fc5ea7d21c7422fbe02001a023a15
+    zod: ^3.22.4
+  checksum: 8d2351ad12bbde1f04278e5bce985a2ad0ebfd7e989cb646819be89e32e588113b6c8b9ce6ae813e241261da42fbb8966444a64a3d567e44e131f1ceb3d2cc43
   languageName: node
   linkType: hard
 
@@ -2042,7 +2042,7 @@ __metadata:
   resolution: "@mariomh8/portfolio@workspace:."
   dependencies:
     "@astrojs/prefetch": 0.4.1
-    "@astrojs/sitemap": 2.0.2
+    "@astrojs/sitemap": 3.0.3
     "@hexatool/eslint-config-typescript": 1.0.11
     "@vite-pwa/astro": 0.1.3
     astro: 2.10.1
@@ -9691,10 +9691,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.17.3, zod@npm:^3.20.6, zod@npm:^3.21.4":
+"zod@npm:^3.20.6, zod@npm:^3.21.4":
   version: 3.21.4
   resolution: "zod@npm:3.21.4"
   checksum: f185ba87342ff16f7a06686767c2b2a7af41110c7edf7c1974095d8db7a73792696bcb4a00853de0d2edeb34a5b2ea6a55871bc864227dace682a0a28de33e1f
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.22.4":
+  version: 3.22.4
+  resolution: "zod@npm:3.22.4"
+  checksum: 80bfd7f8039b24fddeb0718a2ec7c02aa9856e4838d6aa4864335a047b6b37a3273b191ef335bf0b2002e5c514ef261ffcda5a589fb084a48c336ffc4cdbab7f
   languageName: node
   linkType: hard
 
