@@ -1,9 +1,17 @@
 ---
-import Button from '@mariomh/button/astro';
+import buttonCn from '@mariomh/button/cn';
 import Heading from '@mariomh/heading/astro';
 
 import article from '../assets/coding.jpg';
 import BlogPreview from './blog-preview.astro';
+
+const className = buttonCn({
+	bordered: true,
+	transparent: true,
+	size: 'lg',
+	family: 'secondary',
+	className: 'px-12 py-3 w-fit round-xl border-primary-foreground'
+});
 ---
 
 <section
@@ -23,9 +31,9 @@ import BlogPreview from './blog-preview.astro';
 			weight='medium'
 			className='text-6xl leading-7xl mb-12'>Noticias <br/> recientes</Heading>
 
-		<Button bordered transparent className='px-12 py-3 w-fit round-xl border-primary-foreground' size='lg' family='secondary'>
+		<a class={className} href="/blog" title="Blog de MarioMH">
 			Ver más
-		</Button>
+		</a>
 	</div>
 	<div class='w-[66%] flex flex-row gap-12 overflow-x-auto scrollbar-thin scrollbar-thumb-primary scrollbar-track-primary-background-subtle scrollbar-thumb-rounded'>
 		<BlogPreview
@@ -52,7 +60,5 @@ import BlogPreview from './blog-preview.astro';
 			alt='Alt text'
 			src={article}
 			article='VISUAL STUDIO CODE: PRODUCTIVIDAD Y SETUP'/>
-
-
 	</div>
 </section>
