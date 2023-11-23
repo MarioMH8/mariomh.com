@@ -27,7 +27,8 @@
 		"dev": "astro dev",
 		"lint": "eslint .",
 		"lint:fix": "eslint --fix .",
-		"start": "astro preview"
+		"start": "astro preview",
+		"typecheck": "astro check && tsc --noEmit"
 	},
 	"dependencies": {
 		"@mariomh/badge": "0.0.1-beta.3",
