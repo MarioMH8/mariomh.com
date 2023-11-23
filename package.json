@@ -46,7 +46,7 @@
 		"@mariomh/shadow": "0.0.1-beta.2",
 		"@mariomh/span": "0.0.1-beta.3",
 		"@mariomh/theme": "0.0.1-beta.2",
-		"astro": "3.4.0",
+		"astro": "3.6.0",
 		"astro-seo": "0.8.0",
 		"atropos": "2.0.2",
 		"lucide-astro": "0.292.0"
