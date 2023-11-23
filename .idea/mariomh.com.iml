@@ -7,18 +7,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.yarn" />
       <excludeFolder url="file://$MODULE_DIR$/dist" />
       <excludeFolder url="file://$MODULE_DIR$/.firebase" />
-      <excludePattern pattern=".*" />
-      <excludePattern pattern="LICENSE" />
-      <excludePattern pattern="tsconfig.*" />
-      <excludePattern pattern="vite.*" />
-      <excludePattern pattern="babel.*" />
-      <excludePattern pattern="*.lock" />
-      <excludePattern pattern="nest-cli.json" />
-      <excludePattern pattern="webpack.config.js" />
-      <excludePattern pattern="renovate.json" />
-      <excludePattern pattern="dist" />
-      <excludePattern pattern="astro.config.ts" />
-      <excludePattern pattern="firebase.json" />
+      <excludeFolder url="file://$MODULE_DIR$/.github" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
