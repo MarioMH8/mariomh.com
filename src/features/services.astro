@@ -1,0 +1,36 @@
+---
+import Box from '@mariomh/box/astro';
+import Button from '@mariomh/button/astro';
+import Heading from '@mariomh/heading/astro';
+import Paragraph from '@mariomh/paragraph/astro';
+import { Github } from 'lucide-astro';
+
+---
+
+<section
+	id='servicios'
+	class:list={[
+		'container w-full flex flex-col-reverse gap-24 xl:gap-4 xl:flex-row justify-between items-center xl:items-end',
+		'gap-6 pt-[5dvh] md:pt-[10dvh] lg:pt-[15dvh] mt-[15dvh] md:mt-[20dvh] lg:mt-[25dvh]',
+	]}>
+	<div>
+		<Heading
+			size='h2'
+			weight='light'
+			family='secondary'
+			className='text-xl m-0'>Servicios</Heading>
+		<Paragraph className='text-3xl leading-5xl mb-20 max-w-[680px]' weight='medium'>
+			Puedo ayudarte en muchas cosas,
+			desde un portfolio con carácter
+			hasta la tienda online que hará elevar
+			tus ventas al siguiente nivel.
+		</Paragraph>
+
+		<Button bordered transparent className='px-6 py-4 w-fit round-xl border-primary-foreground' size='lg' family='secondary'>
+			<Github class='mr-6'/> Visita mi GitHub
+		</Button>
+	</div>
+	<Box className='h-full w-[50%] min-w-[380px] max-w-[550px] aspect-[10/12]' round='2xl'>
+	</Box>
+
+</section>

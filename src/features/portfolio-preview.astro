@@ -1,0 +1,41 @@
+---
+import fontCn from '@mariomh/font/cn';
+import type { FontVariantsProps } from '@mariomh/font/variants';
+import Link from '@mariomh/link/astro';
+import Paragraph from '@mariomh/paragraph/astro';
+import type { LocalImageProps  } from 'astro:assets';
+import { Image } from 'astro:assets';
+
+const titleCn = [
+	fontCn({ size: 'xl' } as FontVariantsProps),
+	'uppercase',
+]
+
+interface Props {
+	article: string;
+	alt: string;
+	src: LocalImageProps['src'];
+	description: string;
+	className?: string;
+}
+
+const { className, alt, src, article, description } = Astro.props;
+---
+
+<article class:list={[
+	'max-w-[450px] flex flex-col gap-2',
+	'transition-transform hover:scale-110',
+	'[&:hover_img]:backdrop-blur-2xl [&:hover_img]:brightness-[.25] [&_a_span]:opacity-0 [&:hover_a_span]:opacity-100',
+	className
+]}>
+	<Link  family='secondary' href='#todo' className='relative text-lg'>
+		<Image
+			src={src}
+			alt={alt}
+			class='rounded-xl aspect-video object-cover cursor-pointer'/>
+		<span class='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-primary-1'> Mostrar más</span>
+	</Link>
+
+	<header class:list={titleCn}>{article}</header>
+	<Paragraph className='m-0' family='secondary' weight='light' tracking='sm'>{description}</Paragraph>
+</article>

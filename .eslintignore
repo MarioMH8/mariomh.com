@@ -1,2 +1,4 @@
 dist
-vite.config.ts
+dist-astro
+coverage
+node_modules

@@ -1,0 +1,77 @@
+---
+import Button from '@mariomh/button/astro';
+import Heading from '@mariomh/heading/astro'
+
+import proyecto from '../assets/proyecto.png'
+import PortfolioPreview from './portfolio-preview.astro'
+---
+
+<section
+	id='portfolio'
+	class='container w-full flex flex-col items-center gap-6 pt-[5dvh] md:pt-[10dvh] lg:pt-[15dvh]'>
+	<Heading
+		size='h2'
+		weight='light'
+		family='secondary'
+		className='text-xl m-0'>Portfolio</Heading>
+	<Heading
+		size='h3'
+		weight='medium'
+		className='text-6xl'>Proyectos recientes</Heading>
+	<div class='flex flex-row gap-8 items-center mb-16'>
+		<Button solid className='border-primary-foreground px-6 rounded-xl' family='secondary'>
+			Todos
+		</Button>
+		<Button bordered transparent className='border-primary-foreground px-6 rounded-xl' family='secondary'>
+			Webs
+		</Button>
+		<Button bordered transparent className='border-primary-foreground px-6 rounded-xl' family='secondary'>
+			Apps
+		</Button>
+		<Button bordered transparent className='border-primary-foreground px-6 rounded-xl' family='secondary'>
+			Librerías
+		</Button>
+	</div>
+	<div class='flex flex-col lg:flex-row flex-wrap gap-x-12 gap-y-16 lg:gap-y-24 justify-evenly lg:mb-56'>
+		<PortfolioPreview
+			className='lg:even:translate-y-[10rem]'
+			article='Amazon'
+			description='Laborum proident mollit eu anim eiusmod proident nulla ea qui laborum laboris sint.'
+			src={proyecto}
+			alt='Texto alternativo del proyecto'/>
+		<PortfolioPreview
+			className='lg:even:translate-y-[10rem]'
+			article='Amazon'
+			description='Laborum proident mollit eu anim eiusmod proident nulla ea qui laborum laboris sint.'
+			src={proyecto}
+			alt='Texto alternativo del proyecto'/>
+		<PortfolioPreview
+			className='lg:even:translate-y-[10rem]'
+			article='Amazon'
+			description='Laborum proident mollit eu anim eiusmod proident nulla ea qui laborum laboris sint.'
+			src={proyecto}
+			alt='Texto alternativo del proyecto'/>
+		<PortfolioPreview
+			className='lg:even:translate-y-[10rem]'
+			article='Amazon'
+			description='Laborum proident mollit eu anim eiusmod proident nulla ea qui laborum laboris sint.'
+			src={proyecto}
+			alt='Texto alternativo del proyecto'/>
+		<PortfolioPreview
+			className='lg:even:translate-y-[10rem]'
+			article='Amazon'
+			description='Laborum proident mollit eu anim eiusmod proident nulla ea qui laborum laboris sint.'
+			src={proyecto}
+			alt='Texto alternativo del proyecto'/>
+		<PortfolioPreview
+			className='lg:even:translate-y-[10rem]'
+			article='Amazon'
+			description='Laborum proident mollit eu anim eiusmod proident nulla ea qui laborum laboris sint.'
+			src={proyecto}
+			alt='Texto alternativo del proyecto'/>
+	</div>
+
+	<Button bordered transparent className='px-10 border-primary-foreground rounded-xl' family='secondary'>
+		Más proyectos
+	</Button>
+</section>

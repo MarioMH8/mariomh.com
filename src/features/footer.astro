@@ -1,0 +1,23 @@
+---
+import cn from '@mariomh/button/cn'
+import type { ButtonProps } from '@mariomh/button/props';
+import Copyright from '@mariomh/copyright/astro'
+import {Github,Linkedin,Twitter} from 'lucide-astro'
+
+const cls = cn({solid: true, icon: true} as ButtonProps)
+---
+
+<footer class='bg-primary-12 w-full pt-[5dvh] pb-[10dvh] flex flex-col gap-[5dvh] justify-center items-center'>
+	<div class='flex flex-row gap-8 items-center'>
+		<a class={cls} href='https://twitter.com/MarioMH8' target='_blank'>
+			<Twitter/>
+		</a>
+		<a class={cls} href='https://github.com/MarioMH8' target='_blank'>
+			<Github/>
+		</a>
+		<a class={cls} href='https://www.linkedin.com/in/mhidalgomario/' target='_blank'>
+			<Linkedin/>
+		</a>
+	</div>
+	<Copyright className='text-primary-1' weight='light' size='sm' />
+</footer>
