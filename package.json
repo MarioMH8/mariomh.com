@@ -45,10 +45,5 @@
 		"eslint": "8.52.0",
 		"eslint-plugin-astro": "0.29.1",
 		"typescript": "5.2.2"
-	},
-	"volta": {
-		"node": "20.8.1",
-		"yarn": "3.6.4"
-	},
-	"packageManager": "yarn@3.6.4"
+	}
 }
