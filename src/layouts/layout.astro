@@ -238,7 +238,11 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
 		<ViewTransitions />
 
 	</head>
-	<body class:list={[className, 'scrollbar-thin scrollbar-thumb-primary scrollbar-track-primary-background-subtle scrollbar-thumb-rounded']}>
+	<body class:list={[
+		className,
+		'scrollbar-thin scrollbar-thumb-primary scrollbar-track-primary-background-subtle scrollbar-thumb-rounded',
+		'min-h-[100dvh]'
+	]}>
 		<slot />
 		<Footer/>
 	</body>
