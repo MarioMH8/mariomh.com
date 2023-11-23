@@ -1,0 +1,23 @@
+---
+import Button from '@mariomh/button/astro';
+import Heading from '@mariomh/heading/astro'
+---
+
+<section class:list={[
+	'container w-full',
+	'py-[5dvh] md:py-[10dvh] lg:py-[15dvh]',
+]}>
+	<div class:list={[
+		'container w-full rounded-4xl',
+		'flex flex-col items-center justify-center gap-[5%]',
+		'py-[5%]',
+		'bg-keyboard bg-cover bg-center bg-no-repeat',
+	]}>
+		<Heading size='h2' className='text-primary-1 text-center text-6xl leading-8xl' weight='medium'>
+			¿Tines un proyecto <br/> que comenzar?
+		</Heading>
+		<Button solid className='border-primary-foreground px-12 py-4 rounded-xl' family='secondary'>
+			Hablemos
+		</Button>
+	</div>
+</section>

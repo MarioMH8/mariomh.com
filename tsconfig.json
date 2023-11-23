@@ -1,3 +1,8 @@
 {
-  "extends": "astro/tsconfigs/strictest"
+	"extends": "astro/tsconfigs/strictest",
+	"compilerOptions": {
+		"lib": ["dom", "es2022"],
+		"jsx": "preserve"
+	},
+	"include": ["**/*.ts", "**/*.tsx"]
 }

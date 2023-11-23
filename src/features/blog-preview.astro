@@ -1,0 +1,29 @@
+---
+import Badge from '@mariomh/badge/astro';
+import Box from '@mariomh/box/astro';
+import fontCn from '@mariomh/font/cn';
+import type { FontVariantsProps } from '@mariomh/font/variants';
+import type { LocalImageProps } from 'astro:assets';
+import {Image} from 'astro:assets'
+
+const titleCn = [
+	fontCn({ size: 'xl' } as FontVariantsProps),
+	'uppercase mb-4',
+]
+
+interface Props {
+	article: string;
+	alt: string;
+	src: LocalImageProps['src'];
+}
+const {article, alt, src } = Astro.props;
+---
+<article class='flex flex-col gap-6 w-[50%] min-w-[380px] max-w-[550px]'>
+	<Box className='h-full aspect-[10/12] p-0 overflow-hidden' round='2xl'>
+		<Image src={src} alt={alt} class='h-full object-cover' />
+	</Box>
+	<Badge className='w-min' family='secondary' size='sm'>TECNOLOGÍA</Badge>
+	<header class:list={titleCn}>
+		{article}
+	</header>
+</article>
