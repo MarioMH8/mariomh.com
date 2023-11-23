@@ -21,6 +21,17 @@ jobs:
             -   name: Setup bun
                 uses: oven-sh/setup-bun@v1
 
+            -   name: Authorize Google Cloud SDK
+                id: auth
+                uses: google-github-actions/auth@v1
+                with:
+                    create_credentials_file: false
+                    workload_identity_provider: ${{ secrets.WORKLOAD_IDENTITY_POOL_PROVIDER}}
+                    service_account: ${{ secrets.SERVICE_ACCOUNT}}
+
+            -   name: Authorize Google Cloud SDK
+                run: sed -i 's/$TOKEN/${{ steps.auth.outputs.access_token }}/' bunfig.toml
+
             -   name: Install dependencies
                 run: bun install
 
