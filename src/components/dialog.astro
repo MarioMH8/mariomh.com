@@ -1,0 +1,13 @@
+---
+interface Props extends astroHTML.JSX.DialogHTMLAttributes {
+
+}
+const { class: cls1, className: cls2, ...props} = Astro.props;
+---
+<dialog {...props} class:list={[
+	cls1,
+	cls2,
+	'fixed inset-0 z-20'
+]}>
+	<slot/>
+</dialog>

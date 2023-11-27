@@ -1,29 +1,47 @@
 ---
+import type {CollectionEntry} from 'astro:content';
 import Badge from '@mariomh/badge/astro';
 import Box from '@mariomh/box/astro';
 import fontCn from '@mariomh/font/cn';
-import type { FontVariantsProps } from '@mariomh/font/variants';
-import type { LocalImageProps } from 'astro:assets';
+import Link from '@mariomh/link/astro';
+import type {FontVariantsProps} from '@mariomh/font/variants';
 import {Image} from 'astro:assets'
 
 const titleCn = [
-	fontCn({ size: 'xl' } as FontVariantsProps),
-	'uppercase mb-4',
+	fontCn({size: 'xl'} as FontVariantsProps),
+	'uppercase balance',
 ]
 
 interface Props {
-	article: string;
-	alt: string;
-	src: LocalImageProps['src'];
+	post: CollectionEntry<'post'>;
 }
-const {article, alt, src } = Astro.props;
+const {post} = Astro.props;
 ---
-<article class='flex flex-col gap-6 w-[50%] min-w-[380px] max-w-[550px]'>
-	<Box className='h-full aspect-[10/12] p-0 overflow-hidden' round='2xl'>
-		<Image src={src} alt={alt} class='h-full object-cover' />
-	</Box>
-	<Badge className='w-min' family='secondary' size='sm'>TECNOLOGÍA</Badge>
+<article class:list={[
+	'transition-transform hover:scale-110 focus-within:scale-110',
+	'flex flex-col gap-6 w-[50%] min-w-[360px] max-w-[550px]',
+	'[&_a_span]:opacity-0',
+	'[&:hover_img]:backdrop-blur-2xl [&:hover_img]:brightness-[.25] [&:hover_a_span]:opacity-100',
+	'[&_a:focus_img]:backdrop-blur-2xl [&_a:focus_img]:brightness-[.25] [&_a:focus_span]:opacity-100',
+]}>
+
+	<Link
+		family='secondary'
+		href={`/post/${post.slug}`}
+		title={`Leer artículo '${post.data.title}'`}
+		className='rounded-2xl relative text-lg aspect-[10/13]'>
+		<Image
+			src={post.data.image}
+			alt={post.data.imageAlt}
+			class='rounded-2xl h-full object-cover'/>
+		<span class='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-primary-1'> Leer artículo</span>
+	</Link>
+	<div class="flex flex-row flex-wrap gap-4">
+		{post.data.tags.map((tag) =>
+			<Badge className='w-min' family='secondary' size='sm'>{tag}</Badge>
+		)}
+	</div>
 	<header class:list={titleCn}>
-		{article}
+		{post.data.title}
 	</header>
 </article>
