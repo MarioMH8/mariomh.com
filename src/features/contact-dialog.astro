@@ -1,16 +1,13 @@
 ---
 import Box from '@mariomh/box/astro';
-import {X} from 'lucide-astro';
-import Heading from '@mariomh/heading/astro';
 import Button from '@mariomh/button/astro';
-import TextArea from '@mariomh/textarea/astro';
+import Heading from '@mariomh/heading/astro';
 import Input from '@mariomh/input/astro';
 import Label from '@mariomh/label/astro';
-import Dialog from '../components/dialog.astro';
-interface Props extends astroHTML.JSX.DialogHTMLAttributes {
+import TextArea from '@mariomh/textarea/astro';
+import {X} from 'lucide-astro';
 
-}
-const { class: cls1, className: cls2, ...props} = Astro.props;
+import Dialog from '../components/dialog.astro';
 ---
 <Dialog id="contact">
 	<Box className="w-[90vw] max-w-[680px] min-h-[720px] bg-primary-1 py-8 relative" round='2xl'>
