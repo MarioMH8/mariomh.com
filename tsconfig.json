@@ -3,6 +3,6 @@
 	"compilerOptions": {
 		"lib": ["dom", "es2022"]
 	},
-	"include": ["src/**/*.ts", "src/**/*.tsx", "astro.config.ts"],
+	"include": ["src/**/*.ts", "src/**/*.tsx", "astro.config.ts", ".astro"],
 	"exclude": ["node_modules", "dist", "public"]
 }

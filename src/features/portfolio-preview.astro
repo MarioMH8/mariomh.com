@@ -3,8 +3,8 @@ import fontCn from '@mariomh/font/cn';
 import type { FontVariantsProps } from '@mariomh/font/variants';
 import Link from '@mariomh/link/astro';
 import Paragraph from '@mariomh/paragraph/astro';
-import type { LocalImageProps  } from 'astro:assets';
 import { Image } from 'astro:assets';
+import {CollectionEntry} from "astro:content";
 
 const titleCn = [
 	fontCn({ size: 'xl' } as FontVariantsProps),
@@ -12,30 +12,29 @@ const titleCn = [
 ]
 
 interface Props {
-	article: string;
-	alt: string;
-	src: LocalImageProps['src'];
-	description: string;
-	className?: string;
+	project: CollectionEntry<'project'>;
 }
 
-const { className, alt, src, article, description } = Astro.props;
+const { project, className} = Astro.props;
 ---
 
-<article class:list={[
+<article data-type={project.data.category} class:list={[
+	'portfolio-preview',
 	'max-w-[450px] flex flex-col gap-2',
-	'transition-transform hover:scale-110',
-	'[&:hover_img]:backdrop-blur-2xl [&:hover_img]:brightness-[.25] [&_a_span]:opacity-0 [&:hover_a_span]:opacity-100',
+	'transition-transform hover:scale-105 focus-within:scale-105',
+	'[&_a_span]:opacity-0',
+	'[&:hover_img]:backdrop-blur-2xl [&:hover_img]:brightness-[.25] [&:hover_a_span]:opacity-100',
+	'[&_a:focus_img]:backdrop-blur-2xl [&_a:focus_img]:brightness-[.25] [&_a:focus_span]:opacity-100',
 	className
 ]}>
-	<Link  family='secondary' href='#todo' className='relative text-lg'>
+	<Link  family='secondary' href={project.data.href} className='rounded-xl relative text-lg' target={project.data.target}>
 		<Image
-			src={src}
-			alt={alt}
+			src={project.data.image}
+			alt={project.data.imageAlt}
 			class='rounded-xl aspect-video object-cover cursor-pointer'/>
 		<span class='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-primary-1'> Mostrar más</span>
 	</Link>
 
-	<header class:list={titleCn}>{article}</header>
-	<Paragraph className='m-0' family='secondary' weight='light' tracking='sm'>{description}</Paragraph>
+	<header class:list={titleCn}>{project.data.title}</header>
+	<Paragraph className='m-0' family='secondary' weight='light' tracking='sm'>{project.data.resume}</Paragraph>
 </article>

@@ -1,14 +1,16 @@
 ---
 import Button from '@mariomh/button/astro';
 import Heading from '@mariomh/heading/astro'
+import { getCollection } from 'astro:content';
 
-import proyecto from '../assets/proyecto.png'
 import PortfolioPreview from './portfolio-preview.astro'
+
+const projects = await getCollection('project');
 ---
 
 <section
 	id='portfolio'
-	class='container w-full flex flex-col items-center gap-6 pt-[5dvh] md:pt-[10dvh] lg:pt-[15dvh]'>
+	class='container w-full flex flex-col items-center gap-6 pt-[5dvh]'>
 	<Heading
 		size='h2'
 		weight='light'
@@ -18,60 +20,130 @@ import PortfolioPreview from './portfolio-preview.astro'
 		size='h3'
 		weight='medium'
 		className='text-6xl'>Proyectos recientes</Heading>
-	<div class='flex flex-row gap-8 items-center mb-16'>
-		<Button solid className='border-primary-foreground px-6 rounded-xl' family='secondary'>
+	<div class='flex flex-row flex-wrap gap-8 items-center justify-center mb-16'>
+		<Button solid className='border-primary-foreground px-6 rounded-xl portfolio-btn' family='secondary'>
 			Todos
 		</Button>
-		<Button bordered transparent className='border-primary-foreground px-6 rounded-xl' family='secondary'>
+		<Button bordered transparent className='border-primary-foreground px-6 rounded-xl portfolio-btn' family='secondary' data-show="portfolio">
 			Webs
 		</Button>
-		<Button bordered transparent className='border-primary-foreground px-6 rounded-xl' family='secondary'>
+		<Button bordered transparent className='border-primary-foreground px-6 rounded-xl portfolio-btn' family='secondary' data-show="app">
 			Apps
 		</Button>
-		<Button bordered transparent className='border-primary-foreground px-6 rounded-xl' family='secondary'>
+		<Button bordered transparent className='border-primary-foreground px-6 rounded-xl portfolio-btn' family='secondary' data-show="lib">
 			Librerías
 		</Button>
 	</div>
 	<div class='flex flex-col lg:flex-row flex-wrap gap-x-12 gap-y-16 lg:gap-y-24 justify-evenly lg:mb-56'>
-		<PortfolioPreview
-			className='lg:even:translate-y-[10rem]'
-			article='Amazon'
-			description='Laborum proident mollit eu anim eiusmod proident nulla ea qui laborum laboris sint.'
-			src={proyecto}
-			alt='Texto alternativo del proyecto'/>
-		<PortfolioPreview
-			className='lg:even:translate-y-[10rem]'
-			article='Amazon'
-			description='Laborum proident mollit eu anim eiusmod proident nulla ea qui laborum laboris sint.'
-			src={proyecto}
-			alt='Texto alternativo del proyecto'/>
-		<PortfolioPreview
-			className='lg:even:translate-y-[10rem]'
-			article='Amazon'
-			description='Laborum proident mollit eu anim eiusmod proident nulla ea qui laborum laboris sint.'
-			src={proyecto}
-			alt='Texto alternativo del proyecto'/>
-		<PortfolioPreview
-			className='lg:even:translate-y-[10rem]'
-			article='Amazon'
-			description='Laborum proident mollit eu anim eiusmod proident nulla ea qui laborum laboris sint.'
-			src={proyecto}
-			alt='Texto alternativo del proyecto'/>
-		<PortfolioPreview
-			className='lg:even:translate-y-[10rem]'
-			article='Amazon'
-			description='Laborum proident mollit eu anim eiusmod proident nulla ea qui laborum laboris sint.'
-			src={proyecto}
-			alt='Texto alternativo del proyecto'/>
-		<PortfolioPreview
-			className='lg:even:translate-y-[10rem]'
-			article='Amazon'
-			description='Laborum proident mollit eu anim eiusmod proident nulla ea qui laborum laboris sint.'
-			src={proyecto}
-			alt='Texto alternativo del proyecto'/>
+		{projects.map((project, i) => <PortfolioPreview
+			className={`lg:even:translate-y-[10rem] ${i < 4  ? '' : 'hidden'}`}
+			project={project}/>
+		)}
 	</div>
 
-	<Button bordered transparent className='px-10 border-primary-foreground rounded-xl' family='secondary'>
+	<Button
+		id="show-more"
+		bordered
+		transparent
+		family='secondary'
+		className='px-10 border-primary-foreground rounded-xl show-more'>
 		Más proyectos
 	</Button>
 </section>
+
+<script>
+	const allProjects = [];
+	let showProjects = [];
+	const maxShow = 8;
+	const defaultShow = 4;
+
+	let show = defaultShow;
+	let showCount = defaultShow;
+	let actualShow = undefined;
+
+	const buttons = document.querySelectorAll('.portfolio-btn');
+	const showMore = document.getElementById('show-more');
+	document.querySelectorAll('.portfolio-preview').forEach(el => {
+		allProjects.push(el);
+	});
+	showProjects = allProjects;
+
+	function toggleClass(cls) {
+		let activeClass = '';
+		buttons.forEach(btn => {
+			if (btn.className === cls) {
+				return;
+			}
+			activeClass = btn.className;
+			btn.className = cls;
+		});
+
+		return activeClass;
+	}
+
+	function toggleShowMore() {
+		if (showProjects.length <= show) {
+			showMore.classList.add('hidden');
+		} else {
+			showMore.classList.remove('hidden');
+		}
+	}
+
+	function showAll() {
+		allProjects.forEach((project, i) => {
+			if (i < show) {
+				project.classList.remove('hidden');
+			} else {
+				project.classList.add('hidden');
+			}
+		});
+		showCount = show;
+		showProjects = allProjects;
+		showMore.classList.remove('hidden');
+	}
+
+	function showType(type) {
+		showCount = 0;
+		showProjects = allProjects.filter(project => project.dataset.type === type);
+		allProjects.forEach(project => {
+			if (project.dataset.type === type) {
+				showCount++;
+				if (showCount <= show) {
+					project.classList.remove('hidden');
+				} else {
+					project.classList.add('hidden');
+				}
+			} else {
+				project.classList.add('hidden');
+			}
+		});
+	}
+
+	function renderProjects() {
+		if (actualShow) {
+			showType(actualShow);
+		} else {
+			showAll();
+		}
+	}
+
+	showMore.addEventListener('click', () => {
+		show = show === maxShow ? defaultShow : maxShow;
+		if (show === maxShow) {
+			showMore.textContent = 'Ver menos';
+		} else {
+			showMore.textContent = 'Ver más';
+		}
+		renderProjects();
+	});
+	buttons.forEach(btn => {
+		btn.addEventListener('click', () => {
+			actualShow = btn.dataset.show;
+			show = defaultShow;
+			showMore.textContent = 'Ver más';
+			btn.className = toggleClass(btn.className);
+			renderProjects();
+			toggleShowMore();
+		});
+	});
+</script>
