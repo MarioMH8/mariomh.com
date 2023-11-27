@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+import buttonCn from '@mariomh/button/cn';
+import Heading from '@mariomh/heading/astro';
+
+import BlogPreview from './blog-preview.astro';
+
+const posts = await getCollection('post');
+
+const className = buttonCn({
+	bordered: true,
+	transparent: true,
+	size: 'lg',
+	family: 'secondary',
+	className: 'px-12 py-3 w-fit round-xl border-primary-foreground'
+});
+---
+
+<section
+	id='blog-recent'
+	class:list={[
+		'container w-full pt-[5dvh] md:pt-[10dvh] lg:pt-[15dvh]',
+		'flex flex-col md:flex-row justify-between gap-12'
+	]}>
+	<div class='w-full md:w-[30%]'>
+		<Heading
+			size='h2'
+			weight='light'
+			family='secondary'
+			className='text-xl'>Blog</Heading>
+		<Heading
+			size='h3'
+			weight='medium'
+			className='text-6xl leading-7xl mb-12'>Artículos <br/> recientes</Heading>
+
+		<a class={className} href="/blog" title="Blog de MarioMH">
+			Ver más
+		</a>
+	</div>
+	<div class:list={[
+		'px-4 md:px-12 pt-12 pb-10',
+		'w-full md:w-[70%] pb-6 flex flex-row gap-12',
+		'overflow-x-auto overflow-y-hidden',
+		'scrollbar-thin scrollbar-thumb-primary scrollbar-track-primary-background-subtle scrollbar-thumb-rounded'
+	]}>
+		{posts.map((post) => (
+			<BlogPreview post={post}/>
+		))}
+	</div>
+</section>

@@ -1,2 +1,2 @@
 [install.scopes]
-"@mariomh" = { token = "$TOKEN", url = "https://europe-npm.pkg.dev/mariomh/npm/" }
+"@mariomh" = { token = "REDACTED", url = "https://europe-npm.pkg.dev/mariomh/npm/" }

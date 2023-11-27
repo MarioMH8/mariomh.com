@@ -4,12 +4,13 @@ import Hero from '../features/hero.astro';
 import NavigationMenu from '../features/navigation-menu.astro';
 import NewProject from '../features/new-project.astro';
 import Portfolio from '../features/portfolio.astro';
-import RecentBlog from '../features/recent-blog.astro';
+import RecentBlog from '../features/blog-recent.astro';
 import Services from '../features/services.astro';
+import ContactDialog from '../features/contact-dialog.astro';
 import Layout from '../layouts/layout.astro';
 ---
 
-<Layout className='flex flex-col gap-16'>
+<Layout>
 	<NavigationMenu/>
 	<Hero/>
 	<AboutMe/>
@@ -17,4 +18,5 @@ import Layout from '../layouts/layout.astro';
 	<Services/>
 	<RecentBlog/>
 	<NewProject/>
+	<ContactDialog slot="dialog"/>
 </Layout>

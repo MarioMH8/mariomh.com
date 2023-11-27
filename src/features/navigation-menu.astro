@@ -15,5 +15,5 @@ const { blog } = Astro.props;
 	<NavigationMenuLink className='font-secondary' href='/#portfolio'>Portfolio</NavigationMenuLink>
 	<NavigationMenuLink className='font-secondary' href='/#servicios'>Servicios</NavigationMenuLink>
 	<NavigationMenuLink className='font-secondary' href='/blog' active={blog === true}>Blog</NavigationMenuLink>
-	<Button solid family='secondary'>Contáctame</Button>
+	<Button solid family='secondary' onclick="window.contact.showModal();">Contáctame</Button>
 </NavBar>
