@@ -238,15 +238,26 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
 		<ViewTransitions />
 
 	</head>
-	<body class:list={[className, 'scrollbar-thin scrollbar-thumb-primary scrollbar-track-primary-background-subtle scrollbar-thumb-rounded']}>
-		<slot />
-		<Footer/>
+	<body>
+		<main class:list={[
+			className,
+			'overflow-y-scroll overflow-x-hidden',
+			'scrollbar-thin scrollbar-thumb-primary scrollbar-track-primary-background-subtle scrollbar-thumb-rounded',
+			'max-h-[100dvh]',
+		]}>
+			<slot />
+			<Footer/>
+		</main>
+		<slot name="dialog" />
 	</body>
 </html>
 
 <style is:global>
     html {
         scroll-behavior: smooth;
+    }
+    body {
+		scrollbar-gutter: stable both-edges;
     }
     img {
         -webkit-user-drag: none;
@@ -269,4 +280,14 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
     p {
 		max-width: 75ch;
 	}
+
+	dialog {
+		background: transparent;
+	}
+
+	dialog::backdrop {
+		background: rgba(0, 0, 0, 0.2);
+		backdrop-filter: blur(3px);
+	}
+
 </style>
