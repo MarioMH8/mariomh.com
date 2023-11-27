@@ -7,19 +7,25 @@ import Paragraph from '@mariomh/paragraph/astro'
 
 <section
 	id='sobre-mi'
-	class='container w-full flex flex-col gap-6 pt-[5dvh] md:pt-[10dvh] lg:pt-[15dvh]'>
+	class='container w-full flex flex-col gap-6 pt-[5dvh]'>
 	<Heading
 		size='h2'
 		weight='light'
 		family='secondary'
 		className='text-xl m-0'>Sobre mi</Heading>
-	<Paragraph className='text-3xl leading-5xl' weight='medium'>
-		Soy un desarrollador apasionado <br/>
-		por la tecnología y la busqueda <br/>
-		de soluciones a todo tipo de <br/>
+	<Paragraph className='text-3xl leading-5xl max-w-[640px]' weight='medium'>
+		Soy un desarrollador apasionado <br class="hidden lg:block"/>
+		por la tecnología y la busqueda <br class="hidden lg:block"/>
+		de soluciones a todo tipo de <br class="hidden lg:block"/>
 		proyectos desafiantes.
 	</Paragraph>
-	<Button bordered transparent className='px-12 py-4 w-fit round-xl border-primary-foreground' size='lg' family='secondary'>
+	<Button
+		bordered
+		transparent
+		className='px-12 py-4 w-fit round-xl border-primary-foreground'
+		size='lg'
+		family='secondary'
+		onclick="window.contact.showModal();">
 		Hablemos
 	</Button>
 </section>

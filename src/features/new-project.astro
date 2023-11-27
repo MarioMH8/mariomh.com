@@ -10,13 +10,17 @@ import Heading from '@mariomh/heading/astro'
 	<div class:list={[
 		'container w-full rounded-4xl',
 		'flex flex-col items-center justify-center gap-[5%]',
-		'py-[5%]',
+		'py-[5dvh]',
 		'bg-keyboard bg-cover bg-center bg-no-repeat',
 	]}>
-		<Heading size='h2' className='text-primary-1 text-center text-6xl leading-8xl' weight='medium'>
+		<Heading size='h2' className='text-primary-1 text-center text-3xl leading-5xl md:text-6xl md:leading-8xl' weight='medium'>
 			¿Tines un proyecto <br/> que comenzar?
 		</Heading>
-		<Button solid className='border-primary-foreground px-12 py-4 rounded-xl' family='secondary'>
+		<Button
+			solid
+			className='border-primary-foreground px-8 md:px-12 py-3 md:py-4 rounded-xl'
+			family='secondary'
+			onclick="window.contact.showModal();">
 			Hablemos
 		</Button>
 	</div>
