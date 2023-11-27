@@ -1,7 +1,7 @@
 ---
-import { getCollection } from 'astro:content';
 import Button from '@mariomh/button/astro';
 import Heading from '@mariomh/heading/astro'
+import { getCollection } from 'astro:content';
 
 import PortfolioPreview from './portfolio-preview.astro'
 
@@ -59,13 +59,14 @@ const projects = await getCollection('project');
 
 	let show = defaultShow;
 	let showCount = defaultShow;
-	let actualShow: string | undefined = undefined;
+	let actualShow = undefined;
 
 	const buttons = document.querySelectorAll('.portfolio-btn');
 	const showMore = document.getElementById('show-more');
-	document.querySelectorAll('.portfolio-preview').forEach(el => allProjects.push(el));
+	document.querySelectorAll('.portfolio-preview').forEach(el => {
+		allProjects.push(el);
+	});
 	showProjects = allProjects;
-
 
 	function toggleClass(cls) {
 		let activeClass = '';
@@ -75,7 +76,8 @@ const projects = await getCollection('project');
 			}
 			activeClass = btn.className;
 			btn.className = cls;
-		})
+		});
+
 		return activeClass;
 	}
 
@@ -103,7 +105,7 @@ const projects = await getCollection('project');
 	function showType(type) {
 		showCount = 0;
 		showProjects = allProjects.filter(project => project.dataset.type === type);
-		allProjects.forEach((project, i) => {
+		allProjects.forEach(project => {
 			if (project.dataset.type === type) {
 				showCount++;
 				if (showCount <= show) {
@@ -118,10 +120,10 @@ const projects = await getCollection('project');
 	}
 
 	function renderProjects() {
-		if (!actualShow) {
-			showAll();
-		} else {
+		if (actualShow) {
 			showType(actualShow);
+		} else {
+			showAll();
 		}
 	}
 
@@ -133,7 +135,7 @@ const projects = await getCollection('project');
 			showMore.textContent = 'Ver más';
 		}
 		renderProjects();
-	})
+	});
 	buttons.forEach(btn => {
 		btn.addEventListener('click', () => {
 			actualShow = btn.dataset.show;
@@ -142,6 +144,6 @@ const projects = await getCollection('project');
 			btn.className = toggleClass(btn.className);
 			renderProjects();
 			toggleShowMore();
-		})
-	})
+		});
+	});
 </script>

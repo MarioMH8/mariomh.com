@@ -1,11 +1,10 @@
 ---
-import type {CollectionEntry} from 'astro:content';
 import Badge from '@mariomh/badge/astro';
-import Box from '@mariomh/box/astro';
 import fontCn from '@mariomh/font/cn';
-import Link from '@mariomh/link/astro';
 import type {FontVariantsProps} from '@mariomh/font/variants';
+import Link from '@mariomh/link/astro';
 import {Image} from 'astro:assets'
+import type {CollectionEntry} from 'astro:content';
 
 const titleCn = [
 	fontCn({size: 'xl'} as FontVariantsProps),
@@ -37,7 +36,7 @@ const {post} = Astro.props;
 		<span class='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-primary-1'> Leer artículo</span>
 	</Link>
 	<div class="flex flex-row flex-wrap gap-4">
-		{post.data.tags.map((tag) =>
+		{post.data.tags.map(tag =>
 			<Badge className='w-min' family='secondary' size='sm'>{tag}</Badge>
 		)}
 	</div>

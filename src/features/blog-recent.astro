@@ -1,7 +1,7 @@
 ---
-import { getCollection } from 'astro:content';
 import buttonCn from '@mariomh/button/cn';
 import Heading from '@mariomh/heading/astro';
+import { getCollection } from 'astro:content';
 
 import BlogPreview from './blog-preview.astro';
 
@@ -43,7 +43,7 @@ const className = buttonCn({
 		'overflow-x-auto overflow-y-hidden',
 		'scrollbar-thin scrollbar-thumb-primary scrollbar-track-primary-background-subtle scrollbar-thumb-rounded'
 	]}>
-		{posts.map((post) => (
+		{posts.map(post => (
 			<BlogPreview post={post}/>
 		))}
 	</div>

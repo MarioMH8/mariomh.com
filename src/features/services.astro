@@ -1,12 +1,12 @@
 ---
-import {getCollection} from 'astro:content';
+import Box from '@mariomh/box/astro';
 import Button from '@mariomh/button/astro';
 import buttonCn from '@mariomh/button/cn';
-import Span from '@mariomh/span/astro';
-import Box from '@mariomh/box/astro';
 import carouselCn, {cnSlide} from '@mariomh/carousel/cn';
 import Heading from '@mariomh/heading/astro';
 import Paragraph from '@mariomh/paragraph/astro';
+import Span from '@mariomh/span/astro';
+import {getCollection} from 'astro:content';
 import {Github} from 'lucide-astro';
 
 const services = await getCollection('services');
@@ -27,7 +27,7 @@ const carouselSlideClassName = cnSlide({
 	className: 'px-12 text-center balance slide',
 });
 
-const dotsClassName = (index) => [
+const dotsClassName = index => [
 	"dot",
 	"transition",
 	"p-0 h-3 aspect-square",
@@ -133,21 +133,21 @@ const dotsClassName = (index) => [
 			setActive(dot);
 		});
 	});
-	// define an observer instance
+	// Define an observer instance
 	const observer = new IntersectionObserver(onIntersection, {
 		root: carousel,
-		threshold: 1
+		threshold: 1,
 	});
 
-	// callback is called on intersection change
-	function onIntersection(entries, opts){
+	// Callback is called on intersection change
+	function onIntersection(entries) {
 		entries.forEach(entry => {
 			if (entry.isIntersecting) {
 				const id = entry.target.id.split('-')[1];
 				const dot = document.getElementById(`dot-${id}`);
-				setActive(dot)
+				setActive(dot);
 			}
-		})
+		});
 	}
 	document.querySelectorAll('.slide').forEach(slide => {
 		observer.observe(slide);
