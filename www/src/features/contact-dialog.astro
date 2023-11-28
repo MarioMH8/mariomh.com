@@ -83,21 +83,21 @@ import Dialog from '../components/dialog.astro';
 		form.reset();
 		window.contact.close();
 	}
-	/* code from qodo.co.uk */
+	/* Code from qodo.co.uk */
 	function disableFormElements(bDisabled) {
-		const inputs = form.getElementsByTagName("input");
+		const inputs = form.getElementsByTagName('input');
 		for (let i = 0; i < inputs.length; i++) {
 			inputs[i].disabled = bDisabled;
 		}
-		const selects = form.getElementsByTagName("select");
+		const selects = form.getElementsByTagName('select');
 		for (let i = 0; i < selects.length; i++) {
 			selects[i].disabled = bDisabled;
 		}
-		const textareas = form.getElementsByTagName("textarea");
+		const textareas = form.getElementsByTagName('textarea');
 		for (let i = 0; i < textareas.length; i++) {
 			textareas[i].disabled = bDisabled;
 		}
-		const buttons = form.getElementsByTagName("button");
+		const buttons = form.getElementsByTagName('button');
 		for (let i = 0; i < buttons.length; i++) {
 			buttons[i].disabled = bDisabled;
 		}
@@ -108,17 +108,17 @@ import Dialog from '../components/dialog.astro';
 		const action = form.getAttribute('action');
 		const method = form.getAttribute('method');
 		const object = {};
-		formData.forEach(function(value, key){
+		formData.forEach((value, key) => {
 			object[key] = value;
 		});
 		try {
 			disableFormElements(true);
 			const response = await fetch(action, {
-				method: method,
+				method,
 				body: JSON.stringify(object),
 				headers: {
 					'Content-Type': 'application/json',
-				}
+				},
 			});
 			if (response.ok) {
 				showSentMessage();
@@ -132,6 +132,6 @@ import Dialog from '../components/dialog.astro';
 			disableFormElements(false);
 		}
 	}
-	form.addEventListener("submit", submitContactForm);
-	close.addEventListener("click", closeDialog);
+	form.addEventListener('submit', submitContactForm);
+	close.addEventListener('click', closeDialog);
 </script>
