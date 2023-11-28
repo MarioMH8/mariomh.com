@@ -1,5 +1,3 @@
-dist
-dist-astro
-coverage
 node_modules
 www/tailwind.config.ts
+src/env.d.ts

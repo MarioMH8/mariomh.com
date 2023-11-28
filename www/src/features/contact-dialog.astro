@@ -16,40 +16,50 @@ import Dialog from '../components/dialog.astro';
 			icon
 			subtle
 			className="absolute top-[2.5rem] right-[2.5rem]"
-			onclick="window.contact.close();">
+			id="contact-form-close">
 			<X/>
 			<span class="sr-only">Cerrar</span>
 		</Button>
-		<form class="max-w-[550px] mx-auto flex flex-col gap-8">
+		<form
+			id="contact-form"
+			method="post"
+			class="max-w-[550px] mx-auto flex flex-col gap-8" >
 			<Label family="secondary">
 				Nombre
 				<Input
 					placeholder="Elvira Casanovas"
-					className="mt-4 border-secondary-11"
+					className="form_data mt-4 border-secondary-11"
 					family="secondary"
 					transparent
+					name="name"
 					required/>
 			</Label>
 			<Label family="secondary">
 				Email
 				<Input
 					placeholder="ecasanovas@domain.es"
-					className="mt-4 border-secondary-11"
+					className="form_data mt-4 border-secondary-11"
 					family="secondary"
 					required
 					transparent
+					name="email"
 					type="email"/>
 			</Label>
 			<Label family="secondary">
 				Mensaje
 				<TextArea
 					placeholder="Me pongo en contacto con usted para..."
-					className="mt-4 border-secondary-11"
+					className="form_data mt-4 border-secondary-11"
 					family="secondary"
 					required
+					name="message"
 					transparent/>
 			</Label>
 			<Button type="submit" family="secondary" solid>Enviar mensaje</Button>
+			<span id="contact-form-success" class="hidden text-primary-10 mx-auto">Mensaje enviado correctamente</span>
+			<span id="contact-form-error" class="hidden text-danger-10 mx-auto">Hubo un error al enviar tu mensaje, inténtelo de nuevo más tarde</span>
 		</form>
 	</Box>
 </Dialog>
+
+<script src="./contact-dialog.ts" />
