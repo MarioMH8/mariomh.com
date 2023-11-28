@@ -23,7 +23,6 @@ import Dialog from '../components/dialog.astro';
 		<form
 			id="contact-form"
 			method="post"
-			action="http://127.0.0.1:5001/mariomh/europe-west1/sendMailFn"
 			class="max-w-[550px] mx-auto flex flex-col gap-8" >
 			<Label family="secondary">
 				Nombre
@@ -69,18 +68,18 @@ import Dialog from '../components/dialog.astro';
 	const error = document.getElementById('contact-form-error');
 	const success = document.getElementById('contact-form-success');
 	function showErrorMessages() {
-		error.classList.remove('hidden');
-		success.classList.add('hidden');
+		error?.classList.remove('hidden');
+		success?.classList.add('hidden');
 	}
 	function showSentMessage() {
-		error.classList.add('hidden');
-		success.classList.remove('hidden');
-		form.reset();
+		error?.classList.add('hidden');
+		success?.classList.remove('hidden');
+		form?.reset();
 	}
 	function closeDialog() {
-		error.classList.add('hidden');
-		success.classList.add('hidden');
-		form.reset();
+		error?.classList.add('hidden');
+		success?.classList.add('hidden');
+		form?.reset();
 		window.contact.close();
 	}
 	/* Code from qodo.co.uk */
@@ -104,17 +103,16 @@ import Dialog from '../components/dialog.astro';
 	}
 	async function submitContactForm(e) {
 		e.preventDefault();
+		if (!form) return;
 		const formData = new FormData(form);
-		const action = form.getAttribute('action');
-		const method = form.getAttribute('method');
 		const object = {};
 		formData.forEach((value, key) => {
 			object[key] = value;
 		});
 		try {
 			disableFormElements(true);
-			const response = await fetch(action, {
-				method,
+			const response = await fetch('http://127.0.0.1:5001/mariomh/europe-west1/sendMailFn', {
+				method: "POST",
 				body: JSON.stringify(object),
 				headers: {
 					'Content-Type': 'application/json',
@@ -132,6 +130,6 @@ import Dialog from '../components/dialog.astro';
 			disableFormElements(false);
 		}
 	}
-	form.addEventListener('submit', submitContactForm);
-	close.addEventListener('click', closeDialog);
+	form?.addEventListener('submit', submitContactForm);
+	close?.addEventListener('click', closeDialog);
 </script>

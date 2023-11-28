@@ -24,7 +24,7 @@
 	"scripts": {
 		"lint": "eslint .",
 		"lint:fix": "eslint --fix .",
-		"typecheck": "astro check && tsc --noEmit"
+		"typecheck": "tsc --noEmit"
 	},
 	"devDependencies": {
 		"@hexatool/eslint-config": "2.2.3",

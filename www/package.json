@@ -18,7 +18,7 @@
 	"author": "MarioMH8",
 	"license": "PRIVATE",
 	"scripts": {
-		"build": "astro build",
+		"build": "astro check && astro build",
 		"dev": "astro dev",
 		"postinstall": "astro sync",
 		"preview": "astro preview"

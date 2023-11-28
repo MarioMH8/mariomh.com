@@ -120,15 +120,15 @@ const dotsClassName = index => [
 	const dots = document.querySelectorAll('.dot');
 	const carousel = document.getElementById('service-carousel');
 	function setActive(dot) {
-		activeButton.classList.remove('active');
-		dot.classList.add('active');
+		activeButton?.classList.remove('active');
+		dot?.classList.add('active');
 		activeButton = dot;
 	}
 	dots.forEach((dot, index) => {
 		dot.addEventListener('click', () => {
 			const ele = document.getElementById(`service-${index}`);
-			carousel.scrollTo({
-				left: ele.offsetWidth * index,
+			carousel?.scrollTo({
+				left: (ele?.offsetWidth ?? 0) * index,
 			});
 			setActive(dot);
 		});

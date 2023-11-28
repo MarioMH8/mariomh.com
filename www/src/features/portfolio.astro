@@ -83,14 +83,14 @@ const projects = await getCollection('project');
 
 	function toggleShowMore() {
 		if (showProjects.length <= show) {
-			showMore.classList.add('hidden');
+			showMore?.classList.add('hidden');
 		} else {
-			showMore.classList.remove('hidden');
+			showMore?.classList.remove('hidden');
 		}
 	}
 
 	function showAll() {
-		allProjects.forEach((project, i) => {
+		allProjects?.forEach((project, i) => {
 			if (i < show) {
 				project.classList.remove('hidden');
 			} else {
@@ -99,13 +99,13 @@ const projects = await getCollection('project');
 		});
 		showCount = show;
 		showProjects = allProjects;
-		showMore.classList.remove('hidden');
+		showMore?.classList.remove('hidden');
 	}
 
 	function showType(type) {
 		showCount = 0;
-		showProjects = allProjects.filter(project => project.dataset.type === type);
-		allProjects.forEach(project => {
+		showProjects = allProjects?.filter(project => project.dataset.type === type) ?? [];
+		allProjects?.forEach(project => {
 			if (project.dataset.type === type) {
 				showCount++;
 				if (showCount <= show) {
@@ -127,8 +127,11 @@ const projects = await getCollection('project');
 		}
 	}
 
-	showMore.addEventListener('click', () => {
+	showMore?.addEventListener('click', () => {
 		show = show === maxShow ? defaultShow : maxShow;
+		if (!showMore) {
+			return;
+		}
 		if (show === maxShow) {
 			showMore.textContent = 'Ver menos';
 		} else {
@@ -140,7 +143,9 @@ const projects = await getCollection('project');
 		btn.addEventListener('click', () => {
 			actualShow = btn.dataset.show;
 			show = defaultShow;
-			showMore.textContent = 'Ver más';
+			if (showMore ) {
+				showMore.textContent = 'Ver más';
+			}
 			btn.className = toggleClass(btn.className);
 			renderProjects();
 			toggleShowMore();

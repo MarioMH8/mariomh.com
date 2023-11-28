@@ -3,6 +3,5 @@
 	"compilerOptions": {
 		"lib": ["dom", "es2022"]
 	},
-	"include": ["www", "functions"],
-	"exclude": ["node_modules", "dist", "www/public"]
+	"exclude": ["node_modules"]
 }
