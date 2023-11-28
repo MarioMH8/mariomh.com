@@ -52,7 +52,7 @@
 		"@mariomh/span": "0.0.1-beta.3",
 		"@mariomh/textarea": "0.0.1-beta.3",
 		"@mariomh/theme": "0.0.1-beta.2",
-		"astro": "3.4.0",
+		"astro": "3.6.1",
 		"astro-seo": "0.8.0",
 		"atropos": "2.0.2",
 		"lucide-astro": "0.293.0"
@@ -76,5 +76,8 @@
 	},
 	"trustedDependencies": [
 		"sharp"
-	]
+	],
+	"overrides": {
+		"astro": "3.6.1"
+	}
 }
