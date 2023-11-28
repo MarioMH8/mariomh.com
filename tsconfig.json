@@ -1,8 +1,18 @@
 {
 	"extends": "astro/tsconfigs/strictest",
 	"compilerOptions": {
-		"lib": ["dom", "es2022"]
+		"lib": ["dom", "es2022"],
+		"plugins": [
+			{
+				"name": "@astrojs/ts-plugin"
+			}
+		],
+		"paths": {
+			"@mariomh/navigation-menu/astro/*": ["./node_modules/@mariomh/navigation-menu/dist/astro/*.astro"],
+			"@mariomh/navigation-menu/astro": ["./node_modules/@mariomh/navigation-menu/dist/astro/menu.astro"],
+			"@mariomh/*/astro": ["./node_modules/@mariomh/*/dist/component.astro"]
+		}
 	},
-	"include": ["src/**/*.ts", "src/**/*.tsx", "astro.config.ts", ".astro"],
+	"include": ["src", "astro.config.ts", ".astro"],
 	"exclude": ["node_modules", "dist", "public"]
 }
