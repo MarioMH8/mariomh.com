@@ -13,6 +13,6 @@
 			"@mariomh/*/astro": ["./node_modules/@mariomh/*/dist/component.astro"]
 		}
 	},
-	"include": ["src", "astro.config.ts", ".astro"],
-	"exclude": ["node_modules", "dist", "public"]
+	"include": ["www/src", "www/astro.config.ts", "www/.astro"],
+	"exclude": ["node_modules", "dist", "www/public"]
 }
