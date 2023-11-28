@@ -37,7 +37,7 @@ jobs:
                 run: bun install
 
             -   name: Build types
-                run: bun build:types
+                run: bun build:astro:types
 
             -   name: Lint
                 run: bun lint

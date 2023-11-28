@@ -1,11 +1,19 @@
 {
 	"hosting": {
-		"public": "dist",
+		"public": "dist-astro",
 		"rewrites": [
 			{
 				"source": "**",
 				"destination": "/index.html"
 			}
-		]
-	}
+		],
+		"predeploy": ["bun run build:astro"]
+	},
+	"functions": [
+		{
+			"source": ".",
+			"codebase": "mariomh",
+			"predeploy": ["bun run build:functions"]
+		}
+	]
 }
