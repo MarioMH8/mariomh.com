@@ -27,7 +27,7 @@ const carouselSlideClassName = cnSlide({
 	className: 'px-12 text-center balance slide',
 });
 
-const dotsClassName = index => [
+const dotsClassName = (index: number) => [
 	"dot",
 	"transition",
 	"p-0 h-3 aspect-square",
@@ -115,41 +115,4 @@ const dotsClassName = index => [
 	</svg>
 </section>
 
-<script>
-	let activeButton = document.querySelector('.dot.active');
-	const dots = document.querySelectorAll('.dot');
-	const carousel = document.getElementById('service-carousel');
-	function setActive(dot) {
-		activeButton.classList.remove('active');
-		dot.classList.add('active');
-		activeButton = dot;
-	}
-	dots.forEach((dot, index) => {
-		dot.addEventListener('click', () => {
-			const ele = document.getElementById(`service-${index}`);
-			carousel.scrollTo({
-				left: ele.offsetWidth * index,
-			});
-			setActive(dot);
-		});
-	});
-	// Define an observer instance
-	const observer = new IntersectionObserver(onIntersection, {
-		root: carousel,
-		threshold: 1,
-	});
-
-	// Callback is called on intersection change
-	function onIntersection(entries) {
-		entries.forEach(entry => {
-			if (entry.isIntersecting) {
-				const id = entry.target.id.split('-')[1];
-				const dot = document.getElementById(`dot-${id}`);
-				setActive(dot);
-			}
-		});
-	}
-	document.querySelectorAll('.slide').forEach(slide => {
-		observer.observe(slide);
-	});
-</script>
+<script src="./services.ts" />
