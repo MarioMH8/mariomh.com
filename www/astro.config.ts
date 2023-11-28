@@ -8,7 +8,6 @@ import webmanifest from 'astro-webmanifest';
 
 export default defineConfig({
 	site: 'https://mariomh.com',
-	outDir: 'dist-astro',
 	integrations: [
 		sitemap(),
 		robotsTxt(),

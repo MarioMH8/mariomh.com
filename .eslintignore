@@ -2,4 +2,4 @@ dist
 dist-astro
 coverage
 node_modules
-tailwind.config.ts
+www/tailwind.config.ts

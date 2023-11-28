@@ -1,6 +1,6 @@
 {
 	"hosting": {
-		"public": "dist-astro",
+		"public": "dist",
 		"rewrites": [
 			{
 				"source": "**",
@@ -11,7 +11,7 @@
 	},
 	"functions": [
 		{
-			"source": ".",
+			"source": "functions",
 			"codebase": "mariomh",
 			"predeploy": ["bun run build:functions"]
 		}

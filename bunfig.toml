@@ -1,2 +1,2 @@
 [install.scopes]
-"@mariomh" = { token = "ya29.a0AfB_byB96fWuoHNQzWGQPGwbxQdlGHGssAxG2GXKxu8o4yt3S0LgSuXlmUH6lP-aS0WHEt2myPMCYizRlNHo7vs8ldEGYZiv1ajALMnC3nmFc8LkUU1ZOgLvK1le5ItS2O4XiSk6lo1vnJEMXfFsh4BD-btPr4l-B0y4aCgYKAR0SARMSFQHGX2Mi3GWIB4lCqEhi1cn2CevIRQ0171", url = "https://europe-npm.pkg.dev/mariomh/npm/" }
+"@mariomh" = { url = "https://europe-npm.pkg.dev/mariomh/npm/", token = "ya29.a0AfB_byA1tWoHHXSVwGDYI60I3HmaM_YlQaRA2vBk5ILe2SLIhphPAXTsEkPAZ_CDFToUL6LPxpOk4oVnmKnmbkdF6GRJLvYLO1ZneL2mvCVXJ-oUvInkVrtQAnW7UB3jv1_Pldc_1jzEE6tzQcf0Kck2S2YdO4owtTNCewaCgYKAcwSARMSFQHGX2Min0psxDwsIuYXP21SRq-g8g0173" }

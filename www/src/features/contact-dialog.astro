@@ -1,0 +1,137 @@
+---
+import Box from '@mariomh/box/astro';
+import Button from '@mariomh/button/astro';
+import Heading from '@mariomh/heading/astro';
+import Input from '@mariomh/input/astro';
+import Label from '@mariomh/label/astro';
+import TextArea from '@mariomh/textarea/astro';
+import {X} from 'lucide-astro';
+
+import Dialog from '../components/dialog.astro';
+---
+<Dialog id="contact">
+	<Box className="w-[90vw] max-w-[680px] min-h-[720px] bg-primary-1 py-8 relative" round='2xl'>
+		<Heading size="h2" weight="medium" className="text-5xl mb-12 text-center">¡Hablemos!</Heading>
+		<Button
+			icon
+			subtle
+			className="absolute top-[2.5rem] right-[2.5rem]"
+			id="contact-form-close">
+			<X/>
+			<span class="sr-only">Cerrar</span>
+		</Button>
+		<form
+			id="contact-form"
+			method="post"
+			action="http://127.0.0.1:5001/mariomh/europe-west1/sendMailFn"
+			class="max-w-[550px] mx-auto flex flex-col gap-8" >
+			<Label family="secondary">
+				Nombre
+				<Input
+					placeholder="Elvira Casanovas"
+					className="form_data mt-4 border-secondary-11"
+					family="secondary"
+					transparent
+					name="name"
+					required/>
+			</Label>
+			<Label family="secondary">
+				Email
+				<Input
+					placeholder="ecasanovas@domain.es"
+					className="form_data mt-4 border-secondary-11"
+					family="secondary"
+					required
+					transparent
+					name="email"
+					type="email"/>
+			</Label>
+			<Label family="secondary">
+				Mensaje
+				<TextArea
+					placeholder="Me pongo en contacto con usted para..."
+					className="form_data mt-4 border-secondary-11"
+					family="secondary"
+					required
+					name="message"
+					transparent/>
+			</Label>
+			<Button type="submit" family="secondary" solid>Enviar mensaje</Button>
+			<span id="contact-form-success" class="hidden text-primary-10 mx-auto">Mensaje enviado correctamente</span>
+			<span id="contact-form-error" class="hidden text-danger-10 mx-auto">Hubo un error al enviar tu mensaje, inténtelo de nuevo más tarde</span>
+		</form>
+	</Box>
+</Dialog>
+
+<script>
+	const form = document.getElementById('contact-form');
+	const close = document.getElementById('contact-form-close');
+	const error = document.getElementById('contact-form-error');
+	const success = document.getElementById('contact-form-success');
+	function showErrorMessages() {
+		error.classList.remove('hidden');
+		success.classList.add('hidden');
+	}
+	function showSentMessage() {
+		error.classList.add('hidden');
+		success.classList.remove('hidden');
+		form.reset();
+	}
+	function closeDialog() {
+		error.classList.add('hidden');
+		success.classList.add('hidden');
+		form.reset();
+		window.contact.close();
+	}
+	/* code from qodo.co.uk */
+	function disableFormElements(bDisabled) {
+		const inputs = form.getElementsByTagName("input");
+		for (let i = 0; i < inputs.length; i++) {
+			inputs[i].disabled = bDisabled;
+		}
+		const selects = form.getElementsByTagName("select");
+		for (let i = 0; i < selects.length; i++) {
+			selects[i].disabled = bDisabled;
+		}
+		const textareas = form.getElementsByTagName("textarea");
+		for (let i = 0; i < textareas.length; i++) {
+			textareas[i].disabled = bDisabled;
+		}
+		const buttons = form.getElementsByTagName("button");
+		for (let i = 0; i < buttons.length; i++) {
+			buttons[i].disabled = bDisabled;
+		}
+	}
+	async function submitContactForm(e) {
+		e.preventDefault();
+		const formData = new FormData(form);
+		const action = form.getAttribute('action');
+		const method = form.getAttribute('method');
+		const object = {};
+		formData.forEach(function(value, key){
+			object[key] = value;
+		});
+		try {
+			disableFormElements(true);
+			const response = await fetch(action, {
+				method: method,
+				body: JSON.stringify(object),
+				headers: {
+					'Content-Type': 'application/json',
+				}
+			});
+			if (response.ok) {
+				showSentMessage();
+			} else {
+				showErrorMessages();
+			}
+		} catch (e) {
+			showErrorMessages();
+			console.error(e);
+		} finally {
+			disableFormElements(false);
+		}
+	}
+	form.addEventListener("submit", submitContactForm);
+	close.addEventListener("click", closeDialog);
+</script>

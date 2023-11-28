@@ -1,0 +1,39 @@
+{
+	"name": "@mariomh8/functions",
+	"version": "0.0.0",
+	"description": "Mario Menéndez functions",
+	"keywords": [
+		"portfolio",
+		"astro",
+		"typescript"
+	],
+	"homepage": "https://github.com/MarioMH8/mariomh.com",
+	"bugs": {
+		"url": "https://github.com/MarioMH8/mariomh.com/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/MarioMH8/mariomh.com"
+	},
+	"author": "MarioMH8",
+	"license": "PRIVATE",
+	"type": "module",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "vite build",
+		"dev": "vite build --watch & firebase emulators:start --only functions",
+		"preview": "vite build && firebase emulators:start --only functions"
+	},
+	"dependencies": {
+		"firebase-functions": "4.5.0",
+		"nodemailer": "6.9.7",
+		"zod": "3.22.4"
+	},
+	"devDependencies": {
+		"@types/nodemailer": "6.4.14",
+		"firebase-admin": "11.11.0"
+	},
+	"engines": {
+		"node": "20"
+	}
+}

@@ -1,0 +1,67 @@
+{
+	"name": "@mariomh8/portfolio",
+	"version": "0.0.0",
+	"description": "Mario Menéndez portfolio",
+	"keywords": [
+		"portfolio",
+		"astro",
+		"typescript"
+	],
+	"homepage": "https://github.com/MarioMH8/mariomh.com",
+	"bugs": {
+		"url": "https://github.com/MarioMH8/mariomh.com/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/MarioMH8/mariomh.com"
+	},
+	"author": "MarioMH8",
+	"license": "PRIVATE",
+	"scripts": {
+		"build": "astro build",
+		"dev": "astro dev",
+		"postinstall": "astro sync",
+		"preview": "astro preview"
+	},
+	"dependencies": {
+		"@mariomh/badge": "0.0.1-beta.3",
+		"@mariomh/box": "0.0.1-beta.3",
+		"@mariomh/button": "0.0.1-beta.3",
+		"@mariomh/carousel": "0.0.1-beta.3",
+		"@mariomh/container": "0.0.1-beta.2",
+		"@mariomh/copyright": "0.0.1-beta.3",
+		"@mariomh/focus": "0.0.1-beta.2",
+		"@mariomh/font": "0.0.1-beta.2",
+		"@mariomh/heading": "0.0.1-beta.3",
+		"@mariomh/input": "0.0.1-beta.3",
+		"@mariomh/label": "0.0.1-beta.3",
+		"@mariomh/link": "0.0.1-beta.3",
+		"@mariomh/logo": "0.0.1-beta.3",
+		"@mariomh/navigation-menu": "0.0.1-beta.4",
+		"@mariomh/paragraph": "0.0.1-beta.3",
+		"@mariomh/round": "0.0.1-beta.2",
+		"@mariomh/scroll-area": "0.0.1-beta.3",
+		"@mariomh/shadow": "0.0.1-beta.2",
+		"@mariomh/span": "0.0.1-beta.3",
+		"@mariomh/textarea": "0.0.1-beta.3",
+		"@mariomh/theme": "0.0.1-beta.2",
+		"astro": "3.6.1",
+		"astro-seo": "0.8.0",
+		"atropos": "2.0.2",
+		"lucide-astro": "0.293.0"
+	},
+	"devDependencies": {
+		"@astrojs/check": "0.3.1",
+		"@astrojs/prefetch": "0.4.1",
+		"@astrojs/sitemap": "3.0.3",
+		"@astrojs/tailwind": "5.0.2",
+		"astro-compress": "2.2.3",
+		"astro-eslint-parser": "0.16.0",
+		"astro-robots-txt": "1.0.0",
+		"astro-webmanifest": "1.0.0",
+		"tailwindcss": "3.3.5"
+	},
+	"trustedDependencies": [
+		"sharp"
+	]
+}
