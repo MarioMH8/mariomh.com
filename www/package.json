@@ -48,7 +48,7 @@
 		"astro": "3.6.1",
 		"astro-seo": "0.8.0",
 		"atropos": "2.0.2",
-		"lucide-astro": "0.293.0"
+		"lucide-astro": "0.294.0"
 	},
 	"devDependencies": {
 		"@astrojs/check": "0.3.1",
