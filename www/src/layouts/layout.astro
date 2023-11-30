@@ -38,7 +38,8 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
 			}}
 		/>
 
-		<meta name="theme-color" content="#C6F118">
+		<meta name="theme-color" content="#FEFFFA" media="(prefers-color-scheme: light)">
+		<meta name="theme-color" content="#001915" media="(prefers-color-scheme: dark)">
 		<meta name="generator" content={Astro.generator} />
 
 		<link rel="sitemap" href="/sitemap-index.xml">
@@ -242,7 +243,8 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
 		<main class:list={[
 			className,
 			'overflow-y-scroll overflow-x-hidden',
-			'scrollbar-thin scrollbar-thumb-primary scrollbar-track-primary-background-subtle scrollbar-thumb-rounded',
+			'scrollbar-thin scrollbar-thumb-primary scrollbar-thumb-rounded',
+			'scrollbar-track-primary-background dark:scrollbar-track-primary-dark-background',
 			'max-h-[100dvh]',
 		]}>
 			<slot />
@@ -258,6 +260,10 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
     }
     body {
 		scrollbar-gutter: stable both-edges;
+		@apply dark:bg-primary-12
+    }
+    body.dark {
+		@apply bg-primary-12
     }
     img {
         -webkit-user-drag: none;

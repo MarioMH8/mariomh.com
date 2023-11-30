@@ -12,7 +12,7 @@ const className = buttonCn({
 	transparent: true,
 	size: 'lg',
 	family: 'secondary',
-	className: 'px-12 py-3 w-fit round-xl border-primary-foreground'
+	className: 'px-12 py-3 w-fit round-xl'
 });
 ---
 
@@ -27,7 +27,7 @@ const className = buttonCn({
 			size='h2'
 			weight='light'
 			family='secondary'
-			className='text-xl'>Blog</Heading>
+			className='text-xl dark:text-primary'>Blog</Heading>
 		<Heading
 			size='h3'
 			weight='medium'
@@ -41,7 +41,8 @@ const className = buttonCn({
 		'px-4 md:px-12 pt-12 pb-10',
 		'w-full md:w-[70%] pb-6 flex flex-row gap-12',
 		'overflow-x-auto overflow-y-hidden',
-		'scrollbar-thin scrollbar-thumb-primary scrollbar-track-primary-background-subtle scrollbar-thumb-rounded'
+		'scrollbar-thin scrollbar-thumb-primary scrollbar-thumb-rounded',
+		'scrollbar-track-primary-background dark:scrollbar-track-primary-dark-background',
 	]}>
 		{posts.map(post => (
 			<BlogPreview post={post}/>

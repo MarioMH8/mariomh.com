@@ -15,22 +15,22 @@ const projects = await getCollection('project');
 		size='h2'
 		weight='light'
 		family='secondary'
-		className='text-xl m-0'>Portfolio</Heading>
+		className='text-xl m-0 dark:text-primary'>Portfolio</Heading>
 	<Heading
 		size='h3'
 		weight='medium'
 		className='text-6xl'>Proyectos recientes</Heading>
 	<div class='flex flex-row flex-wrap gap-8 items-center justify-center mb-16'>
-		<Button solid className='border-primary-foreground px-6 rounded-xl portfolio-btn' family='secondary'>
+		<Button solid className='px-6 rounded-xl portfolio-btn' family='secondary'>
 			Todos
 		</Button>
-		<Button bordered transparent className='border-primary-foreground px-6 rounded-xl portfolio-btn' family='secondary' data-show="portfolio">
+		<Button bordered transparent className='px-6 rounded-xl portfolio-btn' family='secondary' data-show="portfolio">
 			Webs
 		</Button>
-		<Button bordered transparent className='border-primary-foreground px-6 rounded-xl portfolio-btn' family='secondary' data-show="app">
+		<Button bordered transparent className='px-6 rounded-xl portfolio-btn' family='secondary' data-show="app">
 			Apps
 		</Button>
-		<Button bordered transparent className='border-primary-foreground px-6 rounded-xl portfolio-btn' family='secondary' data-show="lib">
+		<Button bordered transparent className='px-6 rounded-xl portfolio-btn' family='secondary' data-show="lib">
 			Librerías
 		</Button>
 	</div>
@@ -46,7 +46,7 @@ const projects = await getCollection('project');
 		bordered
 		transparent
 		family='secondary'
-		className='px-10 border-primary-foreground rounded-xl show-more'>
+		className='px-10 rounded-xl show-more'>
 		Más proyectos
 	</Button>
 </section>
