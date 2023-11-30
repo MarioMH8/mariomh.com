@@ -23,7 +23,7 @@ jobs:
 
             -   name: Authorize Google Cloud SDK
                 id: auth
-                uses: google-github-actions/auth@v1
+                uses: google-github-actions/auth@v2
                 with:
                     token_format: 'access_token'
                     create_credentials_file: false
@@ -62,7 +62,7 @@ jobs:
 
             -   name: Authorize Google Cloud SDK
                 id: auth
-                uses: google-github-actions/auth@v1
+                uses: google-github-actions/auth@v2
                 with:
                     token_format: access_token
                     create_credentials_file: true
