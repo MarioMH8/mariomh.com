@@ -31,7 +31,7 @@
 	},
 	"devDependencies": {
 		"@types/nodemailer": "6.4.14",
-		"firebase-admin": "11.11.0"
+		"firebase-admin": "11.11.1"
 	},
 	"engines": {
 		"node": "20"
