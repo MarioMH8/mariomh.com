@@ -1,17 +1,37 @@
+import { initializeApp } from '@firebase/app';
+import { initializeAppCheck, ReCaptchaEnterpriseProvider } from '@firebase/app-check';
+import { getFunctions, httpsCallableFromURL } from '@firebase/functions';
+
+const app = initializeApp({
+	apiKey: 'REDACTED',
+	authDomain: 'mariomh-com.firebaseapp.com',
+	projectId: 'mariomh-com',
+	storageBucket: 'mariomh-com.appspot.com',
+	messagingSenderId: '777228830069',
+	appId: '1:777228830069:web:bec62e2a54077a6e997f3c',
+});
+initializeAppCheck(app, {
+	provider: new ReCaptchaEnterpriseProvider('6LcJ7E8pAAAAAIAMPYW5bsJXTzUgRTMycDfcAaii'),
+	isTokenAutoRefreshEnabled: true,
+});
+
 const form = document.getElementById('contact-form') as HTMLFormElement;
 const closeButton = document.getElementById('contact-form-close') as HTMLButtonElement;
 const error = document.getElementById('contact-form-error') as HTMLSpanElement;
 const success = document.getElementById('contact-form-success') as HTMLSpanElement;
 const dialog = document.getElementById('contact') as HTMLDialogElement;
+
 function showErrorMessages() {
 	error.classList.remove('hidden');
 	success.classList.add('hidden');
 }
+
 function showSentMessage() {
 	error.classList.add('hidden');
 	success.classList.remove('hidden');
 	form.reset();
 }
+
 function closeDialog() {
 	error.classList.add('hidden');
 	success.classList.add('hidden');
@@ -41,6 +61,7 @@ function disableForm(bDisabled: boolean) {
 	const buttons = form.getElementsByTagName('button');
 	disableFormElements(buttons, bDisabled);
 }
+
 async function submitContactForm(e: SubmitEvent) {
 	e.preventDefault();
 	const formData = new FormData(form);
@@ -50,18 +71,13 @@ async function submitContactForm(e: SubmitEvent) {
 	});
 	try {
 		disableForm(true);
-		const response = await fetch('http://127.0.0.1:5001/mariomh/europe-west1/sendMailFn', {
-			method: 'POST',
-			body: JSON.stringify(object),
-			headers: {
-				'Content-Type': 'application/json',
-			},
-		});
-		if (response.ok) {
-			showSentMessage();
-		} else {
-			showErrorMessages();
-		}
+		const functions = getFunctions(app);
+		const sendMail = httpsCallableFromURL(
+			functions,
+			'https://europe-west1-mariomh-com.cloudfunctions.net/mail-send'
+		);
+		await sendMail(object);
+		showSentMessage();
 	} catch (e) {
 		showErrorMessages();
 		console.error(e);
@@ -69,5 +85,6 @@ async function submitContactForm(e: SubmitEvent) {
 		disableForm(false);
 	}
 }
+
 form.addEventListener('submit', e => void submitContactForm(e));
 closeButton.addEventListener('click', closeDialog);
