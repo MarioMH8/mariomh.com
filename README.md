@@ -1,15 +1,10 @@
 <h1 align="center">
-  Portfolio
+  mariomh.com
 </h1>
 
 <p align="center">
-    Portfolio implementado para MarioMH
+    Portfolio personal
 </p>
-
-## Introducción
-
-Este proyecto es un portfolio implementado con Astro. Se trata de una aplicación web estática que se despliega en Firebase Hosting.
-
 ![mariomh-portfolio](docs/mriomh.com.webp)
 
 ## Variables de entorno
