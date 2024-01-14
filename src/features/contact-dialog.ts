@@ -1,17 +1,20 @@
 import { initializeApp } from '@firebase/app';
-import { initializeAppCheck, ReCaptchaEnterpriseProvider } from '@firebase/app-check';
+import { initializeAppCheck, ReCaptchaV3Provider } from '@firebase/app-check';
 import { getFunctions, httpsCallableFromURL } from '@firebase/functions';
 
+// @ts-expect-error - This is a debug token, it's fine to have it here
+self.FIREBASE_APPCHECK_DEBUG_TOKEN = import.meta.env.PUBLIC_FIREBASE_APPCHECK_DEBUG_TOKEN;
+
 const app = initializeApp({
-	apiKey: 'AIzaSyBaY8osi3ih1u6KUnnrN91ReKGC1dCnMeM',
-	authDomain: 'mariomh-com.firebaseapp.com',
-	projectId: 'mariomh-com',
-	storageBucket: 'mariomh-com.appspot.com',
-	messagingSenderId: '777228830069',
-	appId: '1:777228830069:web:bec62e2a54077a6e997f3c',
+	apiKey: import.meta.env.PUBLIC_FIREBASE_API_KEY,
+	appId: import.meta.env.PUBLIC_FIREBASE_APP_ID,
+	authDomain: import.meta.env.PUBLIC_FIREBASE_AUTH_DOMAIN,
+	messagingSenderId: import.meta.env.PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+	storageBucket: import.meta.env.PUBLIC_FIREBASE_STORAGE_BUCKET,
+	projectId: import.meta.env.PUBLIC_FIREBASE_PROJECT,
 });
 initializeAppCheck(app, {
-	provider: new ReCaptchaEnterpriseProvider('6LcJ7E8pAAAAAIAMPYW5bsJXTzUgRTMycDfcAaii'),
+	provider: new ReCaptchaV3Provider(import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY),
 	isTokenAutoRefreshEnabled: true,
 });
 
@@ -72,10 +75,7 @@ async function submitContactForm(e: SubmitEvent) {
 	try {
 		disableForm(true);
 		const functions = getFunctions(app);
-		const sendMail = httpsCallableFromURL(
-			functions,
-			'https://europe-west1-mariomh-com.cloudfunctions.net/mail-send'
-		);
+		const sendMail = httpsCallableFromURL(functions, import.meta.env.FIREBASE_FUNCTIONS_SEND_MAIL);
 		await sendMail(object);
 		showSentMessage();
 	} catch (e) {
