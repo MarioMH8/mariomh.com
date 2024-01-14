@@ -75,7 +75,7 @@ async function submitContactForm(e: SubmitEvent) {
 	try {
 		disableForm(true);
 		const functions = getFunctions(app);
-		const sendMail = httpsCallableFromURL(functions, import.meta.env.FIREBASE_FUNCTIONS_SEND_MAIL);
+		const sendMail = httpsCallableFromURL(functions, import.meta.env.PUBLIC_FIREBASE_FUNCTIONS_SEND_MAIL);
 		await sendMail(object);
 		showSentMessage();
 	} catch (e) {
