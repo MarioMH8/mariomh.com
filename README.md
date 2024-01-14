@@ -5,6 +5,7 @@
 <p align="center">
     Portfolio personal
 </p>
+
 ![mariomh-portfolio](docs/mriomh.com.webp)
 
 ## Variables de entorno
