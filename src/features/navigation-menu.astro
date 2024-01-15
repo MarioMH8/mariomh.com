@@ -1,6 +1,7 @@
 ---
 import Button from '@mariomh/button/astro';
 import NavBar from '@mariomh/navigation-menu/astro';
+import NavBarLi from '@mariomh/navigation-menu/astro/li';
 import NavigationMenuLink from '@mariomh/navigation-menu/astro/link';
 
 interface Props {
@@ -11,19 +12,19 @@ const {blog} = Astro.props;
 ---
 
 <NavBar>
-	<li>
+	<NavBarLi>
 		<NavigationMenuLink className='font-secondary' href='/#sobre-mi'>Sobre mi</NavigationMenuLink>
-	</li>
-	<li>
+	</NavBarLi>
+	<NavBarLi>
 		<NavigationMenuLink className='font-secondary' href='/#portfolio'>Portfolio</NavigationMenuLink>
-	</li>
-	<li>
+	</NavBarLi>
+	<NavBarLi>
 		<NavigationMenuLink className='font-secondary' href='/#servicios'>Servicios</NavigationMenuLink>
-	</li>
-	<li>
+	</NavBarLi>
+	<NavBarLi>
 		<NavigationMenuLink className='font-secondary' href='/blog' active={blog === true}>Blog</NavigationMenuLink>
-	</li>
-	<li>
+	</NavBarLi>
+	<NavBarLi>
 		<Button solid family='secondary' onclick="window.contact.showModal();">Contáctame</Button>
-	</li>
+	</NavBarLi>
 </NavBar>
