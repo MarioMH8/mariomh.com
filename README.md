@@ -10,12 +10,11 @@
 
 ## Tecnologías
 
-- **Runtime** - [Bun](https://bun.sh)  
-- **Frontend** - [Astro](https://astro.build/)  
-- **Styling** - [TailwindCSS](https://tailwindcss.com/)  
-- **Deployment** - [Firebase](https://firebase.google.com/)  
+- **Runtime** - [Bun](https://bun.sh)
+- **Frontend** - [Astro](https://astro.build/)
+- **Styling** - [TailwindCSS](https://tailwindcss.com/)
+- **Deployment** - [Firebase](https://firebase.google.com/)
 - **Languages** - [TypeScript](https://www.typescriptlang.org/)
-
 
 ## Ejecutar proyecto
 
@@ -76,13 +75,13 @@ Accede a la GitHub Action [Deploy to Firebase](https://github.com/MarioMH8/mario
 
 El proyecto está organizado en varios directorios y archivos principales:
 
-- `src/`: Este directorio contiene todo el código fuente del proyecto. 
-    - `assets/`: Contiene las imágenes del proyecto que se procesan y optimizan con Astro.
-    - `components/`: Contiene los componentes de Astro que se utilizan en varias partes de la aplicación.
-    - `content/`: Configuración del contenido de Astro.
-    - `features/`: Contiene los componentes específicos del proyecto.
-    - `layouts/`: Contiene el layout base de la página.
-    - `pages/`: Contiene los componentes de Astro que representan las páginas de la aplicación.
+- `src/`: Este directorio contiene todo el código fuente del proyecto.
+  - `assets/`: Contiene las imágenes del proyecto que se procesan y optimizan con Astro.
+  - `components/`: Contiene los componentes de Astro que se utilizan en varias partes de la aplicación.
+  - `content/`: Configuración del contenido de Astro.
+  - `features/`: Contiene los componentes específicos del proyecto.
+  - `layouts/`: Contiene el layout base de la página.
+  - `pages/`: Contiene los componentes de Astro que representan las páginas de la aplicación.
 - `public/`: Este directorio contiene todos los archivos estáticos.
 
 ## Variables de entorno
