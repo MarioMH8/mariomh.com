@@ -8,10 +8,9 @@ import Footer from '../features/footer.astro';
 interface Props {
 	title?: string;
 	description?: string;
-	className?: string;
 }
 
-const {title, description, className} = Astro.props;
+const {title, description} = Astro.props;
 const computedTitle = title ? `${title} - Magnus Strategy Group` : 'MarioMH - Desarrollador JavaScript';
 const computedDescription = description ? description : 'Mario Menéndez Hidalgo es un desarrollador Full Stack especializado en JavaScript.';
 ---
@@ -193,14 +192,12 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
 		<ViewTransitions />
 
 	</head>
-	<body>
-		<main class:list={[
-			className,
-			'overflow-y-scroll overflow-x-hidden',
-			'scrollbar-thin scrollbar-thumb-primary scrollbar-thumb-rounded',
-			'scrollbar-track-primary-background dark:scrollbar-track-primary-dark-background',
-			'max-h-[100dvh]',
-		]}>
+	<body class:list={[
+		'overflow-y-scroll overflow-x-hidden',
+		'scrollbar-thin scrollbar-thumb-primary scrollbar-thumb-rounded',
+		'scrollbar-track-primary-background dark:scrollbar-track-primary-dark-background',
+	]}>
+		<main>
 			<slot />
 			<Footer/>
 		</main>
