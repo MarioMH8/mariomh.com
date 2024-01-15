@@ -22,13 +22,13 @@
 Clonar el proyecto
 
 ```bash
-git clone https://github.com/MarioMH8/terminal.mariomh.com.git
+git clone https://github.com/MarioMH8/mariomh.com.git
 ```
 
 Acceder al directorio del proyecto
 
 ```bash
-cd terminal.mariomh.com
+cd mariomh.com
 ```
 
 Crea el archivo `.env` con las [variables de entorno](#variables-de-entorno)
