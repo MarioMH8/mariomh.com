@@ -36,14 +36,15 @@ Crea el archivo `.env` con las [variables de entorno](#variables-de-entorno)
 **.env**
 
 ```.dotenv
-PUBLIC_FIREBASE_API_KEY=AIzaSyBa....
-PUBLIC_FIREBASE_APP_ID=1:77.....:web:438....
-PUBLIC_FIREBASE_AUTH_DOMAIN=<project>.firebaseapp.com
-PUBLIC_FIREBASE_MESSAGING_SENDER_ID=77....
-PUBLIC_FIREBASE_STORAGE_BUCKET=<project>.appspot.com
-PUBLIC_FIREBASE_PROJECT=<project>
-PUBLIC_FIREBASE_APPCHECK_DEBUG_TOKEN=<uuid v4>
-PUBLIC_RECAPTCHA_SITE_KEY=6Ld....
+PUBLIC_FIREBASE_API_KEY=AIzaSyBaY8osi3ih1u6KUnnrN91ReKGC1dCnMeM
+PUBLIC_FIREBASE_APP_ID=1:777228830069:web:43848397f5a0f7b8997f3c
+PUBLIC_FIREBASE_AUTH_DOMAIN=mariomh-com.firebaseapp.com
+PUBLIC_FIREBASE_MESSAGING_SENDER_ID=777228830069
+PUBLIC_FIREBASE_STORAGE_BUCKET=mariomh-com.appspot.com
+PUBLIC_FIREBASE_PROJECT=mariomh-com
+PUBLIC_RECAPTCHA_SITE_KEY=6LdCrFApAAAAAPZWjDrinEIlt4-gQVNX3TQTjuyS
+PUBLIC_FIREBASE_APPCHECK_DEBUG_TOKEN=f7fa6ff0-a746-4ba0-936b-57366f12bba9
+PUBLIC_FIREBASE_FUNCTIONS_SEND_MAIL=http://127.0.0.1:5001/mariomh-com/europe-west1/mail-send
 ```
 
 La primera instalación tendrás que actualizar el valor de `$TOKEN` del archivo [bunfig.toml](bunfig.toml)
@@ -83,3 +84,15 @@ El proyecto está organizado en varios directorios y archivos principales:
     - `layouts/`: Contiene el layout base de la página.
     - `pages/`: Contiene los componentes de Astro que representan las páginas de la aplicación.
 - `public/`: Este directorio contiene todos los archivos estáticos.
+
+## Variables de entorno
+
+- `PUBLIC_FIREBASE_API_KEY`: API Key de Firebase
+- `PUBLIC_FIREBASE_APP_ID`: ID de la aplicación de Firebase
+- `PUBLIC_FIREBASE_AUTH_DOMAIN`: Dominio de autenticación de Firebase
+- `PUBLIC_FIREBASE_MESSAGING_SENDER_ID`: ID de mensajería de Firebase
+- `PUBLIC_FIREBASE_STORAGE_BUCKET`: Bucket de almacenamiento de Firebase
+- `PUBLIC_FIREBASE_PROJECT`: ID del proyecto de Firebase
+- `PUBLIC_RECAPTCHA_SITE_KEY`: Site Key de reCAPTCHA
+- `PUBLIC_FIREBASE_APPCHECK_DEBUG_TOKEN`: Token de debug de Firebase App Check
+- `PUBLIC_FIREBASE_FUNCTIONS_SEND_MAIL`: URL de la función de Firebase para enviar mails
