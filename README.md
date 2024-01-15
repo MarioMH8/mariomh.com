@@ -18,7 +18,7 @@
 
 ## Puntuación Lighthouse
 
-![lighthouse.webp](docs/lighthouse.webp)
+![lighthouse.webp](docs/lighthouse-result.svg)
 
 ## Ejecutar proyecto
 
