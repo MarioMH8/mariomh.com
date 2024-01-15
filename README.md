@@ -16,6 +16,10 @@
 - **Deployment** - [Firebase](https://firebase.google.com/)
 - **Languages** - [TypeScript](https://www.typescriptlang.org/)
 
+## Puntuación Lighthouse
+
+![lighthouse.webp](docs/lighthouse.webp)
+
 ## Ejecutar proyecto
 
 Clonar el proyecto
