@@ -10,11 +10,11 @@ import {X} from 'lucide-astro';
 import Dialog from '../components/dialog.astro';
 ---
 <Dialog id="contact">
-	<Box className="w-[90vw] max-w-[680px] min-h-[720px] bg-primary-1 py-8 relative" round='2xl'>
-		<Heading size="h2" weight="medium" className="text-5xl mb-12 text-center dark:text-primary-foreground">¡Hablemos!</Heading>
+	<Box className="w-[90vw] max-w-[680px] min-h-[720px] bg-primary-1 dark:bg-primary-12 py-8 relative" round='2xl'>
+		<Heading size="h2" weight="medium" className="text-5xl mb-12 text-center">¡Hablemos!</Heading>
 		<Button
 			icon
-			subtle
+			link
 			className="absolute top-[2.5rem] right-[2.5rem]"
 			id="contact-form-close">
 			<X/>
@@ -58,8 +58,11 @@ import Dialog from '../components/dialog.astro';
 					transparent/>
 			</Label>
 			<Button type="submit" family="secondary" solid>Enviar mensaje</Button>
-			<span id="contact-form-success" class="hidden text-primary-10 mx-auto">Mensaje enviado correctamente</span>
-			<span id="contact-form-error" class="hidden text-danger-10 mx-auto">Hubo un error al enviar tu mensaje, inténtelo de nuevo más tarde</span>
+			<span id="contact-form-success" class="hidden text-primary-10 mx-auto text-center">Mensaje enviado correctamente</span>
+			<span id="contact-form-error" class="hidden text-danger-10 mx-auto text-center">
+				Hubo un error al enviar tu mensaje, sin embargo puedes escribirme algo bonito a
+				<a href="mailto:hola@mariomh.com" class="text-primary-10">hola@mariomh.com</a>.
+			</span>
 		</form>
 	</Box>
 </Dialog>
