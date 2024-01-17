@@ -7,8 +7,8 @@ let show = defaultShow;
 let showCount = defaultShow;
 let actualShow: string | undefined = undefined;
 
-const buttons = document.querySelectorAll<HTMLButtonElement>('.portfolio-btn');
-const showMore = document.getElementById('show-more') as HTMLButtonElement;
+const $buttons = document.querySelectorAll<HTMLButtonElement>('.portfolio-btn');
+const $showMore = document.getElementById('show-more') as HTMLButtonElement;
 document.querySelectorAll<HTMLElement>('.portfolio-preview').forEach(el => {
 	allProjects.push(el);
 });
@@ -16,7 +16,7 @@ showProjects = allProjects;
 
 function toggleClass(cls: string) {
 	let activeClass = '';
-	buttons.forEach(btn => {
+	$buttons.forEach(btn => {
 		if (btn.className === cls) {
 			return;
 		}
@@ -29,9 +29,9 @@ function toggleClass(cls: string) {
 
 function toggleShowMore() {
 	if (showProjects.length <= show) {
-		showMore.classList.add('hidden');
+		$showMore.classList.add('hidden');
 	} else {
-		showMore.classList.remove('hidden');
+		$showMore.classList.remove('hidden');
 	}
 }
 
@@ -45,7 +45,7 @@ function showAll() {
 	});
 	showCount = show;
 	showProjects = allProjects;
-	showMore.classList.remove('hidden');
+	$showMore.classList.remove('hidden');
 }
 
 function showType(type: string) {
@@ -73,20 +73,20 @@ function renderProjects() {
 	}
 }
 
-showMore.addEventListener('click', () => {
+$showMore.addEventListener('click', () => {
 	show = show === maxShow ? defaultShow : maxShow;
 	if (show === maxShow) {
-		showMore.textContent = 'Ver menos';
+		$showMore.textContent = 'Ver menos';
 	} else {
-		showMore.textContent = 'Ver más';
+		$showMore.textContent = 'Ver más';
 	}
 	renderProjects();
 });
-buttons.forEach(btn => {
+$buttons.forEach(btn => {
 	btn.addEventListener('click', () => {
 		actualShow = btn.dataset.show;
 		show = defaultShow;
-		showMore.textContent = 'Ver más';
+		$showMore.textContent = 'Ver más';
 		btn.className = toggleClass(btn.className);
 		renderProjects();
 		toggleShowMore();
