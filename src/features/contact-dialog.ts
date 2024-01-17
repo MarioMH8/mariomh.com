@@ -5,13 +5,10 @@ self.FIREBASE_APPCHECK_DEBUG_TOKEN = import.meta.env.PUBLIC_FIREBASE_APPCHECK_DE
 
 let app: FirebaseApp | undefined = undefined;
 
-async function initializeFirebase() {
-	if (app) {
-		return;
-	}
+async function initializeFirebase(): Promise<FirebaseApp> {
 	const { initializeApp } = await import('@firebase/app');
 	const { initializeAppCheck, ReCaptchaV3Provider } = await import('@firebase/app-check');
-	app = initializeApp({
+	const app = initializeApp({
 		apiKey: import.meta.env.PUBLIC_FIREBASE_API_KEY,
 		appId: import.meta.env.PUBLIC_FIREBASE_APP_ID,
 		authDomain: import.meta.env.PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -23,6 +20,8 @@ async function initializeFirebase() {
 		provider: new ReCaptchaV3Provider(import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY),
 		isTokenAutoRefreshEnabled: true,
 	});
+
+	return app;
 }
 
 const $form = document.getElementById('contact-form') as HTMLFormElement;
@@ -99,6 +98,13 @@ $form.addEventListener('submit', e => void submitContactForm(e));
 $closeButton.addEventListener('click', closeDialog);
 $buttons.forEach(btn => {
 	btn.addEventListener('click', () => {
-		void initializeFirebase().then(() => $dialog.showModal());
+		if (app) {
+			$dialog.showModal();
+		} else {
+			void initializeFirebase().then(a => {
+				app = a;
+				$dialog.showModal();
+			});
+		}
 	});
 });
