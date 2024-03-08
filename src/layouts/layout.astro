@@ -191,6 +191,17 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
 
 		<ViewTransitions />
 
+		<script is:inline>
+			window.getThemePreference = () => {
+				const localItem = typeof localStorage !== "undefined" && localStorage.getItem("theme")
+				if (localItem) return localItem
+				return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+			}
+
+			const isDark = window.getThemePreference() === "dark"
+			document.documentElement.classList.toggle("dark", isDark)
+		</script>
+
 	</head>
 	<body class:list={[
 		'overflow-y-scroll overflow-x-hidden',
