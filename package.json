@@ -48,7 +48,7 @@
 		"@mariomh/span": "0.0.2",
 		"@mariomh/textarea": "0.0.3",
 		"@mariomh/theme": "0.0.1",
-		"astro": "4.4.2",
+		"astro": "4.4.15",
 		"astro-seo": "0.8.2",
 		"atropos": "2.0.2",
 		"firebase": "10.8.0",
