@@ -49,7 +49,7 @@
 		"@mariomh/textarea": "0.0.3",
 		"@mariomh/theme": "0.0.1",
 		"astro": "4.4.15",
-		"astro-seo": "0.8.2",
+		"astro-seo": "0.8.3",
 		"atropos": "2.0.2",
 		"firebase": "10.8.1",
 		"lucide-astro": "0.338.0"
