@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 
 import BlogPreview from './blog-preview.astro';
 
-const posts = await getCollection('post');
+const posts = (await getCollection('post')).slice(0, 6);
 
 const className = buttonCn({
 	bordered: true,
