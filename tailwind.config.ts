@@ -5,7 +5,7 @@ const theme = plugin({});
 const plugins = theme.config?.plugins ?? [];
 
 const config: Config = {
-	darkMode: 'media',
+	darkMode: 'class',
 	content: ['./src/**/*.{js,ts,jsx,tsx,mdx,astro}', './node_modules/@mariomh/**/*.{js,ts,jsx,tsx,mdx,astro}'],
 	plugins: [theme, ...plugins],
 	theme: {
