@@ -1,13 +1,13 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
-import { SEO } from "astro-seo";
+import {ViewTransitions} from 'astro:transitions';
+import {SEO} from "astro-seo";
 
 import Footer from '../features/footer.astro';
 
 
 interface Props {
-	title?: string;
-	description?: string;
+    title?: string;
+    description?: string;
 }
 
 const {title, description} = Astro.props;
@@ -17,213 +17,218 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
 
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width"/>
 
 
-		<SEO
-			title={computedTitle}
-			description={computedDescription}
-			openGraph={{
-				basic: {
-					title: 'MarioMH - Desarrollador JavaScript',
-					type: "website",
-					image: "/og.webp",
-				}
-			}}
-			twitter={{
-				creator: "@MarioMH8"
-			}}
-		/>
-
-		<meta name="theme-color" content="#FEFFFA" media="(prefers-color-scheme: light)">
-		<meta name="theme-color" content="#001915" media="(prefers-color-scheme: dark)">
-		<meta name="generator" content={Astro.generator} />
-
-		<link rel="sitemap" href="/sitemap-index.xml">
-
-		<style>
-            @font-face {
-                font-family: Archia;
-                font-weight: 100;
-                font-style: normal;
-                font-display: swap;
-                src: url('/fonts/archia/archia-thin-webfont.eot');
-                src: url('/fonts/archia/archia-thin-webfont.eot?#iefix') format('embedded-opentype'),
-                url('/fonts/archia/archia-thin-webfont.woff2') format('woff2'),
-                url('/fonts/archia/archia-thin-webfont.woff') format('woff'),
-                url('/fonts/archia/archia-thin-webfont.ttf') format('truetype');
+	<SEO
+		title={computedTitle}
+		description={computedDescription}
+		openGraph={{
+            basic: {
+                title: 'MarioMH - Desarrollador JavaScript',
+                type: "website",
+                image: "/og.webp",
             }
+        }}
+		twitter={{
+            creator: "@MarioMH8"
+        }}
+	/>
 
-            @font-face {
-                font-family: Archia;
-                font-weight: 300;
-                font-style: normal;
-                font-display: swap;
-                src: url('/fonts/archia/archia-light-webfont.eot');
-                src: url('/fonts/archia/archia-light-webfont.eot?#iefix') format('embedded-opentype'),
-                url('/fonts/archia/archia-light-webfont.woff2') format('woff2'),
-                url('/fonts/archia/archia-light-webfont.woff') format('woff'),
-                url('/fonts/archia/archia-light-webfont.ttf') format('truetype');
-            }
+	<meta name="theme-color" content="#FEFFFA" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#001915" media="(prefers-color-scheme: dark)">
+	<meta name="generator" content={Astro.generator}/>
 
-            @font-face {
-                font-family: Archia;
-                font-weight: 400;
-                font-style: normal;
-                font-display: swap;
-                src: url('/fonts/archia/archia-regular-webfont.eot');
-                src: url('/fonts/archia/archia-regular-webfont.eot?#iefix') format('embedded-opentype'),
-                url('/fonts/archia/archia-regular-webfont.woff2') format('woff2'),
-                url('/fonts/archia/archia-regular-webfont.woff') format('woff'),
-                url('/fonts/archia/archia-regular-webfont.ttf') format('truetype');
-            }
+	<link rel="sitemap" href="/sitemap-index.xml">
 
-            @font-face {
-                font-family: Archia;
-                font-weight: 500;
-                font-style: normal;
-                font-display: swap;
-                src: url('/fonts/archia/archia-medium-webfont.eot');
-                src: url('/fonts/archia/archia-medium-webfont.eot?#iefix') format('embedded-opentype'),
-                url('/fonts/archia/archia-medium-webfont.woff2') format('woff2'),
-                url('/fonts/archia/archia-medium-webfont.woff') format('woff'),
-                url('/fonts/archia/archia-medium-webfont.ttf') format('truetype');
-            }
+	<style>
+        @font-face {
+            font-family: Archia;
+            font-weight: 100;
+            font-style: normal;
+            font-display: swap;
+            src: url('/fonts/archia/archia-thin-webfont.eot');
+            src: url('/fonts/archia/archia-thin-webfont.eot?#iefix') format('embedded-opentype'),
+            url('/fonts/archia/archia-thin-webfont.woff2') format('woff2'),
+            url('/fonts/archia/archia-thin-webfont.woff') format('woff'),
+            url('/fonts/archia/archia-thin-webfont.ttf') format('truetype');
+        }
 
-            @font-face {
-                font-family: Archia;
-                font-weight: 600;
-                font-style: normal;
-                font-display: swap;
-                src: url('/fonts/archia/archia-semibold-webfont.eot');
-                src: url('/fonts/archia/archia-semibold-webfont.eot?#iefix') format('embedded-opentype'),
-                url('/fonts/archia/archia-semibold-webfont.woff2') format('woff2'),
-                url('/fonts/archia/archia-semibold-webfont.woff') format('woff'),
-                url('/fonts/archia/archia-semibold-webfont.ttf') format('truetype');
-            }
+        @font-face {
+            font-family: Archia;
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+            src: url('/fonts/archia/archia-light-webfont.eot');
+            src: url('/fonts/archia/archia-light-webfont.eot?#iefix') format('embedded-opentype'),
+            url('/fonts/archia/archia-light-webfont.woff2') format('woff2'),
+            url('/fonts/archia/archia-light-webfont.woff') format('woff'),
+            url('/fonts/archia/archia-light-webfont.ttf') format('truetype');
+        }
 
-            @font-face {
-                font-family: Archia;
-                font-weight: 700;
-                font-style: normal;
-                font-display: swap;
-                src: url('/fonts/archia/archia-bold-webfont.eot');
-                src: url('/fonts/archia/archia-bold-webfont.eot?#iefix') format('embedded-opentype'),
-                url('/fonts/archia/archia-bold-webfont.woff2') format('woff2'),
-                url('/fonts/archia/archia-bold-webfont.woff') format('woff'),
-                url('/fonts/archia/archia-bold-webfont.ttf') format('truetype');
-            }
+        @font-face {
+            font-family: Archia;
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+            src: url('/fonts/archia/archia-regular-webfont.eot');
+            src: url('/fonts/archia/archia-regular-webfont.eot?#iefix') format('embedded-opentype'),
+            url('/fonts/archia/archia-regular-webfont.woff2') format('woff2'),
+            url('/fonts/archia/archia-regular-webfont.woff') format('woff'),
+            url('/fonts/archia/archia-regular-webfont.ttf') format('truetype');
+        }
 
-            @font-face {
-                font-family: DMSans;
-                font-weight: 100;
-                font-style: normal;
-                font-display: swap;
-                src: url('/fonts/dmsans/DMSans-Thin.woff2') format('woff2');
-            }
+        @font-face {
+            font-family: Archia;
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+            src: url('/fonts/archia/archia-medium-webfont.eot');
+            src: url('/fonts/archia/archia-medium-webfont.eot?#iefix') format('embedded-opentype'),
+            url('/fonts/archia/archia-medium-webfont.woff2') format('woff2'),
+            url('/fonts/archia/archia-medium-webfont.woff') format('woff'),
+            url('/fonts/archia/archia-medium-webfont.ttf') format('truetype');
+        }
 
-            @font-face {
-                font-family: DMSans;
-                font-weight: 200;
-                font-style: normal;
-                font-display: swap;
-                src: url('/fonts/dmsans/DMSans-ExtraLight.woff2') format('woff2');
-            }
+        @font-face {
+            font-family: Archia;
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+            src: url('/fonts/archia/archia-semibold-webfont.eot');
+            src: url('/fonts/archia/archia-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+            url('/fonts/archia/archia-semibold-webfont.woff2') format('woff2'),
+            url('/fonts/archia/archia-semibold-webfont.woff') format('woff'),
+            url('/fonts/archia/archia-semibold-webfont.ttf') format('truetype');
+        }
 
-            @font-face {
-                font-family: DMSans;
-                font-weight: 300;
-                font-style: normal;
-                font-display: swap;
-                src: url('/fonts/dmsans/DMSans-Light.woff2') format('woff2');
-            }
+        @font-face {
+            font-family: Archia;
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+            src: url('/fonts/archia/archia-bold-webfont.eot');
+            src: url('/fonts/archia/archia-bold-webfont.eot?#iefix') format('embedded-opentype'),
+            url('/fonts/archia/archia-bold-webfont.woff2') format('woff2'),
+            url('/fonts/archia/archia-bold-webfont.woff') format('woff'),
+            url('/fonts/archia/archia-bold-webfont.ttf') format('truetype');
+        }
 
-            @font-face {
-                font-family: DMSans;
-                font-weight: 400;
-                font-style: normal;
-                font-display: swap;
-                src: url('/fonts/dmsans/DMSans-Regular.woff2') format('woff2');
-            }
+        @font-face {
+            font-family: DMSans;
+            font-weight: 100;
+            font-style: normal;
+            font-display: swap;
+            src: url('/fonts/dmsans/DMSans-Thin.woff2') format('woff2');
+        }
 
-            @font-face {
-                font-family: DMSans;
-                font-weight: 500;
-                font-style: normal;
-                font-display: swap;
-                src: url('/fonts/dmsans/DMSans-Medium.woff2') format('woff2');
-            }
+        @font-face {
+            font-family: DMSans;
+            font-weight: 200;
+            font-style: normal;
+            font-display: swap;
+            src: url('/fonts/dmsans/DMSans-ExtraLight.woff2') format('woff2');
+        }
 
-            @font-face {
-                font-family: DMSans;
-                font-weight: 600;
-                font-style: normal;
-                font-display: swap;
-                src: url('/fonts/dmsans/DMSans-SemiBold.woff2') format('woff2');
-            }
+        @font-face {
+            font-family: DMSans;
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+            src: url('/fonts/dmsans/DMSans-Light.woff2') format('woff2');
+        }
 
-            @font-face {
-                font-family: DMSans;
-                font-weight: 700;
-                font-style: normal;
-                font-display: swap;
-                src: url('/fonts/dmsans/DMSans-Bold.woff2') format('woff2');
-            }
+        @font-face {
+            font-family: DMSans;
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+            src: url('/fonts/dmsans/DMSans-Regular.woff2') format('woff2');
+        }
 
-            @font-face {
-                font-family: DMSans;
-                font-weight: 800;
-                font-style: normal;
-                font-display: swap;
-                src: url('/fonts/dmsans/DMSans-ExtraBold.woff2') format('woff2');
-            }
+        @font-face {
+            font-family: DMSans;
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+            src: url('/fonts/dmsans/DMSans-Medium.woff2') format('woff2');
+        }
 
-            @font-face {
-                font-family: DMSans;
-                font-weight: 900;
-                font-style: normal;
-                font-display: swap;
-                src: url('/fonts/dmsans/DMSans-Black.woff2') format('woff2');
-            }
-		</style>
+        @font-face {
+            font-family: DMSans;
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+            src: url('/fonts/dmsans/DMSans-SemiBold.woff2') format('woff2');
+        }
 
-		<ViewTransitions />
+        @font-face {
+            font-family: DMSans;
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+            src: url('/fonts/dmsans/DMSans-Bold.woff2') format('woff2');
+        }
 
-		<script is:inline>
-			window.getThemePreference = () => {
-				const localItem = typeof localStorage !== "undefined" && localStorage.getItem("theme")
-				if (localItem) return localItem
-				return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
-			}
+        @font-face {
+            font-family: DMSans;
+            font-weight: 800;
+            font-style: normal;
+            font-display: swap;
+            src: url('/fonts/dmsans/DMSans-ExtraBold.woff2') format('woff2');
+        }
 
-			const isDark = window.getThemePreference() === "dark"
-			document.documentElement.classList.toggle("dark", isDark)
-		</script>
+        @font-face {
+            font-family: DMSans;
+            font-weight: 900;
+            font-style: normal;
+            font-display: swap;
+            src: url('/fonts/dmsans/DMSans-Black.woff2') format('woff2');
+        }
+	</style>
 
-	</head>
-	<body class:list={[
-		'overflow-y-scroll overflow-x-hidden',
-		'scrollbar-thin scrollbar-thumb-primary scrollbar-thumb-rounded',
-		'scrollbar-track-primary-background dark:scrollbar-track-primary-dark-background',
-	]}>
-		<main>
-			<slot />
-			<Footer/>
-		</main>
-		<slot name="dialog" />
-	</body>
+	<ViewTransitions/>
+
+	<script is:inline>
+        window.getThemePreference = () => {
+        	const localItem = typeof localStorage !== 'undefined' && localStorage.getItem('theme');
+        	if (localItem) {
+        		return localItem;
+        	}
+
+        	return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        };
+
+        const isDark = window.getThemePreference() === 'dark';
+        document.documentElement.classList.toggle('dark', isDark);
+	</script>
+
+</head>
+<body class:list={[
+    'overflow-y-scroll overflow-x-hidden',
+    'scrollbar-thin scrollbar-thumb-primary scrollbar-thumb-rounded',
+    'scrollbar-track-primary-background dark:scrollbar-track-primary-dark-background',
+]}>
+<main>
+	<slot/>
+	<Footer/>
+</main>
+<slot name="dialog"/>
+</body>
 </html>
 
 <style is:global>
     body {
-		scrollbar-gutter: stable both-edges;
-		@apply dark:bg-primary-12
+        scrollbar-gutter: stable both-edges;
+        @apply dark:bg-primary-12
     }
+
     body.dark {
-		@apply bg-primary-12
+        @apply bg-primary-12
     }
+
     img {
         -webkit-user-drag: none;
         -khtml-user-drag: none;
@@ -239,17 +244,18 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
         -webkit-user-select: none;
         -ms-user-select: none;
     }
+
     p {
-		max-width: 75ch;
-	}
+        max-width: 75ch;
+    }
 
-	dialog {
-		background: transparent;
-	}
+    dialog {
+        background: transparent;
+    }
 
-	dialog::backdrop {
-		background: rgba(0, 0, 0, 0.2);
-		backdrop-filter: blur(3px);
-	}
+    dialog::backdrop {
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(3px);
+    }
 
 </style>
