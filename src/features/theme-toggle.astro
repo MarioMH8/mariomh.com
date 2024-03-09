@@ -17,23 +17,28 @@ import {Moon, Sun} from 'lucide-astro'
 </Button>
 
 <script>
+	declare const window: {
+		getThemePreference: () => 'dark' | 'light';
+	} & Window;
+
 	const darkTheme = 'dark';
 	const lightTheme = 'light';
 
 	function toggleTheme() {
 		const element = document.documentElement;
+		const isDark = element.classList.contains(darkTheme);
+
 		element.classList.toggle(darkTheme);
 
-		const isDark = element.classList.contains(darkTheme);
 		localStorage.setItem('theme', isDark ? darkTheme : lightTheme);
 
 		updateThemeMessage(isDark);
 	}
 
-	function updateThemeMessage(isDark) {
+	function updateThemeMessage(isDark: boolean) {
 		const translation = isDark ? 'oscuro' : 'claro';
 		const message = `Alternar tema, el tema actual es ${translation}`;
-		const span = document.querySelector('span.sr-only');
+		const span = document.getElementById('theme-toggle').querySelector('span.sr-only');
 		span.innerHTML = message;
 	}
 
@@ -52,7 +57,7 @@ import {Moon, Sun} from 'lucide-astro'
 		themePreference.addListener(handleThemePreferenceChange);
 
 		document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+		updateThemeMessage(window.getThemePreference() === darkTheme);
 	});
 
-	updateThemeMessage(window.getThemePreference());
 </script>

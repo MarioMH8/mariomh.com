@@ -192,17 +192,32 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
 	<ViewTransitions/>
 
 	<script is:inline>
+		window.getSystemTheme = () => {
+			return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+		};
+
         window.getThemePreference = () => {
         	const localItem = typeof localStorage !== 'undefined' && localStorage.getItem('theme');
-        	if (localItem) {
+			if (localItem === 'dark' || localItem === 'light') {
         		return localItem;
         	}
 
-        	return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        	return window.getSystemTheme();
         };
 
-        const isDark = window.getThemePreference() === 'dark';
-        document.documentElement.classList.toggle('dark', isDark);
+        window.toggleTheme = () => {
+			const isDark = window.getThemePreference() === 'dark';
+			document.documentElement.classList.toggle('dark', isDark);
+        };
+
+
+		document.addEventListener('astro:page-load', () => {
+			window.toggleTheme();
+		});
+
+		window.toggleTheme();
+		const isDark = window.getThemePreference() === 'dark';
+		document.documentElement.classList.toggle('dark', isDark);
 	</script>
 
 </head>
