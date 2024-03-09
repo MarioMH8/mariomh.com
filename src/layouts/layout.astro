@@ -205,19 +205,22 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
         	return window.getSystemTheme();
         };
 
-        window.toggleTheme = () => {
+        function toggleTheme() {
+			const element = document.documentElement;
 			const isDark = window.getThemePreference() === 'dark';
-			document.documentElement.classList.toggle('dark', isDark);
-        };
+			const hasDark = element.classList.contains('dark');
+			if (isDark === hasDark) {
+				return;
+			}
+			element.classList.toggle('dark', isDark);
+        }
 
 
 		document.addEventListener('astro:page-load', () => {
-			window.toggleTheme();
+			toggleTheme();
 		});
 
-		window.toggleTheme();
-		const isDark = window.getThemePreference() === 'dark';
-		document.documentElement.classList.toggle('dark', isDark);
+		toggleTheme();
 	</script>
 
 </head>
