@@ -221,12 +221,13 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
 	</script>
 
 </head>
-<body class:list={[
-    'overflow-y-scroll overflow-x-hidden',
-    'scrollbar-thin scrollbar-thumb-primary scrollbar-thumb-rounded',
-    'scrollbar-track-primary-background dark:scrollbar-track-primary-dark-background',
+<body class="overflow-hidden">
+<main class:list={[
+	'h-screen',
+	'overflow-y-scroll overflow-x-hidden',
+	'scrollbar-thin scrollbar-thumb-primary scrollbar-thumb-rounded',
+	'scrollbar-track-primary-background dark:scrollbar-track-primary-dark-background',
 ]}>
-<main>
 	<slot/>
 	<Footer/>
 </main>
