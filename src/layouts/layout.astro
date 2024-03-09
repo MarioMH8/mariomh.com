@@ -196,16 +196,16 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
 			return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 		};
 
-        window.getThemePreference = () => {
-        	const localItem = typeof localStorage !== 'undefined' && localStorage.getItem('theme');
+  window.getThemePreference = () => {
+  	const localItem = typeof localStorage !== 'undefined' && localStorage.getItem('theme');
 			if (localItem === 'dark' || localItem === 'light') {
-        		return localItem;
-        	}
+  		return localItem;
+  	}
 
-        	return window.getSystemTheme();
-        };
+  	return window.getSystemTheme();
+  };
 
-        function toggleTheme() {
+  function toggleTheme() {
 			const element = document.documentElement;
 			const isDark = window.getThemePreference() === 'dark';
 			const hasDark = element.classList.contains('dark');
@@ -213,8 +213,7 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
 				return;
 			}
 			element.classList.toggle('dark', isDark);
-        }
-
+  }
 
 		document.addEventListener('astro:page-load', () => {
 			toggleTheme();
