@@ -113,4 +113,5 @@ document.addEventListener('astro:page-load', () => {
 			}
 		});
 	});
+	$dialog.addEventListener('close', closeDialog);
 });
