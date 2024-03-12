@@ -27,6 +27,11 @@ import {Moon, Sun} from 'lucide-astro'
 		localStorage.setItem('theme', isDark ? lightTheme : darkTheme);
 		updateThemeMessage(isDark);
 		element.classList.toggle(darkTheme);
+		if (isDark) {
+			element.classList.replace('scrollbar-track-primary-dark-background', 'scrollbar-track-primary-background');
+		} else {
+			element.classList.replace('scrollbar-track-primary-background', 'scrollbar-track-primary-dark-background');
+		}
 	}
 
 	function updateThemeMessage(isDark) {
