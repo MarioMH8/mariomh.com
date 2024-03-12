@@ -1,7 +1,6 @@
 import type { FirebaseApp } from '@firebase/app';
 
 document.addEventListener('astro:page-load', () => {
-	// @ts-expect-error - This is a debug token, it's fine to have it here
 	self.FIREBASE_APPCHECK_DEBUG_TOKEN = import.meta.env.PUBLIC_FIREBASE_APPCHECK_DEBUG_TOKEN;
 
 	let app: FirebaseApp | undefined = undefined;
