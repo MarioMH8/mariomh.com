@@ -192,43 +192,43 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
 	<ViewTransitions/>
 
 	<script is:inline>
-		window.getSystemTheme = () => {
-			return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-		};
+        window.getSystemTheme = () => {
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        };
 
-  window.getThemePreference = () => {
-  	const localItem = typeof localStorage !== 'undefined' && localStorage.getItem('theme');
-			if (localItem === 'dark' || localItem === 'light') {
-  		return localItem;
-  	}
+        window.getThemePreference = () => {
+            const localItem = typeof localStorage !== 'undefined' && localStorage.getItem('theme');
+            if (localItem === 'dark' || localItem === 'light') {
+                return localItem;
+            }
 
-  	return window.getSystemTheme();
-  };
+            return window.getSystemTheme();
+        };
 
-  function toggleTheme() {
-			const element = document.documentElement;
-			const isDark = window.getThemePreference() === 'dark';
-			const hasDark = element.classList.contains('dark');
-			if (isDark === hasDark) {
-				return;
-			}
-			element.classList.toggle('dark', isDark);
-  }
+        function toggleTheme() {
+            const element = document.documentElement;
+            const isDark = window.getThemePreference() === 'dark';
+            const hasDark = element.classList.contains('dark');
+            if (isDark === hasDark) {
+                return;
+            }
+            element.classList.toggle('dark', isDark);
+        }
 
-		document.addEventListener('astro:page-load', () => {
-			toggleTheme();
-		});
+        document.addEventListener('astro:page-load', () => {
+            toggleTheme();
+        });
 
-		toggleTheme();
+        toggleTheme();
 	</script>
 
 </head>
 <body class="overflow-hidden">
 <main class:list={[
-	'h-screen',
-	'overflow-y-scroll overflow-x-hidden',
-	'scrollbar-thin scrollbar-thumb-primary scrollbar-thumb-rounded',
-	'scrollbar-track-primary-background dark:scrollbar-track-primary-dark-background',
+    'h-screen',
+    'overflow-y-scroll overflow-x-hidden',
+    'scrollbar-thin scrollbar-thumb-primary scrollbar-thumb-rounded',
+    'scrollbar-track-primary-background dark:scrollbar-track-primary-dark-background',
 ]}>
 	<slot/>
 	<Footer/>
@@ -254,8 +254,6 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
         -o-user-drag: none;
         user-drag: none;
 
-
-        user-drag: none;
         user-select: none;
         -moz-user-select: none;
         -webkit-user-drag: none;
