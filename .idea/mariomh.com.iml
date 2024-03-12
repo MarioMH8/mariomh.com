@@ -9,7 +9,6 @@
       <excludeFolder url="file://$MODULE_DIR$/.firebase" />
       <excludeFolder url="file://$MODULE_DIR$/.github" />
       <excludeFolder url="file://$MODULE_DIR$/functions/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/.astro" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
