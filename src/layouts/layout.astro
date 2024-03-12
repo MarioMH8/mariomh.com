@@ -20,7 +20,7 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
 	'h-screen',
 	'overflow-y-scroll overflow-x-hidden',
 	'scrollbar-thin scrollbar-thumb-primary scrollbar-thumb-rounded',
-	'scrollbar-track-primary-background dark:scrollbar-track-primary-dark-background',
+	'scrollbar-track-primary-background',
 ]}>
 <head>
 	<meta charset="UTF-8"/>
@@ -214,10 +214,13 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
             const element = document.documentElement;
             const isDark = window.getThemePreference() === 'dark';
             const hasDark = element.classList.contains('dark');
-            if (isDark === hasDark) {
-                return;
+            if (isDark !== hasDark) {
+            	element.classList.toggle('dark', isDark);
             }
-            element.classList.toggle('dark', isDark);
+            const hasDarkScrollbar = element.classList.contains('scrollbar-track-primary-dark-background');
+			if (isDark !== hasDarkScrollbar) {
+				element.classList.toggle('scrollbar-track-primary-dark-background', isDark);
+			}
         }
 
         document.addEventListener('astro:page-load', () => {
