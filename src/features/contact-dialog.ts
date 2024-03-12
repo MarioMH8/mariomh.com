@@ -42,11 +42,17 @@ document.addEventListener('astro:page-load', () => {
 		$form.reset();
 	}
 
+	function openDialog() {
+		$dialog.showModal();
+		document.documentElement.classList.replace('overflow-y-scroll', 'overflow-y-hidden');
+	}
+
 	function closeDialog() {
 		$error.classList.add('hidden');
 		$success.classList.add('hidden');
 		$form.reset();
 		$dialog.close();
+		document.documentElement.classList.replace('overflow-y-hidden', 'overflow-y-scroll');
 	}
 
 	function disableFormElements<
@@ -98,11 +104,11 @@ document.addEventListener('astro:page-load', () => {
 	$buttons.forEach(btn => {
 		btn.addEventListener('click', () => {
 			if (app) {
-				$dialog.showModal();
+				openDialog();
 			} else {
 				void initializeFirebase().then(a => {
 					app = a;
-					$dialog.showModal();
+					openDialog();
 				});
 			}
 		});
