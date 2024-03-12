@@ -16,7 +16,12 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
 ---
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class:list={[
+	'h-screen',
+	'overflow-y-scroll overflow-x-hidden',
+	'scrollbar-thin scrollbar-thumb-primary scrollbar-thumb-rounded',
+	'scrollbar-track-primary-background dark:scrollbar-track-primary-dark-background',
+]}>
 <head>
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width"/>
@@ -223,13 +228,8 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
 	</script>
 
 </head>
-<body class="overflow-hidden">
-<main class:list={[
-    'h-screen',
-    'overflow-y-scroll overflow-x-hidden',
-    'scrollbar-thin scrollbar-thumb-primary scrollbar-thumb-rounded',
-    'scrollbar-track-primary-background dark:scrollbar-track-primary-dark-background',
-]}>
+<body>
+<main>
 	<slot/>
 	<Footer/>
 </main>
