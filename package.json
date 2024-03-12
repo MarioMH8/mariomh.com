@@ -52,7 +52,7 @@
 		"astro-seo": "0.8.3",
 		"atropos": "2.0.2",
 		"firebase": "10.8.1",
-		"lucide-astro": "0.352.0"
+		"lucide-astro": "0.356.0"
 	},
 	"devDependencies": {
 		"@astrojs/check": "0.5.8",
