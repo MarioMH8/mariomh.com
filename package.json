@@ -59,7 +59,7 @@
 		"@astrojs/sitemap": "3.1.1",
 		"@astrojs/tailwind": "5.1.0",
 		"@astrojs/ts-plugin": "1.6.0",
-		"@hexatool/eslint-config": "2.3.0",
+		"@hexatool/eslint-config": "3.0.0",
 		"astro-compress": "2.2.15",
 		"astro-eslint-parser": "0.16.3",
 		"astro-robots-txt": "1.0.0",
