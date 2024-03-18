@@ -1,0 +1,34 @@
+---
+import Button from '@mariomh/button/astro';
+import type {CollectionEntry} from "astro:content";
+import {getCollection} from "astro:content";
+
+import BlogPreview from './blog-preview.astro'
+
+interface Props {
+    posts: CollectionEntry<'posts'>[];
+}
+
+const allPosts = await getCollection('post');
+
+const tags = allPosts
+    .map(p => p.data.tags)
+    .flat()
+    .filter((v, i, a) => a.indexOf(v) === i)
+    .sort();
+
+const {posts} = Astro.props;
+---
+
+<section class='container w-full flex flex-col items-center gap-6 pt-[5dvh]'>
+	<div class='flex flex-row flex-wrap gap-8 items-center justify-center mb-16'>
+        {tags.map(tag =>
+			<Button bordered transparent className='rounded-lg' family='secondary' size='sm'>
+                {tag}
+			</Button>)}
+	</div>
+	<div class='flex flex-col lg:flex-row flex-wrap justify-center items-center gap-x-12 gap-y-16 lg:gap-y-24 lg:mb-24'>
+        {posts.map(post =>
+			<BlogPreview post={post} direction='horizontal' />)}
+	</div>
+</section>

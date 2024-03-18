@@ -13,8 +13,12 @@ const titleCn = [
 
 interface Props {
 	post: CollectionEntry<'post'>;
+	direction?: 'horizontal' | 'vertical';
 }
-const {post} = Astro.props;
+const {post, direction = 'vertical'} = Astro.props;
+
+const vertical = direction === 'vertical';
+
 ---
 <article class:list={[
 	'transition-transform hover:scale-110 focus-within:scale-110',
@@ -28,7 +32,7 @@ const {post} = Astro.props;
 		family='secondary'
 		href={`/post/${post.slug}`}
 		title={`Leer artículo '${post.data.title}'`}
-		className='rounded-2xl relative text-lg aspect-[10/13]'>
+		className={`rounded-2xl relative text-lg ${vertical ? 'aspect-[10/13]' : 'aspect-[7/5]'}`}>
 		<Image
 			src={post.data.image}
 			alt={post.data.imageAlt}
