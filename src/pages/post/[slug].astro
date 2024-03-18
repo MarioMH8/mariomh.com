@@ -1,0 +1,18 @@
+---
+import {getCollection} from "astro:content";
+import NavigationMenu from "../../features/navigation-menu.astro";
+import Layout from "../../layouts/layout.astro";
+
+export async function getStaticPaths() {
+    const collectionEntries = await getCollection('post');
+
+    return collectionEntries
+        .map(entry => ({
+            params: {slug: entry.slug}, props: {entry},
+        }));
+}
+---
+
+<Layout>
+	<NavigationMenu blog/>
+</Layout>
