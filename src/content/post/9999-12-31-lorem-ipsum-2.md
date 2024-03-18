@@ -1,7 +1,7 @@
 ---
 slug: lorem-ipsum-2
-title: "Visual Studio Code: Productividad y setup"
-tags: ["Tecnología"]
+title: 'Visual Studio Code: Productividad y setup'
+tags: ['Tecnología']
 image: ../../assets/posts/coding.jpg
 imageAlt: Manos de una persona sobre el teclado de un portátil, escribiendo código.
 ---

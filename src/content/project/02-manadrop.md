@@ -1,7 +1,7 @@
 ---
 category: app
 title: Manadrop
-resume: "Aplicación web para gestionar de tu colección de cartas Magic: The Gathering"
+resume: 'Aplicación web para gestionar de tu colección de cartas Magic: The Gathering'
 href: https://manadrop.mariomh.com
 target: _blank
 image: ../../assets/projects/manadrop.png
