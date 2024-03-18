@@ -1,13 +1,12 @@
 ---
-import {getCollection} from "astro:content";
-
 import Link from '@mariomh/link/astro';
+import {getCollection} from "astro:content";
+import {ChevronRight} from "lucide-astro";
 
 import BlogGrid from "@/features/blog-grid.astro";
 import ContactDialog from "@/features/contact-dialog.astro";
 import NavigationMenu from '@/features/navigation-menu.astro';
 import Layout from '@/layouts/layout.astro';
-import {ChevronRight} from "lucide-astro";
 
 const posts = (await getCollection('post')).slice(0, 4);
 ---

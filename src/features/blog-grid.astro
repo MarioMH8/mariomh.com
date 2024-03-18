@@ -1,7 +1,5 @@
 ---
-import Button from '@mariomh/button/astro';
 import type {CollectionEntry} from "astro:content";
-import {getCollection} from "astro:content";
 
 import BlogPreview from './blog-preview.astro'
 
@@ -9,13 +7,15 @@ interface Props {
     posts: CollectionEntry<'posts'>[];
 }
 
-const allPosts = await getCollection('post');
-
-const tags = allPosts
-    .map(p => p.data.tags)
-    .flat()
-    .filter((v, i, a) => a.indexOf(v) === i)
-    .sort();
+/*
+ * Const allPosts = await getCollection('post');
+ * 
+ * const tags = allPosts
+ *     .map(p => p.data.tags)
+ *     .flat()
+ *     .filter((v, i, a) => a.indexOf(v) === i)
+ *     .sort();
+ */
 
 const {posts} = Astro.props;
 ---
