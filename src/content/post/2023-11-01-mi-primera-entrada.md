@@ -1,7 +1,7 @@
 ---
 slug: presentacion
 title: Buenas, me presento
-tags: ["Presentación", "Experiencias"]
+tags: ['Presentación', 'Experiencias']
 image: ../../assets/posts/coding.jpg
 imageAlt: Manos de una persona sobre el teclado de un portátil, escribiendo código.
 ---
