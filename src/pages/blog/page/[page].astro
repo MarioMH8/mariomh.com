@@ -1,0 +1,21 @@
+---
+import { getCollection } from "astro:content";
+
+import BlogGrid from "../../../features/blog-grid.astro";
+import ContactDialog from "../../../features/contact-dialog.astro";
+import NavigationMenu from "../../../features/navigation-menu.astro";
+import Layout from "../../../layouts/layout.astro";
+
+export async function getStaticPaths({ paginate }) {
+	const posts = await getCollection('post');
+
+    return paginate(posts, { pageSize: 4 });
+}
+const { page } = Astro.props;
+---
+
+<Layout>
+	<NavigationMenu blog/>
+	<BlogGrid posts={page.data}/>
+	<ContactDialog slot="dialog"/>
+</Layout>
