@@ -1,5 +1,8 @@
 ---
 import { getCollection } from "astro:content";
+import { ChevronRight, ChevronLeft } from "lucide-astro";
+
+import Link from '@mariomh/link/astro';
 
 import BlogGrid from "@/features/blog-grid.astro";
 import ContactDialog from "@/features/contact-dialog.astro";
@@ -17,5 +20,19 @@ const { page } = Astro.props;
 <Layout>
 	<NavigationMenu blog/>
 	<BlogGrid posts={page.data}/>
+	<div class='flex flex-row flex-wrap gap-8 items-center justify-center mb-16'>
+		{page.url.prev !== undefined &&
+			<Link href={page.url.prev === '/blog/page/1' ? '/blog' : page.url.prev} class="flex flex-row items-center">
+				<ChevronLeft class='w-6 h-6'/>
+				Artículos anteriores
+			</Link>
+		}
+		{page.url.next !== undefined &&
+			<Link href={page.url.next} class="flex flex-row items-center">
+				Artículos siguientes
+				<ChevronRight class='w-6 h-6'/>
+			</Link>
+		}
+	</div>
 	<ContactDialog slot="dialog"/>
 </Layout>
