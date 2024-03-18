@@ -1,10 +1,10 @@
 ---
 import {getCollection} from "astro:content";
 
-import BlogGrid from "../../features/blog-grid.astro";
-import ContactDialog from "../../features/contact-dialog.astro";
-import NavigationMenu from '../../features/navigation-menu.astro';
-import Layout from '../../layouts/layout.astro';
+import BlogGrid from "@/features/blog-grid.astro";
+import ContactDialog from "@/features/contact-dialog.astro";
+import NavigationMenu from '@/features/navigation-menu.astro';
+import Layout from '@/layouts/layout.astro';
 
 const posts = (await getCollection('post')).slice(0, 4);
 ---
