@@ -5,7 +5,6 @@ import { ChevronLeft,ChevronRight } from "lucide-astro";
 
 import BlogGrid from "@/features/blog-grid.astro";
 import ContactDialog from "@/features/contact-dialog.astro";
-import NavigationMenu from "@/features/navigation-menu.astro";
 import Layout from "@/layouts/layout.astro";
 
 export async function getStaticPaths({ paginate }) {
@@ -16,8 +15,7 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props;
 ---
 
-<Layout>
-	<NavigationMenu blog/>
+<Layout blog>
 	<BlogGrid posts={page.data}/>
 	<div class='flex flex-row flex-wrap gap-8 items-center justify-center mb-16'>
 		{page.url.prev !== undefined &&

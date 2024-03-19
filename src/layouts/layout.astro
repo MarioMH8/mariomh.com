@@ -3,14 +3,16 @@ import {ViewTransitions} from 'astro:transitions';
 import {SEO} from "astro-seo";
 
 import Footer from '@/features/footer.astro';
+import NavigationMenu from "../features/navigation-menu.astro";
 
 
 interface Props {
-    title?: string;
+	blog?: boolean;
     description?: string;
+    title?: string;
 }
 
-const {title, description} = Astro.props;
+const {title, description, blog} = Astro.props;
 const computedTitle = title ? `${title} - Magnus Strategy Group` : 'MarioMH - Desarrollador JavaScript';
 const computedDescription = description ? description : 'Mario Menéndez Hidalgo es un desarrollador Full Stack especializado en JavaScript.';
 ---
@@ -232,10 +234,11 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
 
 </head>
 <body>
+<NavigationMenu blog={blog}/>
 <main>
 	<slot/>
-	<Footer/>
 </main>
+<Footer/>
 <slot name="dialog"/>
 </body>
 </html>
@@ -266,6 +269,7 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
 
     p {
         max-width: 75ch;
+		text-wrap: pretty;
     }
 
     dialog {
@@ -276,5 +280,12 @@ const computedDescription = description ? description : 'Mario Menéndez Hidalgo
         background: rgba(0, 0, 0, 0.2);
         backdrop-filter: blur(3px);
     }
+
+
+	pre {
+		padding: .5rem;
+		margin-bottom: 1.5rem;
+		border-radius: 4px;
+	}
 
 </style>
