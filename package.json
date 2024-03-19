@@ -54,7 +54,7 @@
 		"astro-seo": "0.8.3",
 		"atropos": "2.0.2",
 		"firebase": "10.9.0",
-		"lucide-astro": "0.358.0"
+		"lucide-astro": "0.359.0"
 	},
 	"devDependencies": {
 		"@astrojs/check": "0.5.9",
