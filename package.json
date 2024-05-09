@@ -28,7 +28,7 @@
 		"prepare": "husky"
 	},
 	"dependencies": {
-		"@astrojs/mdx": "^2.2.0",
+		"@astrojs/mdx": "^3.0.0",
 		"@mariomh/badge": "0.0.2",
 		"@mariomh/box": "0.0.2",
 		"@mariomh/button": "0.0.2",
