@@ -1,17 +1,15 @@
 {
-	"extends": "astro/tsconfigs/strictest",
+	"extends": "@hexadrop/tsconfig",
 	"compilerOptions": {
 		"baseUrl": ".",
-		"lib": ["dom", "es2022"],
 		"plugins": [
 			{
 				"name": "@astrojs/ts-plugin"
 			}
 		],
 		"paths": {
-			"@/*": ["./src/*"]
+			"@/*": ["./src/*"],
+			"@cv": ["./cv.json"]
 		}
-	},
-	"exclude": ["node_modules", "dist"],
-	"include": ["src/**/*.ts", "src/**/*.tsx", "astro.config.ts"]
+	}
 }
