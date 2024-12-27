@@ -16,28 +16,18 @@ jobs:
             id-token: 'write'
         strategy:
             matrix:
-                command: [ lint, typecheck, build ]
+                command: [ lint, typecheck ]
         steps:
             -   name: Checkout
                 uses: actions/checkout@v4
 
             -   name: Setup bun
-                uses: oven-sh/setup-bun@v1
-
-            -   name: Authorize Google Cloud SDK
-                id: auth
-                uses: google-github-actions/auth@v2
+                uses: oven-sh/setup-bun@v2
                 with:
-                    token_format: 'access_token'
-                    create_credentials_file: false
-                    workload_identity_provider: ${{ secrets.WORKLOAD_IDENTITY_POOL_PROVIDER}}
-                    service_account: ${{ secrets.SERVICE_ACCOUNT}}
-
-            -   name: Authorize Google Cloud SDK
-                run: sed -i 's/$TOKEN/${{ steps.auth.outputs.access_token }}/' bunfig.toml
+                    bun-version: latest
 
             -   name: Install dependencies
                 run: bun install
 
             -   name: ${{ matrix.command }}
-                run: bun run ${{ matrix.command }}
+                run: bun ${{ matrix.command }}

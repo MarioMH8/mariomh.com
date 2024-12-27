@@ -1,9 +1,0 @@
----
-category: portfolio
-title: Magnus Strategy Group
-resume: Página web de la consultora española Magnus Strategy Group
-href: https://magnus-strategy.com
-target: _blank
-image: ../../assets/projects/magnus-strategy.png
-imageAlt: Imagen de la landing page de la web de Magnus Strategy Group
----
