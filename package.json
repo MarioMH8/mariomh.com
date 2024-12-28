@@ -1,51 +1,33 @@
 {
-	"name": "@mariomh/portfolio",
+	"name": "@mariomh/root",
 	"version": "0.0.0",
 	"author": "MarioMH8",
 	"description": "Mario Menéndez portfolio",
-	"keywords": [
-		"portfolio",
-		"astro",
-		"typescript"
-	],
+	"keywords": [],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/MarioMH8/mariomh.com"
+		"url": "git+https://github.com/MarioMH8/mariomh.com.git"
 	},
 	"homepage": "https://github.com/MarioMH8/mariomh.com",
 	"bugs": {
 		"url": "https://github.com/MarioMH8/mariomh.com/issues"
 	},
 	"license": "PRIVATE",
+	"private": true,
 	"type": "module",
+	"workspaces": [
+		"design-system/*",
+		"portfolio"
+	],
 	"scripts": {
-		"build": "astro build",
-		"dev": "astro dev",
 		"lint": "eslint .",
 		"lint:fix": "eslint --fix .",
-		"postinstall": "astro sync",
-		"start": "astro preview",
 		"typecheck": "astro check && tsc --noEmit"
 	},
-	"dependencies": {
-		"@fontsource/dm-sans": "5.1.0",
-		"astro": "5.1.1",
-		"astro-seo": "0.8.4",
-		"cva": "1.0.0-beta.2",
-		"tailwind-merge": "2.6.0"
-	},
 	"devDependencies": {
-		"@astrojs/check": "0.9.4",
-		"@astrojs/sitemap": "3.2.1",
-		"@astrojs/ts-plugin": "1.10.4",
 		"@hexadrop/eslint-config": "0.0.2",
 		"@hexadrop/tsconfig": "0.0.5",
-		"@playform/compress": "0.1.6",
-		"@tailwindcss/vite": "4.0.0-beta.8",
-		"astro-robots-txt": "1.0.0",
-		"astro-webmanifest": "1.0.0",
 		"eslint": "9.17.0",
-		"tailwindcss": "4.0.0-beta.8",
 		"typescript": "5.7.2"
 	}
 }
