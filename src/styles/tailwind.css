@@ -1,6 +1,35 @@
 @import "tailwindcss";
 
 @theme {
+    --color-danger-1: oklch(99.4% 0.0041 29.23);
+    --color-danger-2: oklch(98.4% 0.0098 29.23);
+    --color-danger-3: oklch(95.5% 0.0288 29.23);
+    --color-danger-4: oklch(92.7% 0.0625 29.23);
+    --color-danger-5: oklch(89.3% 0.0828 29.23);
+    --color-danger-6: oklch(85.4% 0.1012 29.23);
+    --color-danger-7: oklch(80.4% 0.1234 29.23);
+    --color-danger-8: oklch(74.2% 0.1553 29.23);
+    --color-danger-9: oklch(62.8% 0.2577 29.23);
+    --color-danger-10: oklch(58.7% 0.2599 29.23);
+    --color-danger-11: oklch(56.4% 0.2577 29.23);
+    --color-danger-12: oklch(34.4% 0.1158 29.23);
+
+    --color-danger-background: var(--color-danger-1);
+    --color-danger-background-subtle: var(--color-danger-2);
+    --color-danger-background-element: var(--color-danger-3);
+    --color-danger-background-hover: var(--color-danger-4);
+    --color-danger-background-active: var(--color-danger-5);
+    --color-danger-background-solid: var(--color-danger-9);
+
+    --color-danger-foreground: var(--color-danger-12);
+    --color-danger-foreground-highlight: var(--color-danger-10);
+    --color-danger-foreground-invert: var(--color-danger-1);
+    --color-danger-foreground-muted: var(--color-danger-11);
+
+    --color-danger-border: var(--color-danger-7);
+    --color-danger-border-hover: var(--color-danger-8);
+    --color-danger-border-subtle: var(--color-danger-6);
+
     --color-primary-1: oklch(99.3% 0.0051 121.9);
     --color-primary-2: oklch(98.3% 0.0145 121.9);
     --color-primary-3: oklch(96.2% 0.0591 121.9);
@@ -14,6 +43,80 @@
     --color-primary-11: oklch(54.9% 0.1337 121.9);
     --color-primary-12: oklch(35.4% 0.0645 121.9);
 
+    --color-primary-background: var(--color-primary-1);
+    --color-primary-background-subtle: var(--color-primary-2);
+    --color-primary-background-element: var(--color-primary-3);
+    --color-primary-background-hover: var(--color-primary-4);
+    --color-primary-background-active: var(--color-primary-5);
+    --color-primary-background-solid: var(--color-primary-9);
+
+    --color-primary-foreground: var(--color-primary-12);
+    --color-primary-foreground-highlight: var(--color-primary-10);
+    --color-primary-foreground-invert: var(--color-primary-1);
+    --color-primary-foreground-muted: var(--color-primary-11);
+
+    --color-primary-border: var(--color-primary-7);
+    --color-primary-border-hover: var(--color-primary-8);
+    --color-primary-border-subtle: var(--color-primary-6);
+
+    --color-secondary-1: oklch(99.1% 0.0015 277.7);
+    --color-secondary-2: oklch(98.2% 0.003 277.7);
+    --color-secondary-3: oklch(95.6% 0.0045 277.7);
+    --color-secondary-4: oklch(93.1% 0.0061 277.7);
+    --color-secondary-5: oklch(91% 0.0077 277.7);
+    --color-secondary-6: oklch(88.8% 0.0093 277.7);
+    --color-secondary-7: oklch(85.3% 0.0117 277.7);
+    --color-secondary-8: oklch(79.4% 0.016 277.7);
+    --color-secondary-9: oklch(64.6% 0.0165 277.7);
+    --color-secondary-10: oklch(61% 0.0161 277.7);
+    --color-secondary-11: oklch(50.3% 0.0139 277.7);
+    --color-secondary-12: oklch(24.1% 0.0099 277.7);
+
+    --color-secondary-background: var(--color-secondary-1);
+    --color-secondary-background-subtle: var(--color-secondary-2);
+    --color-secondary-background-element: var(--color-secondary-3);
+    --color-secondary-background-hover: var(--color-secondary-4);
+    --color-secondary-background-active: var(--color-secondary-5);
+    --color-secondary-background-solid: var(--color-secondary-9);
+
+    --color-secondary-foreground: var(--color-secondary-12);
+    --color-secondary-foreground-highlight: var(--color-secondary-10);
+    --color-secondary-foreground-invert: var(--color-secondary-1);
+    --color-secondary-foreground-muted: var(--color-secondary-11);
+
+    --color-secondary-border: var(--color-secondary-7);
+    --color-secondary-border-hover: var(--color-secondary-8);
+    --color-secondary-border-subtle: var(--color-secondary-6);
+
+    --color-sucess-1: oklch(99.4% 0.0043 157.7);
+    --color-sucess-2: oklch(98.2% 0.0091 157.7);
+    --color-sucess-3: oklch(95.9% 0.0229 157.7);
+    --color-sucess-4: oklch(93.3% 0.0364 157.7);
+    --color-sucess-5: oklch(90% 0.0497 157.7);
+    --color-sucess-6: oklch(85.7% 0.0646 157.7);
+    --color-sucess-7: oklch(79.8% 0.084 157.7);
+    --color-sucess-8: oklch(71.4% 0.1125 157.7);
+    --color-sucess-9: oklch(64.1% 0.1329 157.7);
+    --color-sucess-10: oklch(60% 0.1265 157.7);
+    --color-sucess-11: oklch(52.9% 0.1329 157.7);
+    --color-sucess-12: oklch(32.2% 0.0475 157.7);
+
+    --color-sucess-background: var(--color-sucess-1);
+    --color-sucess-background-subtle: var(--color-sucess-2);
+    --color-sucess-background-element: var(--color-sucess-3);
+    --color-sucess-background-hover: var(--color-sucess-4);
+    --color-sucess-background-active: var(--color-sucess-5);
+    --color-sucess-background-solid: var(--color-sucess-9);
+
+    --color-sucess-foreground: var(--color-sucess-12);
+    --color-sucess-foreground-highlight: var(--color-sucess-10);
+    --color-sucess-foreground-invert: var(--color-sucess-1);
+    --color-sucess-foreground-muted: var(--color-sucess-11);
+
+    --color-sucess-border: var(--color-sucess-7);
+    --color-sucess-border-hover: var(--color-sucess-8);
+    --color-sucess-border-subtle: var(--color-sucess-6);
+
     --font-primary: "Archia", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --font-secondary: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
@@ -22,6 +125,19 @@
 @layer base {
     @media (prefers-color-scheme: dark) {
         :root {
+            --color-danger-1: oklch(17.8% 0.0162 29.23);
+            --color-danger-2: oklch(20.5% 0.0237 29.23);
+            --color-danger-3: oklch(25.2% 0.0755 29.23);
+            --color-danger-4: oklch(29% 0.1185 29.23);
+            --color-danger-5: oklch(33.1% 0.1322 29.23);
+            --color-danger-6: oklch(38.1% 0.1361 29.23);
+            --color-danger-7: oklch(44.8% 0.1465 29.23);
+            --color-danger-8: oklch(53.9% 0.1784 29.23);
+            --color-danger-9: oklch(62.8% 0.2577 29.23);
+            --color-danger-10: oklch(58.7% 0.2577 29.23);
+            --color-danger-11: oklch(78.4% 0.2165 29.23);
+            --color-danger-12: oklch(89.9% 0.0631 29.23);
+
             --color-primary-1: oklch(17.8% 0.0164 121.9);
             --color-primary-2: oklch(20.8% 0.0219 121.9);
             --color-primary-3: oklch(26.5% 0.0407 121.9);
@@ -34,6 +150,32 @@
             --color-primary-10: oklch(86.6% 0.1849 121.9);
             --color-primary-11: oklch(87.3% 0.1849 121.9);
             --color-primary-12: oklch(94.6% 0.0948 121.9);
+
+            --color-secondary-1: oklch(17.8% 0.0042 277.7);
+            --color-secondary-2: oklch(21.5% 0.004 277.7);
+            --color-secondary-3: oklch(25.5% 0.0055 277.7);
+            --color-secondary-4: oklch(28.4% 0.0075 277.7);
+            --color-secondary-5: oklch(31.4% 0.0089 277.7);
+            --color-secondary-6: oklch(35% 0.01 277.7);
+            --color-secondary-7: oklch(40.2% 0.0121 277.7);
+            --color-secondary-8: oklch(49.2% 0.0157 277.7);
+            --color-secondary-9: oklch(54% 0.0167 277.7);
+            --color-secondary-10: oklch(58.6% 0.0165 277.7);
+            --color-secondary-11: oklch(77% 0.0138 277.7);
+            --color-secondary-12: oklch(94.9% 0.0026 277.7);
+
+            --color-sucess-1: oklch(17.8% 0.0127 157.7);
+            --color-sucess-2: oklch(21.1% 0.016 157.7);
+            --color-sucess-3: oklch(27% 0.0388 157.7);
+            --color-sucess-4: oklch(31.8% 0.0573 157.7);
+            --color-sucess-5: oklch(36.5% 0.066 157.7);
+            --color-sucess-6: oklch(41.3% 0.0733 157.7);
+            --color-sucess-7: oklch(46.7% 0.0829 157.7);
+            --color-sucess-8: oklch(52.7% 0.0962 157.7);
+            --color-sucess-9: oklch(64.1% 0.1329 157.7);
+            --color-sucess-10: oklch(60% 0.1329 157.7);
+            --color-sucess-11: oklch(78% 0.1329 157.7);
+            --color-sucess-12: oklch(90.5% 0.0828 157.7);
         }
     }
 
