@@ -8,9 +8,15 @@ export default defineConfig([
 		dts: true,
 		entry: [
 			'lib/cva.ts',
+			'components/focus/class-name.ts',
+			'components/focus/react.tsx',
+			'components/focus/variants.ts',
 			'components/font/class-name.ts',
 			'components/font/react.tsx',
 			'components/font/variants.ts',
+			'components/round/class-name.ts',
+			'components/round/react.tsx',
+			'components/round/variants.ts',
 		],
 		format: ['esm'],
 		onSuccess: async () => {
