@@ -17,8 +17,8 @@
 	"bugs": {
 		"url": "https://github.com/MarioMH8/mariomh.com/issues"
 	},
-	"type": "module",
 	"license": "PRIVATE",
+	"type": "module",
 	"sideEffects": false,
 	"files": [
 		"dist"
@@ -48,17 +48,24 @@
 		"./cva": {
 			"types": "./dist/cva.d.ts",
 			"default": "./dist/cva.js"
+		},
+		"./tailwind": {
+			"default": "./dist/tailwind/index.css"
 		}
 	},
 	"scripts": {
 		"build": "tsup",
 		"prepublishOnly": "tsup"
 	},
+	"peerDependencies": {
+		"tailwindcss": ">=4.0.0-beta.8"
+	},
 	"dependencies": {
 		"cva": "1.0.0-beta.2",
 		"tailwind-merge": "2.6.0"
 	},
 	"devDependencies": {
+		"tailwindcss": "4.0.0-beta.8",
 		"tsup": "8.3.5"
 	}
 }

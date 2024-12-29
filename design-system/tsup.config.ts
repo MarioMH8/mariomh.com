@@ -9,7 +9,10 @@ export default defineConfig([
 		entry: ['lib/cva.ts'],
 		format: ['esm'],
 		onSuccess: async () => {
-			await cp('./fonts', './dist/fonts', { recursive: true });
+			await Promise.all([
+				cp('./fonts', './dist/fonts', { recursive: true }),
+				cp('./tailwind', './dist/tailwind', { recursive: true }),
+			]);
 		},
 		platform: 'neutral',
 		sourcemap: true,

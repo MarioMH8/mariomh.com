@@ -1,4 +1,5 @@
 .docs
-components
+lib
+tailwind
 fonts
 tsup.config.ts
