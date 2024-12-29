@@ -6,7 +6,12 @@ export default defineConfig([
 	{
 		clean: true,
 		dts: true,
-		entry: ['lib/cva.ts'],
+		entry: [
+			'lib/cva.ts',
+			'components/font/class-name.ts',
+			'components/font/react.tsx',
+			'components/font/variants.ts',
+		],
 		format: ['esm'],
 		onSuccess: async () => {
 			await Promise.all([
