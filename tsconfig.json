@@ -2,10 +2,16 @@
 	"extends": "@hexadrop/tsconfig",
 	"compilerOptions": {
 		"baseUrl": ".",
+		"emitDecoratorMetadata": false,
 		"plugins": [
 			{
 				"name": "@astrojs/ts-plugin"
 			}
-		]
+		],
+		"paths": {
+			"@mariomh/desgin-system/cva": ["design-system/lib/cva.ts"],
+			"@mariomh/desgin-system/fonts/archia": ["design-system/fonts/archia/index.css"],
+			"@mariomh/desgin-system/fonts/archia/*": ["design-system/fonts/archia/*"]
+		}
 	}
 }

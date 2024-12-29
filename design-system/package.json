@@ -1,0 +1,64 @@
+{
+	"name": "@mariomh/design-system",
+	"version": "0.0.0",
+	"author": "MarioMH <dev@mariomh.com>",
+	"description": "MarioMH design system",
+	"keywords": [
+		"design",
+		"design system",
+		"ui"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MarioMH8/mariomh.com.git",
+		"directory": "design-system"
+	},
+	"homepage": "https://desing.mariomh.com",
+	"bugs": {
+		"url": "https://github.com/MarioMH8/mariomh.com/issues"
+	},
+	"type": "module",
+	"license": "PRIVATE",
+	"sideEffects": false,
+	"files": [
+		"dist"
+	],
+	"exports": {
+		"./fonts/archia": {
+			"default": "./dist/fonts/archia/index.css"
+		},
+		"./fonts/archia/100.css": {
+			"default": "./dist/fonts/archia/100.css"
+		},
+		"./fonts/archia/300.css": {
+			"default": "./dist/fonts/archia/300.css"
+		},
+		"./fonts/archia/400.css": {
+			"default": "./dist/fonts/archia/400.css"
+		},
+		"./fonts/archia/500.css": {
+			"default": "./dist/fonts/archia/500.css"
+		},
+		"./fonts/archia/600.css": {
+			"default": "./dist/fonts/archia/600.css"
+		},
+		"./fonts/archia/700.css": {
+			"default": "./dist/fonts/archia/700.css"
+		},
+		"./cva": {
+			"types": "./dist/cva.d.ts",
+			"default": "./dist/cva.js"
+		}
+	},
+	"scripts": {
+		"build": "tsup",
+		"prepublishOnly": "tsup"
+	},
+	"dependencies": {
+		"cva": "1.0.0-beta.2",
+		"tailwind-merge": "2.6.0"
+	},
+	"devDependencies": {
+		"tsup": "8.3.5"
+	}
+}
