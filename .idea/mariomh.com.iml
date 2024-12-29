@@ -11,7 +11,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.github" />
       <excludeFolder url="file://$MODULE_DIR$/functions/dist" />
       <excludeFolder url="file://$MODULE_DIR$/.husky" />
-      <excludeFolder url="file://$MODULE_DIR$/design-system/.docs" />
+      <excludeFolder url="file://$MODULE_DIR$/design-system.new/.docs" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

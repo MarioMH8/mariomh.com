@@ -1,0 +1,40 @@
+{
+	"name": "@mariomh/tailwind",
+	"version": "0.0.0",
+	"author": "MarioMH <dev@mariomh.com>",
+	"description": "MarioMH tailwind plugin",
+	"keywords": [
+		"design",
+		"design system",
+		"ui"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MarioMH8/mariomh.com.git",
+		"directory": "design-system/tailwind"
+	},
+	"homepage": "https://desing.mariomh.com",
+	"bugs": {
+		"url": "https://github.com/MarioMH8/mariomh.com/issues"
+	},
+	"license": "PRIVATE",
+	"private": true,
+	"type": "module",
+	"sideEffects": false,
+	"main": "index.css",
+	"exports": {
+		".": {
+			"default": "./index.css"
+		}
+	},
+	"scripts": {
+		"lint:packages": "publint",
+		"prepublishOnly": "publint"
+	},
+	"peerDependencies": {
+		"tailwindcss": ">=4.0.0-beta.8"
+	},
+	"devDependencies": {
+		"tailwindcss": "4.0.0-beta.8"
+	}
+}

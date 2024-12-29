@@ -4,14 +4,23 @@
 		"emitDecoratorMetadata": false,
 		"baseUrl": ".",
 		"paths": {
-			"@mariomh/desing-system/cva": ["design-system/lib/cva.ts"],
-			"@mariomh/desing-system/components/focus/*": ["design-system/components/focus/*.ts"],
-			"@mariomh/desing-system/components/font/*": ["design-system/components/font/*.ts"],
-			"@mariomh/desing-system/components/link/*": ["design-system/components/link/*.ts"],
-			"@mariomh/desing-system/components/round/*": ["design-system/components/round/*.ts"],
-			"@mariomh/desing-system/fonts/archia": ["design-system/fonts/archia/index.css"],
-			"@mariomh/desing-system/fonts/archia/*": ["design-system/fonts/archia/*"],
-			"@mariomh/desing-system/tailwind": ["design-system/tailwind/index.css"]
+			"@mariomh/archia": ["design-system/fonts/archia/index.css"],
+			"@mariomh/archia/*": ["design-system/fonts/archia/*"],
+			"@mariomh/*/argument-types": ["./design-system/components/*/src/argument-types"],
+			"@mariomh/*/astro": ["./design-system/components/*/src/astro.astro"],
+			"@mariomh/*/class-name": ["./design-system/components/*/src/class-name"],
+			"@mariomh/*/properties": ["./design-system/components/*/src/properties"],
+			"@mariomh/*/react": ["./design-system/components/*/src/react"],
+			"@mariomh/*/variants": ["./design-system/components/*/src/variants"],
+			"@mariomh/focus/react": ["./design-system/components/focus/src/react"],
+			"@mariomh/focus/variants": ["./design-system/components/focus/src/variants"],
+			"@mariomh/font/react": ["./design-system/components/font/src/react"],
+			"@mariomh/font/variants": ["./design-system/components/font/src/variants"],
+			"@mariomh/link/react": ["./design-system/components/link/src/react"],
+			"@mariomh/round/react": ["./design-system/components/round/src/react"],
+			"@mariomh/round/variants": ["./design-system/components/round/src/variants"],
+			"@mariomh/cva": ["design-system/cva/src/index.ts"],
+			"@mariomh/tailwind": ["design-system/tailwind/index.css"]
 		},
 		"allowImportingTsExtensions": true,
 		"plugins": [
@@ -21,6 +30,6 @@
 		]
 	},
 	"exclude": [
-		"design-system/dist"
+		"design-system/components/*/dist"
 	]
 }
