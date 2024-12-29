@@ -1,5 +1,5 @@
-import type { VariantProperties } from '@mariomh/desgin-system/cva';
-import cva from '@mariomh/desgin-system/cva';
+import type { VariantProperties } from '@mariomh/desing-system/cva';
+import cva from '@mariomh/desing-system/cva';
 
 const variants = cva({
 	compoundVariants: [
