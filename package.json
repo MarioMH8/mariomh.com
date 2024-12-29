@@ -25,6 +25,7 @@
 		"typecheck": "astro check && tsc --noEmit"
 	},
 	"devDependencies": {
+		"@astrojs/check": "0.9.4",
 		"@hexadrop/eslint-config": "0.0.2",
 		"@hexadrop/tsconfig": "0.0.5",
 		"@types/bun": "1.1.14",
