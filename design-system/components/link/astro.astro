@@ -1,0 +1,12 @@
+---
+import type { AstroLinkProperties } from './astro';
+import properties from './properties.ts';
+
+interface Props extends AstroLinkProperties {}
+
+const { as: Tag = 'a', ...p } = properties(Astro.props);
+---
+
+<Tag {...p}>
+	<slot />
+</Tag>

@@ -69,6 +69,26 @@
 			"types": "./dist/components/font/variants.d.ts",
 			"default": "./dist/components/font/variants.js"
 		},
+		"./components/link/astro": {
+			"types": "./dist/components/link/astro.ts",
+			"default": "./dist/components/link/astro.ts"
+		},
+		"./components/link/class-name": {
+			"types": "./dist/components/link/class-name.d.ts",
+			"default": "./dist/components/link/class-name.js"
+		},
+		"./components/link/properties": {
+			"types": "./dist/components/link/properties.d.ts",
+			"default": "./dist/components/link/properties.js"
+		},
+		"./components/link/react": {
+			"types": "./dist/components/link/react.d.ts",
+			"default": "./dist/components/link/react.js"
+		},
+		"./components/link/variants": {
+			"types": "./dist/components/link/variants.d.ts",
+			"default": "./dist/components/link/variants.js"
+		},
 		"./components/round/class-name": {
 			"types": "./dist/components/round/class-name.d.ts",
 			"default": "./dist/components/round/class-name.js"

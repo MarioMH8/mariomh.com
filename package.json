@@ -22,7 +22,8 @@
 		"build": "bun run --filter '@mariomh/*' build",
 		"lint": "eslint .",
 		"lint:fix": "eslint --fix .",
-		"typecheck": "astro check && tsc --noEmit"
+		"typecheck": "tsc --noEmit",
+		"typecheck:astro": "astro check"
 	},
 	"devDependencies": {
 		"@astrojs/check": "0.9.4",

@@ -3,20 +3,21 @@
 	"compilerOptions": {
 		"emitDecoratorMetadata": false,
 		"baseUrl": ".",
+		"paths": {
+			"@mariomh/desing-system/cva": ["design-system/lib/cva.ts"],
+			"@mariomh/desing-system/components/*/cn": ["design-system/components/*/class-name.ts"],
+			"@mariomh/desing-system/components/*/react": ["design-system/components/*/react.tsx"],
+			"@mariomh/desing-system/components/*/variants": ["design-system/components/*/variants.ts"],
+			"@mariomh/desing-system/fonts/archia": ["design-system/fonts/archia/index.css"],
+			"@mariomh/desing-system/fonts/archia/*": ["design-system/fonts/archia/*"],
+			"@mariomh/desing-system/tailwind": ["design-system/tailwind/index.css"]
+		},
+		"allowImportingTsExtensions": true,
 		"plugins": [
 			{
 				"name": "@astrojs/ts-plugin"
 			}
-		],
-		"paths": {
-			"@mariomh/desgin-system/cva": ["design-system/lib/cva.ts"],
-			"@mariomh/desgin-system/components/*/cn": ["design-system/components/*/class-name.ts"],
-			"@mariomh/desgin-system/components/*/react": ["design-system/components/*/react.tsx"],
-			"@mariomh/desgin-system/components/*/variants": ["design-system/components/*/variants.ts"],
-			"@mariomh/desgin-system/fonts/archia": ["design-system/fonts/archia/index.css"],
-			"@mariomh/desgin-system/fonts/archia/*": ["design-system/fonts/archia/*"],
-			"@mariomh/desgin-system/tailwind": ["design-system/tailwind/index.css"]
-		}
+		]
 	},
 	"exclude": [
 		"design-system/dist"

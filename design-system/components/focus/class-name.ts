@@ -1,4 +1,4 @@
-import { merge } from '@mariomh/desgin-system/cva';
+import { merge } from '@mariomh/desing-system/cva';
 
 import type { FocusVariantsProperties } from './variants';
 import variants from './variants';
