@@ -13,7 +13,7 @@ su pasión desde sus inicios y lo traslada al presente con una vuelta de tuerca 
 Un sistema amable y accesible que deja entrever su gran pasión y conocimiento por la **programación**.
 
 <p align="center">
-<img src='.docs/mariomh.png' alt='Logo de MarioMH'>
+<img src='./.docs/mariomh.png' alt='Logo de MarioMH'>
 </p>
 
 La marca gráfica se compone de un **icono y logotipo**, el primero retomando la morfología de los píxeles como forma de conexión
