@@ -1,15 +1,17 @@
 import { Slot } from '@radix-ui/react-slot';
-import type { FC, RefAttributes } from 'react';
+import type { ComponentPropsWithRef, FC } from 'react';
 
 import properties from './properties';
 import type { LinkVariantsProperties } from './variants';
 
-interface ReactLinkProperties extends LinkVariantsProperties, RefAttributes<HTMLAnchorElement> {
+const ELEMENT_TYPE = 'a';
+
+interface ReactLinkProperties extends ComponentPropsWithRef<typeof ELEMENT_TYPE>, LinkVariantsProperties {
 	asChild?: boolean;
 }
 
 const Link: FC<ReactLinkProperties> = ({ asChild, ref, ...p }) => {
-	const Comp = asChild ? Slot : 'a';
+	const Comp = asChild ? Slot : ELEMENT_TYPE;
 
 	return (
 		<Comp

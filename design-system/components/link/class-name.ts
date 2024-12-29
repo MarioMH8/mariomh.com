@@ -12,7 +12,7 @@ export default function cn(
 ): string {
 	return merge(
 		fontVariants({ ...properties, variant }),
-		roundVariants({ size: properties.size === 'huge' ? '4xl' : properties.size }),
+		roundVariants({ ...properties, dimension: properties.dimension === 'huge' ? '4xl' : properties.dimension }),
 		focusVariants({ ...properties, variant }),
 		variants({ ...properties, variant }),
 		...classLists

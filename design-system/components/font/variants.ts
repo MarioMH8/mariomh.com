@@ -83,8 +83,8 @@ const variants = cva({
 		},
 	],
 	defaultVariants: {
+		dimension: 'base',
 		family: 'primary',
-		size: 'base',
 		tracking: 'base',
 		variant: 'secondary',
 		weight: 'base',
@@ -100,19 +100,7 @@ const variants = cva({
 			true: '',
 		},
 		// Obligatoria
-		family: {
-			primary: 'font-primary',
-			secondary: 'font-secondary',
-		},
-		muted: {
-			true: '',
-		},
-		// Opcional
-		noSelect: {
-			true: 'select-none',
-		},
-		// Obligatoria
-		size: {
+		dimension: {
 			'2xl': 'text-2xl',
 			'3xl': 'text-3xl',
 			'4xl': 'text-4xl',
@@ -123,6 +111,18 @@ const variants = cva({
 			unset: '',
 			xl: 'text-xl',
 			xs: 'text-xs',
+		},
+		// Obligatoria
+		family: {
+			primary: 'font-primary',
+			secondary: 'font-secondary',
+		},
+		muted: {
+			true: '',
+		},
+		// Opcional
+		noSelect: {
+			true: 'select-none',
 		},
 		// Obligatoria
 		tracking: {

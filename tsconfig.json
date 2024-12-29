@@ -5,9 +5,10 @@
 		"baseUrl": ".",
 		"paths": {
 			"@mariomh/desing-system/cva": ["design-system/lib/cva.ts"],
-			"@mariomh/desing-system/components/*/cn": ["design-system/components/*/class-name.ts"],
-			"@mariomh/desing-system/components/*/react": ["design-system/components/*/react.tsx"],
-			"@mariomh/desing-system/components/*/variants": ["design-system/components/*/variants.ts"],
+			"@mariomh/desing-system/components/focus/*": ["design-system/components/focus/*.ts"],
+			"@mariomh/desing-system/components/font/*": ["design-system/components/font/*.ts"],
+			"@mariomh/desing-system/components/link/*": ["design-system/components/link/*.ts"],
+			"@mariomh/desing-system/components/round/*": ["design-system/components/round/*.ts"],
 			"@mariomh/desing-system/fonts/archia": ["design-system/fonts/archia/index.css"],
 			"@mariomh/desing-system/fonts/archia/*": ["design-system/fonts/archia/*"],
 			"@mariomh/desing-system/tailwind": ["design-system/tailwind/index.css"]
