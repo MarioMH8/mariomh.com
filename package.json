@@ -22,11 +22,13 @@
 		"build": "bun run --filter '@mariomh/*' build",
 		"lint": "eslint .",
 		"lint:fix": "eslint --fix .",
+		"test": "bun test",
 		"typecheck": "tsc --noEmit",
 		"typecheck:astro": "astro check"
 	},
 	"devDependencies": {
 		"@astrojs/check": "0.9.4",
+		"@happy-dom/global-registrator": "16.0.1",
 		"@hexadrop/eslint-config": "0.0.2",
 		"@hexadrop/tsconfig": "0.0.5",
 		"@types/bun": "1.1.14",

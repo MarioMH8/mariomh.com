@@ -6,113 +6,110 @@ const variants = cva({
 	compoundVariants: [
 		{
 			className: '',
+			dimension: 'unset',
 			only: undefined,
-			size: 'unset',
 		},
 		{
 			className: 'rounded-sm',
+			dimension: 'xs',
 			only: undefined,
-			size: 'xs',
 		},
 		{
 			className: 'rounded-md',
+			dimension: 'sm',
 			only: undefined,
-			size: 'sm',
 		},
 		{
 			className: 'rounded-lg',
+			dimension: 'base',
 			only: undefined,
-			size: 'base',
 		},
 		{
 			className: 'rounded-xl',
+			dimension: 'lg',
 			only: undefined,
-			size: 'lg',
 		},
 		{
 			className: 'rounded-2xl',
+			dimension: 'xl',
 			only: undefined,
-			size: 'xl',
 		},
 		{
 			className: 'rounded-3xl',
+			dimension: '2xl',
 			only: undefined,
-			size: '2xl',
 		},
 		{
 			className: 'rounded-4xl',
+			dimension: '3xl',
 			only: undefined,
-			size: '3xl',
 		},
 		{
 			className: 'rounded-5xl',
+			dimension: '4xl',
 			only: undefined,
-			size: '4xl',
 		},
 		{
 			className: 'rounded-full',
+			dimension: 'full',
 			only: undefined,
-			size: 'full',
 		},
 		{
 			className: '',
+			dimension: 'unset',
 			only: 'sm',
-			size: 'unset',
 		},
 		{
 			className: 'sm:rounded-sm',
+			dimension: 'xs',
 			only: 'sm',
-			size: 'xs',
 		},
 		{
 			className: 'sm:rounded-md',
+			dimension: 'sm',
 			only: 'sm',
-			size: 'sm',
 		},
 		{
 			className: 'sm:rounded-lg',
+			dimension: 'base',
 			only: 'sm',
-			size: 'base',
 		},
 		{
 			className: 'sm:rounded-xl',
+			dimension: 'lg',
 			only: 'sm',
-			size: 'lg',
 		},
 		{
 			className: 'sm:rounded-2xl',
+			dimension: 'xl',
 			only: 'sm',
-			size: 'xl',
 		},
 		{
 			className: 'sm:rounded-3xl',
+			dimension: '2xl',
 			only: 'sm',
-			size: '2xl',
 		},
 		{
 			className: 'sm:rounded-3xl',
+			dimension: '3xl',
 			only: 'sm',
-			size: '3xl',
 		},
 		{
 			className: 'sm:rounded-3xl',
+			dimension: '4xl',
 			only: 'sm',
-			size: '4xl',
 		},
 		{
 			className: 'sm:rounded-full',
+			dimension: 'full',
 			only: 'sm',
-			size: 'full',
 		},
 	],
 	defaultVariants: {
-		size: 'base',
+		dimension: 'base',
 	},
 	variants: {
-		only: {
-			sm: '',
-		},
-		size: {
+		dimension: {
 			'2xl': '',
 			'3xl': '',
 			'4xl': '',
@@ -123,6 +120,9 @@ const variants = cva({
 			unset: '',
 			xl: '',
 			xs: '',
+		},
+		only: {
+			sm: '',
 		},
 	},
 });

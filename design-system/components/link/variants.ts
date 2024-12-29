@@ -4,10 +4,10 @@ import cva from '@mariomh/desing-system/cva';
 
 const variants = cva({
 	base: 'inline-block underline-offset-4 hover:cursor-pointer hover:underline',
+	defaultVariants: {
+		variant: 'primary',
+	},
 	variants: {
-		defaultVariants: {
-			variant: 'primary',
-		},
 		disabled: {
 			true: 'opacity-50 hover:cursor-default hover:no-underline pointer-events-none',
 		},
