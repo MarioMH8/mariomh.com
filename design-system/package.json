@@ -45,6 +45,18 @@
 		"./fonts/archia/700.css": {
 			"default": "./dist/fonts/archia/700.css"
 		},
+		"./components/focus/class-name": {
+			"types": "./dist/components/focus/class-name.d.ts",
+			"default": "./dist/components/focus/class-name.js"
+		},
+		"./components/focus/react": {
+			"types": "./dist/components/focus/react.d.ts",
+			"default": "./dist/components/focus/react.js"
+		},
+		"./components/focus/variants": {
+			"types": "./dist/components/focus/variants.d.ts",
+			"default": "./dist/components/focus/variants.js"
+		},
 		"./components/font/class-name": {
 			"types": "./dist/components/font/class-name.d.ts",
 			"default": "./dist/components/font/class-name.js"
@@ -56,6 +68,18 @@
 		"./components/font/variants": {
 			"types": "./dist/components/font/variants.d.ts",
 			"default": "./dist/components/font/variants.js"
+		},
+		"./components/round/class-name": {
+			"types": "./dist/components/round/class-name.d.ts",
+			"default": "./dist/components/round/class-name.js"
+		},
+		"./components/round/react": {
+			"types": "./dist/components/round/react.d.ts",
+			"default": "./dist/components/round/react.js"
+		},
+		"./components/round/variants": {
+			"types": "./dist/components/round/variants.d.ts",
+			"default": "./dist/components/round/variants.js"
 		},
 		"./cva": {
 			"types": "./dist/lib/cva.d.ts",
