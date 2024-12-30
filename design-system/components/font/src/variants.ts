@@ -35,7 +35,7 @@ const variants = cva({
 		},
 		{
 			bright: undefined,
-			className: 'text-primary-foreground-muted/65 dark:text-primary-dark-foreground-muted/65',
+			className: 'text-primary-foreground-muted/45 dark:text-primary-dark-foreground-muted/45',
 			muted: true,
 			variant: 'primary',
 		},
@@ -47,7 +47,7 @@ const variants = cva({
 		},
 		{
 			bright: undefined,
-			className: 'text-secondary-foreground-muted/65 dark:text-secondary-dark-foreground-muted/65',
+			className: 'text-secondary-foreground-muted/45 dark:text-secondary-dark-foreground-muted/45',
 			muted: true,
 			variant: 'secondary',
 		},
@@ -59,7 +59,7 @@ const variants = cva({
 		},
 		{
 			bright: undefined,
-			className: 'text-success-foreground-muted/65 dark:text-success-dark-foreground-muted/65',
+			className: 'text-success-foreground-muted/45 dark:text-success-dark-foreground-muted/45',
 			muted: true,
 			variant: 'success',
 		},
@@ -71,7 +71,7 @@ const variants = cva({
 		},
 		{
 			bright: undefined,
-			className: 'text-danger-foreground-muted/65 dark:text-danger-dark-foreground-muted/65',
+			className: 'text-danger-foreground-muted/45 dark:text-danger-dark-foreground-muted/45',
 			muted: true,
 			variant: 'danger',
 		},
