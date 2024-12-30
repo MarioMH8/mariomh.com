@@ -1,0 +1,84 @@
+// Bun Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@mariomh/span/react should default render 1`] = `"SPAN"`;
+
+exports[`@mariomh/span/react should default render 2`] = `{}`;
+
+exports[`@mariomh/span/react should default render 3`] = `"Test Message"`;
+
+exports[`@mariomh/span/react should default render 4`] = `
+[
+  "text-base",
+  "font-primary",
+  "text-secondary-foreground",
+  "selection:bg-secondary-background-active",
+  "dark:text-secondary-dark-foreground",
+  "dark:selection:bg-secondary-dark-background-active",
+  "dark:selection:text-secondary-foreground-invert",
+  "font-normal",
+  "tracking-wide",
+]
+`;
+
+exports[`@mariomh/span/react should asChild works as expected render 1`] = `"SPAN"`;
+
+exports[`@mariomh/span/react should asChild works as expected render 2`] = `{}`;
+
+exports[`@mariomh/span/react should asChild works as expected render 3`] = `"Test Message"`;
+
+exports[`@mariomh/span/react should asChild works as expected render 4`] = `
+[
+  "text-base",
+  "font-primary",
+  "text-secondary-foreground",
+  "selection:bg-secondary-background-active",
+  "dark:text-secondary-dark-foreground",
+  "dark:selection:bg-secondary-dark-background-active",
+  "dark:selection:text-secondary-foreground-invert",
+  "font-normal",
+  "tracking-wide",
+]
+`;
+
+exports[`@mariomh/span/react should override class 1`] = `"SPAN"`;
+
+exports[`@mariomh/span/react should override class 2`] = `{}`;
+
+exports[`@mariomh/span/react should override class 3`] = `"Test Message"`;
+
+exports[`@mariomh/span/react should override class 4`] = `
+[
+  "font-primary",
+  "text-secondary-foreground",
+  "selection:bg-secondary-background-active",
+  "dark:text-secondary-dark-foreground",
+  "dark:selection:bg-secondary-dark-background-active",
+  "dark:selection:text-secondary-foreground-invert",
+  "font-normal",
+  "tracking-wide",
+  "text-2xl",
+]
+`;
+
+exports[`@mariomh/span/react should exclude variants props 1`] = `"SPAN"`;
+
+exports[`@mariomh/span/react should exclude variants props 2`] = `{}`;
+
+exports[`@mariomh/span/react should exclude variants props 3`] = `"Test Message"`;
+
+exports[`@mariomh/span/react should exclude variants props 4`] = `
+[
+  "text-right",
+  "text-lg",
+  "font-secondary",
+  "select-none",
+  "text-danger-foreground",
+  "selection:bg-danger-background-active",
+  "dark:text-danger-dark-foreground",
+  "dark:selection:bg-danger-dark-background-active",
+  "dark:selection:text-danger-foreground-invert",
+  "font-medium",
+  "tracking-widest",
+  "block",
+]
+`;
