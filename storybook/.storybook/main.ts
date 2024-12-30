@@ -7,10 +7,7 @@ const config: StorybookConfig = {
 	},
 	framework: '@storybook/react-vite',
 	staticDirs: ['../public'],
-	stories: [
-		'../docs/**/*.mdx',
-		'./stories/*.stories.@(js|jsx|ts|tsx)',
-	],
+	stories: ['../docs/**/*.mdx', '../src/stories/*.stories.@(js|jsx|ts|tsx)'],
 };
 
 export default config;
