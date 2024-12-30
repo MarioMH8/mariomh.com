@@ -17,7 +17,7 @@ export default function properties<T extends AstroLinkProperties | ReactLinkProp
 		asChild: _asChild,
 		bright: _bright,
 		class: cls1,
-		class: cls2,
+		className: cls2,
 		dimension: _dimension,
 		disabled: _disabled,
 		family: _family,
