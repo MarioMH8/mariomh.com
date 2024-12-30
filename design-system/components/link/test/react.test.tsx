@@ -55,8 +55,8 @@ describe('@mariomh/link/react', () => {
 		const child = container.firstElementChild;
 		assetComponent(child);
 		expect(child?.attributes.length).toBe(2);
-		expect(child?.attributes.item(0)?.name).toBe('class');
-		expect(child?.attributes.item(1)?.name).toBe('href');
+		expect(child?.attributes.item(0)?.name).toBe('href');
+		expect(child?.attributes.item(1)?.name).toBe('class');
 		expect(child?.classList.contains('block')).toBeTruthy();
 	});
 });

@@ -11,7 +11,7 @@
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/MarioMH8/mariomh.com.git",
-		"directory": "design-system/components/round"
+		"directory": "design-system/components/link"
 	},
 	"homepage": "https://github.com/MarioMH8/mariomh.com",
 	"bugs": {
@@ -32,6 +32,9 @@
 		"./class-name": {
 			"types": "./dist/class-name.d.ts",
 			"default": "./dist/class-name.js"
+		},
+		"./package.json": {
+			"default": "./package.json"
 		},
 		"./properties": {
 			"types": "./dist/properties.d.ts",

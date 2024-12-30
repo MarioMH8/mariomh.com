@@ -1,10 +1,9 @@
 import { Slot } from '@radix-ui/react-slot';
 import type { ComponentPropsWithRef, FC } from 'react';
 
+import ELEMENT_TYPE from './element';
 import properties from './properties';
 import type { LinkVariantsProperties } from './variants';
-
-const ELEMENT_TYPE = 'a';
 
 interface ReactLinkProperties extends ComponentPropsWithRef<typeof ELEMENT_TYPE>, LinkVariantsProperties {
 	asChild?: boolean;
