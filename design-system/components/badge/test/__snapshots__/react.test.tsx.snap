@@ -1,0 +1,115 @@
+// Bun Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@mariomh/badge/react should default render 1`] = `"SPAN"`;
+
+exports[`@mariomh/badge/react should default render 2`] = `{}`;
+
+exports[`@mariomh/badge/react should default render 3`] = `"Test Message"`;
+
+exports[`@mariomh/badge/react should default render 4`] = `
+[
+  "text-base",
+  "font-primary",
+  "text-secondary-foreground",
+  "selection:bg-secondary-background-active",
+  "dark:text-secondary-dark-foreground",
+  "dark:selection:bg-secondary-dark-background-active",
+  "dark:selection:text-secondary-foreground-invert",
+  "font-normal",
+  "tracking-wide",
+  "rounded-xl",
+  "py-1",
+  "px-2",
+  "inline-block",
+  "bg-secondary-background-subtle",
+  "border-secondary-border",
+  "dark:bg-secondary-dark-background-subtle",
+  "dark:border-secondary-dark-border",
+]
+`;
+
+exports[`@mariomh/badge/react should asChild works as expected render 1`] = `"P"`;
+
+exports[`@mariomh/badge/react should asChild works as expected render 2`] = `{}`;
+
+exports[`@mariomh/badge/react should asChild works as expected render 3`] = `"Test Message"`;
+
+exports[`@mariomh/badge/react should asChild works as expected render 4`] = `
+[
+  "text-base",
+  "font-primary",
+  "text-secondary-foreground",
+  "selection:bg-secondary-background-active",
+  "dark:text-secondary-dark-foreground",
+  "dark:selection:bg-secondary-dark-background-active",
+  "dark:selection:text-secondary-foreground-invert",
+  "font-normal",
+  "tracking-wide",
+  "rounded-xl",
+  "py-1",
+  "px-2",
+  "inline-block",
+  "bg-secondary-background-subtle",
+  "border-secondary-border",
+  "dark:bg-secondary-dark-background-subtle",
+  "dark:border-secondary-dark-border",
+]
+`;
+
+exports[`@mariomh/badge/react should override class 1`] = `"SPAN"`;
+
+exports[`@mariomh/badge/react should override class 2`] = `{}`;
+
+exports[`@mariomh/badge/react should override class 3`] = `"Test Message"`;
+
+exports[`@mariomh/badge/react should override class 4`] = `
+[
+  "font-primary",
+  "text-secondary-foreground",
+  "selection:bg-secondary-background-active",
+  "dark:text-secondary-dark-foreground",
+  "dark:selection:bg-secondary-dark-background-active",
+  "dark:selection:text-secondary-foreground-invert",
+  "font-normal",
+  "tracking-wide",
+  "rounded-xl",
+  "py-1",
+  "px-2",
+  "inline-block",
+  "bg-secondary-background-subtle",
+  "border-secondary-border",
+  "dark:bg-secondary-dark-background-subtle",
+  "dark:border-secondary-dark-border",
+  "text-2xl",
+]
+`;
+
+exports[`@mariomh/badge/react should exclude variants props 1`] = `"SPAN"`;
+
+exports[`@mariomh/badge/react should exclude variants props 2`] = `{}`;
+
+exports[`@mariomh/badge/react should exclude variants props 3`] = `"Test Message"`;
+
+exports[`@mariomh/badge/react should exclude variants props 4`] = `
+[
+  "text-right",
+  "text-lg",
+  "font-secondary",
+  "select-none",
+  "text-danger-foreground",
+  "selection:bg-danger-background-active",
+  "dark:text-danger-dark-foreground",
+  "dark:selection:bg-danger-dark-background-active",
+  "dark:selection:text-danger-foreground-invert",
+  "font-medium",
+  "tracking-widest",
+  "rounded-xl",
+  "py-1",
+  "px-2",
+  "bg-danger-background-subtle",
+  "border-danger-border",
+  "dark:bg-danger-dark-background-subtle",
+  "dark:border-danger-dark-border",
+  "block",
+]
+`;
