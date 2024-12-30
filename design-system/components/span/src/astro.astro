@@ -1,0 +1,13 @@
+---
+import type { AstroSpanProperties } from './astro';
+import ELEMENT_TYPE from './element.ts';
+import properties from './properties.ts';
+
+interface Props extends AstroSpanProperties {}
+
+const { as: Tag = ELEMENT_TYPE, ...p } = properties(Astro.props);
+---
+
+<Tag {...p}>
+	<slot />
+</Tag>
