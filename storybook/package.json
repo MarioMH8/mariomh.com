@@ -1,0 +1,50 @@
+{
+	"name": "@mariomh/storybook",
+	"version": "0.0.1",
+	"author": "MarioMH <dev@mariomh.com>",
+	"description": "MarioMH storybook",
+	"keywords": [
+		"design",
+		"design system",
+		"ui"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MarioMH8/mariomh.com.git",
+		"directory": "storybook"
+	},
+	"homepage": "https://github.com/MarioMH8/mariomh.com",
+	"bugs": {
+		"url": "https://github.com/MarioMH8/mariomh.com/issues"
+	},
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "storybook dev -p 6006"
+	},
+	"dependencies": {
+		"@fontsource/dm-sans": "5.1.1",
+		"@mariomh/archia": "0.0.0",
+		"@mariomh/cva": "0.0.0",
+		"@mariomh/focus": "0.0.0",
+		"@mariomh/font": "0.0.0",
+		"@mariomh/link": "0.0.0",
+		"@mariomh/round": "0.0.0",
+		"@mariomh/tailwind": "0.0.0",
+		"react": "19.0.0",
+		"react-dom": "19.0.0"
+	},
+	"devDependencies": {
+		"@storybook/addon-a11y": "8.4.7",
+		"@storybook/addon-actions": "8.4.7",
+		"@storybook/addon-essentials": "8.4.7",
+		"@storybook/addon-links": "8.4.7",
+		"@storybook/react": "8.4.7",
+		"@storybook/react-vite": "8.4.7",
+		"@tailwindcss/vite": "4.0.0-beta.8",
+		"storybook": "8.4.7",
+		"storybook-dark-mode": "4.0.2",
+		"vite": "6.0.6",
+		"vite-tsconfig-paths": "5.1.4"
+	}
+}
