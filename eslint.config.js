@@ -1,7 +1,19 @@
 import { default as hexadrop } from '@hexadrop/eslint-config';
 
-export default hexadrop({
-	module: {
-		ignore: ['@cv', '@styles/tailwind.css', '@layouts/layout.astro', 'astro-seo', '@lib/cva'],
+export default hexadrop(
+	{
+		typescript: ['./tsconfig.json', './storybook/tsconfig.json'],
 	},
-});
+	{
+		files: ['storybook/src/stories/**/*'],
+		rules: {
+			'import-sort/exports': 'off',
+		},
+	},
+	{
+		files: ['design-system/components/**/src/**/variants.ts'],
+		rules: {
+			'perfectionist/sort-objects': 'off',
+		},
+	}
+);
