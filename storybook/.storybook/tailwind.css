@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@import "@mariomh/tailwind";
+
+#storybook-docs > .sbdocs-wrapper {
+    background-color: transparent;
+}

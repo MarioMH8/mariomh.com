@@ -13,9 +13,9 @@
 		"url": "git+https://github.com/MarioMH8/mariomh.com.git",
 		"directory": "design-system/cva"
 	},
-	"homepage": "https://github.com/MarioMH8/design-system",
+	"homepage": "https://github.com/MarioMH8/mariomh.com",
 	"bugs": {
-		"url": "https://github.com/MarioMH8/design-system/issues"
+		"url": "https://github.com/MarioMH8/mariomh.com/issues"
 	},
 	"license": "PRIVATE",
 	"private": true,
