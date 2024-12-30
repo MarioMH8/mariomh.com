@@ -29,6 +29,9 @@
 			"types": "./dist/class-name.d.ts",
 			"default": "./dist/class-name.js"
 		},
+		"./package.json": {
+			"default": "./package.json"
+		},
 		"./react": {
 			"types": "./dist/react.d.ts",
 			"default": "./dist/react.js"
