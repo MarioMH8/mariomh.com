@@ -12,7 +12,7 @@ const light = create({
 	base: 'light',
 	brandImage: '/isotipo.svg',
 	brandTitle: 'MarioMH UI',
-	brandUrl: 'https://mariomh.com',
+	brandUrl: 'https://design.mariomh.com',
 	// colorSecondary: '#647a00',
 });
 
@@ -27,7 +27,7 @@ const dark = create({
 	base: 'dark',
 	brandImage: '/isotipo.svg',
 	brandTitle: 'MarioMH UI',
-	brandUrl: 'https://mariomh.com',
+	brandUrl: 'https://design.mariomh.com',
 	// colorSecondary: '#5e7321',
 });
 

@@ -13,11 +13,11 @@ import '@fontsource/dm-sans/600.css';
 import '@fontsource/dm-sans/700.css';
 import '@fontsource/dm-sans/800.css';
 import '@fontsource/dm-sans/900.css';
-import './tailwind.css';
+import './preview.css';
 
+import { DocumentPage } from '@mariomh/storybook/pages';
 import type { Preview } from '@storybook/react';
 
-// import DocumentPage from '../src/pages/document.page';
 import { dark, light } from './theme';
 
 const preview: Preview = {
@@ -39,7 +39,7 @@ const preview: Preview = {
 		},
 		docs: {
 			controls: { exclude: ['onClick'] },
-			// page: () => <DocumentPage />,
+			page: () => <DocumentPage />,
 		},
 		layout: 'centered',
 		options: {
