@@ -4,7 +4,7 @@ export default defineConfig([
 	{
 		clean: true,
 		dts: true,
-		entry: ['src/argument-types.ts', 'src/class-name.ts', 'src/react.tsx', 'src/variants.ts'],
+		entry: ['src/class-name.ts', 'src/react.tsx', 'src/variants.ts'],
 		format: ['esm'],
 		platform: 'neutral',
 		sourcemap: true,
