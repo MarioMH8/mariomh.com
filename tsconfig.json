@@ -17,6 +17,7 @@
 			"@mariomh/button/react": ["./design-system/components/button/src/react"],
 			"@mariomh/box/react": ["./design-system/components/box/src/react"],
 			"@mariomh/checkbox/react": ["./design-system/components/checkbox/src/react"],
+			"@mariomh/container/react": ["./design-system/components/container/src/react"],
 			"@mariomh/focus/react": ["./design-system/components/focus/src/react"],
 			"@mariomh/focus/variants": ["./design-system/components/focus/src/variants"],
 			"@mariomh/font/react": ["./design-system/components/font/src/react"],
