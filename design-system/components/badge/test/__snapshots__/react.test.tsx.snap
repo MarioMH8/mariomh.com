@@ -92,24 +92,25 @@ exports[`@mariomh/badge/react should exclude variants props 3`] = `"Test Message
 
 exports[`@mariomh/badge/react should exclude variants props 4`] = `
 [
-  "text-right",
   "text-lg",
   "font-secondary",
-  "select-none",
   "text-danger-foreground",
   "selection:bg-danger-background-active",
   "dark:text-danger-dark-foreground",
   "dark:selection:bg-danger-dark-background-active",
   "dark:selection:text-danger-foreground-invert",
+  "select-none",
   "font-medium",
   "tracking-widest",
   "rounded-xl",
+  "shadow-md",
   "py-1",
   "px-2",
-  "bg-danger-background-subtle",
+  "border",
   "border-danger-border",
-  "dark:bg-danger-dark-background-subtle",
   "dark:border-danger-dark-border",
+  "bg-transparent",
+  "dark:bg-transparent",
   "block",
 ]
 `;

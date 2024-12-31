@@ -8,6 +8,7 @@ export { default as family } from './family.argument-types';
 export { default as heading } from './heading.argument-types';
 export { default as href } from './href.argument-types';
 export { default as huge } from './huge.argument-types';
+export { default as icon } from './icon.argument-types';
 export * from './intent.argument-types.ts';
 export { default as noSelect } from './no-select.argument-types';
 export { default as round } from './round.argument-types';

@@ -51,14 +51,14 @@ exports[`@mariomh/font/react should exclude variants props 4`] = `
   "text-right",
   "text-lg",
   "font-secondary",
-  "select-none",
-  "text-danger-foreground",
   "selection:bg-danger-background-active",
-  "dark:text-danger-dark-foreground",
   "dark:selection:bg-danger-dark-background-active",
   "dark:selection:text-danger-foreground-invert",
+  "select-none",
   "font-medium",
   "tracking-widest",
+  "text-danger",
+  "dark:text-danger",
   "block",
 ]
 `;
