@@ -30,7 +30,12 @@ function roundSize(properties?: BadgeVariantsProperties): RoundVariantsPropertie
 }
 export default function cn(properties?: BadgeVariantsProperties, ...classLists: Parameters<typeof merge>): string {
 	return merge(
-		fontVariants({ ...properties, variant: properties?.variant ?? 'secondary' }),
+		fontVariants({
+			...properties,
+			align: undefined,
+			intent: properties?.intent ?? 'secondary',
+			variant: undefined,
+		}),
 		roundVariants({ dimension: roundSize(properties) }),
 		properties?.shadow ? shadowVariants({ dimension: properties.shadow }) : undefined,
 		variants(properties),

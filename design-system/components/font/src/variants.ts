@@ -34,72 +34,59 @@ const variants = cva({
 			tracking: 'lg',
 		},
 		{
-			bright: undefined,
 			className: 'text-primary-foreground-muted/45 dark:text-primary-dark-foreground-muted/45',
-			muted: true,
-			variant: 'primary',
+			variant: 'muted',
+			intent: 'primary',
 		},
 		{
-			bright: true,
 			className: 'text-primary dark:text-primary',
-			muted: undefined,
-			variant: 'primary',
+			variant: 'bright',
+			intent: 'primary',
 		},
 		{
-			bright: undefined,
 			className: 'text-secondary-foreground-muted/45 dark:text-secondary-dark-foreground-muted/45',
-			muted: true,
-			variant: 'secondary',
+			variant: 'muted',
+			intent: 'secondary',
 		},
 		{
-			bright: true,
 			className: 'text-secondary dark:text-secondary',
-			muted: undefined,
-			variant: 'secondary',
+			variant: 'bright',
+			intent: 'secondary',
 		},
 		{
-			bright: undefined,
 			className: 'text-success-foreground-muted/45 dark:text-success-dark-foreground-muted/45',
-			muted: true,
-			variant: 'success',
+			variant: 'muted',
+			intent: 'success',
 		},
 		{
-			bright: true,
 			className: 'text-success dark:text-success',
-			muted: undefined,
-			variant: 'success',
+			variant: 'bright',
+			intent: 'success',
 		},
 		{
-			bright: undefined,
 			className: 'text-danger-foreground-muted/45 dark:text-danger-dark-foreground-muted/45',
-			muted: true,
-			variant: 'danger',
+			variant: 'muted',
+			intent: 'danger',
 		},
 		{
-			bright: true,
 			className: 'text-danger dark:text-danger',
-			muted: undefined,
-			variant: 'danger',
+			variant: 'bright',
+			intent: 'danger',
 		},
 	],
 	defaultVariants: {
 		dimension: 'base',
 		family: 'primary',
+		intent: 'secondary',
 		tracking: 'base',
-		variant: 'secondary',
 		weight: 'base',
 	},
 	variants: {
-		// Opcional
 		align: {
 			center: 'text-center',
 			end: 'text-right',
 			start: 'text-left',
 		},
-		bright: {
-			true: '',
-		},
-		// Obligatoria
 		dimension: {
 			'2xl': 'text-2xl',
 			'3xl': 'text-3xl',
@@ -112,26 +99,11 @@ const variants = cva({
 			xl: 'text-xl',
 			xs: 'text-xs',
 		},
-		// Obligatoria
 		family: {
 			primary: 'font-primary',
 			secondary: 'font-secondary',
 		},
-		muted: {
-			true: '',
-		},
-		// Opcional
-		noSelect: {
-			true: 'select-none',
-		},
-		// Obligatoria
-		tracking: {
-			base: '',
-			lg: '',
-			sm: '',
-		},
-		// Obligatoria
-		variant: {
+		intent: {
 			danger: [
 				'text-danger-foreground selection:bg-danger-background-active',
 				'dark:text-danger-dark-foreground dark:selection:bg-danger-dark-background-active dark:selection:text-danger-foreground-invert',
@@ -150,7 +122,18 @@ const variants = cva({
 			],
 			unset: '',
 		},
-		// Obligatoria
+		noSelect: {
+			true: 'select-none',
+		},
+		tracking: {
+			base: '',
+			lg: '',
+			sm: '',
+		},
+		variant: {
+			bright: '',
+			muted: '',
+		},
 		weight: {
 			base: 'font-normal',
 			bold: 'font-semibold',

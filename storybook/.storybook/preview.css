@@ -4,3 +4,7 @@
 #storybook-docs > .sbdocs-wrapper {
     background-color: transparent;
 }
+
+.dark .sbdocs-content .sb-anchor h3 {
+    @apply text-secondary-dark-foreground;
+}

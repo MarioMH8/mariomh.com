@@ -1,6 +1,6 @@
 import type { InputType } from '@storybook/types';
 
-const dimension = {
+const dimensionFont = {
 	control: { required: false, type: 'select' },
 	description: 'Tamaño del texto',
 	name: 'Tamaño',
@@ -8,4 +8,12 @@ const dimension = {
 	table: { category: 'Fuente', defaultValue: { summary: 'base' } },
 } satisfies InputType;
 
-export default dimension;
+const dimensionShadow = {
+	control: { required: false, type: 'select' },
+	description: 'Tamaño del texto',
+	name: 'Tamaño',
+	options: ['sm', 'base', 'lg', 'xl'],
+	table: { category: 'Personalizado', defaultValue: { summary: 'base' } },
+} satisfies InputType;
+
+export { dimensionFont, dimensionShadow };

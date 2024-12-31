@@ -7,10 +7,10 @@ const variants = cva({
 		'ring-offset-primary-background dark:ring-offset-primary-dark-background',
 	],
 	defaultVariants: {
-		variant: 'primary',
+		intent: 'primary',
 	},
 	variants: {
-		variant: {
+		intent: {
 			danger: 'focus-visible:ring-danger-border',
 			primary: 'focus-visible:ring-primary-border',
 			secondary: 'focus-visible:ring-secondary-border',

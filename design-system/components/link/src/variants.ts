@@ -5,13 +5,13 @@ import type { FontVariantsProperties } from '@mariomh/font/variants';
 const variants = cva({
 	base: 'inline-block underline-offset-4 hover:cursor-pointer hover:underline',
 	defaultVariants: {
-		variant: 'primary',
+		intent: 'primary',
 	},
 	variants: {
 		disabled: {
 			true: 'opacity-50 hover:cursor-default hover:no-underline pointer-events-none',
 		},
-		variant: {
+		intent: {
 			danger: [
 				'text-danger-foreground-highlight active:text-danger-foreground-muted',
 				'dark:text-danger-dark-foreground-highlight dark:active:text-danger-dark-foreground-muted',
@@ -32,7 +32,7 @@ const variants = cva({
 	},
 });
 
-export type LinkVariantsProperties = Partial<Omit<FontVariantsProperties, 'variant'>> &
+export type LinkVariantsProperties = Partial<Omit<FontVariantsProperties, 'intent' | 'variant'>> &
 	VariantProperties<typeof variants>;
 
 export default variants;

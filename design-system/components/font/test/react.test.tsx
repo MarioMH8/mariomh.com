@@ -37,14 +37,13 @@ describe('@mariomh/font/react', () => {
 		const { container } = render(
 			<Component
 				align='end'
-				bright
 				className='block'
 				dimension='lg'
 				family='secondary'
-				muted
+				intent='danger'
 				noSelect
 				tracking='lg'
-				variant='danger'
+				variant='bright'
 				weight='medium'>
 				<span>Test Message</span>
 			</Component>

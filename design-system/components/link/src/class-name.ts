@@ -7,14 +7,14 @@ import type { LinkVariantsProperties } from './variants';
 import variants from './variants';
 
 export default function cn(
-	{ variant = 'primary', ...properties }: LinkVariantsProperties = {},
+	{ intent = 'primary', ...properties }: LinkVariantsProperties = {},
 	...classLists: Parameters<typeof merge>
 ): string {
 	return merge(
-		fontVariants({ ...properties, variant }),
+		fontVariants({ ...properties, intent }),
 		roundVariants({ ...properties, dimension: properties.dimension === 'huge' ? '4xl' : properties.dimension }),
-		focusVariants({ ...properties, variant }),
-		variants({ ...properties, variant }),
+		focusVariants({ ...properties, intent }),
+		variants({ ...properties, intent }),
 		...classLists
 	);
 }

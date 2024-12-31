@@ -12,7 +12,7 @@ export default function SubTitle(): JSX.Element | undefined {
 		<Heading
 			className='sb-unstyled text-lg'
 			heading='h2'
-			muted
+			variant='muted'
 			weight='base'>
 			{subtitle}
 		</Heading>

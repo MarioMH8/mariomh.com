@@ -1,17 +1,6 @@
 import package_ from '@mariomh/box/package.json';
 import Comp from '@mariomh/box/react';
-import Span from '@mariomh/span/react';
-import {
-	asChild,
-	bordered,
-	bright,
-	children,
-	round,
-	shadow,
-	subtle,
-	transparent,
-	variant,
-} from '@mariomh/storybook/argument-types';
+import { asChild, bordered, children, intentBox, round, shadow, variantBox } from '@mariomh/storybook/argument-types';
 import type { Meta, StoryObj } from '@storybook/react';
 
 /**
@@ -24,13 +13,11 @@ const meta = {
 	argTypes: {
 		asChild,
 		bordered,
-		bright,
 		children,
+		intent: intentBox,
 		round,
 		shadow,
-		subtle,
-		transparent,
-		variant,
+		variant: variantBox,
 	},
 	Comp,
 	parameters: {
@@ -42,7 +29,7 @@ const meta = {
 		<Comp
 			{...arguments_}
 			className='min-w-[400px] min-h-[300px]'>
-			<Span>{children}</Span>
+			{children}
 		</Comp>
 	),
 	tags: ['autodocs'],
@@ -53,6 +40,27 @@ const Default: StoryObj<typeof meta> = {
 	name: 'Por defecto',
 };
 
+const Bright: StoryObj<typeof meta> = {
+	args: {
+		variant: 'bright',
+	},
+	name: 'Vívido',
+};
+
+const Subtle: StoryObj<typeof meta> = {
+	args: {
+		variant: 'subtle',
+	},
+	name: 'Sutil',
+};
+
+const Transparent: StoryObj<typeof meta> = {
+	args: {
+		variant: 'transparent',
+	},
+	name: 'Transparente',
+};
+
 const Bordered: StoryObj<typeof meta> = {
 	args: {
 		bordered: true,
@@ -60,20 +68,113 @@ const Bordered: StoryObj<typeof meta> = {
 	name: 'Con bordes',
 };
 
-const Subtle: StoryObj<typeof meta> = {
+const BrightBordered: StoryObj<typeof meta> = {
 	args: {
-		subtle: true,
+		bordered: true,
+		variant: 'bright',
 	},
-	name: 'Sutil',
+	name: 'Vívido con bordes',
 };
 
-const Bright: StoryObj<typeof meta> = {
+const SubtleBordered: StoryObj<typeof meta> = {
 	args: {
-		bright: true,
+		bordered: true,
+		variant: 'subtle',
 	},
-	name: 'Vívido',
+	name: 'Sutil con bordes',
 };
 
-export { Default, Bright, Subtle, Bordered };
+const TransparentBordered: StoryObj<typeof meta> = {
+	args: {
+		bordered: true,
+		variant: 'transparent',
+	},
+	name: 'Transparente con bordes',
+};
+
+const Secondary: StoryObj<typeof meta> = {
+	args: {
+		intent: 'secondary',
+	},
+	name: 'Secundario',
+};
+
+const SecondaryBright: StoryObj<typeof meta> = {
+	args: {
+		intent: 'secondary',
+		variant: 'bright',
+	},
+	name: 'Secundario vívido',
+};
+
+const SecondarySubtle: StoryObj<typeof meta> = {
+	args: {
+		intent: 'secondary',
+		variant: 'subtle',
+	},
+	name: 'Secundario sutil',
+};
+
+const SecondaryTransparent: StoryObj<typeof meta> = {
+	args: {
+		intent: 'secondary',
+		variant: 'transparent',
+	},
+	name: 'Secundario transparente',
+};
+
+const SecondaryBordered: StoryObj<typeof meta> = {
+	args: {
+		bordered: true,
+		intent: 'secondary',
+	},
+	name: 'Secundario con bordes',
+};
+
+const SecondaryBrightBordered: StoryObj<typeof meta> = {
+	args: {
+		bordered: true,
+		intent: 'secondary',
+		variant: 'bright',
+	},
+	name: 'Secundario vívido con bordes',
+};
+
+const SecondarySubtleBordered: StoryObj<typeof meta> = {
+	args: {
+		bordered: true,
+		intent: 'secondary',
+		variant: 'subtle',
+	},
+	name: 'Secundario sutil con bordes',
+};
+
+const SecondaryTransparentBordered: StoryObj<typeof meta> = {
+	args: {
+		bordered: true,
+		intent: 'secondary',
+		variant: 'transparent',
+	},
+	name: 'Secundario transparente con bordes',
+};
+
+export {
+	Default,
+	Bright,
+	Subtle,
+	Transparent,
+	Bordered,
+	BrightBordered,
+	SubtleBordered,
+	TransparentBordered,
+	Secondary,
+	SecondaryBright,
+	SecondarySubtle,
+	SecondaryTransparent,
+	SecondaryBordered,
+	SecondaryBrightBordered,
+	SecondarySubtleBordered,
+	SecondaryTransparentBordered,
+};
 
 export default meta;

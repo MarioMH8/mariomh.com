@@ -68,7 +68,7 @@ export default function SourceCode(): JSX.Element {
 		<Box
 			bordered
 			className='sb-unstyled bg-white dark:bg-[#1E1F22]'
-			variant='secondary'>
+			intent='secondary'>
 			<SyntaxHighlighter language={sourceProps.language}>{sourceProps.code}</SyntaxHighlighter>
 		</Box>
 	) : (

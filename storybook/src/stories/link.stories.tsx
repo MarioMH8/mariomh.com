@@ -4,14 +4,14 @@ import {
 	align,
 	asChild,
 	children,
-	dimension,
+	dimensionFont,
 	disabled,
 	family,
 	href,
+	intent,
 	noSelect,
 	target,
 	tracking,
-	variant,
 	weight,
 } from '@mariomh/storybook/argument-types';
 import type { Meta, StoryObj } from '@storybook/react';
@@ -19,7 +19,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 const meta = {
 	args: {
 		children: 'Mi página web',
-		disabled: false,
 		href: 'https://mariomh.com',
 		target: '_blank',
 	},
@@ -27,18 +26,14 @@ const meta = {
 		align,
 		asChild,
 		children,
-		dimension,
+		dimension: dimensionFont,
 		disabled,
 		family,
 		href,
+		intent: { ...intent, table: { category: 'Fuente', defaultValue: { summary: 'primary' } } },
 		noSelect,
 		target,
 		tracking,
-		variant: {
-			...variant,
-			table: { category: 'Fuente', defaultValue: { summary: 'primary' } },
-		},
-
 		weight,
 	},
 	component,

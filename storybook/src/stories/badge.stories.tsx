@@ -4,13 +4,13 @@ import {
 	asChild,
 	bordered,
 	children,
-	dimension,
+	dimensionFont,
 	family,
+	intent,
 	noSelect,
 	shadow,
 	tracking,
-	transparent,
-	variant,
+	variantBadge,
 	weight,
 } from '@mariomh/storybook/argument-types';
 import type { Meta, StoryObj } from '@storybook/react';
@@ -23,13 +23,17 @@ const meta = {
 		asChild,
 		bordered,
 		children,
-		dimension,
+		dimension: dimensionFont,
 		family,
+		intent: {
+			...intent,
+			description: 'Color de la insignia',
+			table: { category: 'Fuente', defaultValue: { summary: 'primary' } },
+		},
 		noSelect,
 		shadow,
 		tracking,
-		transparent,
-		variant,
+		variant: variantBadge,
 		weight,
 	},
 	component,
@@ -62,7 +66,7 @@ const DefaultShadow: StoryObj<typeof meta> = {
 
 const DefaultTransparent: StoryObj<typeof meta> = {
 	args: {
-		transparent: true,
+		variant: 'transparent',
 	},
 	name: 'Por defecto (Transparente)',
 };
@@ -70,14 +74,14 @@ const DefaultTransparent: StoryObj<typeof meta> = {
 const DefaultBorderedTransparent: StoryObj<typeof meta> = {
 	args: {
 		bordered: true,
-		transparent: true,
+		variant: 'transparent',
 	},
 	name: 'Por defecto (Con bordes y transparente)',
 };
 
 const Primary: StoryObj<typeof meta> = {
 	args: {
-		variant: 'primary',
+		intent: 'primary',
 	},
 	name: 'Primario',
 };
@@ -85,23 +89,23 @@ const Primary: StoryObj<typeof meta> = {
 const PrimaryBordered: StoryObj<typeof meta> = {
 	args: {
 		bordered: true,
-		variant: 'primary',
+		intent: 'primary',
 	},
 	name: 'Primario (Con bordes)',
 };
 
 const PrimaryShadow: StoryObj<typeof meta> = {
 	args: {
+		intent: 'primary',
 		shadow: 'md',
-		variant: 'primary',
 	},
 	name: 'Primario (Con sombra)',
 };
 
 const PrimaryTransparent: StoryObj<typeof meta> = {
 	args: {
-		transparent: true,
-		variant: 'primary',
+		intent: 'primary',
+		variant: 'transparent',
 	},
 	name: 'Primario (Transparente)',
 };
@@ -109,15 +113,15 @@ const PrimaryTransparent: StoryObj<typeof meta> = {
 const PrimaryBorderedTransparent: StoryObj<typeof meta> = {
 	args: {
 		bordered: true,
-		transparent: true,
-		variant: 'primary',
+		intent: 'primary',
+		variant: 'transparent',
 	},
 	name: 'Primario (Con bordes y transparente)',
 };
 
 const Secondary: StoryObj<typeof meta> = {
 	args: {
-		variant: 'secondary',
+		intent: 'secondary',
 	},
 	name: 'Primario',
 };
@@ -125,23 +129,23 @@ const Secondary: StoryObj<typeof meta> = {
 const SecondaryBordered: StoryObj<typeof meta> = {
 	args: {
 		bordered: true,
-		variant: 'secondary',
+		intent: 'secondary',
 	},
 	name: 'Primario (Con bordes)',
 };
 
 const SecondaryShadow: StoryObj<typeof meta> = {
 	args: {
+		intent: 'secondary',
 		shadow: 'md',
-		variant: 'secondary',
 	},
 	name: 'Primario (Con sombra)',
 };
 
 const SecondaryTransparent: StoryObj<typeof meta> = {
 	args: {
-		transparent: true,
-		variant: 'secondary',
+		intent: 'secondary',
+		variant: 'transparent',
 	},
 	name: 'Primario (Transparente)',
 };
@@ -149,15 +153,15 @@ const SecondaryTransparent: StoryObj<typeof meta> = {
 const SecondaryBorderedTransparent: StoryObj<typeof meta> = {
 	args: {
 		bordered: true,
-		transparent: true,
-		variant: 'secondary',
+		intent: 'secondary',
+		variant: 'transparent',
 	},
 	name: 'Primario (Con bordes y transparente)',
 };
 
 const Success: StoryObj<typeof meta> = {
 	args: {
-		variant: 'success',
+		intent: 'success',
 	},
 	name: 'Primario',
 };
@@ -165,23 +169,23 @@ const Success: StoryObj<typeof meta> = {
 const SuccessBordered: StoryObj<typeof meta> = {
 	args: {
 		bordered: true,
-		variant: 'success',
+		intent: 'success',
 	},
 	name: 'Primario (Con bordes)',
 };
 
 const SuccessShadow: StoryObj<typeof meta> = {
 	args: {
+		intent: 'success',
 		shadow: 'md',
-		variant: 'success',
 	},
 	name: 'Primario (Con sombra)',
 };
 
 const SuccessTransparent: StoryObj<typeof meta> = {
 	args: {
-		transparent: true,
-		variant: 'success',
+		intent: 'success',
+		variant: 'transparent',
 	},
 	name: 'Primario (Transparente)',
 };
@@ -189,15 +193,15 @@ const SuccessTransparent: StoryObj<typeof meta> = {
 const SuccessBorderedTransparent: StoryObj<typeof meta> = {
 	args: {
 		bordered: true,
-		transparent: true,
-		variant: 'success',
+		intent: 'success',
+		variant: 'transparent',
 	},
 	name: 'Primario (Con bordes y transparente)',
 };
 
 const Danger: StoryObj<typeof meta> = {
 	args: {
-		variant: 'danger',
+		intent: 'danger',
 	},
 	name: 'Primario',
 };
@@ -205,23 +209,23 @@ const Danger: StoryObj<typeof meta> = {
 const DangerBordered: StoryObj<typeof meta> = {
 	args: {
 		bordered: true,
-		variant: 'danger',
+		intent: 'danger',
 	},
 	name: 'Primario (Con bordes)',
 };
 
 const DangerShadow: StoryObj<typeof meta> = {
 	args: {
+		intent: 'danger',
 		shadow: 'md',
-		variant: 'danger',
 	},
 	name: 'Primario (Con sombra)',
 };
 
 const DangerTransparent: StoryObj<typeof meta> = {
 	args: {
-		transparent: true,
-		variant: 'danger',
+		intent: 'danger',
+		variant: 'transparent',
 	},
 	name: 'Primario (Transparente)',
 };
@@ -229,8 +233,8 @@ const DangerTransparent: StoryObj<typeof meta> = {
 const DangerBorderedTransparent: StoryObj<typeof meta> = {
 	args: {
 		bordered: true,
-		transparent: true,
-		variant: 'danger',
+		intent: 'danger',
+		variant: 'transparent',
 	},
 	name: 'Primario (Con bordes y transparente)',
 };

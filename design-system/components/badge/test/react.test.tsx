@@ -37,15 +37,15 @@ describe('@mariomh/badge/react', () => {
 	it('should exclude variants props', () => {
 		const { container } = render(
 			<Component
-				align='end'
-				bright
+				bordered
 				className='block'
 				dimension='lg'
 				family='secondary'
-				muted
+				intent='danger'
 				noSelect
+				shadow='md'
 				tracking='lg'
-				variant='danger'
+				variant='transparent'
 				weight='medium'>
 				Test Message
 			</Component>
