@@ -24,6 +24,14 @@ const variantFont = {
 	table: { category: 'Fuente', defaultValue: { summary: 'undefined' } },
 } satisfies InputType;
 
+const variantCheckbox = {
+	control: { required: false, type: 'select' },
+	description: 'Variante del checkbox',
+	name: 'Variante',
+	options: ['bright', 'transparent'],
+	table: { category: 'Personalizado', defaultValue: { summary: 'undefined' } },
+} satisfies InputType;
+
 const variantButton = {
 	control: { required: false, type: 'select' },
 	description: 'Variante de botón',
@@ -32,4 +40,4 @@ const variantButton = {
 	table: { category: 'Personalizado', defaultValue: { summary: 'undefined' } },
 } satisfies InputType;
 
-export { variantBadge, variantBox, variantButton, variantFont };
+export { variantBadge, variantBox, variantButton, variantCheckbox, variantFont };
