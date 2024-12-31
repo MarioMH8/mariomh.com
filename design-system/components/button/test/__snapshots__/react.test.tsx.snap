@@ -1,0 +1,171 @@
+// Bun Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@mariomh/button/react should default render 1`] = `"BUTTON"`;
+
+exports[`@mariomh/button/react should default render 2`] = `{}`;
+
+exports[`@mariomh/button/react should default render 3`] = `"Test Message"`;
+
+exports[`@mariomh/button/react should default render 4`] = `
+[
+  "text-base",
+  "font-primary",
+  "font-normal",
+  "tracking-wide",
+  "rounded-lg",
+  "focus-visible:outline-none",
+  "focus-visible:ring-2",
+  "focus-visible:ring-offset-2",
+  "ring-offset-primary-background",
+  "dark:ring-offset-primary-dark-background",
+  "focus-visible:ring-primary-border",
+  "transition-colors",
+  "inline-flex",
+  "items-center",
+  "justify-center",
+  "disabled:pointer-events-none",
+  "disabled:opacity-50",
+  "bg-secondary-background-element",
+  "text-secondary-foreground",
+  "dark:bg-secondary-dark-background-element",
+  "dark:text-secondary-dark-foreground",
+  "hover:bg-secondary-background-hover",
+  "active:bg-secondary-background-active",
+  "dark:hover:bg-secondary-dark-background-hover",
+  "dark:active:bg-secondary-dark-background-active",
+  "selection:bg-secondary-background-active",
+  "dark:selection:bg-secondary-dark-background-active",
+  "dark:selection:text-secondary-foreground-invert",
+  "px-4",
+  "py-3",
+]
+`;
+
+exports[`@mariomh/button/react should asChild works as expected render 1`] = `"SPAN"`;
+
+exports[`@mariomh/button/react should asChild works as expected render 2`] = `{}`;
+
+exports[`@mariomh/button/react should asChild works as expected render 3`] = `"Test Message"`;
+
+exports[`@mariomh/button/react should asChild works as expected render 4`] = `
+[
+  "text-base",
+  "font-primary",
+  "font-normal",
+  "tracking-wide",
+  "rounded-lg",
+  "focus-visible:outline-none",
+  "focus-visible:ring-2",
+  "focus-visible:ring-offset-2",
+  "ring-offset-primary-background",
+  "dark:ring-offset-primary-dark-background",
+  "focus-visible:ring-primary-border",
+  "transition-colors",
+  "inline-flex",
+  "items-center",
+  "justify-center",
+  "disabled:pointer-events-none",
+  "disabled:opacity-50",
+  "bg-secondary-background-element",
+  "text-secondary-foreground",
+  "dark:bg-secondary-dark-background-element",
+  "dark:text-secondary-dark-foreground",
+  "hover:bg-secondary-background-hover",
+  "active:bg-secondary-background-active",
+  "dark:hover:bg-secondary-dark-background-hover",
+  "dark:active:bg-secondary-dark-background-active",
+  "selection:bg-secondary-background-active",
+  "dark:selection:bg-secondary-dark-background-active",
+  "dark:selection:text-secondary-foreground-invert",
+  "px-4",
+  "py-3",
+]
+`;
+
+exports[`@mariomh/button/react should override class 1`] = `"BUTTON"`;
+
+exports[`@mariomh/button/react should override class 2`] = `{}`;
+
+exports[`@mariomh/button/react should override class 3`] = `"Test Message"`;
+
+exports[`@mariomh/button/react should override class 4`] = `
+[
+  "font-primary",
+  "font-normal",
+  "tracking-wide",
+  "rounded-lg",
+  "focus-visible:outline-none",
+  "focus-visible:ring-2",
+  "focus-visible:ring-offset-2",
+  "ring-offset-primary-background",
+  "dark:ring-offset-primary-dark-background",
+  "focus-visible:ring-primary-border",
+  "transition-colors",
+  "inline-flex",
+  "items-center",
+  "justify-center",
+  "disabled:pointer-events-none",
+  "disabled:opacity-50",
+  "bg-secondary-background-element",
+  "text-secondary-foreground",
+  "dark:bg-secondary-dark-background-element",
+  "dark:text-secondary-dark-foreground",
+  "hover:bg-secondary-background-hover",
+  "active:bg-secondary-background-active",
+  "dark:hover:bg-secondary-dark-background-hover",
+  "dark:active:bg-secondary-dark-background-active",
+  "selection:bg-secondary-background-active",
+  "dark:selection:bg-secondary-dark-background-active",
+  "dark:selection:text-secondary-foreground-invert",
+  "px-4",
+  "py-3",
+  "text-2xl",
+]
+`;
+
+exports[`@mariomh/button/react should exclude variants props 1`] = `"BUTTON"`;
+
+exports[`@mariomh/button/react should exclude variants props 2`] = `{}`;
+
+exports[`@mariomh/button/react should exclude variants props 3`] = `"Test Message"`;
+
+exports[`@mariomh/button/react should exclude variants props 4`] = `
+[
+  "text-base",
+  "font-secondary",
+  "select-none",
+  "font-medium",
+  "tracking-widest",
+  "rounded-full",
+  "focus-visible:outline-none",
+  "focus-visible:ring-2",
+  "focus-visible:ring-offset-2",
+  "ring-offset-primary-background",
+  "dark:ring-offset-primary-dark-background",
+  "focus-visible:ring-danger-border",
+  "transition-colors",
+  "items-center",
+  "justify-center",
+  "disabled:pointer-events-none",
+  "disabled:opacity-50",
+  "border",
+  "aspect-square",
+  "text-danger-foreground",
+  "dark:text-danger-dark-foreground",
+  "hover:bg-danger-background-hover",
+  "active:bg-danger-background-active",
+  "dark:hover:bg-danger-dark-background-hover",
+  "dark:active:bg-danger-dark-background-active",
+  "selection:bg-danger-background-active",
+  "dark:selection:bg-danger-dark-background-active",
+  "dark:selection:text-danger-foreground-invert",
+  "border-danger-foreground",
+  "hover:border-danger-border-hover",
+  "dark:border-danger-dark-border",
+  "dark:hover:border-danger-dark-border-hover",
+  "bg-danger-background-subtle",
+  "dark:bg-danger-dark-background-subtle",
+  "h-20",
+  "block",
+]
+`;

@@ -12,7 +12,8 @@ exports[`@mariomh/box/react should default render 4`] = `
   "p-4",
   "bg-primary-background-element",
   "dark:bg-primary-dark-background-element",
-  "border-primary-border",
+  "border-primary",
+  "dark:border-primary-dark",
 ]
 `;
 
@@ -28,7 +29,8 @@ exports[`@mariomh/box/react should asChild works as expected render 4`] = `
   "p-4",
   "bg-primary-background-element",
   "dark:bg-primary-dark-background-element",
-  "border-primary-border",
+  "border-primary",
+  "dark:border-primary-dark",
 ]
 `;
 
@@ -44,7 +46,8 @@ exports[`@mariomh/box/react should override class 4`] = `
   "p-4",
   "bg-primary-background-element",
   "dark:bg-primary-dark-background-element",
-  "border-primary-border",
+  "border-primary",
+  "dark:border-primary-dark",
   "table",
 ]
 `;
@@ -60,10 +63,12 @@ exports[`@mariomh/box/react should exclude variants props 4`] = `
   "rounded-lg",
   "p-4",
   "border",
-  "bg-secondary-background-element",
-  "dark:bg-secondary-dark-background-element",
-  "border-secondary-foreground",
-  "dark:border-secondary",
+  "border-secondary",
+  "dark:border-secondary-dark",
+  "bg-secondary",
+  "dark:bg-secondary-dark",
+  "text-secondary-foreground-invert",
+  "dark:text-secondary-dark-foreground-invert",
   "table",
 ]
 `;

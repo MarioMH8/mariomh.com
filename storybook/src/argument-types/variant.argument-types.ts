@@ -24,4 +24,12 @@ const variantFont = {
 	table: { category: 'Fuente', defaultValue: { summary: 'undefined' } },
 } satisfies InputType;
 
-export { variantBadge, variantBox, variantFont };
+const variantButton = {
+	control: { required: false, type: 'select' },
+	description: 'Variante de botón',
+	name: 'Variante',
+	options: ['bright', 'link', 'subtle', 'transparent'],
+	table: { category: 'Personalizado', defaultValue: { summary: 'undefined' } },
+} satisfies InputType;
+
+export { variantBadge, variantBox, variantButton, variantFont };
