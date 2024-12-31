@@ -30,7 +30,7 @@ const meta = {
 	component: Comp,
 	parameters: {
 		category: 'Átomo',
-		exports: ['astro', 'react'],
+		exports: ['react'],
 		package: (package_ as unknown as { name: string }).name,
 	},
 	tags: ['autodocs'],

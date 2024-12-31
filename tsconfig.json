@@ -24,6 +24,7 @@
 			"@mariomh/font/react": ["./design-system/components/font/src/react"],
 			"@mariomh/font/variants": ["./design-system/components/font/src/variants"],
 			"@mariomh/heading/react": ["./design-system/components/heading/src/react"],
+			"@mariomh/input/react": ["./design-system/components/input/src/react"],
 			"@mariomh/label/react": ["./design-system/components/label/src/react"],
 			"@mariomh/link/class-name": ["./design-system/components/link/src/class-name"],
 			"@mariomh/link/react": ["./design-system/components/link/src/react"],

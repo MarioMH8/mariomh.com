@@ -32,6 +32,14 @@ const variantCheckbox = {
 	table: { category: 'Personalizado', defaultValue: { summary: 'undefined' } },
 } satisfies InputType;
 
+const variantInput = {
+	control: { required: false, type: 'select' },
+	description: 'Variante del input',
+	name: 'Variante',
+	options: ['subtle', 'transparent'],
+	table: { category: 'Personalizado', defaultValue: { summary: 'undefined' } },
+} satisfies InputType;
+
 const variantButton = {
 	control: { required: false, type: 'select' },
 	description: 'Variante de botón',
@@ -40,4 +48,4 @@ const variantButton = {
 	table: { category: 'Personalizado', defaultValue: { summary: 'undefined' } },
 } satisfies InputType;
 
-export { variantBadge, variantBox, variantButton, variantCheckbox, variantFont };
+export { variantBadge, variantBox, variantButton, variantCheckbox, variantFont, variantInput };
