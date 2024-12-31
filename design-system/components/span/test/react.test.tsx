@@ -38,14 +38,13 @@ describe('@mariomh/span/react', () => {
 		const { container } = render(
 			<Component
 				align='end'
-				bright
 				className='block'
 				dimension='lg'
 				family='secondary'
-				muted
+				intent='danger'
 				noSelect
 				tracking='lg'
-				variant='danger'
+				variant='muted'
 				weight='medium'>
 				Test Message
 			</Component>

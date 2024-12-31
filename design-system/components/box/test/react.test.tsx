@@ -38,11 +38,9 @@ describe('@mariomh/box/react', () => {
 		const { container } = render(
 			<Component
 				bordered
-				bright
 				className='table'
-				subtle
-				transparent
-				variant='secondary'>
+				intent='secondary'
+				variant='bright'>
 				Test Message
 			</Component>
 		);

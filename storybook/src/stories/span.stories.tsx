@@ -1,15 +1,14 @@
 import package_ from '@mariomh/span/package.json';
 import component from '@mariomh/span/react';
 import {
+	align,
 	asChild,
-	bright,
 	children,
-	dimension,
 	family,
-	muted,
+	intentFont,
 	noSelect,
 	tracking,
-	variant,
+	variantFont,
 	weight,
 } from '@mariomh/storybook/argument-types';
 import type { Meta, StoryObj } from '@storybook/react';
@@ -19,15 +18,14 @@ const meta = {
 		children: 'exercitation',
 	},
 	argTypes: {
+		align,
 		asChild,
-		bright,
 		children,
-		dimension,
 		family,
-		muted,
+		intent: intentFont,
 		noSelect,
 		tracking,
-		variant,
+		variant: variantFont,
 		weight,
 	},
 	component,
@@ -46,106 +44,106 @@ const Default: StoryObj<typeof meta> = {
 
 const DefaultBright: StoryObj<typeof meta> = {
 	args: {
-		bright: true,
+		variant: 'bright',
 	},
 	name: 'Por defecto (Vívido)',
 };
 
 const DefaultMuted: StoryObj<typeof meta> = {
 	args: {
-		muted: true,
+		variant: 'muted',
 	},
 	name: 'Por defecto (Apagado)',
 };
 
 const Primary: StoryObj<typeof meta> = {
 	args: {
-		variant: 'primary',
+		intent: 'primary',
 	},
 	name: 'Primario',
 };
 
 const PrimaryBright: StoryObj<typeof meta> = {
 	args: {
-		bright: true,
-		variant: 'primary',
+		intent: 'primary',
+		variant: 'bright',
 	},
 	name: 'Primario (Vívido)',
 };
 
 const PrimaryMuted: StoryObj<typeof meta> = {
 	args: {
-		muted: true,
-		variant: 'primary',
+		intent: 'primary',
+		variant: 'muted',
 	},
 	name: 'Primario (Apagado)',
 };
 
 const Secondary: StoryObj<typeof meta> = {
 	args: {
-		variant: 'secondary',
+		intent: 'secondary',
 	},
 	name: 'Secundario',
 };
 
 const SecondaryBright: StoryObj<typeof meta> = {
 	args: {
-		bright: true,
-		variant: 'secondary',
+		intent: 'secondary',
+		variant: 'bright',
 	},
 	name: 'Secundario (Vívido)',
 };
 
 const SecondaryMuted: StoryObj<typeof meta> = {
 	args: {
-		muted: true,
-		variant: 'secondary',
+		intent: 'secondary',
+		variant: 'muted',
 	},
 	name: 'Secundario (Apagado)',
 };
 
 const Success: StoryObj<typeof meta> = {
 	args: {
-		variant: 'success',
+		intent: 'success',
 	},
 	name: 'Correcto',
 };
 
 const SuccessBright: StoryObj<typeof meta> = {
 	args: {
-		bright: true,
-		variant: 'success',
+		intent: 'success',
+		variant: 'bright',
 	},
 	name: 'Correcto (Vívido)',
 };
 
 const SuccessMuted: StoryObj<typeof meta> = {
 	args: {
-		muted: true,
-		variant: 'success',
+		intent: 'success',
+		variant: 'muted',
 	},
 	name: 'Correcto (Apagado)',
 };
 
 const Danger: StoryObj<typeof meta> = {
 	args: {
-		variant: 'danger',
+		intent: 'danger',
 	},
 	name: 'Error',
 };
 
 const DangerBright: StoryObj<typeof meta> = {
 	args: {
-		bright: true,
-		variant: 'danger',
+		intent: 'danger',
+		variant: 'bright',
 	},
 	name: 'Error (Vívido)',
 };
 
 const DangerMuted: StoryObj<typeof meta> = {
 	args: {
-		muted: true,
-		variant: 'danger',
+		intent: 'danger',
+		variant: 'muted',
 	},
 	name: 'Error (Apagado)',
 };

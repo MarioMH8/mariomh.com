@@ -38,14 +38,13 @@ describe('@mariomh/heading/react', () => {
 		const { container } = render(
 			<Component
 				align='end'
-				bright
 				className='table'
 				family='secondary'
 				heading='h2'
-				muted
+				intent='danger'
 				noSelect
 				tracking='lg'
-				variant='danger'
+				variant='bright'
 				weight='medium'>
 				Test Message
 			</Component>

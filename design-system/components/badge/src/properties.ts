@@ -13,19 +13,16 @@ export default function properties<T extends AstroBadgeProperties | ReactBadgePr
 	}
 
 	const {
-		align: _align,
 		asChild: _asChild,
 		bordered: _bordered,
-		bright: _bright,
 		class: cls1,
 		className: cls2,
 		dimension: _dimension,
 		family: _family,
-		muted: _muted,
+		intent: _intent,
 		noSelect: _noSelect,
 		shadow: _shadow,
 		tracking: _tracking,
-		transparent: _transparent,
 		variant: _variant,
 		weight: _weight,
 		...rest

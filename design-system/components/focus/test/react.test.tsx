@@ -37,7 +37,7 @@ describe('@mariomh/focus/react', () => {
 		const { container } = render(
 			<Component
 				className='text-2xl'
-				variant='secondary'>
+				intent='secondary'>
 				<span>Test Message</span>
 			</Component>
 		);

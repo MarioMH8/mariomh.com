@@ -15,12 +15,11 @@ export default function properties<T extends AstroHeadingProperties | ReactHeadi
 	const {
 		align: _align,
 		asChild: _asChild,
-		bright: _bright,
 		class: cls1,
 		className: cls2,
 		family: _family,
 		heading: _heading,
-		muted: _muted,
+		intent: _intent,
 		noSelect: _noSelect,
 		tracking: _tracking,
 		variant: _variant,

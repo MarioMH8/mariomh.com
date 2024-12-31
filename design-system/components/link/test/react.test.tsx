@@ -38,16 +38,14 @@ describe('@mariomh/link/react', () => {
 		const { container } = render(
 			<Component
 				align='end'
-				bright
 				className='block'
 				dimension='lg'
 				disabled
 				family='secondary'
 				href='https://example.com'
-				muted
+				intent='danger'
 				noSelect
 				tracking='lg'
-				variant='danger'
 				weight='medium'>
 				Test Message
 			</Component>

@@ -7,13 +7,13 @@ const variants = cva({
 	base: 'py-1 px-2 inline-block',
 	compoundVariants: [],
 	defaultVariants: {
-		variant: 'secondary',
+		intent: 'secondary',
 	},
 	variants: {
 		bordered: {
 			true: 'border',
 		},
-		variant: {
+		intent: {
 			danger: [
 				'bg-danger-background-subtle border-danger-border',
 				'dark:bg-danger-dark-background-subtle dark:border-danger-dark-border',
@@ -31,13 +31,13 @@ const variants = cva({
 				'dark:bg-success-dark-background-subtle dark:border-success-dark-border',
 			],
 		},
-		transparent: {
-			true: 'bg-transparent dark:bg-transparent',
+		variant: {
+			transparent: 'bg-transparent dark:bg-transparent',
 		},
 	},
 });
 
-export type BadgeVariantsProperties = Omit<Partial<FontVariantsProperties>, 'variant'> &
+export type BadgeVariantsProperties = Partial<Omit<FontVariantsProperties, 'align' | 'intent' | 'variant'>> &
 	VariantProperties<typeof variants> & {
 		shadow?: ShadowVariantsProperties['dimension'];
 	};

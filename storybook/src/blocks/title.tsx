@@ -21,8 +21,8 @@ export default function Title(): JSX.Element {
 				<Badge
 					bordered
 					dimension='sm'
-					transparent
-					variant='primary'>
+					intent='primary'
+					variant='transparent'>
 					{category}
 				</Badge>
 			)}
