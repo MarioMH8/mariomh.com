@@ -4,7 +4,7 @@ exports[`@mariomh/copyright/react should default render 1`] = `"SPAN"`;
 
 exports[`@mariomh/copyright/react should default render 2`] = `{}`;
 
-exports[`@mariomh/copyright/react should default render 3`] = `"© 2024 Mario Menéndez Hidalgo"`;
+exports[`@mariomh/copyright/react should default render 3`] = `"© 2025 Mario Menéndez Hidalgo"`;
 
 exports[`@mariomh/copyright/react should default render 4`] = `
 [
@@ -24,7 +24,7 @@ exports[`@mariomh/copyright/react should override class 1`] = `"SPAN"`;
 
 exports[`@mariomh/copyright/react should override class 2`] = `{}`;
 
-exports[`@mariomh/copyright/react should override class 3`] = `"© 2024 Mario Menéndez Hidalgo"`;
+exports[`@mariomh/copyright/react should override class 3`] = `"© 2025 Mario Menéndez Hidalgo"`;
 
 exports[`@mariomh/copyright/react should override class 4`] = `
 [
