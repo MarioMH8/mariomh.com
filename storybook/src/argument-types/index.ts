@@ -12,6 +12,8 @@ export { default as huge } from './huge.argument-types';
 export { default as icon } from './icon.argument-types';
 export { default as id } from './id.argument-types';
 export * from './intent.argument-types';
+export { default as isotipo } from './isotipo.argument-types';
+export { default as logotipo } from './logotipo.argument-types';
 export { default as noSelect } from './no-select.argument-types';
 export { default as placeholder } from './placeholder.argument-types';
 export { default as round } from './round.argument-types';
