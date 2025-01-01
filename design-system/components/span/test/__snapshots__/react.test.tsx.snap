@@ -20,7 +20,7 @@ exports[`@mariomh/span/react should default render 4`] = `
 ]
 `;
 
-exports[`@mariomh/span/react should asChild works as expected render 1`] = `"SPAN"`;
+exports[`@mariomh/span/react should asChild works as expected render 1`] = `"P"`;
 
 exports[`@mariomh/span/react should asChild works as expected render 2`] = `{}`;
 

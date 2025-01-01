@@ -28,6 +28,7 @@
 			"@mariomh/label/react": ["./design-system/components/label/src/react"],
 			"@mariomh/link/class-name": ["./design-system/components/link/src/class-name"],
 			"@mariomh/link/react": ["./design-system/components/link/src/react"],
+			"@mariomh/paragraph/react": ["./design-system/components/paragraph/src/react"],
 			"@mariomh/round/react": ["./design-system/components/round/src/react"],
 			"@mariomh/round/variants": ["./design-system/components/round/src/variants"],
 			"@mariomh/shadow/variants": ["./design-system/components/shadow/src/variants"],

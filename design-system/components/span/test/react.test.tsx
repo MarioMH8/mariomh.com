@@ -22,7 +22,7 @@ describe('@mariomh/span/react', () => {
 	it('should asChild works as expected render', () => {
 		const { container } = render(
 			<Component asChild>
-				<span>Test Message</span>
+				<p>Test Message</p>
 			</Component>
 		);
 		const child = container.firstElementChild;
