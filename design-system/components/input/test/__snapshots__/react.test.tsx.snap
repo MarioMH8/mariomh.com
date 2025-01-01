@@ -1,49 +1,5 @@
 // Bun Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`@mariomh/input/react should asChild works as expected render 1`] = `"P"`;
-
-exports[`@mariomh/input/react should asChild works as expected render 2`] = `{}`;
-
-exports[`@mariomh/input/react should asChild works as expected render 3`] = `"Test Message"`;
-
-exports[`@mariomh/input/react should asChild works as expected render 4`] = `
-[
-  "text-base",
-  "font-primary",
-  "selection:bg-secondary-background-active",
-  "dark:selection:bg-secondary-dark-background-active",
-  "dark:selection:text-secondary-foreground-invert",
-  "font-normal",
-  "tracking-wide",
-  "rounded-lg",
-  "focus-visible:outline-none",
-  "focus-visible:ring-2",
-  "focus-visible:ring-offset-2",
-  "ring-offset-primary-background",
-  "dark:ring-offset-primary-dark-background",
-  "focus-visible:ring-primary-border",
-  "flex",
-  "w-full",
-  "border",
-  "file:border-0",
-  "file:bg-transparent",
-  "file:text-sm",
-  "file:font-medium",
-  "disabled:cursor-not-allowed",
-  "disabled:opacity-50",
-  "px-4",
-  "py-3",
-  "border-primary",
-  "dark:border-primary-border",
-  "text-primary-foreground",
-  "dark:text-primary-dark-foreground",
-  "bg-primary-background-subtle",
-  "dark:bg-primary-dark-background-subtle",
-  "placeholder:text-primary-foreground-muted/60",
-  "dark:placeholder:text-primary-dark-foreground-muted/60",
-]
-`;
-
 exports[`@mariomh/input/react should default render 1`] = `"INPUT"`;
 
 exports[`@mariomh/input/react should default render 2`] = `{}`;
@@ -83,8 +39,52 @@ exports[`@mariomh/input/react should default render 4`] = `
   "dark:text-primary-dark-foreground",
   "bg-primary-background-subtle",
   "dark:bg-primary-dark-background-subtle",
-  "placeholder:text-primary-foreground-muted/60",
-  "dark:placeholder:text-primary-dark-foreground-muted/60",
+  "placeholder:text-primary-foreground-muted/35",
+  "dark:placeholder:text-primary-dark-foreground-muted/35",
+]
+`;
+
+exports[`@mariomh/input/react should asChild works as expected render 1`] = `"P"`;
+
+exports[`@mariomh/input/react should asChild works as expected render 2`] = `{}`;
+
+exports[`@mariomh/input/react should asChild works as expected render 3`] = `"Test Message"`;
+
+exports[`@mariomh/input/react should asChild works as expected render 4`] = `
+[
+  "text-base",
+  "font-primary",
+  "selection:bg-secondary-background-active",
+  "dark:selection:bg-secondary-dark-background-active",
+  "dark:selection:text-secondary-foreground-invert",
+  "font-normal",
+  "tracking-wide",
+  "rounded-lg",
+  "focus-visible:outline-none",
+  "focus-visible:ring-2",
+  "focus-visible:ring-offset-2",
+  "ring-offset-primary-background",
+  "dark:ring-offset-primary-dark-background",
+  "focus-visible:ring-primary-border",
+  "flex",
+  "w-full",
+  "border",
+  "file:border-0",
+  "file:bg-transparent",
+  "file:text-sm",
+  "file:font-medium",
+  "disabled:cursor-not-allowed",
+  "disabled:opacity-50",
+  "px-4",
+  "py-3",
+  "border-primary",
+  "dark:border-primary-border",
+  "text-primary-foreground",
+  "dark:text-primary-dark-foreground",
+  "bg-primary-background-subtle",
+  "dark:bg-primary-dark-background-subtle",
+  "placeholder:text-primary-foreground-muted/35",
+  "dark:placeholder:text-primary-dark-foreground-muted/35",
 ]
 `;
 
@@ -126,8 +126,8 @@ exports[`@mariomh/input/react should override class 4`] = `
   "dark:text-primary-dark-foreground",
   "bg-primary-background-subtle",
   "dark:bg-primary-dark-background-subtle",
-  "placeholder:text-primary-foreground-muted/60",
-  "dark:placeholder:text-primary-dark-foreground-muted/60",
+  "placeholder:text-primary-foreground-muted/35",
+  "dark:placeholder:text-primary-dark-foreground-muted/35",
   "text-2xl",
 ]
 `;
@@ -167,8 +167,8 @@ exports[`@mariomh/input/react should exclude variants props 4`] = `
   "py-4",
   "text-danger-foreground",
   "dark:text-danger-dark-foreground",
-  "placeholder:text-danger-foreground-muted/60",
-  "dark:placeholder:text-danger-dark-foreground-muted/60",
+  "placeholder:text-danger-foreground-muted/35",
+  "dark:placeholder:text-danger-dark-foreground-muted/35",
   "bg-danger-1",
   "dark:bg-danger-dark-1",
   "border-danger-border",
