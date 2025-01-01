@@ -48,4 +48,12 @@ const variantButton = {
 	table: { category: 'Personalizado', defaultValue: { summary: 'undefined' } },
 } satisfies InputType;
 
-export { variantBadge, variantBox, variantButton, variantCheckbox, variantFont, variantInput };
+const variantLogo: InputType = {
+	control: { required: false, type: 'select' },
+	description: 'Variante de forma',
+	name: 'Variante',
+	options: ['isotipo', 'logotipo'],
+	table: { category: 'Personalizado', defaultValue: { summary: 'undefined' } },
+};
+
+export { variantBadge, variantBox, variantButton, variantCheckbox, variantFont, variantInput, variantLogo };

@@ -16,4 +16,12 @@ const dimensionShadow = {
 	table: { category: 'Personalizado', defaultValue: { summary: 'base' } },
 } satisfies InputType;
 
-export { dimensionFont, dimensionShadow };
+const dimensionLogo: InputType = {
+	control: { required: false, type: 'select' },
+	description: 'Tamaño del logo',
+	name: 'Tamaño',
+	options: ['xs', 'sm', 'base', 'lg'],
+	table: { category: 'Personalizado', defaultValue: { summary: 'base' } },
+};
+
+export { dimensionFont, dimensionLogo, dimensionShadow };
