@@ -50,6 +50,16 @@ const variants = cva({
 			only: undefined,
 		},
 		{
+			className: 'rounded-6xl',
+			dimension: '5xl',
+			only: undefined,
+		},
+		{
+			className: 'rounded-7xl',
+			dimension: '6xl',
+			only: undefined,
+		},
+		{
 			className: 'rounded-full',
 			dimension: 'full',
 			only: undefined,
@@ -100,6 +110,16 @@ const variants = cva({
 			only: 'sm',
 		},
 		{
+			className: 'sm:rounded-4xl',
+			dimension: '5xl',
+			only: 'sm',
+		},
+		{
+			className: 'sm:rounded-5xl',
+			dimension: '6xl',
+			only: 'sm',
+		},
+		{
 			className: 'sm:rounded-full',
 			dimension: 'full',
 			only: 'sm',
@@ -110,16 +130,18 @@ const variants = cva({
 	},
 	variants: {
 		dimension: {
+			unset: '',
+			xs: '',
+			sm: '',
+			base: '',
+			lg: '',
+			xl: '',
 			'2xl': '',
 			'3xl': '',
 			'4xl': '',
-			base: '',
+			'5xl': '',
+			'6xl': '',
 			full: '',
-			lg: '',
-			sm: '',
-			unset: '',
-			xl: '',
-			xs: '',
 		},
 		only: {
 			sm: '',
