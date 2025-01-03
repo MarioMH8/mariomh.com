@@ -33,7 +33,7 @@ export default function Title(): JSX.Element {
 							case 'astro': {
 								return (
 									<AstroIcon
-										className='w-6'
+										className='w-7 h-7'
 										key={index}
 									/>
 								);
@@ -41,7 +41,7 @@ export default function Title(): JSX.Element {
 							case 'react': {
 								return (
 									<ReactIcon
-										className='w-7'
+										className='w-7 h-7'
 										key={index}
 									/>
 								);
