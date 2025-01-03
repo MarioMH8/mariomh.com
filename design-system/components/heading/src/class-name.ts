@@ -27,7 +27,7 @@ function getFontSize(
 			return 'xl';
 		}
 		default: {
-			return 'base';
+			return 'lg';
 		}
 	}
 }

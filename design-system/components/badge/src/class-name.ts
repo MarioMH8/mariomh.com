@@ -11,10 +11,13 @@ function roundSize(properties?: BadgeVariantsProperties): RoundVariantsPropertie
 	switch (properties?.dimension) {
 		case '2xl':
 		case '3xl':
-		case '4xl':
-		case 'huge':
-		case 'unset': {
+		case '4xl': {
 			return '2xl';
+		}
+		case '5xl':
+		case '6xl':
+		case 'huge': {
+			return '3xl';
 		}
 		case 'base':
 		case 'lg':
@@ -25,6 +28,9 @@ function roundSize(properties?: BadgeVariantsProperties): RoundVariantsPropertie
 		case 'sm':
 		case 'xs': {
 			return 'base';
+		}
+		case 'unset': {
+			return 'unset';
 		}
 	}
 }
