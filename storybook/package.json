@@ -41,6 +41,7 @@
 		"@mariomh/logo": "0.0.0",
 		"@mariomh/paragraph": "0.0.0",
 		"@mariomh/round": "0.0.0",
+		"@mariomh/select": "0.0.0",
 		"@mariomh/span": "0.0.0",
 		"@mariomh/tailwind": "0.0.0",
 		"@storybook/blocks": "8.4.7",
