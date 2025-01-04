@@ -7,32 +7,32 @@ const variants = cva({
 	compoundVariants: [
 		{
 			className: [
-				'bg-primary-background dark:bg-primary-dark-background',
-				'border-primary-border dark:border-primary-border',
+				'bg-primary-background-subtle dark:bg-primary-dark-background-subtle',
+				'border-primary-border-subtle dark:border-primary-dark-border-subtle',
 			],
 			variant: 'subtle',
 			intent: 'primary',
 		},
 		{
 			className: [
-				'bg-secondary-background dark:bg-secondary-dark-background',
-				'border-secondary-border dark:border-secondary-border',
+				'bg-secondary-background-subtle dark:bg-secondary-dark-background-subtle',
+				'border-secondary-border-subtle dark:border-secondary-dark-border-subtle',
 			],
 			variant: 'subtle',
 			intent: 'secondary',
 		},
 		{
 			className: [
-				'bg-danger-background dark:bg-danger-dark-background',
-				'border-danger-border dark:border-danger-border',
+				'bg-danger-background-subtle dark:bg-danger-dark-background-subtle',
+				'border-danger-border-subtle dark:border-danger-dark-border-subtle',
 			],
 			variant: 'subtle',
 			intent: 'danger',
 		},
 		{
 			className: [
-				'bg-success-background dark:bg-success-dark-background',
-				'border-success-border dark:border-success-border',
+				'bg-success-background-subtle dark:bg-success-dark-background-subtle',
+				'border-success-border-subtle dark:border-success-dark-border-subtle',
 			],
 			variant: 'subtle',
 			intent: 'success',
@@ -58,28 +58,24 @@ const variants = cva({
 		},
 		intent: {
 			primary: [
-				'border-primary dark:border-primary-border',
+				'border-primary-border dark:border-primary-dark-border',
 				'text-primary-foreground dark:text-primary-dark-foreground',
-				'bg-primary-background-subtle dark:bg-primary-dark-background-subtle',
-				'placeholder:text-primary-foreground-muted/35 dark:placeholder:text-primary-dark-foreground-muted/35',
+				'bg-primary-background-element dark:bg-primary-dark-background-element',
 			],
 			secondary: [
-				'border-secondary dark:border-secondary-border',
+				'border-secondary-border dark:border-secondary-dark-border',
 				'text-secondary-foreground dark:text-secondary-dark-foreground',
-				'bg-secondary-background-subtle dark:bg-secondary-dark-background-subtle',
-				'placeholder:text-secondary-foreground-muted/35 dark:placeholder:text-secondary-dark-foreground-muted/35',
+				'bg-secondary-background-element dark:bg-secondary-dark-background-element',
 			],
 			success: [
-				'border-success dark:border-success-border',
+				'border-success-border dark:border-success-dark-border',
 				'text-success-foreground dark:text-success-dark-foreground',
-				'bg-success-background-subtle dark:bg-success-dark-background-subtle',
-				'placeholder:text-success-foreground-muted/35 dark:placeholder:text-success-dark-foreground-muted/35',
+				'bg-success-background-element dark:bg-success-dark-background-element',
 			],
 			danger: [
-				'border-danger dark:border-danger-border',
+				'border-danger-border dark:border-danger-dark-border',
 				'text-danger-foreground dark:text-danger-dark-foreground',
-				'bg-danger-background-subtle dark:bg-danger-dark-background-subtle',
-				'placeholder:text-danger-foreground-muted/35 dark:placeholder:text-danger-dark-foreground-muted/35',
+				'bg-danger-background-element dark:bg-danger-dark-background-element',
 			],
 		},
 		variant: {

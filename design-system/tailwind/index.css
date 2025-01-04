@@ -243,7 +243,7 @@
 
     --font-primary: "Archia", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --font-secondary: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    
+
     --text-xs: clamp(0.691358024691358rem, calc(0.691358024691358rem + ((0.6944444444444445 - 0.691358024691358) * ((100vw - 20rem) / (96 - 20)))), 0.6944444444444445rem);
     --text-xs--line-height: 1.6;
 
