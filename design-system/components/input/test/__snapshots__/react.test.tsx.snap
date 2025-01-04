@@ -169,10 +169,10 @@ exports[`@mariomh/input/react should exclude variants props 4`] = `
   "dark:text-danger-dark-foreground",
   "placeholder:text-danger-foreground-muted/35",
   "dark:placeholder:text-danger-dark-foreground-muted/35",
-  "bg-danger-1",
-  "dark:bg-danger-dark-1",
-  "border-danger-border",
-  "dark:border-danger-border",
+  "bg-subtle-background",
+  "dark:bg-subtle-dark-background",
+  "border-subtle-border",
+  "dark:border-subtle-border",
   "block",
 ]
 `;

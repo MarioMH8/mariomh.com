@@ -21,7 +21,7 @@ import type { Meta, StoryObj } from '@storybook/react';
  */
 const meta = {
 	args: {
-		// Input args
+		autoComplete: 'off',
 		id: 'email-default',
 		placeholder: 'usuario@dominio.es',
 		type: 'email',
