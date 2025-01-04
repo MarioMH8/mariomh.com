@@ -29,14 +29,12 @@ exports[`@mariomh/select/react should default render 4`] = `
   "disabled:opacity-50",
   "px-4",
   "py-3",
-  "border-primary",
-  "dark:border-primary-border",
+  "border-primary-border",
+  "dark:border-primary-dark-border",
   "text-primary-foreground",
   "dark:text-primary-dark-foreground",
-  "bg-primary-background-subtle",
-  "dark:bg-primary-dark-background-subtle",
-  "placeholder:text-primary-foreground-muted/35",
-  "dark:placeholder:text-primary-dark-foreground-muted/35",
+  "bg-primary-background-element",
+  "dark:bg-primary-dark-background-element",
 ]
 `;
 
@@ -69,14 +67,12 @@ exports[`@mariomh/select/react should asChild works as expected render 4`] = `
   "disabled:opacity-50",
   "px-4",
   "py-3",
-  "border-primary",
-  "dark:border-primary-border",
+  "border-primary-border",
+  "dark:border-primary-dark-border",
   "text-primary-foreground",
   "dark:text-primary-dark-foreground",
-  "bg-primary-background-subtle",
-  "dark:bg-primary-dark-background-subtle",
-  "placeholder:text-primary-foreground-muted/35",
-  "dark:placeholder:text-primary-dark-foreground-muted/35",
+  "bg-primary-background-element",
+  "dark:bg-primary-dark-background-element",
 ]
 `;
 
@@ -108,14 +104,12 @@ exports[`@mariomh/select/react should override class 4`] = `
   "disabled:opacity-50",
   "px-4",
   "py-3",
-  "border-primary",
-  "dark:border-primary-border",
+  "border-primary-border",
+  "dark:border-primary-dark-border",
   "text-primary-foreground",
   "dark:text-primary-dark-foreground",
-  "bg-primary-background-subtle",
-  "dark:bg-primary-dark-background-subtle",
-  "placeholder:text-primary-foreground-muted/35",
-  "dark:placeholder:text-primary-dark-foreground-muted/35",
+  "bg-primary-background-element",
+  "dark:bg-primary-dark-background-element",
   "text-2xl",
 ]
 `;
@@ -151,12 +145,10 @@ exports[`@mariomh/select/react should exclude variants props 4`] = `
   "py-4",
   "text-danger-foreground",
   "dark:text-danger-dark-foreground",
-  "placeholder:text-danger-foreground-muted/35",
-  "dark:placeholder:text-danger-dark-foreground-muted/35",
-  "bg-danger-background",
-  "dark:bg-danger-dark-background",
-  "border-danger-border",
-  "dark:border-danger-border",
+  "bg-danger-background-subtle",
+  "dark:bg-danger-dark-background-subtle",
+  "border-danger-border-subtle",
+  "dark:border-danger-dark-border-subtle",
   "block",
 ]
 `;
