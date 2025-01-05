@@ -1,0 +1,51 @@
+---
+import classNameButton from '@mariomh/button/class-name';
+import { Menu as MenuIcon, X as XIcon } from 'lucide-astro';
+
+import { classNameNavigationMenuLinkWrapper } from '../class-name';
+import { propertiesNavigationMenu } from '../properties';
+import type { AstroNavigationMenuProperties } from './navigation-menu.astro';
+import NavigationMenuLogo from './navigation-menu-logo.astro';
+import NavigationMenuUL from './navigation-menu-ul-c.astro.astro';
+import {NAVIGATION_MENU_ELEMENT} from "../element";
+
+export interface Props extends AstroNavigationMenuProperties {}
+const { as: Tag = NAVIGATION_MENU_ELEMENT, ...p } = propertiesNavigationMenu(Astro.props);
+
+const labelClass = classNameButton({ icon: true, variant: 'transparent' }, 'flex lg:hidden');
+const labelMobileClass = classNameButton({ icon: true, variant: 'transparent' });
+const linkWrapper = classNameNavigationMenuLinkWrapper();
+---
+
+<Tag {...p}>
+	<NavigationMenuLogo />
+	<label
+		class:list={labelClass}
+		for='mobile-menu'>
+		<span class='sr-only'>Abrir menu</span>
+		<MenuIcon
+			height='26'
+			width='26'
+		/>
+	</label>
+	<input
+		class='peer hidden'
+		id='mobile-menu'
+		type='checkbox'
+	/>
+	<NavigationMenuUL>
+		<li class:list={linkWrapper}>
+			<NavigationMenuLogo />
+			<label
+				class:list={labelMobileClass}
+				for='mobile-menu'>
+				<span class='sr-only'>Cerrar menu</span>
+				<XIcon
+					height='26'
+					width='26'
+				/>
+			</label>
+		</li>
+		<slot />
+	</NavigationMenuUL>
+</Tag>
