@@ -1,0 +1,12 @@
+---
+import { propertiesNavigationMenuUL } from '../properties';
+import type { AstroNavigationMenuULProperties } from './navigation-menu-ul.astro';
+import {NAVIGATION_MENU_UL_ELEMENT} from "../element";
+
+export interface Props extends AstroNavigationMenuULProperties {}
+const { as: Tag = NAVIGATION_MENU_UL_ELEMENT, ...p } = propertiesNavigationMenuUL(Astro.props);
+---
+
+<Tag {...p}>
+	<slot />
+</Tag>
