@@ -10,7 +10,7 @@ interface ReactHeadingProperties extends ComponentPropsWithRef<typeof ELEMENT_TY
 }
 
 const Heading: FC<ReactHeadingProperties> = ({ asChild, ref, ...p }) => {
-	const Comp = asChild ? Slot : ELEMENT_TYPE;
+	const Comp = asChild ? Slot : (p.heading ?? ELEMENT_TYPE);
 
 	return (
 		<Comp
