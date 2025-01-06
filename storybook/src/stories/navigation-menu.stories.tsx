@@ -21,7 +21,7 @@ const meta = {
 		</NavigationMenu>
 	),
 	tags: ['autodocs'],
-	title: 'Organismo/Menú de navegación',
+	title: 'Organismos/Menú de navegación',
 } satisfies Meta<typeof NavigationMenu>;
 
 const Default: StoryObj<typeof meta> = {
