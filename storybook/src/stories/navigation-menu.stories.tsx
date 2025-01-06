@@ -7,6 +7,7 @@ const meta = {
 	parameters: {
 		category: 'Átomo',
 		exports: ['astro', 'react'],
+		import: `import { NavigationMenu, NavigationMenuLink } from '@mariomh/navigation-menu/react';`,
 		package: (package_ satisfies unknown satisfies { name: string }).name,
 	},
 	render: arguments_ => (
