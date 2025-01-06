@@ -6,6 +6,7 @@ const variants = cva({
 	base: 'block mb-6',
 	defaultVariants: {
 		dimension: 'base',
+		wrap: true,
 	},
 	variants: {
 		dimension: {
@@ -19,6 +20,10 @@ const variants = cva({
 			unset: '',
 			xl: 'leading-9',
 			xs: 'leading-5',
+		},
+		wrap: {
+			true: 'max-w-[75ch]',
+			false: '!max-w-none',
 		},
 	},
 });
