@@ -24,6 +24,7 @@ export default function properties<T extends AstroParagraphProperties | ReactPar
 		tracking: _tracking,
 		variant: _variant,
 		weight: _weight,
+		wrap: _wrap,
 		...rest
 	} = p as AstroParagraphProperties & ReactParagraphProperties;
 
