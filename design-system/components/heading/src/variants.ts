@@ -9,10 +9,10 @@ const variants = cva({
 	},
 	variants: {
 		heading: {
-			h1: '',
-			h2: '',
-			h3: '',
-			h4: '',
+			h1: 'mb-8',
+			h2: 'mb-6',
+			h3: 'mb-4',
+			h4: 'mb-2',
 		},
 		huge: {
 			true: 'text-9xl mb-12',
