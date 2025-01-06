@@ -10,6 +10,7 @@ import {
 	tracking,
 	variantFont,
 	weight,
+	wrap,
 } from '@mariomh/storybook/argument-types';
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -24,6 +25,7 @@ const meta = {
 		tracking,
 		variant: variantFont,
 		weight,
+		wrap,
 	},
 	component: Comp,
 	parameters: {

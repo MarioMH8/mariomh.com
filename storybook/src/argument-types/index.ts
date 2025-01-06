@@ -25,3 +25,4 @@ export { default as tracking } from './tracking.argument-types';
 export { default as type } from './type.argument-types';
 export * from './variant.argument-types';
 export { default as weight } from './weight.argument-types';
+export { default as wrap } from './wrap.argument-types';
