@@ -78,9 +78,9 @@
 		"@mariomh/container": "0.0.0",
 		"@mariomh/logo": "0.0.0",
 		"@radix-ui/react-slot": "^1",
+		"astro": "^5",
 		"lucide-astro": "^0.469.0",
 		"lucide-react": "^0.469.0",
-		"astro": "^5",
 		"react": "^19"
 	},
 	"peerDependenciesMeta": {

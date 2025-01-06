@@ -2,6 +2,9 @@ import { default as hexadrop } from '@hexadrop/eslint-config';
 
 export default hexadrop(
 	{
+		module: {
+			ignore: ['@mariomh/logo/astro', '@mariomh/button/class-name'],
+		},
 		typescript: ['./tsconfig.json', './storybook/tsconfig.json'],
 	},
 	{

@@ -20,6 +20,7 @@ exports[`@mariomh/paragraph/react should default render 4`] = `
   "block",
   "mb-6",
   "leading-7",
+  "max-w-[75ch]",
 ]
 `;
 
@@ -43,6 +44,7 @@ exports[`@mariomh/paragraph/react should asChild works as expected render 4`] = 
   "block",
   "mb-6",
   "leading-7",
+  "max-w-[75ch]",
 ]
 `;
 
@@ -64,6 +66,7 @@ exports[`@mariomh/paragraph/react should override class 4`] = `
   "tracking-wide",
   "block",
   "mb-6",
+  "max-w-[75ch]",
   "text-2xl",
 ]
 `;
@@ -88,7 +91,8 @@ exports[`@mariomh/paragraph/react should exclude variants props 4`] = `
   "text-danger-foreground-muted/45",
   "dark:text-danger-dark-foreground-muted/45",
   "mb-6",
-  "leading-7",
+  "leading-8",
+  "max-w-[75ch]",
   "block",
 ]
 `;

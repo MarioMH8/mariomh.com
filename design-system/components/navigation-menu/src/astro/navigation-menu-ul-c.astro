@@ -1,7 +1,7 @@
 ---
-import { propertiesNavigationMenuUL } from '../properties';
-import type { AstroNavigationMenuULProperties } from './navigation-menu-ul.astro';
-import {NAVIGATION_MENU_UL_ELEMENT} from "../element";
+import { NAVIGATION_MENU_UL_ELEMENT } from '../element/index.ts';
+import { propertiesNavigationMenuUL } from '../properties/index.ts';
+import type { AstroNavigationMenuULProperties } from './navigation-menu-ul.astro.ts';
 
 export interface Props extends AstroNavigationMenuULProperties {}
 const { as: Tag = NAVIGATION_MENU_UL_ELEMENT, ...p } = propertiesNavigationMenuUL(Astro.props);
