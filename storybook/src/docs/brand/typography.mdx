@@ -1,0 +1,32 @@
+import { Source } from '@storybook/blocks';
+import { Meta, Unstyled } from '@storybook/blocks';
+import Heading from '@mariomh/heading/react';
+import Paragraph from '@mariomh/paragraph/react';
+
+<Meta title='Marca/Tipografía' />
+
+<Unstyled>
+	<Heading heading='h1' className='mb-4'>Tipografía</Heading>
+	<Paragraph wrap={false} family='secondary' variant='muted' dimension='lg' tracking='lg'>
+		Se define un par tipográfico para resolver cualquier tipo de pieza gráfica.
+	</Paragraph>
+
+	<Heading heading='h2'>Principal</Heading>
+	<Paragraph wrap={false}>De cuerpo geométrico y tinte técnico, Archia se determina como elemento para acompañar todo el sistema visual.
+		Una fuente de formas puras que conecta a la perfección con la marca, se adapta al sistema y permite la
+		jerarquización de información gracias a su gran variedad de pesos.</Paragraph>
+	<Paragraph wrap={false}>Para títulos, subtítulos y comunicación textual en general se aplicará siempre la tipografía Archia, aplicando
+		las variables necesarias para jerarquizar y categorizar correctamente la información.</Paragraph>
+	<Paragraph wrap={false} noSelect intent='primary' dimension='huge' variant='bright'>Aa</Paragraph>
+	<Paragraph wrap={false} noSelect dimension='lg' weight='medium'>Archia</Paragraph>
+	<Paragraph wrap={false} noSelect dimension='lg' weight='light'>abcdefghijklmnopqrstuvwxyz<br />ABCDEFGHIJLKMNOPQRSTUVWXYZ<br />0123456789
+		@#”$%&/()=?!{}*</Paragraph>
+
+	<Heading heading='h2'>Secundaria</Heading>
+	<Paragraph wrap={false}>Se define DM Sans como segunda tipografía para textos largos o bien para algunas excepciones donde la
+		información comunicada es breve y acompaña algún título o se aplica en algún tamaño reducido.</Paragraph>
+	<Paragraph wrap={false} noSelect family='secondary' intent='primary' dimension='huge' variant='bright'>Bb</Paragraph>
+	<Paragraph wrap={false} noSelect family='secondary' dimension='lg' weight='medium'>DM Sans</Paragraph>
+	<Paragraph wrap={false} noSelect family='secondary' dimension='lg'
+	   weight='light'>abcdefghijklmnopqrstuvwxyz<br />ABCDEFGHIJLKMNOPQRSTUVWXYZ<br />0123456789 @#”$%&/()=?!{}*</Paragraph>
+</Unstyled>
