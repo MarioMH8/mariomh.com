@@ -2,12 +2,12 @@
 import classNameButton from '@mariomh/button/class-name';
 import { Menu as MenuIcon, X as XIcon } from 'lucide-astro';
 
-import { classNameNavigationMenuLinkWrapper } from '../class-name';
-import { propertiesNavigationMenu } from '../properties';
+import { classNameNavigationMenuLinkWrapper } from '../class-name/index.ts';
+import { NAVIGATION_MENU_ELEMENT } from '../element/index.ts';
+import { propertiesNavigationMenu } from '../properties/index.ts';
 import type { AstroNavigationMenuProperties } from './navigation-menu.astro';
 import NavigationMenuLogo from './navigation-menu-logo.astro';
-import NavigationMenuUL from './navigation-menu-ul-c.astro.astro';
-import {NAVIGATION_MENU_ELEMENT} from "../element";
+import NavigationMenuUL from './navigation-menu-ul-c.astro';
 
 export interface Props extends AstroNavigationMenuProperties {}
 const { as: Tag = NAVIGATION_MENU_ELEMENT, ...p } = propertiesNavigationMenu(Astro.props);
