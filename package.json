@@ -16,6 +16,7 @@
 	"private": true,
 	"type": "module",
 	"workspaces": [
+		"app",
 		"design-system/cva",
 		"design-system/fonts/archia",
 		"design-system/tailwind",
