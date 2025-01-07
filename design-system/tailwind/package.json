@@ -39,6 +39,7 @@
 		}
 	},
 	"scripts": {
+		"build": "tsup",
 		"lint:packages": "publint",
 		"prepublishOnly": "publint"
 	},
