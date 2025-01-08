@@ -7,5 +7,5 @@ export default function cn(
 	properties: NavigationMenuLinkWrapperVariantsProperties = {},
 	...classLists: Parameters<typeof merge>
 ): string {
-	return merge(variantsNavigationMenuLinkWrapper(properties), ...classLists);
+	return merge(variantsNavigationMenuLinkWrapper(properties), 'container', ...classLists);
 }

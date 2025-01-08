@@ -2,15 +2,6 @@ import { default as hexadrop } from '@hexadrop/eslint-config';
 
 export default hexadrop(
 	{
-		module: {
-			ignore: [
-				'@mariomh/logo/astro',
-				'@mariomh/button/class-name',
-				'@mariomh/button/astro',
-				'@mariomh/navigation-menu/astro',
-				'astro-seo',
-			],
-		},
 		typescript: ['./tsconfig.json', './storybook/tsconfig.json'],
 	},
 	{
@@ -23,6 +14,12 @@ export default hexadrop(
 		files: ['design-system/components/**/src/**/variants.ts'],
 		rules: {
 			'perfectionist/sort-objects': 'off',
+		},
+	},
+	{
+		files: ['app/**/*.astro', 'design-system/components/navigation-menu/src/astro/**/*.astro'],
+		rules: {
+			'import/no-unresolved': 'off',
 		},
 	}
 );

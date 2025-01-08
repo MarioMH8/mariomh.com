@@ -16,11 +16,10 @@ import '@fontsource/dm-sans/800.css';
 import '@fontsource/dm-sans/900.css';
 import './layout.css';
 
-import { ClientRouter } from 'astro:transitions';
+import NavigationMenu from '@app/features/navigation-menu.astro';
 import { SEO } from 'astro-seo';
 
 import cv from '../../cv.json';
-import NavigationMenu from '../features/navigation-menu.astro';
 
 interface Props {
 	title?: string;
@@ -66,41 +65,6 @@ const computedDescription = description ?? cv.basics.summary;
 			href='/sitemap-index.xml'
 			rel='sitemap'
 		/>
-
-		<ClientRouter />
-		<script is:inline>
-			function getSystemTheme() {
-				return matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-			}
-
-			function getThemePreference() {
-				const localItem = typeof localStorage !== 'undefined' && localStorage.getItem('theme');
-				if (localItem === 'dark' || localItem === 'light') {
-					return localItem;
-				}
-
-				return getSystemTheme();
-			}
-
-			function toggleTheme() {
-				const element = document.documentElement;
-				const isDark = getThemePreference() === 'dark';
-				const hasDark = element.classList.contains('dark');
-				if (isDark !== hasDark) {
-					element.classList.toggle('dark', isDark);
-				}
-				const hasDarkScrollbar = element.classList.contains('scrollbar-track-primary-dark-background');
-				if (isDark !== hasDarkScrollbar) {
-					element.classList.toggle('scrollbar-track-primary-dark-background', isDark);
-				}
-			}
-
-			document.addEventListener('astro:page-load', () => {
-				toggleTheme();
-			});
-
-			toggleTheme();
-		</script>
 	</head>
 	<body>
 		<NavigationMenu />
