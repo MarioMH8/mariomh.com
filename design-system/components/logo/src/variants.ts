@@ -28,11 +28,11 @@ const variants = cva({
 });
 
 const pathVariants = cva({
-	base: 'fill-secondary-foreground dark:fill-secondary-dark-foreground',
+	base: 'fill-primary-foreground dark:fill-primary-dark-foreground',
 	variants: {
 		isotipo: {
-			dark: 'fill-secondary-foreground dark:fill-secondary-foreground',
-			light: 'fill-secondary-foreground-invert dark:fill-secondary-foreground-invert',
+			dark: 'fill-primary-foreground dark:fill-primary-foreground',
+			light: 'fill-primary-foreground-invert dark:fill-primary-foreground-invert',
 			primary: 'fill-primary dark:fill-primary',
 		},
 	},
@@ -86,8 +86,8 @@ const textVariants = cva({
 	},
 	variants: {
 		logotipo: {
-			dark: 'text-secondary-foreground dark:text-secondary-foreground',
-			light: 'text-secondary-foreground-invert dark:text-secondary-foreground-invert',
+			dark: 'text-primary-foreground dark:text-primary-foreground',
+			light: 'text-primary-foreground-invert dark:text-primary-foreground-invert',
 			primary: 'text-primary dark:text-primary-dark',
 		},
 		dimension: {

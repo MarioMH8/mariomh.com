@@ -5,5 +5,15 @@ import type { SpanVariantsProperties } from './variants';
 import variants from './variants';
 
 export default function cn(properties?: SpanVariantsProperties, ...classLists: Parameters<typeof merge>): string {
-	return merge(font(properties), variants({}), ...classLists);
+	return merge(
+		font({
+			dimension: properties?.dimension,
+			family: 'secondary',
+			noSelect: properties?.noSelect,
+			variant: properties?.variant,
+			weight: properties?.weight,
+		}),
+		variants({}),
+		...classLists
+	);
 }

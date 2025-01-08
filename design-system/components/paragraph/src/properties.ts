@@ -18,12 +18,7 @@ export default function properties<T extends AstroParagraphProperties | ReactPar
 		class: cls1,
 		className: cls2,
 		dimension: _dimension,
-		family: _family,
-		intent: _intent,
 		noSelect: _noSelect,
-		tracking: _tracking,
-		variant: _variant,
-		weight: _weight,
 		wrap: _wrap,
 		...rest
 	} = p as AstroParagraphProperties & ReactParagraphProperties;

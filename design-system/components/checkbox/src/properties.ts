@@ -10,12 +10,10 @@ export default function properties<T extends ReactCheckboxProperties>(p?: Checkb
 	}
 
 	const {
-		bordered: _bordered,
 		className: cls1,
 		dimension: _dimension,
 		iconLabel: _iconLabel,
 		intent: _intent,
-		variant: _variant,
 		...rest
 	} = p as ReactCheckboxProperties;
 

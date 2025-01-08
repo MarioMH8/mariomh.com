@@ -9,7 +9,6 @@ function logoCn(properties: LogoVariantsProperties = {}): string {
 		fontVariants({
 			dimension: 'unset',
 			family: 'primary',
-			intent: 'secondary',
 			noSelect: true,
 			tracking: 'base',
 			weight: 'base',

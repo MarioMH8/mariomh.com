@@ -14,16 +14,12 @@ export default function properties<T extends AstroButtonProperties | ReactButton
 
 	const {
 		asChild: _asChild,
-		bordered: _bordered,
 		class: cls1,
 		className: cls2,
 		dimension: _dimension,
-		family: _family,
 		icon: _icon,
 		intent: _intent,
 		noSelect: _noSelect,
-		tracking: _tracking,
-		variant: _variant,
 		weight: _weight,
 		...rest
 	} = p as AstroButtonProperties & ReactButtonProperties;

@@ -9,10 +9,9 @@ exports[`@mariomh/select/react should default render 3`] = `""`;
 exports[`@mariomh/select/react should default render 4`] = `
 [
   "text-base",
-  "font-primary",
-  "selection:bg-secondary-background-active",
-  "dark:selection:bg-secondary-dark-background-active",
-  "dark:selection:text-secondary-foreground-invert",
+  "font-secondary",
+  "selection:bg-primary-background-active",
+  "dark:selection:text-primary-foreground",
   "font-normal",
   "tracking-wide",
   "rounded-lg",
@@ -29,12 +28,12 @@ exports[`@mariomh/select/react should default render 4`] = `
   "disabled:opacity-50",
   "px-4",
   "py-3",
-  "border-primary-border",
-  "dark:border-primary-dark-border",
   "text-primary-foreground",
   "dark:text-primary-dark-foreground",
-  "bg-primary-background-element",
-  "dark:bg-primary-dark-background-element",
+  "border-primary-foreground",
+  "dark:border-primary-dark",
+  "disabled:border-primary-foreground/50",
+  "disabled:dark:border-primary-dark-foreground/50",
 ]
 `;
 
@@ -47,10 +46,9 @@ exports[`@mariomh/select/react should asChild works as expected render 3`] = `"T
 exports[`@mariomh/select/react should asChild works as expected render 4`] = `
 [
   "text-base",
-  "font-primary",
-  "selection:bg-secondary-background-active",
-  "dark:selection:bg-secondary-dark-background-active",
-  "dark:selection:text-secondary-foreground-invert",
+  "font-secondary",
+  "selection:bg-primary-background-active",
+  "dark:selection:text-primary-foreground",
   "font-normal",
   "tracking-wide",
   "rounded-lg",
@@ -67,12 +65,12 @@ exports[`@mariomh/select/react should asChild works as expected render 4`] = `
   "disabled:opacity-50",
   "px-4",
   "py-3",
-  "border-primary-border",
-  "dark:border-primary-dark-border",
   "text-primary-foreground",
   "dark:text-primary-dark-foreground",
-  "bg-primary-background-element",
-  "dark:bg-primary-dark-background-element",
+  "border-primary-foreground",
+  "dark:border-primary-dark",
+  "disabled:border-primary-foreground/50",
+  "disabled:dark:border-primary-dark-foreground/50",
 ]
 `;
 
@@ -84,10 +82,9 @@ exports[`@mariomh/select/react should override class 3`] = `""`;
 
 exports[`@mariomh/select/react should override class 4`] = `
 [
-  "font-primary",
-  "selection:bg-secondary-background-active",
-  "dark:selection:bg-secondary-dark-background-active",
-  "dark:selection:text-secondary-foreground-invert",
+  "font-secondary",
+  "selection:bg-primary-background-active",
+  "dark:selection:text-primary-foreground",
   "font-normal",
   "tracking-wide",
   "rounded-lg",
@@ -104,12 +101,12 @@ exports[`@mariomh/select/react should override class 4`] = `
   "disabled:opacity-50",
   "px-4",
   "py-3",
-  "border-primary-border",
-  "dark:border-primary-dark-border",
   "text-primary-foreground",
   "dark:text-primary-dark-foreground",
-  "bg-primary-background-element",
-  "dark:bg-primary-dark-background-element",
+  "border-primary-foreground",
+  "dark:border-primary-dark",
+  "disabled:border-primary-foreground/50",
+  "disabled:dark:border-primary-dark-foreground/50",
   "text-2xl",
 ]
 `;
@@ -122,33 +119,31 @@ exports[`@mariomh/select/react should exclude variants props 3`] = `""`;
 
 exports[`@mariomh/select/react should exclude variants props 4`] = `
 [
-  "text-base",
+  "text-lg",
   "font-secondary",
-  "selection:bg-secondary-background-active",
-  "dark:selection:bg-secondary-dark-background-active",
-  "dark:selection:text-secondary-foreground-invert",
-  "select-none",
-  "font-medium",
-  "tracking-widest",
+  "selection:bg-primary-background-active",
+  "dark:selection:text-primary-foreground",
+  "font-normal",
+  "tracking-wide",
   "rounded-xl",
   "focus-visible:outline-none",
   "focus-visible:ring-2",
   "focus-visible:ring-offset-2",
   "ring-offset-primary-background",
   "dark:ring-offset-primary-dark-background",
-  "focus-visible:ring-danger-border",
+  "focus-visible:ring-primary-border",
   "w-full",
   "border",
   "disabled:cursor-not-allowed",
   "disabled:opacity-50",
   "px-5",
   "py-4",
-  "text-danger-foreground",
-  "dark:text-danger-dark-foreground",
-  "bg-danger-background-subtle",
-  "dark:bg-danger-dark-background-subtle",
-  "border-danger-border-subtle",
-  "dark:border-danger-dark-border-subtle",
+  "text-primary-foreground",
+  "dark:text-primary-dark-foreground",
+  "border-primary-foreground",
+  "dark:border-primary-dark",
+  "disabled:border-primary-foreground/50",
+  "disabled:dark:border-primary-dark-foreground/50",
   "block",
 ]
 `;

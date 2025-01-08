@@ -6,9 +6,10 @@ const variants = cva({
 		'dark:text-primary-dark-foreground text-primary-foreground',
 		'py-4 px-6',
 		'border-b-2 border-b-transparent',
-		'focus-visible:outline-none hover:cursor-pointer',
-		'focus-visible:border-b-secondary-4 dark:focus-visible:border-b-primary-dark-background-subtle',
-		'hover:border-b-secondary-4 dark:hover:border-b-primary-dark-background-subtle',
+		'hover:cursor-pointer',
+		'hover:border-b-primary-foreground/50 hover:dark:border-b-primary/50',
+		'focus-visible:outline-none',
+		'focus-visible:border-b-primary-foreground/50 focus-visible:dark:border-b-primary/50',
 		'max-lg:text-xl',
 		'whitespace-nowrap',
 	],
@@ -19,9 +20,9 @@ const variants = cva({
 	variants: {
 		active: {
 			true: [
-				'border-b-primary-foreground dark:border-b-primary-dark-foreground',
-				'hover:border-b-primary-foreground/40 dark:hover:border-b-primary-dark-foreground/40',
-				'focus-visible:border-b-primary-foreground/40 dark:focus-visible:border-b-primary-dark-foreground/40',
+				'border-b-primary-foreground dark:border-b-primary',
+				'hover:border-b-primary-foreground/75 hover:dark:border-b-primary/75',
+				'focus-visible:border-b-primary-foreground/75 focus-visible:dark:border-b-primary/75',
 			],
 		},
 	},

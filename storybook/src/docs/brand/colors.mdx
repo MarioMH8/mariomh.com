@@ -3,7 +3,6 @@ import { Meta, Unstyled } from '@storybook/blocks';
 import Heading from '@mariomh/heading/react';
 import Paragraph from '@mariomh/paragraph/react';
 import Font from '@mariomh/font/react';
-import {Tabs, TabsList, TabsTrigger, TabsContent} from '@mariomh/tabs/react';
 import pallete from '@mariomh/tailwind/pallete';
 
 import ColorPallete from '../../blocks/color-pallete';
@@ -12,41 +11,13 @@ import ColorPallete from '../../blocks/color-pallete';
 
 <Unstyled>
 	<Heading heading='h1' className='mb-4'>Paleta de colores</Heading>
-	<Paragraph wrap={false} family='secondary' variant='muted' dimension='lg' tracking='lg'>Aprende qué paso de la escala es el más apropiado para cada caso de uso.</Paragraph>
+	<Heading heading='h3' subtitle asChild><p>Aprende qué paso de la escala es el más apropiado para cada caso de uso.</p></Heading>
 	<Paragraph wrap={false}>Hay 12 pasos en cada escala. Cada paso fue diseñado al menos para un caso de uso específico.</Paragraph>
 
-	<Tabs defaultValue="primary">
-		<TabsList aria-label="Lista de paletas">
-			<TabsTrigger value="primary">Primario</TabsTrigger>
-			<TabsTrigger value="secondary">Secundario</TabsTrigger>
-			<TabsTrigger value="success">Verde</TabsTrigger>
-			<TabsTrigger value="danger">Rojo</TabsTrigger>
-		</TabsList>
-		<TabsContent value="primary">
-			<ColorPallete
-				variant='primary'
-				pallete={pallete.primary}
-			/>
-		</TabsContent>
-		<TabsContent value="secondary">
-			<ColorPallete
-				variant='primary'
-				pallete={pallete.secondary}
-			/>
-		</TabsContent>
-		<TabsContent value="success">
-			<ColorPallete
-				variant='primary'
-				pallete={pallete.success}
-			/>
-		</TabsContent>
-		<TabsContent value="danger">
-			<ColorPallete
-				variant='primary'
-				pallete={pallete.danger}
-			/>
-		</TabsContent>
-	</Tabs>
+    <ColorPallete
+        intent='primary'
+        pallete={pallete.primary}
+    />
 
 	<Paragraph wrap={false}>Esta tabla muestra una visión general del caso de uso más común para cada paso.
 		Sin embargo, hay muchas excepciones y advertencias a tener en cuenta, las cuales se tratan con más detalle a continuación.</Paragraph>

@@ -37,13 +37,9 @@ describe('@mariomh/span/react', () => {
 	it('should exclude variants props', () => {
 		const { container } = render(
 			<Component
-				align='end'
 				className='block'
 				dimension='lg'
-				family='secondary'
-				intent='danger'
 				noSelect
-				tracking='lg'
 				variant='muted'
 				weight='medium'>
 				Test Message

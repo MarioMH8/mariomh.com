@@ -10,7 +10,7 @@ export default function DocumentPage(): JSX.Element {
 		<>
 			<Title />
 			<SubTitle />
-			<hr className='mb-6 !border-secondary-foreground/50 dark:!border-secondary-dark-foreground/50' />
+			<hr className='mb-6 !border-primary-foreground/50 dark:!border-primary-dark-foreground/50' />
 			<Story />
 			<SourceCode />
 			<Controls />

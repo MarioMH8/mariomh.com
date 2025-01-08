@@ -13,14 +13,18 @@ const variants = cva({
 			h2: 'mb-6',
 			h3: 'mb-4',
 			h4: 'mb-2',
+			h5: 'mb-1 uppercase',
 		},
 		huge: {
 			true: 'text-9xl mb-12',
 		},
+		subtitle: {
+			true: '',
+		},
 	},
 });
 
-export type HeadingVariantsProperties = Partial<Omit<FontVariantsProperties, 'dimension'>> &
+export type HeadingVariantsProperties = Partial<Pick<FontVariantsProperties, 'align' | 'noSelect'>> &
 	VariantProperties<typeof variants>;
 
 export default variants;

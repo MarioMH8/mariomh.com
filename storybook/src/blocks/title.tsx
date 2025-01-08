@@ -17,15 +17,7 @@ export default function Title(): JSX.Element {
 	return (
 		<div className='sb-unstyled flex flex-row items-center gap-4 mb-4'>
 			<Heading className='sb-unstyled mb-0 inline-block'>{title}</Heading>
-			{category && (
-				<Badge
-					bordered
-					dimension='sm'
-					intent='primary'
-					variant='transparent'>
-					{category}
-				</Badge>
-			)}
+			{category && <Badge dimension='xs'>{category}</Badge>}
 			{tags && (
 				<div className='ml-auto flex flex-row items-center gap-4'>
 					{tags.map((t, index) => {

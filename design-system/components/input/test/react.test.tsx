@@ -39,12 +39,7 @@ describe('@mariomh/input/react', () => {
 			<Component
 				className='block'
 				dimension='lg'
-				family='secondary'
-				intent='danger'
-				noSelect
-				tracking='lg'
-				variant='subtle'
-				weight='medium'
+				intent='primary'
 			/>
 		);
 		const child = container.firstElementChild;

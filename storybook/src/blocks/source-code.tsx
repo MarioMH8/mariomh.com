@@ -1,7 +1,6 @@
-import Box from '@mariomh/box/react';
+import useIsDarkMode from '@mariomh/storybook/hooks';
 import type { DocsContextProps } from '@storybook/blocks';
-import { DocsContext, SourceContext, useSourceProps } from '@storybook/blocks';
-import { SyntaxHighlighter } from '@storybook/core/components';
+import { DocsContext, Source, SourceContext, useSourceProps } from '@storybook/blocks';
 import type { JSX } from 'react';
 import { useContext } from 'react';
 
@@ -56,6 +55,7 @@ function extractTag(code: string): string | undefined {
 export default function SourceCode(): JSX.Element {
 	const documentContext = useContext(DocsContext);
 	const sourceContext = useContext(SourceContext);
+	const isDark = useIsDarkMode();
 	const sourceProps = useSourceProps(
 		{
 			transform,
@@ -65,12 +65,10 @@ export default function SourceCode(): JSX.Element {
 	);
 
 	return sourceProps.language ? (
-		<Box
-			bordered
-			className='sb-unstyled bg-white dark:bg-[#1E1F22]'
-			intent='secondary'>
-			<SyntaxHighlighter language={sourceProps.language}>{sourceProps.code}</SyntaxHighlighter>
-		</Box>
+		<Source
+			{...sourceProps}
+			dark={isDark}
+		/>
 	) : (
 		<></>
 	);

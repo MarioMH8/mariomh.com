@@ -26,11 +26,11 @@
 		"start": "astro preview"
 	},
 	"dependencies": {
+		"@fontsource/dm-sans": "5.1.1",
 		"@mariomh/archia": "0.0.0",
 		"@mariomh/button": "0.0.0",
 		"@mariomh/cva": "0.0.0",
 		"@mariomh/navigation-menu": "0.0.0",
-		"@fontsource/dm-sans": "5.1.1",
 		"astro-seo": "0.8.4",
 		"lucide-astro": "0.469.0"
 	},

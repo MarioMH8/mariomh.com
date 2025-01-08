@@ -5,5 +5,14 @@ import type { ParagraphVariantsProperties } from './variants';
 import variants from './variants';
 
 export default function cn(properties?: ParagraphVariantsProperties, ...classLists: Parameters<typeof merge>): string {
-	return merge(font(properties), variants(properties), ...classLists);
+	return merge(
+		font({
+			align: properties?.align,
+			dimension: properties?.dimension,
+			family: 'secondary',
+			noSelect: properties?.noSelect,
+		}),
+		variants(properties),
+		...classLists
+	);
 }

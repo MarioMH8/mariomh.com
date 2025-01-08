@@ -2,48 +2,49 @@ import { merge } from '@mariomh/cva';
 import fontVariants from '@mariomh/font/variants';
 import type { RoundVariantsProperties } from '@mariomh/round/variants';
 import roundVariants from '@mariomh/round/variants';
-import shadowVariants from '@mariomh/shadow/variants';
 
 import type { BadgeVariantsProperties } from './variants';
 import variants from './variants';
 
-function roundSize(properties?: BadgeVariantsProperties): RoundVariantsProperties['dimension'] {
-	switch (properties?.dimension) {
+function getRoundDimension(dimension: BadgeVariantsProperties['dimension']): RoundVariantsProperties['dimension'] {
+	if (!dimension) {
+		return 'base';
+	}
+	switch (dimension) {
 		case '2xl':
-		case '3xl':
-		case '4xl': {
-			return '2xl';
-		}
-		case '5xl':
-		case '6xl':
-		case 'huge': {
-			return '3xl';
-		}
-		case 'base':
 		case 'lg':
-		case undefined:
 		case 'xl': {
 			return 'lg';
 		}
+		case '3xl':
+		case '4xl':
+		case '5xl': {
+			return 'xl';
+		}
+		case '6xl':
+		case 'huge': {
+			return '2xl';
+		}
+		case 'base':
 		case 'sm':
 		case 'xs': {
-			return 'base';
+			return dimension;
 		}
 		case 'unset': {
-			return 'unset';
+			return 'base';
 		}
 	}
 }
 export default function cn(properties?: BadgeVariantsProperties, ...classLists: Parameters<typeof merge>): string {
+	const dimension = properties?.dimension ?? 'sm';
+
 	return merge(
 		fontVariants({
-			...properties,
-			align: undefined,
-			intent: properties?.intent ?? 'secondary',
-			variant: undefined,
+			dimension,
+			family: 'secondary',
+			noSelect: properties?.noSelect,
 		}),
-		roundVariants({ dimension: roundSize(properties) }),
-		properties?.shadow ? shadowVariants({ dimension: properties.shadow }) : undefined,
+		roundVariants({ dimension: getRoundDimension(dimension) }),
 		variants(properties),
 		...classLists
 	);

@@ -17,13 +17,9 @@ export default function properties<T extends AstroHeadingProperties | ReactHeadi
 		asChild: _asChild,
 		class: cls1,
 		className: cls2,
-		family: _family,
 		heading: _heading,
-		intent: _intent,
 		noSelect: _noSelect,
-		tracking: _tracking,
-		variant: _variant,
-		weight: _weight,
+		subtitle: _subtitle,
 		...rest
 	} = p as AstroHeadingProperties & ReactHeadingProperties;
 

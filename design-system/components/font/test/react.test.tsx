@@ -40,7 +40,7 @@ describe('@mariomh/font/react', () => {
 				className='block'
 				dimension='lg'
 				family='secondary'
-				intent='danger'
+				intent='unset'
 				noSelect
 				tracking='lg'
 				variant='bright'

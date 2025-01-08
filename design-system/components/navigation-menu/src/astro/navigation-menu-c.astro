@@ -12,8 +12,8 @@ import NavigationMenuUL from './navigation-menu-ul-c.astro';
 export interface Props extends AstroNavigationMenuProperties {}
 const { as: Tag = NAVIGATION_MENU_ELEMENT, ...p } = propertiesNavigationMenu(Astro.props);
 
-const labelClass = classNameButton({ icon: true, variant: 'transparent' }, 'flex lg:hidden');
-const labelMobileClass = classNameButton({ icon: true, variant: 'transparent' });
+const labelClass = classNameButton({ icon: true }, 'flex lg:hidden');
+const labelMobileClass = classNameButton({ icon: true });
 const linkWrapper = classNameNavigationMenuLinkWrapper();
 ---
 

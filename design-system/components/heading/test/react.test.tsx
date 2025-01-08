@@ -39,13 +39,9 @@ describe('@mariomh/heading/react', () => {
 			<Component
 				align='end'
 				className='table'
-				family='secondary'
 				heading='h2'
-				intent='danger'
 				noSelect
-				tracking='lg'
-				variant='bright'
-				weight='medium'>
+				subtitle>
 				Test Message
 			</Component>
 		);

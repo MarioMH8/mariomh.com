@@ -4,7 +4,7 @@ import type { FontVariantsProperties } from '@mariomh/font/variants';
 
 const variants = cva({});
 
-export type CopyrightVariantsProperties = Partial<FontVariantsProperties> &
+export type CopyrightVariantsProperties = Partial<Pick<FontVariantsProperties, 'dimension' | 'noSelect'>> &
 	VariantProperties<typeof variants> & {
 		from?: string;
 		to?: string;

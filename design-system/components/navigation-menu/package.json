@@ -76,6 +76,7 @@
 	"peerDependencies": {
 		"@mariomh/button": "0.0.0",
 		"@mariomh/container": "0.0.0",
+		"@mariomh/font": "0.0.0",
 		"@mariomh/logo": "0.0.0",
 		"@radix-ui/react-slot": "^1",
 		"astro": "^5",
@@ -88,6 +89,9 @@
 			"optional": true
 		},
 		"@mariomh/container": {
+			"optional": true
+		},
+		"@mariomh/font": {
 			"optional": true
 		},
 		"@mariomh/logo": {
@@ -115,6 +119,7 @@
 	"devDependencies": {
 		"@mariomh/button": "0.0.0",
 		"@mariomh/container": "0.0.0",
+		"@mariomh/font": "0.0.0",
 		"@mariomh/logo": "0.0.0",
 		"@radix-ui/react-slot": "1.1.1",
 		"@testing-library/react": "16.1.0",

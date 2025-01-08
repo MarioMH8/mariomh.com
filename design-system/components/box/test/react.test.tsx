@@ -37,10 +37,9 @@ describe('@mariomh/box/react', () => {
 	it('should exclude variants props', () => {
 		const { container } = render(
 			<Component
-				bordered
 				className='table'
-				intent='secondary'
-				variant='bright'>
+				intent='primary'
+				round='lg'>
 				Test Message
 			</Component>
 		);
