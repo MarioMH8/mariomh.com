@@ -14,13 +14,10 @@ export default function properties<T extends AstroBoxProperties | ReactBoxProper
 
 	const {
 		asChild: _asChild,
-		bordered: _bordered,
 		class: cls1,
 		className: cls2,
 		intent: _intent,
 		round: _round,
-		shadow: _shadow,
-		variant: _variant,
 		...rest
 	} = p as AstroBoxProperties & ReactBoxProperties;
 

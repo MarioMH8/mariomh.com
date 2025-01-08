@@ -40,12 +40,8 @@ describe('@mariomh/paragraph/react', () => {
 				align='end'
 				className='block'
 				dimension='lg'
-				family='secondary'
-				intent='danger'
 				noSelect
-				tracking='lg'
-				variant='muted'
-				weight='medium'>
+				wrap>
 				Test Message
 			</Component>
 		);

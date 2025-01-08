@@ -76,7 +76,6 @@
 	"peerDependencies": {
 		"@mariomh/focus": "0.0.0",
 		"@mariomh/font": "0.0.0",
-		"@mariomh/link": "0.0.0",
 		"@mariomh/round": "0.0.0",
 		"@radix-ui/react-slot": "^1",
 		"astro": "^5",
@@ -87,9 +86,6 @@
 			"optional": true
 		},
 		"@mariomh/font": {
-			"optional": true
-		},
-		"@mariomh/link": {
 			"optional": true
 		},
 		"@mariomh/round": {
@@ -111,7 +107,6 @@
 	"devDependencies": {
 		"@mariomh/focus": "0.0.0",
 		"@mariomh/font": "0.0.0",
-		"@mariomh/link": "0.0.0",
 		"@mariomh/round": "0.0.0",
 		"@radix-ui/react-slot": "1.1.1",
 		"@testing-library/react": "16.1.0",

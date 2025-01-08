@@ -6,42 +6,69 @@ import type { AstroHeadingProperties } from './astro';
 import type { HeadingVariantsProperties } from './variants';
 import variants from './variants';
 
-function getFontSize(
+function getDimension(
 	properties: Partial<AstroHeadingProperties & HeadingVariantsProperties>
 ): FontVariantsProperties['dimension'] {
 	if (properties.huge) {
 		return 'unset';
 	}
 	const size = properties.heading ?? properties.as ?? 'h1';
+	if (properties.subtitle) {
+		switch (size) {
+			case 'h1': {
+				return '4xl';
+			}
+			case 'h2': {
+				return '2xl';
+			}
+			case 'h3': {
+				return 'xl';
+			}
+			case 'h4': {
+				return 'base';
+			}
+			case 'h5': {
+				return 'sm';
+			}
+			default: {
+				return 'xs';
+			}
+		}
+	}
 	switch (size) {
 		case 'h1': {
-			return '4xl';
+			return '6xl';
 		}
 		case 'h2': {
-			return '3xl';
+			return '4xl';
 		}
 		case 'h3': {
-			return '2xl';
+			return '3xl';
 		}
 		case 'h4': {
-			return 'xl';
+			return '2xl';
+		}
+		case 'h5': {
+			return 'lg';
 		}
 		default: {
-			return 'lg';
+			return 'base';
 		}
 	}
 }
 
 export default function cn(properties?: HeadingVariantsProperties, ...classLists: Parameters<typeof merge>): string {
-	const { heading = 'h1', tracking, weight } = properties ?? {};
-	const fontSize = getFontSize({ heading, ...properties });
+	const { heading = 'h1' } = properties ?? {};
+	const dimension = getDimension({ heading, ...properties });
 
 	return merge(
 		fontVariants({
-			...properties,
-			dimension: fontSize,
-			tracking: tracking ?? 'sm',
-			weight: weight ?? 'bold',
+			align: properties?.align,
+			dimension,
+			family: properties?.subtitle === true ? 'secondary' : 'primary',
+			noSelect: properties?.noSelect,
+			tracking: properties?.subtitle === true ? 'lg' : 'sm',
+			variant: properties?.subtitle === true ? 'muted' : undefined,
 		}),
 		variants({ heading, ...properties }),
 		...classLists

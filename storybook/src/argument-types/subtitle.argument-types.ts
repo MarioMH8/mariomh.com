@@ -1,10 +1,10 @@
 import type { InputType } from '@storybook/types';
 
-const bordered = {
+const subtitle = {
 	control: 'boolean',
-	description: 'Variante con bordes',
-	name: 'Bordes',
+	description: 'Subtítulo',
+	name: 'Subtítulo',
 	table: { category: 'Personalizado', defaultValue: { summary: 'undefined' } },
 } satisfies InputType;
 
-export default bordered;
+export default subtitle;

@@ -13,15 +13,11 @@ export default function properties<T extends AstroSpanProperties | ReactSpanProp
 	}
 
 	const {
-		align: _align,
 		asChild: _asChild,
 		class: cls1,
 		className: cls2,
 		dimension: _dimension,
-		family: _family,
-		intent: _intent,
 		noSelect: _noSelect,
-		tracking: _tracking,
 		variant: _variant,
 		weight: _weight,
 		...rest

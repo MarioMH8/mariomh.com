@@ -6,5 +6,5 @@
 }
 
 .dark .sbdocs-content .sb-anchor h3 {
-    @apply text-secondary-dark-foreground;
+    @apply text-primary-dark-foreground;
 }

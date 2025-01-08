@@ -75,16 +75,12 @@
 	},
 	"peerDependencies": {
 		"@mariomh/round": "0.0.0",
-		"@mariomh/shadow": "0.0.0",
 		"@radix-ui/react-slot": "^1",
 		"astro": "^5",
 		"react": "^19"
 	},
 	"peerDependenciesMeta": {
 		"@mariomh/round": {
-			"optional": true
-		},
-		"@mariomh/shadow": {
 			"optional": true
 		},
 		"@radix-ui/react-slot": {
@@ -102,7 +98,6 @@
 	},
 	"devDependencies": {
 		"@mariomh/round": "0.0.0",
-		"@mariomh/shadow": "0.0.0",
 		"@radix-ui/react-slot": "1.1.1",
 		"@testing-library/react": "16.1.0",
 		"astro": "5.1.1",

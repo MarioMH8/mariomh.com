@@ -9,10 +9,9 @@ exports[`@mariomh/link/react should default render 3`] = `"Test Message"`;
 exports[`@mariomh/link/react should default render 4`] = `
 [
   "text-base",
-  "font-primary",
+  "font-secondary",
   "selection:bg-primary-background-active",
-  "dark:selection:bg-primary-dark-background-active",
-  "dark:selection:text-primary-foreground-invert",
+  "dark:selection:text-primary-foreground",
   "font-normal",
   "tracking-wide",
   "rounded-lg",
@@ -42,10 +41,9 @@ exports[`@mariomh/link/react should asChild works as expected render 3`] = `"Tes
 exports[`@mariomh/link/react should asChild works as expected render 4`] = `
 [
   "text-base",
-  "font-primary",
+  "font-secondary",
   "selection:bg-primary-background-active",
-  "dark:selection:bg-primary-dark-background-active",
-  "dark:selection:text-primary-foreground-invert",
+  "dark:selection:text-primary-foreground",
   "font-normal",
   "tracking-wide",
   "rounded-lg",
@@ -74,10 +72,9 @@ exports[`@mariomh/link/react should override class 3`] = `"Test Message"`;
 
 exports[`@mariomh/link/react should override class 4`] = `
 [
-  "font-primary",
+  "font-secondary",
   "selection:bg-primary-background-active",
-  "dark:selection:bg-primary-dark-background-active",
-  "dark:selection:text-primary-foreground-invert",
+  "dark:selection:text-primary-foreground",
   "font-normal",
   "tracking-wide",
   "rounded-lg",
@@ -107,31 +104,29 @@ exports[`@mariomh/link/react should exclude variants props 3`] = `"Test Message"
 
 exports[`@mariomh/link/react should exclude variants props 4`] = `
 [
-  "text-right",
   "text-lg",
   "font-secondary",
-  "selection:bg-danger-background-active",
-  "dark:selection:bg-danger-dark-background-active",
-  "dark:selection:text-danger-foreground-invert",
+  "selection:bg-primary-background-active",
+  "dark:selection:text-primary-foreground",
   "select-none",
   "font-medium",
-  "tracking-widest",
+  "tracking-wide",
   "rounded-xl",
   "focus-visible:outline-none",
   "focus-visible:ring-2",
   "focus-visible:ring-offset-2",
   "ring-offset-primary-background",
   "dark:ring-offset-primary-dark-background",
-  "focus-visible:ring-danger-border",
+  "focus-visible:ring-primary-border",
   "underline-offset-4",
   "opacity-50",
   "hover:cursor-default",
   "hover:no-underline",
   "pointer-events-none",
-  "text-danger-foreground-highlight",
-  "active:text-danger-foreground-muted",
-  "dark:text-danger-dark-foreground-highlight",
-  "dark:active:text-danger-dark-foreground-muted",
+  "text-primary-foreground-highlight",
+  "active:text-primary-foreground-muted",
+  "dark:text-primary-dark-foreground-highlight",
+  "dark:active:text-primary-dark-foreground-muted",
   "block",
 ]
 `;

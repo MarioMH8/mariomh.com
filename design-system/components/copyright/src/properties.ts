@@ -13,19 +13,13 @@ export default function properties<T extends AstroCopyrightProperties | ReactCop
 	}
 
 	const {
-		align: _align,
 		asChild: _asChild,
 		class: cls1,
 		className: cls2,
 		dimension: _dimension,
-		family: _family,
 		from: _from,
-		intent: _intent,
 		noSelect: _noSelect,
 		to: _to,
-		tracking: _tracking,
-		variant: _variant,
-		weight: _weight,
 		...rest
 	} = p as AstroCopyrightProperties & ReactCopyrightProperties;
 

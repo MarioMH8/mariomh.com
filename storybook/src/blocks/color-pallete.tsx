@@ -55,43 +55,38 @@ function ColorItem({ color, intent, invert }: ColorItemProps): ReactNode {
 			<Portal>
 				<Span
 					asChild
-					dimension='sm'
-					family='secondary'>
+					dimension='sm'>
 					<Content
-						className='data-[side=bottom]:animate-slide-up-and-fade data-[side=right]:animate-slide-left-and-fade data-[side=left]:animate-slide-right-and-fade data-[side=top]:animate-slide-down-and-fade rounded-md dark:bg-secondary-dark-1 bg-secondary-1 p-5 shadow-md data-[state=open]:transition-all'
+						className='data-[side=bottom]:animate-slide-up-and-fade data-[side=right]:animate-slide-left-and-fade data-[side=left]:animate-slide-right-and-fade data-[side=top]:animate-slide-down-and-fade rounded-md dark:bg-primary-dark-1 bg-primary-1 p-5 shadow-md data-[state=open]:transition-all'
 						hideWhenDetached={true}
 						sideOffset={5}>
 						<div className='grid gap-2 grid-cols-[repeat(2,_minmax(2rem,_min-content))]'>
 							<Span
-								align='end'
 								dimension='unset'
 								weight='bold'>
 								LCH:{' '}
 							</Span>
 							<code className='whitespace-nowrap'>{lchToSting(color)}</code>
 							<Span
-								align='end'
 								dimension='unset'
 								weight='bold'>
 								HSL:{' '}
 							</Span>
 							<code className='whitespace-nowrap'>{hslToString(convert.lch.hsl(color))}</code>
 							<Span
-								align='end'
 								dimension='unset'
 								weight='bold'>
 								RGB:{' '}
 							</Span>
 							<code className='whitespace-nowrap'>{rgbToSting(convert.lch.rgb(color))}</code>
 							<Span
-								align='end'
 								dimension='unset'
 								weight='bold'>
 								HEX:{' '}
 							</Span>
 							<code className='whitespace-nowrap'>#{convert.lch.hex(color)}</code>
 						</div>
-						<Arrow className='fill-secondary-1 dark:fill-secondary-dark-1' />
+						<Arrow className='fill-primary-1 dark:fill-primary-dark-1' />
 					</Content>
 				</Span>
 			</Portal>

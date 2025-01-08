@@ -1,17 +1,13 @@
 import package_ from '@mariomh/link/package.json';
 import component from '@mariomh/link/react';
 import {
-	align,
 	asChild,
 	children,
 	dimensionFont,
 	disabled,
-	family,
 	href,
-	intent,
 	noSelect,
 	target,
-	tracking,
 	weight,
 } from '@mariomh/storybook/argument-types';
 import type { Meta, StoryObj } from '@storybook/react';
@@ -23,17 +19,13 @@ const meta = {
 		target: '_blank',
 	},
 	argTypes: {
-		align,
 		asChild,
 		children,
 		dimension: dimensionFont,
 		disabled,
-		family,
 		href,
-		intent: { ...intent, table: { category: 'Fuente', defaultValue: { summary: 'primary' } } },
 		noSelect,
 		target,
-		tracking,
 		weight,
 	},
 	component,

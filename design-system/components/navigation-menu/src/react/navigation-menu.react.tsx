@@ -33,8 +33,7 @@ const NavigationMenu: FC<ReactNavigationMenuProperties> = ({ asChild, children, 
 			<Button
 				asChild
 				className='flex lg:hidden'
-				icon
-				variant='transparent'>
+				icon>
 				<label htmlFor={`${id}-mobile-menu`}>
 					<span className='sr-only'>Abrir menu</span>
 					<MenuIcon
@@ -53,8 +52,7 @@ const NavigationMenu: FC<ReactNavigationMenuProperties> = ({ asChild, children, 
 					<NavigationMenuLogo />
 					<Button
 						asChild
-						icon
-						variant='transparent'>
+						icon>
 						<label htmlFor={`${id}-mobile-menu`}>
 							<span className='sr-only'>Cerrar menu</span>
 							<XIcon

@@ -8,14 +8,6 @@ const dimensionFont = {
 	table: { category: 'Fuente', defaultValue: { summary: 'base' } },
 } satisfies InputType;
 
-const dimensionShadow = {
-	control: { required: false, type: 'select' },
-	description: 'Tamaño del texto',
-	name: 'Tamaño',
-	options: ['sm', 'base', 'lg', 'xl'],
-	table: { category: 'Personalizado', defaultValue: { summary: 'base' } },
-} satisfies InputType;
-
 const dimensionLogo: InputType = {
 	control: { required: false, type: 'select' },
 	description: 'Tamaño del logo',
@@ -24,4 +16,4 @@ const dimensionLogo: InputType = {
 	table: { category: 'Personalizado', defaultValue: { summary: 'base' } },
 };
 
-export { dimensionFont, dimensionLogo, dimensionShadow };
+export { dimensionFont, dimensionLogo };

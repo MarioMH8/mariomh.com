@@ -3,26 +3,43 @@ import Button from '@mariomh/button/astro';
 import { NavigationMenu as Nav, NavigationMenuLI, NavigationMenuLink } from '@mariomh/navigation-menu/astro';
 
 interface Props {
-    blog?: boolean;
+	blog?: boolean;
 }
 
-const {blog} = Astro.props;
+const { blog } = Astro.props;
 ---
 
 <Nav>
 	<NavigationMenuLI>
-		<NavigationMenuLink className='font-secondary' href='/#sobre-mi'>Sobre mi</NavigationMenuLink>
+		<NavigationMenuLink
+			className='font-secondary'
+			href='/#sobre-mi'>
+			Sobre mi
+		</NavigationMenuLink>
 	</NavigationMenuLI>
 	<NavigationMenuLI>
-		<NavigationMenuLink className='font-secondary' href='/#portfolio'>Portfolio</NavigationMenuLink>
+		<NavigationMenuLink
+			className='font-secondary'
+			href='/#portfolio'>
+			Portfolio
+		</NavigationMenuLink>
 	</NavigationMenuLI>
 	<NavigationMenuLI>
-		<NavigationMenuLink className='font-secondary' href='/#servicios'>Servicios</NavigationMenuLink>
+		<NavigationMenuLink
+			className='font-secondary'
+			href='/#servicios'>
+			Servicios
+		</NavigationMenuLink>
 	</NavigationMenuLI>
 	<NavigationMenuLI>
-		<NavigationMenuLink className='font-secondary' href='/blog' active={blog === true}>Blog</NavigationMenuLink>
+		<NavigationMenuLink
+			active={blog === true}
+			className='font-secondary'
+			href='/blog'>
+			Blog
+		</NavigationMenuLink>
 	</NavigationMenuLI>
 	<NavigationMenuLI>
-		<Button intent="primary" variant='bright' family='secondary' data-dialog="contact">Contáctame</Button>
+		<Button variant='solid'>Contáctame</Button>
 	</NavigationMenuLI>
 </Nav>

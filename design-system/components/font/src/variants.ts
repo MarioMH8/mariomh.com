@@ -19,65 +19,35 @@ const variants = cva({
 			tracking: 'lg',
 		},
 		{
-			className: 'tracking-wide',
+			className: 'tracking-normal',
 			family: 'secondary',
 			tracking: 'sm',
 		},
 		{
-			className: 'tracking-wider',
+			className: 'tracking-wide',
 			family: 'secondary',
 			tracking: 'base',
 		},
 		{
-			className: 'tracking-widest',
+			className: 'tracking-wider',
 			family: 'secondary',
 			tracking: 'lg',
 		},
 		{
-			className: 'text-primary-foreground-muted/45 dark:text-primary-dark-foreground-muted/45',
+			className: 'text-primary-foreground/65 dark:text-primary-dark-foreground/65',
 			variant: 'muted',
 			intent: 'primary',
 		},
 		{
-			className: 'text-primary dark:text-primary',
+			className: 'text-primary dark:text-primary-dark',
 			variant: 'bright',
 			intent: 'primary',
-		},
-		{
-			className: 'text-secondary-foreground-muted/45 dark:text-secondary-dark-foreground-muted/45',
-			variant: 'muted',
-			intent: 'secondary',
-		},
-		{
-			className: 'text-secondary dark:text-secondary',
-			variant: 'bright',
-			intent: 'secondary',
-		},
-		{
-			className: 'text-success-foreground-muted/45 dark:text-success-dark-foreground-muted/45',
-			variant: 'muted',
-			intent: 'success',
-		},
-		{
-			className: 'text-success dark:text-success',
-			variant: 'bright',
-			intent: 'success',
-		},
-		{
-			className: 'text-danger-foreground-muted/45 dark:text-danger-dark-foreground-muted/45',
-			variant: 'muted',
-			intent: 'danger',
-		},
-		{
-			className: 'text-danger dark:text-danger',
-			variant: 'bright',
-			intent: 'danger',
 		},
 	],
 	defaultVariants: {
 		dimension: 'base',
-		family: 'primary',
-		intent: 'secondary',
+		family: 'secondary',
+		intent: 'primary',
 		tracking: 'base',
 		weight: 'base',
 	},
@@ -106,21 +76,9 @@ const variants = cva({
 			secondary: 'font-secondary',
 		},
 		intent: {
-			danger: [
-				'text-danger-foreground selection:bg-danger-background-active',
-				'dark:text-danger-dark-foreground dark:selection:bg-danger-dark-background-active dark:selection:text-danger-foreground-invert',
-			],
 			primary: [
-				'text-primary-foreground selection:bg-primary-background-active',
-				'dark:text-primary-dark-foreground dark:selection:bg-primary-dark-background-active dark:selection:text-primary-foreground-invert',
-			],
-			secondary: [
-				'text-secondary-foreground selection:bg-secondary-background-active',
-				'dark:text-secondary-dark-foreground dark:selection:bg-secondary-dark-background-active dark:selection:text-secondary-foreground-invert',
-			],
-			success: [
-				'text-success-foreground selection:bg-success-background-active',
-				'dark:text-success-dark-foreground dark:selection:bg-success-dark-background-active dark:selection:text-success-foreground-invert',
+				'text-primary-foreground dark:text-primary-dark-foreground',
+				'selection:bg-primary-background-active dark:selection:text-primary-foreground',
 			],
 			unset: '',
 		},

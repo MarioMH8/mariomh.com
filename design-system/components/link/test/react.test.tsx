@@ -37,15 +37,12 @@ describe('@mariomh/link/react', () => {
 	it('should exclude variants props', () => {
 		const { container } = render(
 			<Component
-				align='end'
 				className='block'
 				dimension='lg'
 				disabled
-				family='secondary'
 				href='https://example.com'
-				intent='danger'
+				intent='primary'
 				noSelect
-				tracking='lg'
 				weight='medium'>
 				Test Message
 			</Component>

@@ -13,16 +13,13 @@ export default function properties<T extends AstroLinkProperties | ReactLinkProp
 	}
 
 	const {
-		align: _align,
 		asChild: _asChild,
 		class: cls1,
 		className: cls2,
 		dimension: _dimension,
 		disabled: _disabled,
-		family: _family,
 		intent: _intent,
 		noSelect: _noSelect,
-		tracking: _tracking,
 		weight: _weight,
 		...rest
 	} = p as AstroLinkProperties & ReactLinkProperties;

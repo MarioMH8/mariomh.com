@@ -28,17 +28,11 @@ describe('@mariomh/copyright/react', () => {
 	it('should exclude variants props', () => {
 		const { container } = render(
 			<Component
-				align='end'
 				className='block'
 				dimension='lg'
-				family='secondary'
 				from='2022'
-				intent='danger'
 				noSelect
-				to='2024'
-				tracking='lg'
-				variant='muted'
-				weight='medium'>
+				to='2024'>
 				Test Message
 			</Component>
 		);

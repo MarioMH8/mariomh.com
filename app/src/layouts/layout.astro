@@ -14,14 +14,12 @@ import '@fontsource/dm-sans/600.css';
 import '@fontsource/dm-sans/700.css';
 import '@fontsource/dm-sans/800.css';
 import '@fontsource/dm-sans/900.css';
-
 import './layout.css';
-
 
 import { ClientRouter } from 'astro:transitions';
 import { SEO } from 'astro-seo';
-import cv from '../../cv.json'
 
+import cv from '../../cv.json';
 import NavigationMenu from '../features/navigation-menu.astro';
 
 interface Props {
@@ -31,9 +29,7 @@ interface Props {
 
 const { description, title } = Astro.props;
 const computedTitle = title ? `${title} - ${cv.basics.name}` : `${cv.basics.name} - ${cv.basics.label}`;
-const computedDescription =
-	description ??
-	cv.basics.summary;
+const computedDescription = description ?? cv.basics.summary;
 ---
 
 <!doctype html>

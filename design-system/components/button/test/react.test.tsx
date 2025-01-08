@@ -37,16 +37,12 @@ describe('@mariomh/button/react', () => {
 	it('should exclude variants props', () => {
 		const { container } = render(
 			<Component
-				bordered
 				className='block'
 				dimension='lg'
 				disabled
-				family='secondary'
 				icon
-				intent='danger'
+				intent='primary'
 				noSelect
-				tracking='lg'
-				variant='subtle'
 				weight='medium'>
 				Test Message
 			</Component>

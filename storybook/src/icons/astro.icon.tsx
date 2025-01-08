@@ -3,7 +3,7 @@ import type { JSX, SVGProps } from 'react';
 export default function AstroIcon({ className = '', ...properties }: SVGProps<SVGSVGElement>): JSX.Element {
 	return (
 		<svg
-			className={`${className} fill-secondary-foreground dark:fill-secondary-dark-foreground`}
+			className={`${className} fill-primary-foreground dark:fill-primary-dark-foreground`}
 			viewBox='0 0 63 79'
 			{...properties}>
 			<title>Componente de Astro</title>

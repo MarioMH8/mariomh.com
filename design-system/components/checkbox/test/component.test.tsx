@@ -28,11 +28,9 @@ describe('@mariomh/checkbox/react', () => {
 	it('should exclude variants props', () => {
 		const { container } = render(
 			<Component
-				bordered
 				className='text-2xl'
 				dimension='xs'
-				intent='secondary'
-				variant='transparent'>
+				intent='primary'>
 				Test Message
 			</Component>
 		);
@@ -46,11 +44,9 @@ describe('@mariomh/checkbox/react', () => {
 		const { container } = render(
 			<Component
 				asChild
-				bordered
 				className='text-2xl'
 				dimension='xs'
-				intent='secondary'
-				variant='transparent'>
+				intent='primary'>
 				<section>Test Message</section>
 			</Component>
 		);

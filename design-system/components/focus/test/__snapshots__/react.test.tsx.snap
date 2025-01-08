@@ -47,7 +47,7 @@ exports[`@mariomh/focus/react should exclude variants props 4`] = `
   "focus-visible:ring-offset-2",
   "ring-offset-primary-background",
   "dark:ring-offset-primary-dark-background",
-  "focus-visible:ring-secondary-border",
+  "focus-visible:ring-primary-border",
   "text-2xl",
 ]
 `;

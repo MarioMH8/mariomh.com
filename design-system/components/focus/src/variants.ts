@@ -11,10 +11,7 @@ const variants = cva({
 	},
 	variants: {
 		intent: {
-			danger: 'focus-visible:ring-danger-border',
 			primary: 'focus-visible:ring-primary-border',
-			secondary: 'focus-visible:ring-secondary-border',
-			success: 'focus-visible:ring-success-border',
 		},
 	},
 });

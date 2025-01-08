@@ -28,6 +28,7 @@ const variants = cva({
 	},
 });
 
-export type ParagraphVariantsProperties = Partial<FontVariantsProperties> & VariantProperties<typeof variants>;
+export type ParagraphVariantsProperties = Partial<Pick<FontVariantsProperties, 'align' | 'dimension' | 'noSelect'>> &
+	VariantProperties<typeof variants>;
 
 export default variants;
