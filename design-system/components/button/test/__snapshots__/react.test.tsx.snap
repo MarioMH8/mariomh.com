@@ -35,8 +35,8 @@ exports[`@mariomh/button/react should default render 4`] = `
   "dark:active:bg-primary-dark-background-active",
   "text-primary-foreground",
   "dark:text-primary-dark",
-  "px-4",
-  "py-3",
+  "px-8",
+  "py-4",
 ]
 `;
 
@@ -75,8 +75,8 @@ exports[`@mariomh/button/react should asChild works as expected render 4`] = `
   "dark:active:bg-primary-dark-background-active",
   "text-primary-foreground",
   "dark:text-primary-dark",
-  "px-4",
-  "py-3",
+  "px-8",
+  "py-4",
 ]
 `;
 
@@ -114,8 +114,8 @@ exports[`@mariomh/button/react should override class 4`] = `
   "dark:active:bg-primary-dark-background-active",
   "text-primary-foreground",
   "dark:text-primary-dark",
-  "px-4",
-  "py-3",
+  "px-8",
+  "py-4",
   "text-2xl",
 ]
 `;

@@ -20,6 +20,7 @@ export default function properties<T extends AstroHeadingProperties | ReactHeadi
 		heading: _heading,
 		noSelect: _noSelect,
 		subtitle: _subtitle,
+		weight: _weight,
 		...rest
 	} = p as AstroHeadingProperties & ReactHeadingProperties;
 

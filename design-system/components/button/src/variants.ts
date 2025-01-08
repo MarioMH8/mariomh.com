@@ -11,52 +11,52 @@ const variants = cva({
 	],
 	compoundVariants: [
 		{
-			className: 'px-2 py-1',
+			className: 'px-4 py-2',
 			icon: undefined,
 			dimension: 'xs',
 		},
 		{
-			className: 'px-3 py-2',
+			className: 'px-6 py-3',
 			icon: undefined,
 			dimension: 'sm',
 		},
 		{
-			className: 'px-4 py-3',
+			className: 'px-8 py-4',
 			icon: undefined,
 			dimension: 'base',
 		},
 		{
-			className: 'px-5 py-4',
+			className: 'px-10 py-6',
 			icon: undefined,
 			dimension: 'lg',
 		},
 		{
-			className: 'px-6 py-5',
+			className: 'px-11 py-7',
 			icon: undefined,
 			dimension: 'xl',
 		},
 		{
-			className: 'px-7 py-6',
+			className: 'px-12 py-8',
 			icon: undefined,
 			dimension: '2xl',
 		},
 		{
-			className: 'px-8 py-7',
+			className: 'px-13 py-9',
 			icon: undefined,
 			dimension: '3xl',
 		},
 		{
-			className: 'px-9 py-8',
+			className: 'px-14 py-10',
 			icon: undefined,
 			dimension: '4xl',
 		},
 		{
-			className: 'px-10 py-9',
+			className: 'px-15 py-11',
 			icon: undefined,
 			dimension: '5xl',
 		},
 		{
-			className: 'px-11 py-10',
+			className: 'px-16 py-12',
 			icon: undefined,
 			dimension: '6xl',
 		},

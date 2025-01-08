@@ -69,6 +69,7 @@ export default function cn(properties?: HeadingVariantsProperties, ...classLists
 			noSelect: properties?.noSelect,
 			tracking: properties?.subtitle === true ? 'lg' : 'sm',
 			variant: properties?.subtitle === true ? 'muted' : undefined,
+			weight: properties?.weight,
 		}),
 		variants({ heading, ...properties }),
 		...classLists
