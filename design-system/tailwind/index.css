@@ -153,8 +153,6 @@
     }
 }
 
-@variant dark (&:where(.dark, .dark *));
-
 @layer base {
     * {
         scrollbar-color: initial;
@@ -171,7 +169,7 @@
 
     body {
         scrollbar-gutter: stable both-edges;
-        @apply font-primary bg-primary-background dark:bg-primary-dark-background text-primary-foreground dark:text-primary-dark-foreground;
+        @apply font-secondary bg-primary-background dark:bg-primary-dark-background text-primary-foreground dark:text-primary-dark-foreground;
     }
 
     img {
