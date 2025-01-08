@@ -58,13 +58,13 @@ function getDimension(
 }
 
 export default function cn(properties?: HeadingVariantsProperties, ...classLists: Parameters<typeof merge>): string {
-	const { heading = 'h1' } = properties ?? {};
+	const { heading = 'h1', huge } = properties ?? {};
 	const dimension = getDimension({ heading, ...properties });
 
 	return merge(
 		fontVariants({
 			align: properties?.align,
-			dimension,
+			dimension: huge ? 'huge' : dimension,
 			family: properties?.subtitle === true ? 'secondary' : 'primary',
 			noSelect: properties?.noSelect,
 			tracking: properties?.subtitle === true ? 'lg' : 'sm',

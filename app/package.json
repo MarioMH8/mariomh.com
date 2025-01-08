@@ -1,5 +1,5 @@
 {
-	"name": "mariomh.com",
+	"name": "@mariomh/portfolio",
 	"version": "0.0.1",
 	"author": "MarioMH <dev@mariomh.com>",
 	"description": "MarioMH portfolio",
@@ -18,7 +18,6 @@
 		"url": "https://github.com/MarioMH8/mariomh.com/issues"
 	},
 	"private": true,
-	"type": "module",
 	"scripts": {
 		"build": "astro build",
 		"dev": "astro dev",
@@ -28,9 +27,13 @@
 	"dependencies": {
 		"@fontsource/dm-sans": "5.1.1",
 		"@mariomh/archia": "0.0.0",
+		"@mariomh/box": "0.0.0",
 		"@mariomh/button": "0.0.0",
 		"@mariomh/cva": "0.0.0",
+		"@mariomh/heading": "0.0.0",
 		"@mariomh/navigation-menu": "0.0.0",
+		"@mariomh/paragraph": "0.0.0",
+		"@mariomh/span": "0.0.0",
 		"astro-seo": "0.8.4",
 		"lucide-astro": "0.469.0"
 	},
@@ -42,6 +45,7 @@
 		"astro": "5.1.1",
 		"astro-robots-txt": "1.0.0",
 		"astro-webmanifest": "1.0.0",
+		"sharp": "0.33.5",
 		"tailwindcss": "4.0.0-beta.8",
 		"vite-tsconfig-paths": "5.1.4"
 	}

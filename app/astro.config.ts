@@ -31,12 +31,12 @@ export default defineConfig({
 		}),
 		compress(),
 	],
-	prefetch: true,
+	prefetch: false,
 	site: cv.basics.url,
 	vite: {
 		plugins: [tailwindcss(), paths({ projects: ['./tsconfig.json'], root: '../' })],
 		ssr: {
-			noExternal: true,
+			noExternal: ['@mariomh/cva'],
 		},
 	},
 });

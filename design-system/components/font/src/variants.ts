@@ -69,7 +69,7 @@ const variants = cva({
 			'4xl': 'text-4xl',
 			'5xl': 'text-5xl',
 			'6xl': 'text-6xl',
-			huge: 'text-7xl',
+			huge: 'text-8xl',
 		},
 		family: {
 			primary: 'font-primary',

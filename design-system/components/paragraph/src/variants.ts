@@ -14,7 +14,7 @@ const variants = cva({
 			'3xl': 'leading-[2.75rem]',
 			'4xl': 'leading-[3rem]',
 			base: 'leading-7',
-			huge: 'text-9xl leading-[10rem]',
+			huge: 'leading-[10rem]',
 			lg: 'leading-8',
 			sm: 'leading-6',
 			unset: '',

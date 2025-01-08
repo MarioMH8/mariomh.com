@@ -32,7 +32,7 @@ const NavigationMenu: FC<ReactNavigationMenuProperties> = ({ asChild, children, 
 			<NavigationMenuLogo />
 			<Button
 				asChild
-				className='flex lg:hidden'
+				className='flex lg:hidden border-none'
 				icon>
 				<label htmlFor={`${id}-mobile-menu`}>
 					<span className='sr-only'>Abrir menu</span>
@@ -52,6 +52,7 @@ const NavigationMenu: FC<ReactNavigationMenuProperties> = ({ asChild, children, 
 					<NavigationMenuLogo />
 					<Button
 						asChild
+						className='border-none'
 						icon>
 						<label htmlFor={`${id}-mobile-menu`}>
 							<span className='sr-only'>Cerrar menu</span>
