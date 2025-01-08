@@ -16,6 +16,8 @@ import '@fontsource/dm-sans/800.css';
 import '@fontsource/dm-sans/900.css';
 import './layout.css';
 
+import { ClientRouter } from 'astro:transitions';
+
 import NavigationMenu from '@app/features/navigation-menu.astro';
 import { SEO } from 'astro-seo';
 
@@ -65,6 +67,8 @@ const computedDescription = description ?? cv.basics.summary;
 			href='/sitemap-index.xml'
 			rel='sitemap'
 		/>
+
+		<ClientRouter/>
 	</head>
 	<body>
 		<NavigationMenu />

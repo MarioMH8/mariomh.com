@@ -95,10 +95,10 @@ const variants = cva({
 			muted: '',
 		},
 		weight: {
-			base: 'font-normal',
-			bold: 'font-semibold',
 			light: 'font-light',
+			base: 'font-normal',
 			medium: 'font-medium',
+			bold: 'font-semibold',
 		},
 	},
 });

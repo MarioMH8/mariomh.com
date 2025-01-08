@@ -31,7 +31,7 @@ export default defineConfig({
 		}),
 		compress(),
 	],
-	prefetch: false,
+	prefetch: true,
 	site: cv.basics.url,
 	vite: {
 		plugins: [tailwindcss(), paths({ projects: ['./tsconfig.json'], root: '../' })],
