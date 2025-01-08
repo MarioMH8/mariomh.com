@@ -1,0 +1,25 @@
+---
+import Button from '@mariomh/button/astro';
+import Heading from '@mariomh/heading/astro';
+import Paragraph from '@mariomh/paragraph/astro';
+---
+
+<section
+	class='container w-full flex flex-col gap-6 pt-[5dvh]'
+	id='sobre-mi'>
+	<Heading
+		className='text-xl m-0 dark:text-primary'
+		heading='h2'
+		weight='light'>
+		Sobre mi
+	</Heading>
+	<Paragraph className='text-3xl leading-5xl max-w-[640px]'>
+		Solution Architect con más de 10 años de experiencia en desarrollo web.<br />
+		He liderado equipos de startups y empresas multinacionales.
+	</Paragraph>
+	<Button
+		className='w-fit'
+		data-dialog='contact'>
+		Hablemos
+	</Button>
+</section>

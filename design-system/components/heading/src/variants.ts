@@ -24,7 +24,7 @@ const variants = cva({
 	},
 });
 
-export type HeadingVariantsProperties = Partial<Pick<FontVariantsProperties, 'align' | 'noSelect'>> &
+export type HeadingVariantsProperties = Partial<Pick<FontVariantsProperties, 'align' | 'noSelect' | 'weight'>> &
 	VariantProperties<typeof variants>;
 
 export default variants;

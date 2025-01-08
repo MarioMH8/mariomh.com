@@ -1,6 +1,6 @@
 import package_ from '@mariomh/heading/package.json';
 import component from '@mariomh/heading/react';
-import { align, asChild, children, heading, huge, noSelect } from '@mariomh/storybook/argument-types';
+import { align, asChild, children, heading, huge, noSelect, weight } from '@mariomh/storybook/argument-types';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import subtitle from '../argument-types/subtitle.argument-types.ts';
@@ -18,6 +18,7 @@ const meta = {
 		huge,
 		noSelect,
 		subtitle,
+		weight,
 	},
 	component,
 	parameters: {

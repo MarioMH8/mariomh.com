@@ -41,7 +41,8 @@ describe('@mariomh/heading/react', () => {
 				className='table'
 				heading='h2'
 				noSelect
-				subtitle>
+				subtitle
+				weight='light'>
 				Test Message
 			</Component>
 		);
