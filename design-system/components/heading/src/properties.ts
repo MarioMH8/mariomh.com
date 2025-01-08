@@ -18,6 +18,7 @@ export default function properties<T extends AstroHeadingProperties | ReactHeadi
 		class: cls1,
 		className: cls2,
 		heading: _heading,
+		huge: _huge,
 		noSelect: _noSelect,
 		subtitle: _subtitle,
 		weight: _weight,

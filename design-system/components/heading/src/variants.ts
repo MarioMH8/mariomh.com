@@ -16,7 +16,7 @@ const variants = cva({
 			h5: 'mb-1 uppercase',
 		},
 		huge: {
-			true: 'mb-10 leading-[1.3]',
+			true: 'mb-10',
 		},
 		subtitle: {
 			true: '',
