@@ -13,15 +13,17 @@ import Paragraph from '@mariomh/paragraph/astro';
 		weight='light'>
 		Sobre mi
 	</Heading>
-	<Paragraph className='text-3xl leading-5xl max-w-[640px]'>
+	<Paragraph
+		className='max-w-[640px]'
+		dimension='3xl'>
 		Solution Architect con más de 10 años de experiencia en desarrollo web.<br />
 		He liderado equipos de startups y empresas multinacionales.
 	</Paragraph>
 	<Button
-		as="a"
-		href="mailto:hola@mariomh.com"
+		as='a'
 		className='w-fit'
-		data-dialog='contact'>
+		data-dialog='contact'
+		href='mailto:hola@mariomh.com'>
 		Hablemos
 	</Button>
 </section>

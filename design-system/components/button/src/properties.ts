@@ -20,6 +20,7 @@ export default function properties<T extends AstroButtonProperties | ReactButton
 		icon: _icon,
 		intent: _intent,
 		noSelect: _noSelect,
+		variant: _variant,
 		weight: _weight,
 		...rest
 	} = p as AstroButtonProperties & ReactButtonProperties;

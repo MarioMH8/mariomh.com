@@ -2,43 +2,50 @@
 import fontCn from '@mariomh/font/class-name';
 import Link from '@mariomh/link/astro';
 import Paragraph from '@mariomh/paragraph/astro';
-import {Image} from 'astro:assets';
-import type {CollectionEntry} from "astro:content";
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
 
-const titleCn = [
-    fontCn({ dimension: 'xl' }),
-    'uppercase',
-]
+const titleCn = [fontCn({ dimension: 'xl' }), 'uppercase'];
 
 interface Props {
-    project: CollectionEntry<'project'>;
-    className?: string;
+	project: CollectionEntry<'project'>;
+	className?: string;
 }
 
-const {project, className} = Astro.props;
+const { className, project } = Astro.props;
 ---
 
-<article data-type={project.data.category} class:list={[
-    'portfolio-preview',
-    'w-full max-w-[450px] flex flex-col gap-2',
-    'transition-transform hover:scale-105 focus-within:scale-105',
-    '[&_a_span]:opacity-0',
-    '[&:hover_img]:backdrop-blur-2xl [&:hover_img]:brightness-[.25] [&:hover_a_span]:opacity-100',
-    '[&_a:focus_img]:backdrop-blur-2xl [&_a:focus_img]:brightness-[.25] [&_a:focus_span]:opacity-100',
-	'lg:even:translate-y-[10rem]',
-    className
-]}>
-	<Link href={project.data.href} className='rounded-xl relative text-lg mb-3'
-		  target={project.data.target}>
+<article
+	class:list={[
+		'portfolio-preview',
+		'w-full max-w-[450px] flex flex-col gap-2',
+		'transition-transform hover:scale-105 focus-within:scale-105',
+		'[&_a_span]:opacity-0',
+		'[&:hover_img]:backdrop-blur-2xl [&:hover_img]:brightness-[.25] [&:hover_a_span]:opacity-100',
+		'[&_a:focus_img]:backdrop-blur-2xl [&_a:focus_img]:brightness-[.25] [&_a:focus_span]:opacity-100',
+		'lg:even:translate-y-[10rem]',
+		className,
+	]}
+	data-type={project.data.category}>
+	<Link
+		className='rounded-xl relative text-lg mb-3'
+		href={project.data.href}
+		target={project.data.target}>
 		<Image
-			src={project.data.image}
 			alt={project.data.imageAlt}
-			class='rounded-xl aspect-video object-cover cursor-pointer'/>
-		<span
-			class='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-primary-1'> Mostrar más</span>
+			class='rounded-xl aspect-video object-cover cursor-pointer'
+			src={project.data.image}
+		/>
+		<span class='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-primary-1'>
+			Mostrar más
+		</span>
 	</Link>
 
 	<header class:list={titleCn}>{project.data.title}</header>
 
-	<Paragraph className='m-0' weight='light'>{project.data.resume}</Paragraph>
+	<Paragraph
+		className='m-0'
+		weight='light'>
+		{project.data.resume}
+	</Paragraph>
 </article>
