@@ -1,4 +1,5 @@
 ---
+import cv from '@cv';
 import Button from '@mariomh/button/astro';
 import Heading from '@mariomh/heading/astro';
 import Paragraph from '@mariomh/paragraph/astro';
@@ -23,7 +24,7 @@ import Paragraph from '@mariomh/paragraph/astro';
 		as='a'
 		className='w-fit'
 		data-dialog='contact'
-		href='mailto:hola@mariomh.com'>
+		href={`mailto:${cv.basics.email}`}>
 		Hablemos
 	</Button>
 </section>
