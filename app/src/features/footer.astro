@@ -1,0 +1,36 @@
+---
+import Button from '@mariomh/button/astro';
+import Copyright from '@mariomh/copyright/astro';
+import { Github, Linkedin, Twitter } from 'lucide-astro';
+---
+
+<footer
+	class='bg-primary-dark-background dark:bg-primary-background w-full pt-[5dvh] pb-[10dvh] flex flex-col gap-[5dvh] justify-center items-center'>
+	<div class='flex flex-row gap-8 items-center'>
+		<Button
+			href='https://twitter.com/MarioMH8'
+			icon
+			target='_blank'
+			variant='solid'>
+			<Twitter />
+			<span class='sr-only'>Twitter</span>
+		</Button>
+		<Button
+			href='https://github.com/MarioMH8'
+			icon
+			target='_blank'
+			variant='solid'>
+			<Github />
+			<span class='sr-only'>GitHub</span>
+		</Button>
+		<Button
+			href='https://www.linkedin.com/in/mhidalgomario/'
+			icon
+			target='_blank'
+			variant='solid'>
+			<Linkedin />
+			<span class='sr-only'>LinkedIn</span>
+		</Button>
+	</div>
+	<Copyright className='text-primary-dark-foreground dark:text-primary-foreground' />
+</footer>
