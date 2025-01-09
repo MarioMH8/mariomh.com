@@ -25,7 +25,7 @@ const project = defineCollection({
 		}),
 });
 
-const services = defineCollection({
+const service = defineCollection({
 	loader: glob({ base: './src/content/service', pattern: '**/*.json' }),
 	schema: z.object({
 		content: z.string(),
@@ -34,4 +34,4 @@ const services = defineCollection({
 });
 
 // eslint-disable-next-line import/prefer-default-export
-export const collections = { post, project, services };
+export const collections = { post, project, service };
