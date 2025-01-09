@@ -18,14 +18,19 @@
 		},
 		"profiles": [
 			{
-				"network": "LinkedIn",
-				"username": "mhidalgomario",
-				"url": "https://www.linkedin.com/in/mhidalgomario/"
+				"network": "Twitter",
+				"username": "MarioMH8",
+				"url": "https://twitter.com/MarioMH8"
 			},
 			{
 				"network": "GitHub",
 				"username": "MarioMH8",
 				"url": "https://github.com/MarioMH8"
+			},
+			{
+				"network": "LinkedIn",
+				"username": "mhidalgomario",
+				"url": "https://www.linkedin.com/in/mhidalgomario/"
 			}
 		]
 	},
