@@ -8,6 +8,7 @@ import { Github, Linkedin, Twitter } from 'lucide-astro';
 	class='bg-primary-dark-background dark:bg-primary-background w-full pt-[5dvh] pb-[10dvh] flex flex-col gap-[5dvh] justify-center items-center'>
 	<div class='flex flex-row gap-8 items-center'>
 		<Button
+			class='ring-offset-primary-dark-background dark:ring-offset-primary-background'
 			href='https://twitter.com/MarioMH8'
 			icon
 			target='_blank'
@@ -16,6 +17,7 @@ import { Github, Linkedin, Twitter } from 'lucide-astro';
 			<span class='sr-only'>Twitter</span>
 		</Button>
 		<Button
+			class='ring-offset-primary-dark-background dark:ring-offset-primary-background'
 			href='https://github.com/MarioMH8'
 			icon
 			target='_blank'
@@ -24,6 +26,7 @@ import { Github, Linkedin, Twitter } from 'lucide-astro';
 			<span class='sr-only'>GitHub</span>
 		</Button>
 		<Button
+			class='ring-offset-primary-dark-background dark:ring-offset-primary-background'
 			href='https://www.linkedin.com/in/mhidalgomario/'
 			icon
 			target='_blank'
@@ -32,5 +35,9 @@ import { Github, Linkedin, Twitter } from 'lucide-astro';
 			<span class='sr-only'>LinkedIn</span>
 		</Button>
 	</div>
-	<Copyright className='text-primary-dark-foreground dark:text-primary-foreground' />
+	<Copyright
+		className='text-primary-dark-foreground dark:text-primary-foreground'
+		from='2022'
+		to={new Date().getFullYear()}
+	/>
 </footer>

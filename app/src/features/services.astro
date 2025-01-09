@@ -6,13 +6,13 @@ import Paragraph from '@mariomh/paragraph/astro';
 import { getCollection } from 'astro:content';
 import { Github } from 'lucide-astro';
 
-const services = await getCollection('services');
+const services = await getCollection('service');
 ---
 
-<section
-	class='container w-full pt-[5dvh] xl:pt-0 flex flex-col-reverse'
-	id='servicios'>
-	<div class='z-10 flex flex-col flex-nowrap gap-4 xl:flex-row justify-between items-center xl:items-end'>
+<section class='container w-full pt-[5dvh] xl:pt-0 flex flex-col-reverse'>
+	<div
+		class='z-10 flex flex-col flex-nowrap gap-4 xl:flex-row justify-between items-center xl:items-end'
+		id='servicios'>
 		<div class='flex flex-col gap-6'>
 			<Heading
 				className='text-xl m-0 dark:text-primary'

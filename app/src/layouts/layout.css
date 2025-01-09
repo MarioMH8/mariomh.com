@@ -3,6 +3,9 @@
 
 html {
     @apply h-screen overflow-y-auto overflow-x-hidden;
+}
+
+* {
     scrollbar-color: var(--color-primary) transparent;
     scrollbar-width: thin;
 }
