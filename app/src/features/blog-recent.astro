@@ -4,8 +4,11 @@ import Button from '@mariomh/button/astro';
 import Heading from '@mariomh/heading/astro';
 import { getCollection } from 'astro:content';
 
-const allPosts = await getCollection('post');
-const posts = allPosts.slice(0, 6);
+let posts = await getCollection('post');
+
+posts = posts
+	.sort((b, a) => a.id.localeCompare(b.id))
+	.slice(0, 6);
 ---
 
 <section

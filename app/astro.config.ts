@@ -1,11 +1,12 @@
 import sitemap from '@astrojs/sitemap';
-import cv from '@cv';
 import compress from '@playform/compress';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
 import robotsTxt from 'astro-robots-txt';
 import webmanifest from 'astro-webmanifest';
 import paths from 'vite-tsconfig-paths';
+
+import cv from './cv.json';
 
 export default defineConfig({
 	integrations: [

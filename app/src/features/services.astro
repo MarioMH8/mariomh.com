@@ -7,7 +7,10 @@ import Paragraph from '@mariomh/paragraph/astro';
 import { getCollection } from 'astro:content';
 import { Github } from 'lucide-astro';
 
-const services = await getCollection('service');
+let services = await getCollection('service');
+
+services = services.sort((b, a) => a.id.localeCompare(b.id));
+
 const github = cv.basics.profiles.find(({ network }) => network === 'GitHub');
 ---
 
