@@ -4,6 +4,7 @@
 		"emitDecoratorMetadata": false,
 		"baseUrl": ".",
 		"paths": {
+			"@cv": ["app/cv.json"],
 			"@app/*": ["app/src/*"],
 			"@mariomh/archia": ["design-system/fonts/archia/index.css"],
 			"@mariomh/archia/*": ["design-system/fonts/archia/*"],

@@ -1,39 +1,44 @@
 ---
+import GithubIcon from '@app/features/icons/github-icon.astro';
+import LinkedinIcon from '@app/features/icons/linkedin-icon.astro';
+import XIcon from '@app/features/icons/x-icon.astro';
+import cv from '@cv';
 import Button from '@mariomh/button/astro';
 import Copyright from '@mariomh/copyright/astro';
-import { Github, Linkedin, Twitter } from 'lucide-astro';
 ---
 
 <footer
 	class='bg-primary-dark-background dark:bg-primary-background w-full pt-[5dvh] pb-[10dvh] flex flex-col gap-[5dvh] justify-center items-center'>
 	<div class='flex flex-row gap-8 items-center'>
-		<Button
-			class='ring-offset-primary-dark-background dark:ring-offset-primary-background'
-			href='https://twitter.com/MarioMH8'
-			icon
-			target='_blank'
-			variant='solid'>
-			<Twitter />
-			<span class='sr-only'>Twitter</span>
-		</Button>
-		<Button
-			class='ring-offset-primary-dark-background dark:ring-offset-primary-background'
-			href='https://github.com/MarioMH8'
-			icon
-			target='_blank'
-			variant='solid'>
-			<Github />
-			<span class='sr-only'>GitHub</span>
-		</Button>
-		<Button
-			class='ring-offset-primary-dark-background dark:ring-offset-primary-background'
-			href='https://www.linkedin.com/in/mhidalgomario/'
-			icon
-			target='_blank'
-			variant='solid'>
-			<Linkedin />
-			<span class='sr-only'>LinkedIn</span>
-		</Button>
+		{
+			cv.basics.profiles.map(profile => {
+				const Icon = {
+					GitHub: GithubIcon,
+					LinkedIn: LinkedinIcon,
+					'X (Twitter)': XIcon,
+				}[profile.network];
+
+				if (!Icon) {
+					return undefined;
+				}
+
+				return (
+					<Button
+						as='a'
+						class='ring-offset-primary-dark-background dark:ring-offset-primary-background'
+						href={profile.url ?? ''}
+						icon
+						target='_blank'
+						variant='solid'>
+						<Icon
+							height='24'
+							width='24'
+						/>
+						<span class='sr-only'>{profile.network}</span>
+					</Button>
+				);
+			})
+		}
 	</div>
 	<Copyright
 		className='text-primary-dark-foreground dark:text-primary-foreground'

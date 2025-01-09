@@ -2,6 +2,7 @@
 import 'atropos/css';
 
 import Layout from '@app/layouts/layout.astro';
+import cv from '@cv';
 import Logo from '@mariomh/logo/astro';
 import Span from '@mariomh/span/astro';
 ---
@@ -29,15 +30,15 @@ import Span from '@mariomh/span/astro';
 								as='a'
 								class='block dark:text-primary-foreground'
 								dimension='xl'
-								href='mailto:hola@mariomh.com'>
-								hola@mariomh.com
+								href={`mailto:${cv.basics.email}`}>
+								{cv.basics.email}
 							</Span>
 							<Span
 								as='a'
 								class='block dark:text-primary-foreground'
 								dimension='xl'
-								href='https://mariomh.com'>
-								mariomh.com
+								href={cv.basics.url}>
+								{cv.basics.url.replace('https://', '')}
 							</Span>
 						</p>
 						<p class='pl-[20%] block sm:hidden'>

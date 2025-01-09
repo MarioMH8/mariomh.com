@@ -17,7 +17,11 @@ export default hexadrop(
 		},
 	},
 	{
-		files: ['app/**/*.astro', 'design-system/components/navigation-menu/src/astro/**/*.astro'],
+		files: [
+			'app/astro.config.ts',
+			'app/**/*.astro',
+			'design-system/components/navigation-menu/src/astro/**/*.astro',
+		],
 		rules: {
 			'import/no-unresolved': 'off',
 		},
