@@ -37,6 +37,7 @@
 		"@mariomh/paragraph": "0.0.0",
 		"@mariomh/span": "0.0.0",
 		"astro-seo": "0.8.4",
+		"atropos": "2.0.2",
 		"embla-carousel": "8.5.2",
 		"embla-carousel-autoplay": "8.5.2",
 		"lucide-astro": "0.469.0"

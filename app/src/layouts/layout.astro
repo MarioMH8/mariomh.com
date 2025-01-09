@@ -25,9 +25,10 @@ import cv from '../../cv.json';
 interface Props {
 	title?: string;
 	description?: string;
+	nav?: boolean;
 }
 
-const { description, title } = Astro.props;
+const { description, nav = true, title } = Astro.props;
 const computedTitle = title ? `${title} - ${cv.basics.name}` : `${cv.basics.name} - ${cv.basics.label}`;
 const computedDescription = description ?? cv.basics.summary;
 ---
@@ -70,9 +71,7 @@ const computedDescription = description ?? cv.basics.summary;
 		<ClientRouter />
 	</head>
 	<body>
-		<NavigationMenu />
-		<main>
-			<slot />
-		</main>
+		{nav && <NavigationMenu />}
+		<slot />
 	</body>
 </html>
