@@ -7,7 +7,7 @@ import PortfolioPreview from './portfolio-preview.astro';
 
 let projects = await getCollection('project');
 
-projects = projects.sort((a, b) => a.slug.localeCompare(b.slug));
+projects = projects.sort((a, b) => a.id.localeCompare(b.id));
 ---
 
 <section
