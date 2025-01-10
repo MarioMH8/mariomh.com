@@ -1,0 +1,17 @@
+---
+import Section from '@app/features/cv/section.astro';
+import { basics } from '@cv';
+import Paragraph from '@mariomh/paragraph/astro';
+
+const { summary } = basics;
+---
+
+<Section
+	className='print:mt-1.5'
+	title='Sobre mi'>
+	<Paragraph
+		class='m-0 print:text-sm'
+		variant='muted'>
+		{summary}
+	</Paragraph>
+</Section>

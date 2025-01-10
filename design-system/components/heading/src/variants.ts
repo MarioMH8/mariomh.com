@@ -3,7 +3,7 @@ import cva from '@mariomh/cva';
 import type { FontVariantsProperties } from '@mariomh/font/variants';
 
 const variants = cva({
-	base: 'block',
+	base: 'block text-balance',
 	defaultVariants: {
 		heading: 'h1',
 	},

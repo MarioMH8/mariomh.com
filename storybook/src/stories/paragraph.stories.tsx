@@ -1,6 +1,15 @@
 import package_ from '@mariomh/paragraph/package.json';
 import Comp from '@mariomh/paragraph/react';
-import { align, asChild, children, dimensionFont, noSelect, weight, wrap } from '@mariomh/storybook/argument-types';
+import {
+	align,
+	asChild,
+	children,
+	dimensionFont,
+	noSelect,
+	variantFont,
+	weight,
+	wrap,
+} from '@mariomh/storybook/argument-types';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
@@ -10,6 +19,7 @@ const meta = {
 		children,
 		dimension: dimensionFont,
 		noSelect,
+		variant: variantFont,
 		weight,
 		wrap,
 	},

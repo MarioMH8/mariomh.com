@@ -25,9 +25,10 @@ interface Props {
 	title?: string;
 	description?: string;
 	nav?: boolean;
+	className?: string;
 }
 
-const { description, nav = true, title } = Astro.props;
+const { className, description, nav = true, title } = Astro.props;
 const computedTitle = title ? `${title} - ${cv.basics.name}` : `${cv.basics.name} - ${cv.basics.label}`;
 const computedDescription = description ?? cv.basics.summary;
 ---
@@ -69,7 +70,7 @@ const computedDescription = description ?? cv.basics.summary;
 
 		<ClientRouter />
 	</head>
-	<body>
+	<body class:list={className}>
 		{nav && <NavigationMenu />}
 		<slot />
 	</body>

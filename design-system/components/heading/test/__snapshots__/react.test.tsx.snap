@@ -17,6 +17,7 @@ exports[`@mariomh/heading/react should default render 4`] = `
   "font-normal",
   "tracking-tight",
   "block",
+  "text-balance",
   "mb-8",
 ]
 `;
@@ -38,6 +39,7 @@ exports[`@mariomh/heading/react should asChild works as expected render 4`] = `
   "font-normal",
   "tracking-tight",
   "block",
+  "text-balance",
   "mb-8",
 ]
 `;
@@ -58,6 +60,7 @@ exports[`@mariomh/heading/react should override class 4`] = `
   "dark:selection:text-primary-foreground",
   "font-normal",
   "tracking-tight",
+  "text-balance",
   "mb-8",
   "table",
 ]
@@ -81,6 +84,7 @@ exports[`@mariomh/heading/react should exclude variants props 4`] = `
   "tracking-wider",
   "text-primary-foreground/65",
   "dark:text-primary-dark-foreground/65",
+  "text-balance",
   "mb-6",
   "table",
 ]
