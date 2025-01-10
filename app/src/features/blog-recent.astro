@@ -6,9 +6,7 @@ import { getCollection } from 'astro:content';
 
 let posts = await getCollection('post');
 
-posts = posts
-	.sort((b, a) => a.id.localeCompare(b.id))
-	.slice(0, 6);
+posts = posts.sort((b, a) => a.id.localeCompare(b.id)).slice(0, 6);
 ---
 
 <section

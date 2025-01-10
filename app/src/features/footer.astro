@@ -1,7 +1,5 @@
 ---
-import GithubIcon from '@app/features/icons/github-icon.astro';
-import LinkedinIcon from '@app/features/icons/linkedin-icon.astro';
-import XIcon from '@app/features/icons/x-icon.astro';
+import { SOCIAL_ICONS } from '@app/features/icons';
 import cv from '@cv';
 import Button from '@mariomh/button/astro';
 import Copyright from '@mariomh/copyright/astro';
@@ -12,14 +10,10 @@ import Copyright from '@mariomh/copyright/astro';
 	<div class='flex flex-row gap-8 items-center'>
 		{
 			cv.basics.profiles.map(profile => {
-				const Icon = {
-					GitHub: GithubIcon,
-					LinkedIn: LinkedinIcon,
-					'X (Twitter)': XIcon,
-				}[profile.network];
+				const Icon = SOCIAL_ICONS[profile.network];
 
 				if (!Icon) {
-					return undefined;
+					return <> </>;
 				}
 
 				return (

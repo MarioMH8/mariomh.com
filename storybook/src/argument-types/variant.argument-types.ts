@@ -8,6 +8,14 @@ const variantButton = {
 	table: { category: 'Personalizado', defaultValue: { summary: 'undefined' } },
 } satisfies InputType;
 
+const variantFont: InputType = {
+	control: { required: false, type: 'select' },
+	description: 'Variante de texto',
+	name: 'Variante',
+	options: ['muted', 'bright'],
+	table: { category: 'Personalizado', defaultValue: { summary: 'undefined' } },
+};
+
 const variantLogo: InputType = {
 	control: { required: false, type: 'select' },
 	description: 'Variante de forma',
@@ -16,4 +24,4 @@ const variantLogo: InputType = {
 	table: { category: 'Personalizado', defaultValue: { summary: 'undefined' } },
 };
 
-export { variantButton, variantLogo };
+export { variantButton, variantFont, variantLogo };

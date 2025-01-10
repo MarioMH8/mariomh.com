@@ -11,6 +11,7 @@ export default function cn(properties?: ParagraphVariantsProperties, ...classLis
 			dimension: properties?.dimension,
 			family: 'secondary',
 			noSelect: properties?.noSelect,
+			variant: properties?.variant,
 			weight: properties?.weight,
 		}),
 		variants(properties),
