@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@import "@mariomh/tailwind";
+@source "../../node_modules/@mariomh";
+
+html {
+    @apply h-screen overflow-y-auto overflow-x-hidden;
+}
+
+* {
+    scrollbar-color: var(--color-primary) transparent;
+    scrollbar-width: thin;
+}

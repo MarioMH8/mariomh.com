@@ -4,58 +4,14 @@
 		"emitDecoratorMetadata": false,
 		"baseUrl": ".",
 		"paths": {
-			"@cv": ["app/cv.json"],
-			"@app/*": ["app/src/*"],
-			"@mariomh/archia": ["design-system/fonts/archia/index.css"],
-			"@mariomh/archia/*": ["design-system/fonts/archia/*"],
-			"@mariomh/cva": ["design-system/cva/src/index.ts"],
-			"@mariomh/tailwind/pallete": ["design-system/tailwind/src/pallete.ts"],
-			"@mariomh/tailwind": ["design-system/tailwind/index.css"],
-			"@mariomh/storybook/argument-types": ["storybook/src/argument-types"],
-			"@mariomh/storybook/blocks": ["storybook/src/blocks"],
-			"@mariomh/storybook/hooks": ["storybook/src/hooks"],
-			"@mariomh/storybook/icons": ["storybook/src/icons"],
-			"@mariomh/storybook/lib": ["storybook/src/lib"],
-			"@mariomh/storybook/pages": ["storybook/src/pages"],
-			"@mariomh/badge/react": ["./design-system/components/badge/src/react"],
-			"@mariomh/button/react": ["./design-system/components/button/src/react"],
-			"@mariomh/box/react": ["./design-system/components/box/src/react"],
-			"@mariomh/checkbox/react": ["./design-system/components/checkbox/src/react"],
-			"@mariomh/container/react": ["./design-system/components/container/src/react"],
-			"@mariomh/copyright/react": ["./design-system/components/copyright/src/react"],
-			"@mariomh/focus/react": ["./design-system/components/focus/src/react"],
-			"@mariomh/focus/variants": ["./design-system/components/focus/src/variants"],
-			"@mariomh/font/react": ["./design-system/components/font/src/react"],
-			"@mariomh/font/variants": ["./design-system/components/font/src/variants"],
-			"@mariomh/heading/react": ["./design-system/components/heading/src/react"],
-			"@mariomh/input/react": ["./design-system/components/input/src/react"],
-			"@mariomh/label/react": ["./design-system/components/label/src/react"],
-			"@mariomh/link/class-name": ["./design-system/components/link/src/class-name"],
-			"@mariomh/link/react": ["./design-system/components/link/src/react"],
-			"@mariomh/navigation-menu/astro": ["./design-system/components/navigation-menu/src/astro/index"],
-			"@mariomh/paragraph/react": ["./design-system/components/paragraph/src/react"],
-			"@mariomh/round/react": ["./design-system/components/round/src/react"],
-			"@mariomh/round/variants": ["./design-system/components/round/src/variants"],
-			"@mariomh/shadow/variants": ["./design-system/components/shadow/src/variants"],
-			"@mariomh/shadow/react": ["./design-system/components/shadow/src/react"],
-			"@mariomh/select/react": ["./design-system/components/select/src/react"],
-			"@mariomh/textarea/react": ["./design-system/components/textarea/src/react"],
-			"@mariomh/span/react": ["./design-system/components/span/src/react"],
-			"@mariomh/*/argument-types": ["./design-system/components/*/src/argument-types"],
-			"@mariomh/*/astro": ["./design-system/components/*/src/astro.ts"],
-			"@mariomh/*/class-name": ["./design-system/components/*/src/class-name"],
-			"@mariomh/*/properties": ["./design-system/components/*/src/properties"],
-			"@mariomh/*/react": ["./design-system/components/*/src/react"],
-			"@mariomh/*/variants": ["./design-system/components/*/src/variants"]
+			"@assets/*": ["src/assets/*"],
+			"@features/*": ["src/features/*"],
+			"@layout": ["src/layouts/layout.astro"]
 		},
-		"allowImportingTsExtensions": true,
 		"plugins": [
 			{
 				"name": "@astrojs/ts-plugin"
 			}
 		]
-	},
-	"exclude": [
-		"design-system/components/*/dist"
-	]
+	}
 }
