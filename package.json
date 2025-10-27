@@ -36,6 +36,7 @@
 		"@mariomh/focus": "0.0.8",
 		"@mariomh/font": "0.0.8",
 		"@mariomh/heading": "0.0.11",
+		"@mariomh/link": "0.0.10",
 		"@mariomh/logo": "0.0.10",
 		"@mariomh/navigation-menu": "0.0.12",
 		"@mariomh/paragraph": "0.0.2",
@@ -43,6 +44,8 @@
 		"@mariomh/round": "0.0.8",
 		"@mariomh/span": "0.0.10",
 		"@mariomh/tailwind": "0.0.5",
+		"embla-carousel": "8.6.0",
+		"embla-carousel-autoplay": "8.6.0",
 		"lucide-astro": "0.548.0"
 	},
 	"devDependencies": {
