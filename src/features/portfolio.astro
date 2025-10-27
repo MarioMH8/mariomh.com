@@ -1,0 +1,59 @@
+---
+import Button from '@mariomh/button/astro';
+import Container from '@mariomh/container/astro';
+import Heading from '@mariomh/heading/astro';
+import PortfolioPreview from '@features/portfolio-preview.astro';
+import { getCollection } from 'astro:content';
+
+
+const projects = await getCollection('project');
+---
+
+<Container
+	as='section'
+	class='w-full flex flex-col items-center gap-6 pt-[5dvh]'
+	id='portfolio'>
+	<Heading
+		className='text-xl m-0 dark:text-primary'
+		heading='h2'
+		weight='light'>
+		Portfolio
+	</Heading>
+	<Heading
+		className='text-6xl'
+		heading='h3'
+		weight='medium'>
+		Proyectos recientes
+	</Heading>
+
+	<nav class='flex flex-row flex-wrap gap-8 items-center justify-center mb-16'>
+		<Button variant='solid' className='px-6 portfolio-btn'>
+			Todos
+		</Button>
+		<Button className='px-6 portfolio-btn' data-show="portfolio">
+			Webs
+		</Button>
+		<Button className='px-6 portfolio-btn' data-show="app">
+			Apps
+		</Button>
+		<Button className='px-6 portfolio-btn' data-show="lib">
+			Librerías
+		</Button>
+	</nav>
+
+	<div class='grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-16 lg:gap-y-24 justify-evenly lg:mb-56'>
+		{projects.map((project, i) => <PortfolioPreview
+			className={`lg:even:translate-y-[10rem] ${i < 4  ? '' : 'hidden'}`}
+			project={project}/>
+		)}
+	</div>
+
+	<Button
+		id="show-more"
+		className='px-10 show-more'>
+		Más proyectos
+	</Button>
+
+</Container>
+
+<script src="./portfolio.ts" />

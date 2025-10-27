@@ -13,6 +13,7 @@
         "@mariomh/focus": "0.0.8",
         "@mariomh/font": "0.0.8",
         "@mariomh/heading": "0.0.11",
+        "@mariomh/link": "0.0.10",
         "@mariomh/logo": "0.0.10",
         "@mariomh/navigation-menu": "0.0.12",
         "@mariomh/paragraph": "0.0.2",
@@ -20,6 +21,9 @@
         "@mariomh/round": "0.0.8",
         "@mariomh/span": "0.0.10",
         "@mariomh/tailwind": "0.0.5",
+        "embla-carousel": "8.6.0",
+        "embla-carousel-autoplay": "8.6.0",
+        "embla-carousel-wheel-gestures": "8.1.0",
         "lucide-astro": "0.548.0",
       },
       "devDependencies": {
@@ -285,6 +289,8 @@
     "@mariomh/font": ["@mariomh/font@0.0.8", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/font/-/@mariomh/font-0.0.8.tgz", { "dependencies": { "@mariomh/cva": "0.0.7" }, "peerDependencies": { "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["radix-ui", "react"] }, "sha512-VKVi6TfHSi19HMiEkf/pLbcX7ZWH8Y6rhJSIRAQ3eRb8aF0B2B2OdjKwQenjbwhhTxQyUKBC6NiZ7vopLSxFoA=="],
 
     "@mariomh/heading": ["@mariomh/heading@0.0.11", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/heading/-/@mariomh/heading-0.0.11.tgz", { "dependencies": { "@mariomh/cva": "0.0.7" }, "peerDependencies": { "@mariomh/font": "0.0.8", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/font", "astro", "radix-ui", "react"] }, "sha512-Jrcy8KejtJ2fDawAtzoC8/gONhv9OCdMLtHUppzRSV9MPGaEKC8JqSJURlp2fV08GpGkcMmJ6dJa/VjSlX/yYw=="],
+
+    "@mariomh/link": ["@mariomh/link@0.0.10", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/link/-/@mariomh/link-0.0.10.tgz", { "dependencies": { "@mariomh/cva": "0.0.7" }, "peerDependencies": { "@mariomh/focus": "0.0.8", "@mariomh/font": "0.0.8", "@mariomh/round": "0.0.8", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/focus", "@mariomh/font", "@mariomh/round", "astro", "radix-ui", "react"] }, "sha512-oHdL886OhrstNaI6NGLDM+qnPHFuMlDKFKJ7hZgUSzgz3gWf/H47mNgyQjC/gOHheZh13AkeHwcHvMgkR99C+g=="],
 
     "@mariomh/logo": ["@mariomh/logo@0.0.10", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/logo/-/@mariomh/logo-0.0.10.tgz", { "dependencies": { "@mariomh/cva": "0.0.7" }, "peerDependencies": { "@mariomh/font": "0.0.8", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/font", "astro", "radix-ui", "react"] }, "sha512-S4bE9NkUPIwye5AmWgOj/5UKCU+ffoDpqCdCsQyC5K7yUIlTmLTUFCl9FoSLhCj0YxBThlKfstA0XDcA1HJ7ag=="],
 
@@ -775,6 +781,12 @@
     "dunder-proto": ["dunder-proto@1.0.1", "", { "dependencies": { "call-bind-apply-helpers": "^1.0.1", "es-errors": "^1.3.0", "gopd": "^1.2.0" } }, "sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A=="],
 
     "electron-to-chromium": ["electron-to-chromium@1.5.240", "", {}, "sha512-OBwbZjWgrCOH+g6uJsA2/7Twpas2OlepS9uvByJjR2datRDuKGYeD+nP8lBBks2qnB7bGJNHDUx7c/YLaT3QMQ=="],
+
+    "embla-carousel": ["embla-carousel@8.6.0", "", {}, "sha512-SjWyZBHJPbqxHOzckOfo8lHisEaJWmwd23XppYFYVh10bU66/Pn5tkVkbkCMZVdbUE5eTCI2nD8OyIP4Z+uwkA=="],
+
+    "embla-carousel-autoplay": ["embla-carousel-autoplay@8.6.0", "", { "peerDependencies": { "embla-carousel": "8.6.0" } }, "sha512-OBu5G3nwaSXkZCo1A6LTaFMZ8EpkYbwIaH+bPqdBnDGQ2fh4+NbzjXjs2SktoPNKCtflfVMc75njaDHOYXcrsA=="],
+
+    "embla-carousel-wheel-gestures": ["embla-carousel-wheel-gestures@8.1.0", "", { "dependencies": { "wheel-gestures": "^2.2.5" }, "peerDependencies": { "embla-carousel": "^8.0.0 || ~8.0.0-rc03" } }, "sha512-J68jkYrxbWDmXOm2n2YHl+uMEXzkGSKjWmjaEgL9xVvPb3HqVmg6rJSKfI3sqIDVvm7mkeTy87wtG/5263XqHQ=="],
 
     "emmet": ["emmet@2.4.11", "", { "dependencies": { "@emmetio/abbreviation": "^2.3.3", "@emmetio/css-abbreviation": "^2.1.8" } }, "sha512-23QPJB3moh/U9sT4rQzGgeyyGIrcM+GH5uVYg2C6wZIxAIJq7Ng3QLT79tl8FUwDXhyq9SusfknOrofAKqvgyQ=="],
 
@@ -1745,6 +1757,8 @@
     "vscode-uri": ["vscode-uri@3.1.0", "", {}, "sha512-/BpdSx+yCQGnCvecbyXdxHDkuk55/G3xwnC0GqY4gmQ3j+A+g8kzzgB4Nk/SINjqn6+waqw3EgbVF2QKExkRxQ=="],
 
     "web-namespaces": ["web-namespaces@2.0.1", "", {}, "sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ=="],
+
+    "wheel-gestures": ["wheel-gestures@2.2.48", "", {}, "sha512-f+Gy33Oa5Z14XY9679Zze+7VFhbsQfBFXodnU2x589l4kxGM9L5Y8zETTmcMR5pWOPQyRv4Z0lNax6xCO0NSlA=="],
 
     "which": ["which@2.0.2", "", { "dependencies": { "isexe": "^2.0.0" }, "bin": { "node-which": "./bin/node-which" } }, "sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA=="],
 
