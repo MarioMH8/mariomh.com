@@ -2,6 +2,8 @@
 @import "@mariomh/tailwind";
 @source "../../node_modules/@mariomh";
 
+@variant dark (&:where(.dark, .dark *));
+
 html {
     @apply h-screen overflow-y-auto overflow-x-hidden;
 }
