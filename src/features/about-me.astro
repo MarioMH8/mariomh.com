@@ -1,0 +1,31 @@
+---
+import Button from '@mariomh/button/astro';
+import Container from '@mariomh/container/astro';
+import Heading from '@mariomh/heading/astro';
+import Paragraph from '@mariomh/paragraph/astro';
+---
+
+<Container
+	as='section'
+	class='w-full flex flex-col gap-6 pt-[5dvh]'
+	id='sobre-mi'>
+	<Heading
+		heading='h2'
+		weight='light'
+		className='text-xl m-0 dark:text-primary'>
+		Sobre mi
+	</Heading>
+	<Paragraph className='text-3xl leading-[1.2] max-w-[640px]' weight='medium'>
+		Soy un desarrollador apasionado <br class="hidden lg:block"/>
+		por la tecnología y la búsqueda <br class="hidden lg:block"/>
+		de soluciones a todo tipo de <br class="hidden lg:block"/>
+		proyectos desafiantes.
+	</Paragraph>
+	<Button
+		as='a'
+		className='px-12 py-4 w-fit'
+		dimension='lg'
+		href='mailto:hola@mariomh.com'>
+		Hablemos
+	</Button>
+</Container>
