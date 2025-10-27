@@ -17,8 +17,8 @@ import '@fontsource/dm-sans/900.css';
 import './layout.css';
 
 import resume from '@mariomh/resume/resume.json';
-import {ClientRouter} from 'astro:transitions';
 import type { HTMLTag, Polymorphic } from 'astro/types';
+import { ClientRouter } from 'astro:transitions';
 import { SEO } from 'astro-seo';
 
 type Props<Tag extends HTMLTag = 'body'> = Polymorphic<{ as: Tag }> & {
@@ -81,14 +81,14 @@ const computedDescription = description ?? (typeof summary === 'string' ? summar
 			title={computedTitle}
 		/>
 
-		<ClientRouter/>
+		<ClientRouter />
 
 		<script>
-			window.getSystemTheme = () => {
+			window.getSystemTheme = (): string => {
 				return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 			};
 
-			window.getThemePreference = () => {
+			window.getThemePreference = (): string => {
 				const localItem = typeof localStorage !== 'undefined' && localStorage.getItem('theme');
 				if (localItem === 'dark' || localItem === 'light') {
 					return localItem;

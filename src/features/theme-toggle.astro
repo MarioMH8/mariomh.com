@@ -1,19 +1,16 @@
 ---
 import Button from '@mariomh/button/astro';
-import {Moon, Sun} from 'lucide-astro'
+import { Moon, Sun } from 'lucide-astro';
 ---
 
 <Button
-	id="theme-toggle"
+	class='inline-flex motion-safe:transition relative'
 	icon
-	variant='solid'
-	class="inline-flex motion-safe:transition relative"
->
-	<Sun class="absolute opacity-100 motion-safe:transition-transform dark:-rotate-90 dark:opacity-0" />
-	<Moon
-		class="absolute rotate-90 opacity-0 motion-safe:transition-transform dark:rotate-0 dark:opacity-100"
-	/>
-	<span class="sr-only"></span>
+	id='theme-toggle'
+	variant='solid'>
+	<Sun class='absolute opacity-100 motion-safe:transition-transform dark:-rotate-90 dark:opacity-0' />
+	<Moon class='absolute rotate-90 opacity-0 motion-safe:transition-transform dark:rotate-0 dark:opacity-100' />
+	<span class='sr-only'></span>
 </Button>
 
 <script>
@@ -37,13 +34,15 @@ import {Moon, Sun} from 'lucide-astro'
 	function updateThemeMessage(isDark: boolean) {
 		const translation = isDark ? 'oscuro' : 'claro';
 		const message = `Alternar tema, el tema actual es ${translation}`;
-		const span = document.getElementById('theme-toggle').querySelector('span.sr-only');
-		span.innerHTML = message;
+		const span = document.getElementById('theme-toggle')?.querySelector('span.sr-only');
+		if (span) {
+			span.innerHTML = message;
+		}
 	}
 
-	const handleThemePreferenceChange = e => {
+	const handleThemePreferenceChange = (event: MediaQueryListEvent) => {
 		const isDark = document.documentElement.classList.contains('dark');
-		const toggle = (e.matches && !isDark) || (!e.matches && isDark);
+		const toggle = (event.matches && !isDark) || (!event.matches && isDark);
 		if (toggle) {
 			onToggleTheme();
 		}
