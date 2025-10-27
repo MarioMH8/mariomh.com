@@ -60,13 +60,18 @@ document.addEventListener('astro:page-load', () => {
 		}
 	};
 
-	function renderProjects() {
+	const renderProjects = () => {
 		if (actualShow) {
 			showType(actualShow);
 		} else {
 			showAll();
 		}
-	}
+	};
+
+	const setShow = (buttonShow: string | undefined) => {
+		actualShow = buttonShow;
+		show = defaultShow;
+	};
 
 	$showMore.addEventListener('click', () => {
 		show = show === maxShow ? defaultShow : maxShow;
@@ -75,8 +80,7 @@ document.addEventListener('astro:page-load', () => {
 	});
 	for (const button of $buttons) {
 		button.addEventListener('click', () => {
-			actualShow = button.dataset['show'];
-			show = defaultShow;
+			setShow(button.dataset['show']);
 			$showMore.textContent = 'Ver más';
 			button.className = toggleClass(button.className);
 			renderProjects();
