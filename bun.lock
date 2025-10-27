@@ -14,6 +14,7 @@
         "@mariomh/heading": "0.0.11",
         "@mariomh/logo": "0.0.10",
         "@mariomh/navigation-menu": "0.0.12",
+        "@mariomh/paragraph": "0.0.2",
         "@mariomh/resume": "0.0.2",
         "@mariomh/round": "0.0.8",
         "@mariomh/span": "0.0.10",
@@ -285,6 +286,8 @@
     "@mariomh/logo": ["@mariomh/logo@0.0.10", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/logo/-/@mariomh/logo-0.0.10.tgz", { "dependencies": { "@mariomh/cva": "0.0.7" }, "peerDependencies": { "@mariomh/font": "0.0.8", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/font", "astro", "radix-ui", "react"] }, "sha512-S4bE9NkUPIwye5AmWgOj/5UKCU+ffoDpqCdCsQyC5K7yUIlTmLTUFCl9FoSLhCj0YxBThlKfstA0XDcA1HJ7ag=="],
 
     "@mariomh/navigation-menu": ["@mariomh/navigation-menu@0.0.12", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/navigation-menu/-/@mariomh/navigation-menu-0.0.12.tgz", { "dependencies": { "@mariomh/cva": "0.0.7" }, "peerDependencies": { "@mariomh/button": "0.0.10", "@mariomh/container": "0.0.10", "@mariomh/font": "0.0.8", "@mariomh/logo": "0.0.10", "astro": "^5", "lucide-astro": "^0", "lucide-react": "^0", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/button", "@mariomh/container", "@mariomh/font", "@mariomh/logo", "astro", "lucide-astro", "lucide-react", "radix-ui", "react"] }, "sha512-m6wv7kBgTBrHVDu/NFnNN3bvM0pOF/Mq6h5oOtNd9P3p/GzsARgyOe9b57KEq5tT5D6udiH1yEx2cYaWDbcfpQ=="],
+
+    "@mariomh/paragraph": ["@mariomh/paragraph@0.0.2", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/paragraph/-/@mariomh/paragraph-0.0.2.tgz", { "dependencies": { "@mariomh/cva": "0.0.1" }, "peerDependencies": { "@mariomh/font": "0.0.1", "@radix-ui/react-slot": "^1", "astro": "^5", "react": "^19" }, "optionalPeers": ["@mariomh/font", "@radix-ui/react-slot", "astro", "react"] }, "sha512-N5U19oabUKIojfW0Dr7U3VlqSA4EqBx2YfHC1uVvV6SwroRJgZP5joUxZ69kN09AvRUWz4P/tH5voLpkEVK/0w=="],
 
     "@mariomh/resume": ["@mariomh/resume@0.0.2", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/resume/-/@mariomh/resume-0.0.2.tgz", {}, "sha512-P3RjaiSkLVk+NfpKGjVAAnnSkbBLvzSyJIkgA6vjuxE21LYDolvzT32wP32/B5Kv23+gtJhfopEdl7uTJN6u5g=="],
 
@@ -1800,6 +1803,8 @@
 
     "@eslint/eslintrc/globals": ["globals@14.0.0", "", {}, "sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ=="],
 
+    "@mariomh/paragraph/@mariomh/cva": ["@mariomh/cva@0.0.1", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/cva/-/@mariomh/cva-0.0.1.tgz", { "dependencies": { "cva": "1.0.0-beta.2", "tailwind-merge": "2.6.0" } }, "sha512-k9HeQgnET7pgX7znlnaKu/MItCbftSDVEJAPeYju5Q0NgmzNAetdNSUDuUuQcwUN12sTFiXh/gdTBdFoy/S+WA=="],
+
     "@playform/pipe/@types/node": ["@types/node@22.13.14", "", { "dependencies": { "undici-types": "~6.20.0" } }, "sha512-Zs/Ollc1SJ8nKUAgc7ivOEdIBM8JAKgrqqUYi2J997JuKO7/tpQC+WCetQ1sypiKCQWHdvdg9wBNpUPEWZae7w=="],
 
     "@rollup/pluginutils/estree-walker": ["estree-walker@2.0.2", "", {}, "sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w=="],
@@ -1917,6 +1922,10 @@
     "yaml-language-server/vscode-languageserver": ["vscode-languageserver@7.0.0", "", { "dependencies": { "vscode-languageserver-protocol": "3.16.0" }, "bin": { "installServerIntoExtension": "bin/installServerIntoExtension" } }, "sha512-60HTx5ID+fLRcgdHfmz0LDZAXYEV68fzwG0JWwEPBode9NuMYTIxuYXPg4ngO8i8+Ou0lM7y6GzaYWbiDL0drw=="],
 
     "yaml-language-server/yaml": ["yaml@2.2.2", "", {}, "sha512-CBKFWExMn46Foo4cldiChEzn7S7SRV+wqiluAb6xmueD/fGyRHIhX8m14vVGgeFWjN540nKCNVj6P21eQjgTuA=="],
+
+    "@mariomh/paragraph/@mariomh/cva/cva": ["cva@1.0.0-beta.2", "", { "dependencies": { "clsx": "^2.1.1" }, "peerDependencies": { "typescript": ">= 4.5.5 < 6" }, "optionalPeers": ["typescript"] }, "sha512-dqcOFe247I5pKxfuzqfq3seLL5iMYsTgo40Uw7+pKZAntPgFtR7Tmy59P5IVIq/XgB0NQWoIvYDt9TwHkuK8Cg=="],
+
+    "@mariomh/paragraph/@mariomh/cva/tailwind-merge": ["tailwind-merge@2.6.0", "", {}, "sha512-P+Vu1qXfzediirmHOC3xKGAYeZtPcV9g76X+xg2FD4tYgR71ewMA35Y3sCz3zhiN/dwefRpJX0yBcgwi1fXNQA=="],
 
     "@tailwindcss/node/lightningcss/lightningcss-darwin-arm64": ["lightningcss-darwin-arm64@1.30.2", "", { "os": "darwin", "cpu": "arm64" }, "sha512-ylTcDJBN3Hp21TdhRT5zBOIi73P6/W0qwvlFEk22fkdXchtNTOU4Qc37SkzV+EKYxLouZ6M4LG9NfZ1qkhhBWA=="],
 
