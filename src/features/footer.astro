@@ -1,26 +1,45 @@
 ---
-import Button from '@mariomh/button/astro'
-import Copyright from '@mariomh/copyright/astro'
-import {Github,Linkedin,Twitter} from 'lucide-astro'
+import Button from '@mariomh/button/astro';
+import Copyright from '@mariomh/copyright/astro';
+import { Github, Linkedin, Twitter } from 'lucide-astro';
 
-import ThemeToggle from './theme-toggle.astro'
+import ThemeToggle from './theme-toggle.astro';
 ---
 
-<footer class='bg-primary-12 dark:bg-primary-dark-12 w-full pt-[5dvh] pb-[10dvh] flex flex-col gap-[5dvh] justify-center items-center'>
+<footer
+	class='bg-primary-12 dark:bg-primary-dark-12 w-full pt-[5dvh] pb-[10dvh] flex flex-col gap-[5dvh] justify-center items-center'>
 	<div class='flex flex-row gap-8 items-center'>
-		<Button as='a' variant="solid" icon href='https://twitter.com/MarioMH8' target='_blank'>
-			<Twitter/>
-			<span class="sr-only">Twitter</span>
+		<Button
+			as='a'
+			href='https://twitter.com/MarioMH8'
+			icon
+			target='_blank'
+			variant='solid'>
+			<Twitter />
+			<span class='sr-only'>Twitter</span>
 		</Button>
-		<Button as='a' variant="solid" icon href='https://github.com/MarioMH8' target='_blank'>
-			<Github/>
-			<span class="sr-only">GitHub</span>
+		<Button
+			as='a'
+			href='https://github.com/MarioMH8'
+			icon
+			target='_blank'
+			variant='solid'>
+			<Github />
+			<span class='sr-only'>GitHub</span>
 		</Button>
-		<Button as='a' variant="solid" icon href='https://www.linkedin.com/in/mhidalgomario/' target='_blank'>
-			<Linkedin/>
-			<span class="sr-only">LinkedIn</span>
+		<Button
+			as='a'
+			href='https://www.linkedin.com/in/mhidalgomario/'
+			icon
+			target='_blank'
+			variant='solid'>
+			<Linkedin />
+			<span class='sr-only'>LinkedIn</span>
 		</Button>
-		<ThemeToggle/>
+		<ThemeToggle />
 	</div>
-	<Copyright className='text-primary-1 dark:text-primary-12' dimension='sm' />
+	<Copyright
+		className='text-primary-1 dark:text-primary-12'
+		dimension='sm'
+	/>
 </footer>
