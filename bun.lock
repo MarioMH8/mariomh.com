@@ -13,7 +13,7 @@
         "@mariomh/font": "0.0.8",
         "@mariomh/heading": "0.0.10",
         "@mariomh/logo": "0.0.9",
-        "@mariomh/navigation-menu": "0.0.10",
+        "@mariomh/navigation-menu": "0.0.11",
         "@mariomh/resume": "0.0.2",
         "@mariomh/round": "0.0.8",
         "@mariomh/span": "0.0.9",
@@ -284,7 +284,7 @@
 
     "@mariomh/logo": ["@mariomh/logo@0.0.9", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/logo/-/@mariomh/logo-0.0.9.tgz", { "dependencies": { "@mariomh/cva": "0.0.7" }, "peerDependencies": { "@mariomh/font": "0.0.8", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/font", "astro", "radix-ui", "react"] }, "sha512-GxFdB2ZxW6VlJRC4mjO8D1TibleHCHPt4sNxGKA92YpuhiuK/X6+C2w0izC1JLsveeH165xCv/qkJiMTcFYdIA=="],
 
-    "@mariomh/navigation-menu": ["@mariomh/navigation-menu@0.0.10", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/navigation-menu/-/@mariomh/navigation-menu-0.0.10.tgz", { "dependencies": { "@mariomh/cva": "0.0.7" }, "peerDependencies": { "@mariomh/button": "0.0.9", "@mariomh/container": "0.0.9", "@mariomh/font": "0.0.8", "@mariomh/logo": "0.0.9", "astro": "^5", "lucide-astro": "^0", "lucide-react": "^0", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/button", "@mariomh/container", "@mariomh/font", "@mariomh/logo", "astro", "lucide-astro", "lucide-react", "radix-ui", "react"] }, "sha512-6760An2SecPM7zEIl0iMyF5EGtIiau69S9HHJyabwgI0Uiic285EeoFiF1MuslgS0KXoeol+ACqhY8aWVJS2+w=="],
+    "@mariomh/navigation-menu": ["@mariomh/navigation-menu@0.0.11", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/navigation-menu/-/@mariomh/navigation-menu-0.0.11.tgz", { "dependencies": { "@mariomh/cva": "0.0.7" }, "peerDependencies": { "@mariomh/button": "0.0.9", "@mariomh/container": "0.0.9", "@mariomh/font": "0.0.8", "@mariomh/logo": "0.0.9", "astro": "^5", "lucide-astro": "^0", "lucide-react": "^0", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/button", "@mariomh/container", "@mariomh/font", "@mariomh/logo", "astro", "lucide-astro", "lucide-react", "radix-ui", "react"] }, "sha512-veSgDOdzlCMsKhhI/hK0tmVRnUtKg+92ckjZZg347vejcTvefpwdjxj/czAyfIyJehoMQOZIIFhEJVXVIsVxYQ=="],
 
     "@mariomh/resume": ["@mariomh/resume@0.0.2", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/resume/-/@mariomh/resume-0.0.2.tgz", {}, "sha512-P3RjaiSkLVk+NfpKGjVAAnnSkbBLvzSyJIkgA6vjuxE21LYDolvzT32wP32/B5Kv23+gtJhfopEdl7uTJN6u5g=="],
 
