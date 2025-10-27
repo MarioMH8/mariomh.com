@@ -1,21 +1,26 @@
 ---
+import Hero from '@features/hero.astro';
 import Layout from '@layout';
 import Button from '@mariomh/button/astro';
-import {NavigationMenu, NavigationMenuUL, NavigationMenuLI, NavigationMenuLink} from '@mariomh/navigation-menu/astro';
-import Hero from "@features/hero.astro";
+import { NavigationMenu, NavigationMenuLI, NavigationMenuLink, NavigationMenuUL } from '@mariomh/navigation-menu/astro';
 ---
 
 <Layout>
-	<NavigationMenu class="py-4">
+	<NavigationMenu class='py-4'>
 		<NavigationMenuUL>
 			<NavigationMenuLI>
-				<NavigationMenuLink href="#sobre-mi">Sobre mi</NavigationMenuLink>
-				<NavigationMenuLink href="#portfolio">Portfolio</NavigationMenuLink>
-				<NavigationMenuLink href="#servicios">Servicios</NavigationMenuLink>
-				<NavigationMenuLink href="/blog">Blog</NavigationMenuLink>
-				<Button variant='solid' as="a" href='mailto:hola@mariomh.com'>Contáctame</Button>
+				<NavigationMenuLink href='#sobre-mi'>Sobre mi</NavigationMenuLink>
+				<NavigationMenuLink href='#portfolio'>Portfolio</NavigationMenuLink>
+				<NavigationMenuLink href='#servicios'>Servicios</NavigationMenuLink>
+				<NavigationMenuLink href='/blog'>Blog</NavigationMenuLink>
+				<Button
+					as='a'
+					href='mailto:hola@mariomh.com'
+					variant='solid'>
+					Contáctame
+				</Button>
 			</NavigationMenuLI>
 		</NavigationMenuUL>
 	</NavigationMenu>
-	<Hero/>
+	<Hero />
 </Layout>
