@@ -1,0 +1,54 @@
+---
+import Container from '@mariomh/container/astro';
+import Heading from '@mariomh/heading/astro';
+import Button from '@mariomh/button/astro';
+import { getCollection } from 'astro:content';
+
+import BlogPreview from './blog-preview.astro';
+
+
+const allPosts = await getCollection('post');
+const posts = allPosts.slice(0, 6);
+---
+
+<Container
+	as='section'
+	class:list={[
+		'w-full pt-[5dvh] md:pt-[10dvh] lg:pt-[15dvh]',
+		'flex flex-col md:flex-row justify-between gap-12'
+	]}>
+	<div class='w-full md:w-[30%]'>
+		<Heading
+			heading='h2'
+			weight='light'
+			className='text-xl dark:text-primary'>
+			Blog
+		</Heading>
+		<Heading
+			heading='h3'
+			weight='medium'
+			className='text-6xl leading-7xl mb-12'>
+			Artículos <br/> recientes
+		</Heading>
+
+		<Button
+			as="a"
+			className="px-10"
+			href="/blog"
+			title="Blog de MarioMH">
+			Ver más
+		</Button>
+	</div>
+	<div class:list={[
+		'relative',
+		'px-4 md:px-12 pt-12 pb-10',
+		'w-full md:w-[70%] pb-6 flex flex-row gap-12',
+		'overflow-x-auto overflow-y-hidden',
+		'scrollbar-thin scrollbar-thumb-primary scrollbar-thumb-rounded',
+		'scrollbar-track-primary-background dark:scrollbar-track-primary-dark-background',
+	]}>
+		{posts.map(post => (
+			<BlogPreview post={post}/>
+		))}
+	</div>
+</Container>
