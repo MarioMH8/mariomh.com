@@ -29,8 +29,8 @@
 	"dependencies": {
 		"@fontsource/dm-sans": "5.2.8",
 		"@mariomh/archia": "0.0.4",
-		"@mariomh/box": "0.0.10",
 		"@mariomh/badge": "0.0.11",
+		"@mariomh/box": "0.0.10",
 		"@mariomh/button": "0.0.11",
 		"@mariomh/container": "0.0.10",
 		"@mariomh/copyright": "0.0.11",
