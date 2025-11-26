@@ -1,34 +1,40 @@
-import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
-import tailwind from '@astrojs/tailwind';
+import resume from '@mariomh/resume';
+import compress from '@playform/compress';
+import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
-import compress from 'astro-compress';
 import robotsTxt from 'astro-robots-txt';
-import webmanifest from 'astro-webmanifest';
+import type { WebmanifestOptions } from 'astro-webmanifest';
+import manifest from 'astro-webmanifest';
 
-// https://astro.build/config
+const { name = '', shortName, summary } = resume.basics ?? {};
+
 export default defineConfig({
-	site: 'https://mariomh.com',
-	prefetch: true,
 	integrations: [
 		sitemap(),
 		robotsTxt(),
-		webmanifest({
-			name: 'MarioMH | Desarrollador JavaScript',
-			icon: 'public/favicon.svg',
-			short_name: 'MarioMH',
-			description: 'MarioMH es un desarrollador Full Stack especializado en JavaScript.',
-			start_url: '/',
-			theme_color: '#C6F118',
-			background_color: '#FDFFF5',
-			display: 'standalone',
+		manifest({
+			background_color: '#001C16',
+
 			config: {
 				insertAppleTouchLinks: true,
 				insertThemeColorMeta: false,
 			},
-		}),
+
+			description: summary,
+			display: 'standalone',
+			icon: 'public/favicon.svg',
+			name,
+			short_name: typeof shortName === 'string' ? shortName : undefined,
+			start_url: '/',
+
+			theme_color: '#c6f118',
+		} as WebmanifestOptions),
 		compress(),
-		tailwind(),
-		mdx(),
 	],
+	prefetch: false,
+	site: 'https://mariomh.com',
+	vite: {
+		plugins: [tailwindcss()],
+	},
 });

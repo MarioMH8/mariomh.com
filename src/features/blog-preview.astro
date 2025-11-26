@@ -1,24 +1,24 @@
 ---
 import Badge from '@mariomh/badge/astro';
-import fontCn from '@mariomh/font/cn';
-import type {FontVariantsProps} from '@mariomh/font/variants';
+import fontCn from '@mariomh/font/class-name';
 import Link from '@mariomh/link/astro';
-import {Image} from 'astro:assets'
-import type {CollectionEntry} from 'astro:content';
 
-const titleCn = [
-	fontCn({size: 'xl'} as FontVariantsProps),
-	'uppercase text-balance',
-]
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
 
 interface Props {
 	post: CollectionEntry<'post'>;
 	direction?: 'horizontal' | 'vertical';
 }
-const {post, direction = 'vertical'} = Astro.props;
+
+const titleCn = [
+	fontCn({ dimension: 'xl' }),
+	'uppercase text-balance',
+]
+
+const { post, direction = 'vertical' } = Astro.props;
 
 const vertical = direction === 'vertical';
-
 ---
 <article class:list={[
 	'transition-transform hover:scale-110 focus-within:scale-110',
@@ -27,10 +27,9 @@ const vertical = direction === 'vertical';
 	'[&:hover_img]:backdrop-blur-2xl [&:hover_img]:brightness-[.25] [&:hover_a_span]:opacity-100',
 	'[&_a:focus_img]:backdrop-blur-2xl [&_a:focus_img]:brightness-[.25] [&_a:focus_span]:opacity-100',
 ]}>
-
 	<Link
 		family='secondary'
-		href={`/post/${post.slug}`}
+		href={`/blog/post/${post.slug}`}
 		title={`Leer artículo '${post.data.title}'`}
 		className={`rounded-2xl relative text-lg ${vertical ? 'aspect-[10/13]' : 'aspect-[7/5]'}`}>
 		<Image
@@ -41,7 +40,7 @@ const vertical = direction === 'vertical';
 	</Link>
 	<div class="flex flex-row flex-wrap gap-4">
 		{post.data.tags.map(tag =>
-			<Badge className='w-min' family='secondary' size='sm'>{tag}</Badge>
+			<Badge className='w-min' family='secondary' dimension='sm'>{tag}</Badge>
 		)}
 	</div>
 	<header class:list={titleCn}>

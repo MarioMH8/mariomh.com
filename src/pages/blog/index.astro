@@ -1,24 +1,5 @@
 ---
-import Link from '@mariomh/link/astro';
-import {getCollection} from "astro:content";
-import {ChevronRight} from "lucide-astro";
-
-import BlogGrid from "@/features/blog-grid.astro";
-import ContactDialog from "@/features/contact-dialog.astro";
-import Layout from '@/layouts/layout.astro';
-
-const allPosts = await getCollection('post');
-const posts = allPosts.slice(0, 4);
+import Layout from '@layout';
 ---
 
-<Layout blog>
-	<BlogGrid posts={posts}/>
-	{allPosts.length > 4 &&
-		<div class='flex flex-row flex-wrap gap-8 items-center justify-center mb-16'>
-			<Link href="/blog/page/2" class="flex flex-row items-center">
-				Artículos siguientes
-				<ChevronRight class='w-6 h-6'/>
-			</Link>
-		</div>}
-	<ContactDialog slot="dialog"/>
-</Layout>
+<Layout />

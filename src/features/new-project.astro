@@ -1,27 +1,31 @@
 ---
 import Button from '@mariomh/button/astro';
-import Heading from '@mariomh/heading/astro'
+import Container from '@mariomh/container/astro';
+import Heading from '@mariomh/heading/astro';
 ---
 
-<section class:list={[
-	'container w-full',
-	'py-[5dvh] md:py-[10dvh] lg:py-[15dvh]',
-]}>
-	<div class:list={[
-		'container w-full rounded-4xl',
-		'flex flex-col items-center justify-center gap-[5%]',
-		'py-[5dvh]',
-		'bg-keyboard bg-cover bg-center bg-no-repeat',
-	]}>
-		<Heading size='h2' className='text-primary-1 text-center text-3xl leading-5xl md:text-6xl md:leading-8xl' weight='medium'>
-			¿Tines un proyecto <br/> que comenzar?
+<Container
+	as='section'
+	class='w-full py-[5dvh] md:py-[10dvh] lg:py-[15dvh]'>
+	<div
+		class:list={[
+			'rounded-4xl',
+			'flex flex-col items-center justify-center gap-[5%]',
+			'py-[5dvh] md:py-[7dvh] lg:py-[10dvh]',
+			`bg-[url('/assets/keyboard.webp')] bg-cover bg-center bg-no-repeat`,
+		]}>
+		<Heading
+			className='text-primary-1 text-center text-3xl leading-5xl md:text-6xl md:leading-8xl'
+			heading='h2'
+			weight='medium'>
+			¿Tines un proyecto <br /> que comenzar?
 		</Heading>
 		<Button
-			solid
+			as='a'
 			className='border-primary-foreground px-8 md:px-12 py-3 md:py-4 rounded-xl'
-			family='secondary'
-			data-dialog="contact">
+			href='mailto:hola@mariomh.com'
+			variant='solid'>
 			Hablemos
 		</Button>
 	</div>
-</section>
+</Container>

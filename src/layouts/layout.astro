@@ -1,292 +1,125 @@
 ---
-import {ViewTransitions} from 'astro:transitions';
-import {SEO} from "astro-seo";
+import '@mariomh/archia/100.css';
+import '@mariomh/archia/300.css';
+import '@mariomh/archia/400.css';
+import '@mariomh/archia/500.css';
+import '@mariomh/archia/600.css';
+import '@mariomh/archia/700.css';
+import '@fontsource/dm-sans/100.css';
+import '@fontsource/dm-sans/200.css';
+import '@fontsource/dm-sans/300.css';
+import '@fontsource/dm-sans/400.css';
+import '@fontsource/dm-sans/500.css';
+import '@fontsource/dm-sans/600.css';
+import '@fontsource/dm-sans/700.css';
+import '@fontsource/dm-sans/800.css';
+import '@fontsource/dm-sans/900.css';
+import './layout.css';
 
-import Footer from '@/features/footer.astro';
+import resume from '@mariomh/resume/resume.json';
+import type { HTMLTag, Polymorphic } from 'astro/types';
+import { ClientRouter } from 'astro:transitions';
+import { SEO } from 'astro-seo';
 
-import NavigationMenu from "../features/navigation-menu.astro";
+type Props<Tag extends HTMLTag = 'body'> = Polymorphic<{ as: Tag }> & {
+	title?: string;
+	description?: string;
+};
 
-
-interface Props {
-	blog?: boolean;
-    description?: string;
-    title?: string;
-}
-
-const {title, description, blog} = Astro.props;
-const computedTitle = title ? `${title} - Magnus Strategy Group` : 'MarioMH - Desarrollador JavaScript';
-const computedDescription = description ? description : 'Mario Menéndez Hidalgo es un desarrollador Full Stack especializado en JavaScript.';
+const { description, title, ...properties } = Astro.props;
+const { label, name } = resume.basics ?? {};
+const nameLabel = [name, label].filter(Boolean).join(' - ');
+const summary = resume.basics?.summary;
+const titleName = [title, name].filter(Boolean).join(' - ');
+const computedTitle = title ? titleName : nameLabel;
+const computedDescription = description ?? (typeof summary === 'string' ? summary : '');
 ---
 
-<!DOCTYPE html>
-<html lang="es" class:list={[
-    'h-screen',
-    'overflow-y-scroll overflow-x-hidden',
-    'scrollbar-thin scrollbar-thumb-primary scrollbar-thumb-rounded',
-    'scrollbar-track-primary-background',
-]}>
-<head>
-	<meta charset="UTF-8"/>
-	<meta name="viewport" content="width=device-width"/>
+<!doctype html>
+<html lang='es'>
+	<head>
+		<meta charset='utf-8' />
 
+		<meta
+			content='width=device-width, initial-scale=1.0'
+			name='viewport'
+		/>
 
-	<SEO
-		title={computedTitle}
-		description={computedDescription}
-		openGraph={{
-            basic: {
-                title: 'MarioMH - Desarrollador JavaScript',
-                type: "website",
-                image: "/og.webp",
-            }
-        }}
-		twitter={{
-            creator: "@MarioMH8"
-        }}
-	/>
+		<meta
+			content='#F5F5F5'
+			id='meta-light'
+			media='(prefers-color-scheme: light)'
+			name='theme-color'
+		/>
 
-	<meta name="theme-color" content="#FEFFFA" media="(prefers-color-scheme: light)">
-	<meta name="theme-color" content="#001915" media="(prefers-color-scheme: dark)">
-	<meta name="generator" content={Astro.generator}/>
+		<meta
+			content='#001C16'
+			id='meta-dark'
+			media='(prefers-color-scheme: dark)'
+			name='theme-color'
+		/>
 
-	<link rel="sitemap" href="/sitemap-index.xml">
+		<meta
+			content={Astro.generator}
+			name='generator'
+		/>
 
-	<style>
-        @font-face {
-            font-family: Archia;
-            font-weight: 100;
-            font-style: normal;
-            font-display: swap;
-            src: url('/fonts/archia/archia-thin-webfont.eot');
-            src: url('/fonts/archia/archia-thin-webfont.eot?#iefix') format('embedded-opentype'),
-            url('/fonts/archia/archia-thin-webfont.woff2') format('woff2'),
-            url('/fonts/archia/archia-thin-webfont.woff') format('woff'),
-            url('/fonts/archia/archia-thin-webfont.ttf') format('truetype');
-        }
+		<link
+			href='/sitemap-index.xml'
+			rel='sitemap'
+		/>
 
-        @font-face {
-            font-family: Archia;
-            font-weight: 300;
-            font-style: normal;
-            font-display: swap;
-            src: url('/fonts/archia/archia-light-webfont.eot');
-            src: url('/fonts/archia/archia-light-webfont.eot?#iefix') format('embedded-opentype'),
-            url('/fonts/archia/archia-light-webfont.woff2') format('woff2'),
-            url('/fonts/archia/archia-light-webfont.woff') format('woff'),
-            url('/fonts/archia/archia-light-webfont.ttf') format('truetype');
-        }
+		<SEO
+			description={computedDescription}
+			openGraph={{
+				basic: {
+					image: '/og.webp',
+					title: nameLabel,
+					type: 'website',
+				},
+			}}
+			title={computedTitle}
+		/>
 
-        @font-face {
-            font-family: Archia;
-            font-weight: 400;
-            font-style: normal;
-            font-display: swap;
-            src: url('/fonts/archia/archia-regular-webfont.eot');
-            src: url('/fonts/archia/archia-regular-webfont.eot?#iefix') format('embedded-opentype'),
-            url('/fonts/archia/archia-regular-webfont.woff2') format('woff2'),
-            url('/fonts/archia/archia-regular-webfont.woff') format('woff'),
-            url('/fonts/archia/archia-regular-webfont.ttf') format('truetype');
-        }
+		<ClientRouter />
 
-        @font-face {
-            font-family: Archia;
-            font-weight: 500;
-            font-style: normal;
-            font-display: swap;
-            src: url('/fonts/archia/archia-medium-webfont.eot');
-            src: url('/fonts/archia/archia-medium-webfont.eot?#iefix') format('embedded-opentype'),
-            url('/fonts/archia/archia-medium-webfont.woff2') format('woff2'),
-            url('/fonts/archia/archia-medium-webfont.woff') format('woff'),
-            url('/fonts/archia/archia-medium-webfont.ttf') format('truetype');
-        }
+		<script>
+			window.getSystemTheme = (): string => {
+				return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+			};
 
-        @font-face {
-            font-family: Archia;
-            font-weight: 600;
-            font-style: normal;
-            font-display: swap;
-            src: url('/fonts/archia/archia-semibold-webfont.eot');
-            src: url('/fonts/archia/archia-semibold-webfont.eot?#iefix') format('embedded-opentype'),
-            url('/fonts/archia/archia-semibold-webfont.woff2') format('woff2'),
-            url('/fonts/archia/archia-semibold-webfont.woff') format('woff'),
-            url('/fonts/archia/archia-semibold-webfont.ttf') format('truetype');
-        }
+			window.getThemePreference = (): string => {
+				const localItem = typeof localStorage !== 'undefined' && localStorage.getItem('theme');
+				if (localItem === 'dark' || localItem === 'light') {
+					return localItem;
+				}
 
-        @font-face {
-            font-family: Archia;
-            font-weight: 700;
-            font-style: normal;
-            font-display: swap;
-            src: url('/fonts/archia/archia-bold-webfont.eot');
-            src: url('/fonts/archia/archia-bold-webfont.eot?#iefix') format('embedded-opentype'),
-            url('/fonts/archia/archia-bold-webfont.woff2') format('woff2'),
-            url('/fonts/archia/archia-bold-webfont.woff') format('woff'),
-            url('/fonts/archia/archia-bold-webfont.ttf') format('truetype');
-        }
+				return window.getSystemTheme();
+			};
 
-        @font-face {
-            font-family: DMSans;
-            font-weight: 100;
-            font-style: normal;
-            font-display: swap;
-            src: url('/fonts/dmsans/DMSans-Thin.woff2') format('woff2');
-        }
+			function toggleTheme() {
+				const element = document.documentElement;
+				const isDark = window.getThemePreference() === 'dark';
+				const hasDark = element.classList.contains('dark');
+				if (isDark !== hasDark) {
+					element.classList.toggle('dark', isDark);
+				}
+				const hasDarkScrollbar = element.classList.contains('scrollbar-track-primary-dark-background');
+				if (isDark !== hasDarkScrollbar) {
+					element.classList.toggle('scrollbar-track-primary-dark-background', isDark);
+				}
+			}
 
-        @font-face {
-            font-family: DMSans;
-            font-weight: 200;
-            font-style: normal;
-            font-display: swap;
-            src: url('/fonts/dmsans/DMSans-ExtraLight.woff2') format('woff2');
-        }
+			document.addEventListener('astro:page-load', () => {
+				toggleTheme();
+			});
 
-        @font-face {
-            font-family: DMSans;
-            font-weight: 300;
-            font-style: normal;
-            font-display: swap;
-            src: url('/fonts/dmsans/DMSans-Light.woff2') format('woff2');
-        }
-
-        @font-face {
-            font-family: DMSans;
-            font-weight: 400;
-            font-style: normal;
-            font-display: swap;
-            src: url('/fonts/dmsans/DMSans-Regular.woff2') format('woff2');
-        }
-
-        @font-face {
-            font-family: DMSans;
-            font-weight: 500;
-            font-style: normal;
-            font-display: swap;
-            src: url('/fonts/dmsans/DMSans-Medium.woff2') format('woff2');
-        }
-
-        @font-face {
-            font-family: DMSans;
-            font-weight: 600;
-            font-style: normal;
-            font-display: swap;
-            src: url('/fonts/dmsans/DMSans-SemiBold.woff2') format('woff2');
-        }
-
-        @font-face {
-            font-family: DMSans;
-            font-weight: 700;
-            font-style: normal;
-            font-display: swap;
-            src: url('/fonts/dmsans/DMSans-Bold.woff2') format('woff2');
-        }
-
-        @font-face {
-            font-family: DMSans;
-            font-weight: 800;
-            font-style: normal;
-            font-display: swap;
-            src: url('/fonts/dmsans/DMSans-ExtraBold.woff2') format('woff2');
-        }
-
-        @font-face {
-            font-family: DMSans;
-            font-weight: 900;
-            font-style: normal;
-            font-display: swap;
-            src: url('/fonts/dmsans/DMSans-Black.woff2') format('woff2');
-        }
-	</style>
-
-	<ViewTransitions/>
-
-	<script is:inline>
-        window.getSystemTheme = () => {
-        	return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        };
-
-        window.getThemePreference = () => {
-        	const localItem = typeof localStorage !== 'undefined' && localStorage.getItem('theme');
-        	if (localItem === 'dark' || localItem === 'light') {
-        		return localItem;
-        	}
-
-        	return window.getSystemTheme();
-        };
-
-        function toggleTheme() {
-        	const element = document.documentElement;
-        	const isDark = window.getThemePreference() === 'dark';
-        	const hasDark = element.classList.contains('dark');
-        	if (isDark !== hasDark) {
-        		element.classList.toggle('dark', isDark);
-        	}
-        	const hasDarkScrollbar = element.classList.contains('scrollbar-track-primary-dark-background');
-        	if (isDark !== hasDarkScrollbar) {
-        		element.classList.toggle('scrollbar-track-primary-dark-background', isDark);
-        	}
-        }
-
-        document.addEventListener('astro:page-load', () => {
-        	toggleTheme();
-        });
-
-        toggleTheme();
-	</script>
-
-</head>
-<body>
-<NavigationMenu blog={blog}/>
-<main>
-	<slot/>
-</main>
-<Footer/>
-<slot name="dialog"/>
-</body>
+			toggleTheme();
+		</script>
+	</head>
+	<body
+		{...properties}
+		class:list={[properties.class]}>
+		<slot />
+	</body>
 </html>
-
-<style is:global>
-    body {
-        scrollbar-gutter: stable both-edges;
-        @apply dark:bg-primary-12
-    }
-
-    body.dark {
-        @apply bg-primary-12
-    }
-
-    img {
-        -webkit-user-drag: none;
-        -khtml-user-drag: none;
-        -moz-user-drag: none;
-        -o-user-drag: none;
-        user-drag: none;
-
-        user-select: none;
-        -moz-user-select: none;
-        -webkit-user-drag: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-    }
-
-    p {
-        max-width: 75ch;
-		text-wrap: pretty;
-    }
-
-    dialog {
-        background: transparent;
-    }
-
-    dialog::backdrop {
-        background: rgba(0, 0, 0, 0.2);
-        backdrop-filter: blur(3px);
-    }
-
-
-	pre {
-		padding: .5rem;
-		margin-bottom: 1.5rem;
-		border-radius: 4px;
-	}
-
-</style>

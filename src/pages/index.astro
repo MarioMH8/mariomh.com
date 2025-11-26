@@ -1,20 +1,22 @@
 ---
-import AboutMe from '@/features/about-me.astro';
-import RecentBlog from '@/features/blog-recent.astro';
-import ContactDialog from '@/features/contact-dialog.astro';
-import Hero from '@/features/hero.astro';
-import NewProject from '@/features/new-project.astro';
-import Portfolio from '@/features/portfolio.astro';
-import Services from '@/features/services.astro';
-import Layout from '@/layouts/layout.astro';
+import AboutMe from '@features/about-me.astro';
+import BlogRecent from '@features/blog-recent.astro';
+import Footer from '@features/footer.astro';
+import Hero from '@features/hero.astro';
+import Nav from '@features/nav.astro';
+import NewProject from '@features/new-project.astro';
+import Portfolio from '@features/portfolio.astro';
+import Services from '@features/services.astro';
+import Layout from '@layout';
 ---
 
 <Layout>
-	<Hero/>
-	<AboutMe/>
-	<Portfolio/>
-	<Services/>
-	<RecentBlog/>
-	<NewProject/>
-	<ContactDialog slot="dialog"/>
+	<Nav />
+	<Hero />
+	<AboutMe />
+	<Portfolio />
+	<Services />
+	<BlogRecent />
+	<NewProject />
+	<Footer />
 </Layout>
