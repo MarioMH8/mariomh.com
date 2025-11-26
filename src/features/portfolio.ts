@@ -6,91 +6,85 @@ document.addEventListener('astro:page-load', () => {
 
 	let show = defaultShow;
 	let showCount = defaultShow;
-	let actualShow: string | undefined = undefined;
+	let actualShow: string | undefined;
 
 	const $buttons = document.querySelectorAll<HTMLButtonElement>('.portfolio-btn');
-	const $showMore = document.getElementById('show-more') as HTMLButtonElement;
-	document.querySelectorAll<HTMLElement>('.portfolio-preview').forEach(el => {
-		allProjects.push(el);
-	});
+	const $showMore = document.querySelector('#show-more');
+
+	if (!$showMore) {
+		return;
+	}
+
+	for (const element of document.querySelectorAll<HTMLElement>('.portfolio-preview')) {
+		allProjects.push(element);
+	}
+
 	showProjects = allProjects;
 
-	function toggleClass(cls: string) {
+	const toggleClass = (cls: string) => {
 		let activeClass = '';
-		$buttons.forEach(btn => {
-			if (btn.className === cls) {
-				return;
+		for (const button of $buttons) {
+			if (button.className === cls) {
+				continue;
 			}
-			activeClass = btn.className;
-			btn.className = cls;
-		});
+			activeClass = button.className;
+			button.className = cls;
+		}
 
 		return activeClass;
-	}
+	};
 
-	function toggleShowMore() {
-		if (showProjects.length <= show) {
-			$showMore.classList.add('hidden');
-		} else {
-			$showMore.classList.remove('hidden');
+	const toggleShowMore = () => {
+		$showMore.classList.toggle('hidden', showProjects.length <= show);
+	};
+
+	const showAll = () => {
+		for (const [index, project] of allProjects.entries()) {
+			project.classList.toggle('hidden', !(index < show));
 		}
-	}
-
-	function showAll() {
-		allProjects.forEach((project, i) => {
-			if (i < show) {
-				project.classList.remove('hidden');
-			} else {
-				project.classList.add('hidden');
-			}
-		});
 		showCount = show;
 		showProjects = allProjects;
 		$showMore.classList.remove('hidden');
-	}
+	};
 
-	function showType(type: string) {
+	const showType = (type: string) => {
 		showCount = 0;
-		showProjects = allProjects.filter(project => project.dataset.type === type);
-		allProjects.forEach(project => {
-			if (project.dataset.type === type) {
+		showProjects = allProjects.filter(project => project.dataset['type'] === type);
+		for (const project of allProjects) {
+			if (project.dataset['type'] === type) {
 				showCount++;
-				if (showCount <= show) {
-					project.classList.remove('hidden');
-				} else {
-					project.classList.add('hidden');
-				}
+				project.classList.toggle('hidden', !(showCount <= show));
 			} else {
 				project.classList.add('hidden');
 			}
-		});
-	}
+		}
+	};
 
-	function renderProjects() {
+	const renderProjects = () => {
 		if (actualShow) {
 			showType(actualShow);
 		} else {
 			showAll();
 		}
-	}
+	};
+
+	const setShow = (buttonShow: string | undefined) => {
+		actualShow = buttonShow;
+		show = defaultShow;
+	};
 
 	$showMore.addEventListener('click', () => {
 		show = show === maxShow ? defaultShow : maxShow;
-		if (show === maxShow) {
-			$showMore.textContent = 'Ver menos';
-		} else {
-			$showMore.textContent = 'Ver más';
-		}
+		$showMore.textContent = show === maxShow ? 'Ver menos' : 'Ver más';
 		renderProjects();
 	});
-	$buttons.forEach(btn => {
-		btn.addEventListener('click', () => {
-			actualShow = btn.dataset.show;
-			show = defaultShow;
+	for (const button of $buttons) {
+		button.addEventListener('click', () => {
+			setShow(button.dataset['show']);
 			$showMore.textContent = 'Ver más';
-			btn.className = toggleClass(btn.className);
+			button.className = toggleClass(button.className);
 			renderProjects();
 			toggleShowMore();
 		});
-	});
+	}
 });

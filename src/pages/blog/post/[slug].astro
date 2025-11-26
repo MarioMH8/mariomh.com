@@ -1,0 +1,56 @@
+---
+import Heading from '@mariomh/heading/astro'
+import Paragraph from '@mariomh/paragraph/astro'
+
+import Layout from '@layout';
+
+import { Image } from 'astro:assets'
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+    const collectionEntries = await getCollection('post');
+
+    return collectionEntries
+        .map(entry => ({
+            params: {slug: entry.slug}, props: {entry},
+        }));
+}
+
+const { entry } = Astro.props;
+const data = entry.data;
+const { Content } = await render(entry);
+---
+
+<Layout>
+	<article class="container py-24">
+		<Heading
+            heading='h1'
+			class="text-center text-6xl mb-12 md:mb-18 lg:mb-24 text-balance">
+            {data.title}
+        </Heading>
+		<Image
+			src={data.image}
+			alt={data.imageAlt}
+			class="w-screen mx-auto blog-image"/>
+        {data.resume &&
+        <Paragraph
+            dimension='3xl'
+            family='secondary'
+            class="max-w-3xl text-center mx-auto my-12 md:my-18 lg:my-24 !leading-5xl">
+            {data.resume}
+        </Paragraph>}
+		<div class="w-[75ch] mx-auto">
+			<Content />
+		</div>
+	</article>
+</Layout>
+
+<style>
+	.blog-image {
+		//mask-image: url(/shape.svg);
+		//mask-repeat: no-repeat;
+		//mask-size: cover;
+		//transform: translateX(15%);
+		//mask-size: 85vw;
+	}
+</style>

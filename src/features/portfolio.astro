@@ -1,54 +1,70 @@
 ---
+import PortfolioPreview from '@features/portfolio-preview.astro';
 import Button from '@mariomh/button/astro';
-import Heading from '@mariomh/heading/astro'
+import Container from '@mariomh/container/astro';
+import Heading from '@mariomh/heading/astro';
 import { getCollection } from 'astro:content';
-
-import PortfolioPreview from './portfolio-preview.astro'
 
 const projects = await getCollection('project');
 ---
 
-<section
-	id='portfolio'
-	class='container w-full flex flex-col items-center gap-6 pt-[5dvh]'>
+<Container
+	as='section'
+	class='w-full flex flex-col items-center gap-6 pt-[5dvh]'
+	id='portfolio'>
 	<Heading
-		size='h2'
-		weight='light'
+		className='m-0 dark:text-primary'
+		heading='h2'
 		family='secondary'
-		className='text-xl m-0 dark:text-primary'>Portfolio</Heading>
+		dimension='xl'
+		weight='light'>
+		Portfolio
+	</Heading>
 	<Heading
-		size='h3'
-		weight='medium'
-		className='text-6xl'>Proyectos recientes</Heading>
-	<div class='flex flex-row flex-wrap gap-8 items-center justify-center mb-16'>
-		<Button solid className='px-6 rounded-xl portfolio-btn' family='secondary'>
+		dimension='6xl'
+		heading='h3'
+		weight='medium'>
+		Proyectos recientes
+	</Heading>
+
+	<nav class='flex flex-row flex-wrap gap-8 items-center justify-center mb-16'>
+		<Button
+			className='portfolio-btn'
+			variant='solid'>
 			Todos
 		</Button>
-		<Button bordered transparent className='px-6 rounded-xl portfolio-btn' family='secondary' data-show="portfolio">
+		<Button
+			className='portfolio-btn'
+			data-show='portfolio'>
 			Webs
 		</Button>
-		<Button bordered transparent className='px-6 rounded-xl portfolio-btn' family='secondary' data-show="app">
+		<Button
+			className='portfolio-btn'
+			data-show='app'>
 			Apps
 		</Button>
-		<Button bordered transparent className='px-6 rounded-xl portfolio-btn' family='secondary' data-show="lib">
+		<Button
+			className='portfolio-btn'
+			data-show='lib'>
 			Librerías
 		</Button>
-	</div>
-	<div class='flex flex-col lg:flex-row flex-wrap gap-x-12 gap-y-16 lg:gap-y-24 justify-evenly lg:mb-56'>
-		{projects.map((project, i) => <PortfolioPreview
-			className={`lg:even:translate-y-[10rem] ${i < 4  ? '' : 'hidden'}`}
-			project={project}/>
-		)}
+	</nav>
+
+	<div class='grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-16 lg:gap-y-24 justify-evenly lg:mb-56'>
+		{
+			projects.map((project, index) => (
+				<PortfolioPreview
+					className={`lg:even:translate-y-[10rem] ${index < 4 ? '' : 'hidden'}`}
+					project={project}
+				/>
+			))
+		}
 	</div>
 
 	<Button
-		id="show-more"
-		bordered
-		transparent
-		family='secondary'
-		className='px-10 rounded-xl show-more'>
+		id='show-more'>
 		Más proyectos
 	</Button>
-</section>
+</Container>
 
-<script src="./portfolio.ts" />
+<script src='./portfolio.ts'></script>

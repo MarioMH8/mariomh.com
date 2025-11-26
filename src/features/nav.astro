@@ -1,0 +1,27 @@
+---
+import Button from '@mariomh/button/astro';
+import { NavigationMenu, NavigationMenuLI, NavigationMenuLink } from '@mariomh/navigation-menu/astro';
+---
+
+<NavigationMenu class='py-4'>
+	<NavigationMenuLI>
+		<NavigationMenuLink href='#sobre-mi'>Sobre mi</NavigationMenuLink>
+	</NavigationMenuLI>
+	<NavigationMenuLI>
+		<NavigationMenuLink href='#portfolio'>Portfolio</NavigationMenuLink>
+	</NavigationMenuLI>
+	<NavigationMenuLI>
+		<NavigationMenuLink href='#servicios'>Servicios</NavigationMenuLink>
+	</NavigationMenuLI>
+	<NavigationMenuLI>
+		<NavigationMenuLink href='/blog'>Blog</NavigationMenuLink>
+	</NavigationMenuLI>
+	<NavigationMenuLI>
+		<Button
+			as='a'
+			href='mailto:hola@mariomh.com'
+			variant='solid'>
+			Contáctame
+		</Button>
+	</NavigationMenuLI>
+</NavigationMenu>

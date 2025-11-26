@@ -1,17 +1,17 @@
 {
-	"extends": "astro/tsconfigs/strictest",
+	"extends": "@hexadrop/tsconfig",
 	"compilerOptions": {
+		"emitDecoratorMetadata": false,
 		"baseUrl": ".",
-		"lib": ["dom", "es2022"],
+		"paths": {
+			"@assets/*": ["src/assets/*"],
+			"@features/*": ["src/features/*"],
+			"@layout": ["src/layouts/layout.astro"]
+		},
 		"plugins": [
 			{
 				"name": "@astrojs/ts-plugin"
 			}
-		],
-		"paths": {
-			"@/*": ["./src/*"]
-		}
-	},
-	"exclude": ["node_modules", "dist"],
-	"include": ["src/**/*.ts", "src/**/*.tsx", "astro.config.ts"]
+		]
+	}
 }
