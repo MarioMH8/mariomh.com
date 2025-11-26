@@ -47,7 +47,7 @@
 		"@mariomh/tailwind": "0.0.5",
 		"embla-carousel": "8.6.0",
 		"embla-carousel-autoplay": "8.6.0",
-		"lucide-astro": "0.554.0"
+		"lucide-astro": "0.555.0"
 	},
 	"devDependencies": {
 		"@astrojs/check": "0.9.5",
