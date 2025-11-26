@@ -1,25 +1,36 @@
 ---
 import Button from '@mariomh/button/astro';
 import { NavigationMenu, NavigationMenuLI, NavigationMenuLink } from '@mariomh/navigation-menu/astro';
+
+interface Props {
+	blog?: boolean;
+}
+
+const {blog} = Astro.props;
 ---
 
 <NavigationMenu class='py-4'>
 	<NavigationMenuLI>
-		<NavigationMenuLink href='#sobre-mi'>Sobre mi</NavigationMenuLink>
+		<NavigationMenuLink href={blog ? '/#sobre-mi' : '#sobre-mi'}>Sobre mi</NavigationMenuLink>
 	</NavigationMenuLI>
 	<NavigationMenuLI>
-		<NavigationMenuLink href='#portfolio'>Portfolio</NavigationMenuLink>
+		<NavigationMenuLink href={blog ? '/#portfolio' : '#portfolio'}>Portfolio</NavigationMenuLink>
 	</NavigationMenuLI>
 	<NavigationMenuLI>
-		<NavigationMenuLink href='#servicios'>Servicios</NavigationMenuLink>
+		<NavigationMenuLink href={blog ? '/#servicios' : '#servicios'}>Servicios</NavigationMenuLink>
 	</NavigationMenuLI>
 	<NavigationMenuLI>
-		<NavigationMenuLink href='/blog'>Blog</NavigationMenuLink>
+		<NavigationMenuLink
+			active={blog === true}
+			href='/blog'>
+			Blog
+		</NavigationMenuLink>
 	</NavigationMenuLI>
 	<NavigationMenuLI>
 		<Button
 			as='a'
-			href='mailto:hola@mariomh.com'
+			data-email='holaATmariomhDOTcom'
+			className='cursor-pointer hidden-email'
 			variant='solid'>
 			Contáctame
 		</Button>
