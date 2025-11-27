@@ -24,6 +24,7 @@
 		"dev": "astro dev",
 		"lint": "eslint .",
 		"lint:fix": "eslint --fix .",
+		"sync": "astro sync",
 		"typecheck": "astro check && tsc --noEmit"
 	},
 	"dependencies": {
