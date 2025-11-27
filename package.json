@@ -47,13 +47,13 @@
 		"@mariomh/tailwind": "0.0.5",
 		"embla-carousel": "8.6.0",
 		"embla-carousel-autoplay": "8.6.0",
-		"lucide-astro": "0.554.0"
+		"lucide-astro": "0.555.0"
 	},
 	"devDependencies": {
-		"@astrojs/check": "0.9.5",
+		"@astrojs/check": "0.9.6",
 		"@astrojs/sitemap": "3.6.0",
-		"@astrojs/ts-plugin": "1.10.5",
-		"@hexadrop/eslint-config": "0.1.11",
+		"@astrojs/ts-plugin": "1.10.6",
+		"@hexadrop/eslint-config": "0.1.15",
 		"@hexadrop/tsconfig": "0.0.5",
 		"@playform/compress": "0.2.0",
 		"@tailwindcss/vite": "4.1.17",
@@ -62,7 +62,7 @@
 		"astro-robots-txt": "1.0.0",
 		"astro-seo": "0.8.4",
 		"astro-webmanifest": "1.0.0",
-		"eslint": "9.38.0",
+		"eslint": "9.39.1",
 		"tailwindcss": "4.1.17",
 		"typescript": "5.9.3"
 	}
