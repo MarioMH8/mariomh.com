@@ -45,7 +45,7 @@
 		"@mariomh/resume": "0.0.3",
 		"@mariomh/round": "0.0.9",
 		"@mariomh/span": "0.0.12",
-		"@mariomh/tailwind": "0.0.5",
+		"@mariomh/tailwind": "0.0.6",
 		"embla-carousel": "8.6.0",
 		"embla-carousel-autoplay": "8.6.0",
 		"lucide-astro": "0.555.0"
