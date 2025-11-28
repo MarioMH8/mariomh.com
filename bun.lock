@@ -22,7 +22,7 @@
         "@mariomh/resume": "0.0.3",
         "@mariomh/round": "0.0.9",
         "@mariomh/span": "0.0.12",
-        "@mariomh/tailwind": "0.0.5",
+        "@mariomh/tailwind": "0.0.6",
         "embla-carousel": "8.6.0",
         "embla-carousel-autoplay": "8.6.0",
         "lucide-astro": "0.555.0",
@@ -307,7 +307,7 @@
 
     "@mariomh/span": ["@mariomh/span@0.0.12", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/span/-/@mariomh/span-0.0.12.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/font": "0.0.9", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/font", "astro", "radix-ui", "react"] }, "sha512-QbiwHJ5X1e3Sm3XXhuU4CMhaTsKSCV6OFxptEsAvzXDsz34oWQhmN6DXlMXXlkiQcQVknrs1m32X195ttUyxkg=="],
 
-    "@mariomh/tailwind": ["@mariomh/tailwind@0.0.5", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/tailwind/-/@mariomh/tailwind-0.0.5.tgz", { "peerDependencies": { "tailwindcss": ">=4.0.0" } }, "sha512-ogSSL3vfsPJ95xKVN2PMEUC3NBiHPOQskguuC4YUQ2swy7uo2ZoPn/8CEAw7XeE2MAQmX0jAyZo9cI/gCoPswQ=="],
+    "@mariomh/tailwind": ["@mariomh/tailwind@0.0.6", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/tailwind/-/@mariomh/tailwind-0.0.6.tgz", { "peerDependencies": { "tailwindcss": ">=4.1.16" } }, "sha512-AX4aMQaEJ8hgBuTnNTRTPPsY6GSXmgU/6x/krRnqaXQJtkuVrs7S7E3BgS7l5qm0NnZEIi6mqn+xZyxu7qb5Ag=="],
 
     "@napi-rs/wasm-runtime": ["@napi-rs/wasm-runtime@0.2.12", "", { "dependencies": { "@emnapi/core": "^1.4.3", "@emnapi/runtime": "^1.4.3", "@tybys/wasm-util": "^0.10.0" } }, "sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ=="],
 
