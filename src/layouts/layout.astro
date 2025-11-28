@@ -138,9 +138,7 @@ const computedDescription = description ?? (typeof summary === 'string' ? summar
 			toggleTheme();
 		</script>
 	</head>
-	<body
-		{...properties}
-		class:list={[properties.class]}>
+	<body {...properties}>
 		<slot />
 	</body>
 </html>
