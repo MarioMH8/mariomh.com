@@ -9,5 +9,5 @@
 		}
 	],
 	"ignoreNpmrcFile": true,
-	"npmrc": "@mariomh:registry=https://europe-npm.pkg.dev/mariomh/npm/\n//europe-npm.pkg.dev/:username=_json_key_base64\n//europe-npm.pkg.dev/:_password={{ secrets.RENOVATE_SERVICE_ACCOUNT_KEY }}\n//europe-npm.pkg.dev/:email=renovate@example.com\n//europe-npm.pkg.dev/:always-auth=true"
+	"npmrc": "@mariomh:registry=https://europe-npm.pkg.dev/mariomh/npm/"
 }
