@@ -7,5 +7,6 @@
 			"password": "{{ secrets.RENOVATE_SERVICE_ACCOUNT_KEY }}",
 			"hostType": "npm"
 		}
-	]
+	],
+	"npmrc": "@mariomh:registry=https://europe-npm.pkg.dev/mariomh/npm/"
 }
