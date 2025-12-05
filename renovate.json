@@ -8,5 +8,11 @@
 			"hostType": "npm"
 		}
 	],
-	"npmrc": "@mariomh:registry=https://europe-npm.pkg.dev/mariomh/npm/"
+	"npmrc": "@mariomh:registry=https://europe-npm.pkg.dev/mariomh/npm/",
+	"packageRules": [
+		{
+			"matchPackageNames": ["@mariomh/*"],
+			"groupName": "@mariomh monorepo"
+		}
+	]
 }
