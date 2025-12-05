@@ -110,29 +110,8 @@ const computedDescription = description ?? (typeof summary === 'string' ? summar
 				}
 			}
 
-			function revealEmail() {
-				const buttons = document.getElementsByClassName('hidden-email');
-
-				for (const button of buttons) {
-					const onClick = (event: Event) => {
-						const href = button.getAttribute('href');
-						const email = button.getAttribute('data-email')?.replace(/AT/, '@').replace(/DOT/, '.');
-						if (!href && email) {
-							event.preventDefault();
-							const emailLink = `mailto:${email}`;
-							button.classList.remove('hidden-email');
-							button.setAttribute('href', emailLink);
-							window.location.href = emailLink;
-							button.removeEventListener('click', onClick);
-						}
-					};
-					button.addEventListener('click', onClick);
-				}
-			}
-
 			document.addEventListener('astro:page-load', () => {
 				toggleTheme();
-				revealEmail();
 			});
 
 			toggleTheme();
