@@ -7,22 +7,22 @@
       "dependencies": {
         "@fontsource/dm-sans": "5.2.8",
         "@mariomh/archia": "0.0.4",
-        "@mariomh/badge": "0.0.12",
-        "@mariomh/box": "0.0.11",
-        "@mariomh/button": "0.0.12",
-        "@mariomh/container": "0.0.11",
-        "@mariomh/copyright": "0.0.12",
-        "@mariomh/focus": "0.0.9",
-        "@mariomh/font": "0.0.9",
-        "@mariomh/heading": "0.0.13",
-        "@mariomh/link": "0.0.12",
-        "@mariomh/logo": "0.0.11",
-        "@mariomh/navigation-menu": "0.0.15",
-        "@mariomh/paragraph": "0.0.12",
+        "@mariomh/badge": "0.0.13",
+        "@mariomh/box": "0.0.12",
+        "@mariomh/button": "0.0.13",
+        "@mariomh/container": "0.0.12",
+        "@mariomh/copyright": "0.0.13",
+        "@mariomh/focus": "0.0.10",
+        "@mariomh/font": "0.0.10",
+        "@mariomh/heading": "0.0.14",
+        "@mariomh/link": "0.0.13",
+        "@mariomh/logo": "0.0.12",
+        "@mariomh/navigation-menu": "0.0.16",
+        "@mariomh/paragraph": "0.0.13",
         "@mariomh/resume": "0.0.3",
-        "@mariomh/round": "0.0.9",
-        "@mariomh/span": "0.0.12",
-        "@mariomh/tailwind": "0.0.6",
+        "@mariomh/round": "0.0.10",
+        "@mariomh/span": "0.0.13",
+        "@mariomh/tailwind": "0.0.8",
         "embla-carousel": "8.6.0",
         "embla-carousel-autoplay": "8.6.0",
         "lucide-astro": "0.555.0",
@@ -283,39 +283,39 @@
 
     "@mariomh/archia": ["@mariomh/archia@0.0.4", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/archia/-/@mariomh/archia-0.0.4.tgz", {}, "sha512-xd6lm3S2qnuaZ+wcmp0hvFlmBV0tkPHGP1rxkakvEdOyBGPbjoDveBlXLv0T9JNwzVbaKNG46JzxgSVGbpyFqA=="],
 
-    "@mariomh/badge": ["@mariomh/badge@0.0.12", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/badge/-/@mariomh/badge-0.0.12.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/font": "0.0.9", "@mariomh/round": "0.0.9", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/font", "@mariomh/round", "astro", "radix-ui", "react"] }, "sha512-tPQIerFBV/XJ1OaMDqLljLchWHL/EDS9w6eJlbKms14FCa4x7rHCY4blINWRUPz28bFAqmnnn8SHHKd0ek2A+w=="],
+    "@mariomh/badge": ["@mariomh/badge@0.0.13", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/badge/-/@mariomh/badge-0.0.13.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/font": "0.0.10", "@mariomh/round": "0.0.10", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/font", "@mariomh/round", "astro", "radix-ui", "react"] }, "sha512-9Cf8Gis7nwp2r76Ns9YmqLB/Nn5hEi5Ny3eJDbtcKvcnNhDyk7lld5wJjPAJUDYezarV3ztZgdNPQQ5O5nK9qQ=="],
 
-    "@mariomh/box": ["@mariomh/box@0.0.11", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/box/-/@mariomh/box-0.0.11.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/round": "0.0.9", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/round", "astro", "radix-ui", "react"] }, "sha512-73IgngDjxkrZakKkIVboO1vNZqqtiGtrXcEXq9sPFuda7gig8NQB6vpMSmGQsUw2GT7JuCAxVdlGDsVWd1NSlQ=="],
+    "@mariomh/box": ["@mariomh/box@0.0.12", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/box/-/@mariomh/box-0.0.12.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/round": "0.0.10", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/round", "astro", "radix-ui", "react"] }, "sha512-RyimO+t2TgPcpBH7oEirBPPGC9jTV0I9Hal4dKtFVlUsqBmYgNEiSRl30VZ0l64rrAgM7DCZeNRV3MNkVl3HOQ=="],
 
-    "@mariomh/button": ["@mariomh/button@0.0.12", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/button/-/@mariomh/button-0.0.12.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/focus": "0.0.9", "@mariomh/font": "0.0.9", "@mariomh/round": "0.0.9", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/focus", "@mariomh/font", "@mariomh/round", "astro", "radix-ui", "react"] }, "sha512-SJw7JU+AsL/napJlPZfFmfEHwn+yjTnh/VfRlbybAJDY8jUk//luJDbs7lcXZgaioXkMJ6RDnJ1+mUtR0/wOpQ=="],
+    "@mariomh/button": ["@mariomh/button@0.0.13", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/button/-/@mariomh/button-0.0.13.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/focus": "0.0.10", "@mariomh/font": "0.0.10", "@mariomh/round": "0.0.10", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/focus", "@mariomh/font", "@mariomh/round", "astro", "radix-ui", "react"] }, "sha512-yd9RJ2uXh/q9rMMawOw+GAAUOUUvCilpjRLRwyGZYvc3CGtW7jVuoKjCL4H/H5O/UN2Jw0ar03yArN2eK+9oIQ=="],
 
-    "@mariomh/container": ["@mariomh/container@0.0.11", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/container/-/@mariomh/container-0.0.11.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["astro", "radix-ui", "react"] }, "sha512-QxcAOkQJOIfLQK4BJX9fJWqj1XPuZL8QWMpSQ8FpSL/RTVgKgWNs3W9vvU+0SkJOcuK4xd91wWQ61cCbhPwZpg=="],
+    "@mariomh/container": ["@mariomh/container@0.0.12", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/container/-/@mariomh/container-0.0.12.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["astro", "radix-ui", "react"] }, "sha512-uBiA+fGOBdYHn1n7K/eFFGiTnO0z8FOhd7gZn+HQKV27iERASLqgq0C0WLXvHiL9zIkJdPy2/M50eqBJGKSKIA=="],
 
-    "@mariomh/copyright": ["@mariomh/copyright@0.0.12", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/copyright/-/@mariomh/copyright-0.0.12.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/font": "0.0.9", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/font", "astro", "radix-ui", "react"] }, "sha512-6EUklg7qSMau3dgYe2/tFuLcARyOSMXpHYXOr7YYOYiPS6pMVuWQfPOdn6ZU+rjRYMunyKA+r2YOwYG/Yuu1fQ=="],
+    "@mariomh/copyright": ["@mariomh/copyright@0.0.13", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/copyright/-/@mariomh/copyright-0.0.13.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/font": "0.0.10", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/font", "astro", "radix-ui", "react"] }, "sha512-MmkxW8DKB05YSQem0pF36lW3u4pmQ0/CE3SDakMeLGD5Mv2NJZgUz5btuNmmhxsldhWTq0pTCwcZOiDZJI4F6A=="],
 
     "@mariomh/cva": ["@mariomh/cva@0.0.8", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/cva/-/@mariomh/cva-0.0.8.tgz", { "dependencies": { "cva": "1.0.0-beta.4", "tailwind-merge": "3.4.0" } }, "sha512-YN2068dNE6b4UmHHCrSUWmNFWVf0cw7gtPAynxPk0+qXUmoJ2obnuUCdkS1hxhQbRzDTV3qR+T/SB7o0qodArw=="],
 
-    "@mariomh/focus": ["@mariomh/focus@0.0.9", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/focus/-/@mariomh/focus-0.0.9.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["radix-ui", "react"] }, "sha512-TSggigUgyqXiAxQltRTXUKScFPjRAT51lYcTU9pFARV7OHwjGiOvk8Qcn0bwZ0Atvn6X157qFQOoG9FLihOJGQ=="],
+    "@mariomh/focus": ["@mariomh/focus@0.0.10", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/focus/-/@mariomh/focus-0.0.10.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["radix-ui", "react"] }, "sha512-y5kmoQUNaQ+tkqgHyaoWQOCC7l7dK0zNl72QvyEqKI5i9EiqkdD9TgOv8ptElmaEiXuqWd0152QY8em2SmAxUA=="],
 
-    "@mariomh/font": ["@mariomh/font@0.0.9", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/font/-/@mariomh/font-0.0.9.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["radix-ui", "react"] }, "sha512-GYVfF/JVCF21qYSemd2rTmRy8MYtfrrC7aekPIweZPc89e8rhmL8T2GxIdX8wcL3K7es+h03aQu9/WRsQwgWkA=="],
+    "@mariomh/font": ["@mariomh/font@0.0.10", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/font/-/@mariomh/font-0.0.10.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["radix-ui", "react"] }, "sha512-eqF6g96wq+MiDMfIcu71Ym+EIPMdOK3wer6d83HLZdPmMIfuNrlb/ZtsLe9iVYM+EnLHJHqZ2acY+DQoCVuQqw=="],
 
-    "@mariomh/heading": ["@mariomh/heading@0.0.13", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/heading/-/@mariomh/heading-0.0.13.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/font": "0.0.9", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/font", "astro", "radix-ui", "react"] }, "sha512-GunGMv8MiqS5aIFSAcYkfl+pE8qncEzsetWcIdznqUXH5F1zscCNceMgdBx+iq8stVmCS+qsfungXm+mx9AcRg=="],
+    "@mariomh/heading": ["@mariomh/heading@0.0.14", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/heading/-/@mariomh/heading-0.0.14.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/font": "0.0.10", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/font", "astro", "radix-ui", "react"] }, "sha512-sL/OpMWEVxOrtY3QfUsckqxg9ShzHTIPiJsFEwnLSIwiM1XdcY6nRxs0wuMIrESU3QTLAh2p6TsOj+KU+JydQA=="],
 
-    "@mariomh/link": ["@mariomh/link@0.0.12", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/link/-/@mariomh/link-0.0.12.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/focus": "0.0.9", "@mariomh/font": "0.0.9", "@mariomh/round": "0.0.9", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/focus", "@mariomh/font", "@mariomh/round", "astro", "radix-ui", "react"] }, "sha512-I0q/Lq0SA2CDTeTnj4WM/zeM7m9ai22b+HDMWbdEqRfwVowRive9uvzhs/BvYVc8HMcICoGyp1GEPTwPBtMcaA=="],
+    "@mariomh/link": ["@mariomh/link@0.0.13", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/link/-/@mariomh/link-0.0.13.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/focus": "0.0.10", "@mariomh/font": "0.0.10", "@mariomh/round": "0.0.10", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/focus", "@mariomh/font", "@mariomh/round", "astro", "radix-ui", "react"] }, "sha512-Db0YLiGaeIc6cDcUIUn0CsNCjLDvc/Ak5Q5lQdWtF/luspqHDKIZ1yjR+P5B9f9ZMba3Caa0zr01QNYWjdJTsA=="],
 
-    "@mariomh/logo": ["@mariomh/logo@0.0.11", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/logo/-/@mariomh/logo-0.0.11.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/font": "0.0.9", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/font", "astro", "radix-ui", "react"] }, "sha512-1OExIazzJQp94IoER+zM0B0jQawCySgb2PWmdEXnZ0kfR5IoLSNY27JbCMuSH9tzoNpmx2et3B1Ad8FGiiu27w=="],
+    "@mariomh/logo": ["@mariomh/logo@0.0.12", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/logo/-/@mariomh/logo-0.0.12.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/font": "0.0.10", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/font", "astro", "radix-ui", "react"] }, "sha512-dNHLokxJz0+s8IM5WUVaNHdb2APNbUfqiDYj80c1TLJx2bkVoeCZCLaU1jZwNKJ4JU/jwydtiyZmBOQgRhoAKw=="],
 
-    "@mariomh/navigation-menu": ["@mariomh/navigation-menu@0.0.15", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/navigation-menu/-/@mariomh/navigation-menu-0.0.15.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/button": "0.0.12", "@mariomh/container": "0.0.11", "@mariomh/font": "0.0.9", "@mariomh/logo": "0.0.11", "astro": "^5", "lucide-astro": "^0", "lucide-react": "^0", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/button", "@mariomh/container", "@mariomh/font", "@mariomh/logo", "astro", "lucide-astro", "lucide-react", "radix-ui", "react"] }, "sha512-MoCy4J3C5KoEQOKr5tvBgdT7hkmIG5bdOy5GhdI4GOySWGNsKNLe9FQxn3Q8zbHRR0/tdBHAioBg3UTJTj99lQ=="],
+    "@mariomh/navigation-menu": ["@mariomh/navigation-menu@0.0.16", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/navigation-menu/-/@mariomh/navigation-menu-0.0.16.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/button": "0.0.13", "@mariomh/container": "0.0.12", "@mariomh/font": "0.0.10", "@mariomh/logo": "0.0.12", "astro": "^5", "lucide-astro": "^0", "lucide-react": "^0", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/button", "@mariomh/container", "@mariomh/font", "@mariomh/logo", "astro", "lucide-astro", "lucide-react", "radix-ui", "react"] }, "sha512-7ygFHhMSVa3cTogZPRddpZsJjVDlD9dDbnhW7Sn+ZA1+7SnEKMVpGKgT5LGI7o5fR2HBFQ8eoi4kh264PNXA6A=="],
 
-    "@mariomh/paragraph": ["@mariomh/paragraph@0.0.12", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/paragraph/-/@mariomh/paragraph-0.0.12.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/font": "0.0.9", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/font", "astro", "radix-ui", "react"] }, "sha512-svO7K+5Mji85y+oPIE2ZYJxTD0Yes7eYyoFL0BDMPXCWIhU93kibgw82ozWVEPgoXfyxyegwFK2qkelmysS7/Q=="],
+    "@mariomh/paragraph": ["@mariomh/paragraph@0.0.13", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/paragraph/-/@mariomh/paragraph-0.0.13.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/font": "0.0.10", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/font", "astro", "radix-ui", "react"] }, "sha512-So6drtALS+LzNKuU16tgjpMqYYTF641n3dWuiCpHC2f3OEozoTqhYaYRgGibESy99SyO1G2MXpIPznbhD1PCPw=="],
 
     "@mariomh/resume": ["@mariomh/resume@0.0.3", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/resume/-/@mariomh/resume-0.0.3.tgz", {}, "sha512-DHZ1jwsGSSKeyDw7jbirTJiTkMgex4QGb8OZOVhhu6GuL7s2p1A+aXdFJHxpl6gcpG9MR+1TeEFEN+DMjq67kQ=="],
 
-    "@mariomh/round": ["@mariomh/round@0.0.9", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/round/-/@mariomh/round-0.0.9.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["radix-ui", "react"] }, "sha512-tZVkfVi45eVejjYBy15s3dxcFNNJRXB0ZqjOlBSV4Ask6E9k3tFeQzqfpN2DwbWR7n2GMZs04XIbGZbWRhPCfA=="],
+    "@mariomh/round": ["@mariomh/round@0.0.10", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/round/-/@mariomh/round-0.0.10.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["radix-ui", "react"] }, "sha512-l4/QfhS3H7zUB2Ag0oc1ZSnrBau9lO2wERwQWg+WnvQQrAr7IE6RwkqdY3mBpHbTF3PFABv1SDtj5VJnXUHirQ=="],
 
-    "@mariomh/span": ["@mariomh/span@0.0.12", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/span/-/@mariomh/span-0.0.12.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/font": "0.0.9", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/font", "astro", "radix-ui", "react"] }, "sha512-QbiwHJ5X1e3Sm3XXhuU4CMhaTsKSCV6OFxptEsAvzXDsz34oWQhmN6DXlMXXlkiQcQVknrs1m32X195ttUyxkg=="],
+    "@mariomh/span": ["@mariomh/span@0.0.13", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/span/-/@mariomh/span-0.0.13.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/font": "0.0.10", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/font", "astro", "radix-ui", "react"] }, "sha512-rT6kb2ooHZbL3KERBe+jHWPlqGv/M8NZaC4qlJP8crn1ZKul/G4T+YD+EM2KK+Gn8RW5VzyM/mSpk33VCRGUUQ=="],
 
-    "@mariomh/tailwind": ["@mariomh/tailwind@0.0.6", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/tailwind/-/@mariomh/tailwind-0.0.6.tgz", { "peerDependencies": { "tailwindcss": ">=4.1.16" } }, "sha512-AX4aMQaEJ8hgBuTnNTRTPPsY6GSXmgU/6x/krRnqaXQJtkuVrs7S7E3BgS7l5qm0NnZEIi6mqn+xZyxu7qb5Ag=="],
+    "@mariomh/tailwind": ["@mariomh/tailwind@0.0.8", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/tailwind/-/@mariomh/tailwind-0.0.8.tgz", { "dependencies": { "tailwindcss-flow-type": "0.0.2" }, "peerDependencies": { "tailwindcss": ">=4.1.16" } }, "sha512-6BbeEw5FVNR27y8C76VtscU+O+N2KetVMtykWVYSvS4bOINaZ7WYEd4vAymekh3j6wpNSNFgeStAMJ6RJzANiw=="],
 
     "@napi-rs/wasm-runtime": ["@napi-rs/wasm-runtime@0.2.12", "", { "dependencies": { "@emnapi/core": "^1.4.3", "@emnapi/runtime": "^1.4.3", "@tybys/wasm-util": "^0.10.0" } }, "sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ=="],
 
@@ -1622,6 +1622,8 @@
     "tailwind-merge": ["tailwind-merge@3.4.0", "", {}, "sha512-uSaO4gnW+b3Y2aWoWfFpX62vn2sR3skfhbjsEnaBI81WD1wBLlHZe5sWf0AqjksNdYTbGBEd0UasQMT3SNV15g=="],
 
     "tailwindcss": ["tailwindcss@4.1.17", "", {}, "sha512-j9Ee2YjuQqYT9bbRTfTZht9W/ytp5H+jJpZKiYdP/bpnXARAuELt9ofP0lPnmHjbga7SNQIxdTAXCmtKVYjN+Q=="],
+
+    "tailwindcss-flow-type": ["tailwindcss-flow-type@0.0.2", "", { "peerDependencies": { "tailwindcss": "^4.0.0" } }, "sha512-pVnOpgxceQpdN/kdvNA2bMKTu02S/crx02HvUDBcMvIFphR3Q5IVorc/MgoJ8Kr4r7t4xdzgJ497uCJTqUudCA=="],
 
     "tapable": ["tapable@2.3.0", "", {}, "sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg=="],
 
