@@ -3,6 +3,7 @@ import resume from '@mariomh/resume';
 import compress from '@playform/compress';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
+import obfuscation from 'astro-mail-obfuscation';
 import robotsTxt from 'astro-robots-txt';
 import type { WebmanifestOptions } from 'astro-webmanifest';
 import manifest from 'astro-webmanifest';
@@ -11,6 +12,7 @@ const { name = '', shortName, summary } = resume.basics ?? {};
 
 export default defineConfig({
 	integrations: [
+		obfuscation(),
 		sitemap(),
 		robotsTxt(),
 		manifest({
