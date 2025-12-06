@@ -4,6 +4,6 @@
 
 @variant dark (&:where(.dark, .dark *));
 
-.hidden {
-    display: none;
+.force-hidden {
+  @apply hidden;
 }

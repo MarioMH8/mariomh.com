@@ -35,7 +35,7 @@ document.addEventListener('astro:page-load', () => {
 			return;
 		}
 		const moreThanShow = showProjects.length > show;
-		$showMore.classList.toggle('hidden', !moreThanShow);
+		$showMore.classList.toggle('force-hidden', !moreThanShow);
 	};
 
 	const showAll = () => {
