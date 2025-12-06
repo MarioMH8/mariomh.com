@@ -1,11 +1,14 @@
 ---
+/* eslint-disable format/prettier */
 import PortfolioPreview from '@features/portfolio-preview.astro';
 import Button from '@mariomh/button/astro';
 import Container from '@mariomh/container/astro';
 import Heading from '@mariomh/heading/astro';
 import { getCollection } from 'astro:content';
 
-const projects = await getCollection('project');
+const allProjects = await getCollection('project');
+const projects = allProjects.toSorted((a, b) => a.id.localeCompare(b.id));
+const categories = new Set(projects.map(project => project.data.category));
 ---
 
 <Container
@@ -33,35 +36,45 @@ const projects = await getCollection('project');
 			variant='solid'>
 			Todos
 		</Button>
-		<Button
-			className='portfolio-btn'
-			data-show='portfolio'>
-			Webs
-		</Button>
-		<Button
-			className='portfolio-btn'
-			data-show='app'>
-			Apps
-		</Button>
-		<Button
-			className='portfolio-btn'
-			data-show='lib'>
-			Librerías
-		</Button>
+		{categories.has('app') ? (
+			<Button
+				className='portfolio-btn'
+				data-show='app'>
+				Apps
+			</Button>
+		) : <></>}
+		{categories.has('lib') ? (
+			<Button
+				className='portfolio-btn'
+				data-show='lib'>
+				Librerías
+			</Button>
+		) : <></>}
+		{categories.has('portfolio') ? (
+			<Button
+				className='portfolio-btn'
+				data-show='portfolio'>
+				Webs
+			</Button>
+		) : <></>}
 	</nav>
 
-	<div class='grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-16 lg:gap-y-24 justify-evenly lg:mb-56'>
+	<div class='grid grid-cols-1 lg:grid-cols-2 gap-x-14 gap-y-16 lg:gap-y-24 justify-evenly lg:mb-56'>
 		{
 			projects.map((project, index) => (
 				<PortfolioPreview
-					className={`lg:even:translate-y-[10rem] ${index < 4 ? '' : 'hidden'}`}
+					className={`lg:[.odd]:translate-y-[10rem] ${index < 4 ? '' : 'hidden'} ${(index + 1) % 2 === 0 ? 'odd' : ''}`}
 					project={project}
 				/>
 			))
 		}
 	</div>
 
-	<Button id='show-more'> Más proyectos </Button>
+	{
+		projects.length > 4 ? <Button id='show-more'>Más proyectos</Button> : (
+			<></>
+		)
+	}
 </Container>
 
 <script src='./portfolio.ts'></script>
