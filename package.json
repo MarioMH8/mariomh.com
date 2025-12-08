@@ -50,7 +50,7 @@
 		"astro-seo": "0.8.4",
 		"embla-carousel": "8.6.0",
 		"embla-carousel-autoplay": "8.6.0",
-		"lucide-astro": "0.555.0"
+		"lucide-astro": "0.556.0"
 	},
 	"devDependencies": {
 		"@astrojs/check": "0.9.6",
