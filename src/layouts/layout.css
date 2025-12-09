@@ -2,8 +2,6 @@
 @import "@mariomh/tailwind";
 @source "../../node_modules/@mariomh";
 
-@variant dark (&:where(.dark, .dark *));
-
 .force-hidden {
   @apply hidden;
 }
