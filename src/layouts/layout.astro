@@ -46,7 +46,7 @@ const computedDescription = description ?? (typeof summary === 'string' ? summar
 		/>
 
 		<meta
-			content='#F5F5F5'
+			content='#FDFFF5'
 			id='meta-light'
 			media='(prefers-color-scheme: light)'
 			name='theme-color'
@@ -84,37 +84,19 @@ const computedDescription = description ?? (typeof summary === 'string' ? summar
 		<ClientRouter />
 
 		<script>
-			window.getSystemTheme = (): string => {
-				return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-			};
+			import ThemeManager from '@features/theme-manager';
 
-			window.getThemePreference = (): string => {
-				const localItem = typeof localStorage !== 'undefined' && localStorage.getItem('theme');
-				if (localItem === 'dark' || localItem === 'light') {
-					return localItem;
-				}
-
-				return window.getSystemTheme();
-			};
-
-			function toggleTheme() {
-				const element = document.documentElement;
-				const isDark = window.getThemePreference() === 'dark';
-				const hasDark = element.classList.contains('dark');
-				if (isDark !== hasDark) {
-					element.classList.toggle('dark', isDark);
-				}
-				const hasDarkScrollbar = element.classList.contains('scrollbar-track-primary-dark-background');
-				if (isDark !== hasDarkScrollbar) {
-					element.classList.toggle('scrollbar-track-primary-dark-background', isDark);
-				}
-			}
-
-			document.addEventListener('astro:page-load', () => {
-				toggleTheme();
+			const manager = new ThemeManager({
+				overrideSystemPreference: true,
 			});
 
-			toggleTheme();
+			document.addEventListener('astro:page-load', () => {
+				manager.applyCurrentTheme();
+			});
+
+			manager.applyCurrentTheme();
+
+			window.themeManager = manager;
 		</script>
 	</head>
 	<body {...properties}>

@@ -1,6 +1,5 @@
 /// <reference path="../.astro/types.d.ts" />
 
 interface Window {
-	getSystemTheme(): string;
-	getThemePreference(): string;
+	themeManager: import('@features/theme-manager').default;
 }
