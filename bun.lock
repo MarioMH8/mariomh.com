@@ -19,7 +19,7 @@
         "@mariomh/logo": "0.0.12",
         "@mariomh/navigation-menu": "0.0.17",
         "@mariomh/paragraph": "0.0.13",
-        "@mariomh/resume": "0.0.3",
+        "@mariomh/resume": "0.0.5",
         "@mariomh/round": "0.0.10",
         "@mariomh/span": "0.0.13",
         "@mariomh/tailwind": "0.0.11",
@@ -310,7 +310,7 @@
 
     "@mariomh/paragraph": ["@mariomh/paragraph@0.0.13", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/paragraph/-/@mariomh/paragraph-0.0.13.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/font": "0.0.10", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/font", "astro", "radix-ui", "react"] }, "sha512-So6drtALS+LzNKuU16tgjpMqYYTF641n3dWuiCpHC2f3OEozoTqhYaYRgGibESy99SyO1G2MXpIPznbhD1PCPw=="],
 
-    "@mariomh/resume": ["@mariomh/resume@0.0.3", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/resume/-/@mariomh/resume-0.0.3.tgz", {}, "sha512-DHZ1jwsGSSKeyDw7jbirTJiTkMgex4QGb8OZOVhhu6GuL7s2p1A+aXdFJHxpl6gcpG9MR+1TeEFEN+DMjq67kQ=="],
+    "@mariomh/resume": ["@mariomh/resume@0.0.5", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/resume/-/@mariomh/resume-0.0.5.tgz", {}, "sha512-FZE9k95eZ2AKOzT8vH5JFKab10aKZjrmH7Vz6F4h3apSBXqiROalNrR+qsRJgC+iTXt/olMXajXSTxzcYw1JOA=="],
 
     "@mariomh/round": ["@mariomh/round@0.0.10", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/round/-/@mariomh/round-0.0.10.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["radix-ui", "react"] }, "sha512-l4/QfhS3H7zUB2Ag0oc1ZSnrBau9lO2wERwQWg+WnvQQrAr7IE6RwkqdY3mBpHbTF3PFABv1SDtj5VJnXUHirQ=="],
 
