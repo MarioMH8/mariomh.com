@@ -66,15 +66,15 @@ const dotsClassName = (index: number) =>
 							testimonials.map(({ data }) => (
 								<article class:list={['px-12', 'min-w-0 grow-0 shrink-0 basis-full']}>
 									<Paragraph
-										className='text-balance dark:text-primary-foreground'
+										className='text-balance dark:text-primary-foreground before:content-["“"] after:content-["”"]'
 										dimension='xl'>
-										{data.content}
+										{data.reference}
 									</Paragraph>
-									{data.author && (
+									{data.name && (
 										<Span
-											className='block text-right italic dark:text-primary-foreground'
+											className='block text-right italic dark:text-primary-foreground before:content-["—_"] before:mr-1'
 											weight='light'>
-											— {data.author}
+											{data.name} {data.position && <> &middot; {data.position}</>}
 										</Span>
 									)}
 								</article>
