@@ -1,3 +1,4 @@
+import resume from '@mariomh/resume';
 import { defineCollection, z } from 'astro:content';
 
 const project = defineCollection({
@@ -25,11 +26,17 @@ const post = defineCollection({
 });
 
 const testimonial = defineCollection({
+	loader: () =>
+		(resume.references ?? []).map(reference => ({
+			...reference,
+			id: reference.name?.replaceAll(' ', '-').toLowerCase() ?? Math.random().toString(36).slice(2, 8),
+		})),
 	schema: z.object({
-		author: z.string().optional(),
-		content: z.string(),
+		name: z.string().optional(),
+		position: z.string().optional(),
+		reference: z.string(),
+		url: z.string().url().optional(),
 	}),
-	type: 'data',
 });
 
 const collections = {
