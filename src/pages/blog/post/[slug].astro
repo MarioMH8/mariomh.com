@@ -1,4 +1,6 @@
 ---
+import Footer from '@features/footer.astro';
+import Nav from '@features/nav.astro';
 import Layout from '@layout';
 import Heading from '@mariomh/heading/astro';
 import Paragraph from '@mariomh/paragraph/astro';
@@ -19,7 +21,8 @@ const data = entry.data;
 const { Content } = await render(entry);
 ---
 
-<Layout>
+<Layout class='overflow-x-hidden'>
+	<Nav blog />
 	<article class='container py-24'>
 		<Heading
 			class='text-center text-6xl mb-12 md:mb-18 lg:mb-24 text-balance'
@@ -34,25 +37,36 @@ const { Content } = await render(entry);
 		{
 			data.resume && (
 				<Paragraph
-					class='max-w-3xl text-center mx-auto my-12 md:my-18 lg:my-24 !leading-5xl'
+					class='max-w-3xl text-center mx-auto mb-12 md:mb-18 lg:mb-24 !leading-5xl'
 					dimension='3xl'
 					family='secondary'>
 					{data.resume}
 				</Paragraph>
 			)
 		}
-		<div class='w-[75ch] mx-auto'>
+		<div class='max-w-[75ch] mx-auto article'>
 			<Content />
 		</div>
 	</article>
+	<Footer />
 </Layout>
 
 <style>
+	@reference '../../../layouts/layout.css';
+
 	.blog-image {
 		mask-image: url(/assets/shape.svg);
 		mask-repeat: no-repeat;
-		mask-size: cover;
 		transform: translateX(15%);
-		mask-size: 85vw;
+		mask-size: 75vw;
+	}
+
+	.article {
+		h2 {
+			@apply font-primary mb-8 text-2xl;
+		}
+		p {
+			@apply font-secondary mb-6 tracking-wide;
+		}
 	}
 </style>

@@ -17,12 +17,12 @@
         "@mariomh/heading": "0.0.14",
         "@mariomh/link": "0.0.13",
         "@mariomh/logo": "0.0.12",
-        "@mariomh/navigation-menu": "0.0.17",
+        "@mariomh/navigation-menu": "0.0.18",
         "@mariomh/paragraph": "0.0.13",
         "@mariomh/resume": "0.0.5",
         "@mariomh/round": "0.0.10",
         "@mariomh/span": "0.0.13",
-        "@mariomh/tailwind": "0.0.11",
+        "@mariomh/tailwind": "0.0.12",
         "astro": "5.16.5",
         "astro-seo": "0.8.4",
         "embla-carousel": "8.6.0",
@@ -306,7 +306,7 @@
 
     "@mariomh/logo": ["@mariomh/logo@0.0.12", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/logo/-/@mariomh/logo-0.0.12.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/font": "0.0.10", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/font", "astro", "radix-ui", "react"] }, "sha512-dNHLokxJz0+s8IM5WUVaNHdb2APNbUfqiDYj80c1TLJx2bkVoeCZCLaU1jZwNKJ4JU/jwydtiyZmBOQgRhoAKw=="],
 
-    "@mariomh/navigation-menu": ["@mariomh/navigation-menu@0.0.17", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/navigation-menu/-/@mariomh/navigation-menu-0.0.17.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/button": "0.0.13", "@mariomh/container": "0.0.12", "@mariomh/font": "0.0.10", "@mariomh/logo": "0.0.12", "astro": "^5", "lucide-astro": "^0", "lucide-react": "^0", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/button", "@mariomh/container", "@mariomh/font", "@mariomh/logo", "astro", "lucide-astro", "lucide-react", "radix-ui", "react"] }, "sha512-DSLsG7eAst+hP/9asDwej2tLuxv03qkcrnROxOnugdk0ldSqgbDolMIeoJJTR/MTflXlbvM+UZJgv/P7HExEHw=="],
+    "@mariomh/navigation-menu": ["@mariomh/navigation-menu@0.0.18", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/navigation-menu/-/@mariomh/navigation-menu-0.0.18.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/button": "0.0.13", "@mariomh/container": "0.0.12", "@mariomh/font": "0.0.10", "@mariomh/logo": "0.0.12", "astro": "^5", "lucide-astro": "^0", "lucide-react": "^0", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/button", "@mariomh/container", "@mariomh/font", "@mariomh/logo", "astro", "lucide-astro", "lucide-react", "radix-ui", "react"] }, "sha512-xBPm7YhrGNGaG5sm1XFN4wVD8/nYUpUMg0tcx+iP/1fuYUWBB2iUpB6qiSVVYq//pA8pJZkHjDQiTpm3W7Dt0w=="],
 
     "@mariomh/paragraph": ["@mariomh/paragraph@0.0.13", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/paragraph/-/@mariomh/paragraph-0.0.13.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/font": "0.0.10", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/font", "astro", "radix-ui", "react"] }, "sha512-So6drtALS+LzNKuU16tgjpMqYYTF641n3dWuiCpHC2f3OEozoTqhYaYRgGibESy99SyO1G2MXpIPznbhD1PCPw=="],
 
@@ -316,7 +316,7 @@
 
     "@mariomh/span": ["@mariomh/span@0.0.13", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/span/-/@mariomh/span-0.0.13.tgz", { "dependencies": { "@mariomh/cva": "0.0.8" }, "peerDependencies": { "@mariomh/font": "0.0.10", "astro": "^5", "radix-ui": "^1", "react": "^19" }, "optionalPeers": ["@mariomh/font", "astro", "radix-ui", "react"] }, "sha512-rT6kb2ooHZbL3KERBe+jHWPlqGv/M8NZaC4qlJP8crn1ZKul/G4T+YD+EM2KK+Gn8RW5VzyM/mSpk33VCRGUUQ=="],
 
-    "@mariomh/tailwind": ["@mariomh/tailwind@0.0.11", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/tailwind/-/@mariomh/tailwind-0.0.11.tgz", { "dependencies": { "tailwindcss-flow-type": "0.0.2" }, "peerDependencies": { "tailwindcss": ">=4.1.16" } }, "sha512-Zyy2NRd0nai8fAbUrAfwqJFKQKfwjdxZMJitObos+NonZxIiPI+134wmFZUSwlVZVloPA2S6C/t2LfwWKq/onA=="],
+    "@mariomh/tailwind": ["@mariomh/tailwind@0.0.12", "https://europe-npm.pkg.dev/mariomh/npm/@mariomh/tailwind/-/@mariomh/tailwind-0.0.12.tgz", { "dependencies": { "tailwindcss-flow-type": "0.0.2" }, "peerDependencies": { "tailwindcss": ">=4.1.16" } }, "sha512-nspCfy2zdKnhJBpXT0YX/lUghYGlgILjeDD1Lu8OaEQ9XIm7AZH2NNn3HvoQWfKzgBfDH0og5bdYG69ECXVsJQ=="],
 
     "@napi-rs/wasm-runtime": ["@napi-rs/wasm-runtime@0.2.12", "", { "dependencies": { "@emnapi/core": "^1.4.3", "@emnapi/runtime": "^1.4.3", "@tybys/wasm-util": "^0.10.0" } }, "sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ=="],
 

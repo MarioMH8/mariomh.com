@@ -1,7 +1,7 @@
 ---
 slug: design-system
 title: Como creé mi imagen de Marca
-resume: Descubre como diseñe mi propia imagen de marca y como desarrollé mi propia librería de componentes.
+resume: Descubre como diseñe mi propia imagen de marca y desarrollé mi propia librería de componentes.
 tags: ['Diseño', 'Astro', 'React']
 image: ../../assets/posts/code.png
 imageAlt: Manos de una persona sobre el teclado de un portátil, escribiendo código.
