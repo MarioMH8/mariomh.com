@@ -7,7 +7,7 @@ import { getCollection } from 'astro:content';
 import BlogPreview from './blog-preview.astro';
 
 const allPosts = await getCollection('post');
-const posts = allPosts.slice(0, 6);
+const posts = allPosts.toSorted((a, b) => b.id.localeCompare(a.id)).slice(0, 6);
 ---
 
 <Container
