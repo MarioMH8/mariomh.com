@@ -5,7 +5,7 @@
     <scripts>
       <script value="lint:fix" />
     </scripts>
-    <node-interpreter value="$USER_HOME$/.proto/shims/bun" />
+    <node-interpreter value="project" />
     <envs />
     <method v="2" />
   </configuration>
