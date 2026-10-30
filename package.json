@@ -28,7 +28,7 @@
 		"typecheck": "astro check && tsc --noEmit"
 	},
 	"dependencies": {
-		"@fontsource/dm-sans": "5.2.8",
+		"@fontsource/dm-sans": "5.3.0",
 		"@mariomh/archia": "0.0.4",
 		"@mariomh/badge": "0.0.13",
 		"@mariomh/box": "0.0.12",
