@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "@mariomh8/tailwind";
-@source "../../node_modules/@mariomh";
+@source "../../node_modules/@mariomh8";
 @source "../";
 
 .force-hidden {
