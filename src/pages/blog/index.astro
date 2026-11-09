@@ -1,10 +1,52 @@
 ---
+import BlogPreview from '@features/blog-preview.astro';
 import Footer from '@features/footer.astro';
 import Nav from '@features/nav.astro';
 import Layout from '@layout';
+import Heading from '@mariomh/heading/astro';
+import Paragraph from '@mariomh/paragraph/astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('post');
+const posts = allPosts.toSorted((a, b) => b.id.localeCompare(a.id));
 ---
 
-<Layout>
+<Layout
+	description='Aquí comparto proyectos, ideas y aprendizajes sobre desarrollo y tecnología.'
+	title='Blog'>
 	<Nav blog />
+	<main class='container py-20 md:py-24'>
+		<header class='mb-12 md:mb-18'>
+			<Heading
+				class='text-6xl md:text-7xl mb-6 text-balance'
+				heading='h1'
+				weight='medium'>
+				Blog
+			</Heading>
+			<Paragraph
+				class='max-w-3xl text-balance !leading-5xl'
+				dimension='xl'
+				family='secondary'>
+				Aquí comparto proyectos, ideas y aprendizajes sobre desarrollo y tecnología.
+			</Paragraph>
+		</header>
+		{
+			posts.length > 0 ? (
+				<ul class='grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 xl:grid-cols-3'>
+					{posts.map(post => (
+						<li>
+							<BlogPreview
+								layout='grid'
+								post={post}
+								titleHeading='h2'
+							/>
+						</li>
+					))}
+				</ul>
+			) : (
+				<Paragraph family='secondary'>Todavía no hay artículos publicados.</Paragraph>
+			)
+		}
+	</main>
 	<Footer />
 </Layout>
