@@ -1,6 +1,7 @@
 ---
 import Badge from '@mariomh8/badge/astro';
 import fontCn from '@mariomh8/font/class-name';
+import Heading from '@mariomh8/heading/astro';
 import Link from '@mariomh8/link/astro';
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
@@ -8,28 +9,40 @@ import type { CollectionEntry } from 'astro:content';
 interface Props {
 	post: CollectionEntry<'post'>;
 	direction?: 'horizontal' | 'vertical';
+	layout?: 'carousel' | 'grid';
+	titleHeading?: 'h2' | 'h4';
 }
 
 const titleCn = [fontCn({ dimension: 'xl' }), 'uppercase text-balance'];
 
-const { direction = 'vertical', post } = Astro.props;
+const { direction = 'vertical', layout = 'carousel', post, titleHeading = 'h4' } = Astro.props;
 
 const isVertical = direction === 'vertical';
+const isGrid = layout === 'grid';
 ---
 
 <article
 	class:list={[
-		'transition-transform hover:scale-110 focus-within:scale-110',
-		'flex flex-col gap-6 w-[50%] min-w-[360px] max-w-[550px]',
+		'transition-transform',
+		{
+			'hover:-translate-y-1 focus-within:-translate-y-1': isGrid,
+			'hover:scale-110 focus-within:scale-110': !isGrid,
+		},
+		'flex flex-col gap-6',
+		{
+			'w-[50%] min-w-[360px] max-w-[550px]': !isGrid,
+			'w-full min-w-0 max-w-none': isGrid,
+		},
 		'[&_a_span]:opacity-0',
 		'[&:hover_img]:backdrop-blur-2xl [&:hover_img]:brightness-[.25] [&:hover_a_span]:opacity-100',
 		'[&_a:focus_img]:backdrop-blur-2xl [&_a:focus_img]:brightness-[.25] [&_a:focus_span]:opacity-100',
 	]}>
 	<Link
+		aria-label={`Leer artículo: ${post.data.title}`}
 		className={`rounded-2xl relative text-lg ${isVertical ? 'aspect-[10/13]' : 'aspect-[7/5]'}`}
 		family='secondary'
 		href={`/blog/post/${post.id}`}
-		title={`Leer artículo '${post.data.title}'`}>
+		title={`Leer artículo: ${post.data.title}`}>
 		<Image
 			alt={post.data.imageAlt}
 			class='rounded-2xl h-full object-cover object-center'
@@ -52,6 +65,17 @@ const isVertical = direction === 'vertical';
 		}
 	</div>
 	<header class:list={titleCn}>
-		{post.data.title}
+		<Heading
+			className='text-inherit'
+			heading={titleHeading}
+			weight='medium'>
+			<Link
+				className='text-inherit no-underline'
+				family='secondary'
+				href={`/blog/post/${post.id}`}
+				title={`Leer artículo: ${post.data.title}`}>
+				{post.data.title}
+			</Link>
+		</Heading>
 	</header>
 </article>
