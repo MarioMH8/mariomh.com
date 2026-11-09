@@ -55,7 +55,7 @@
 	"devDependencies": {
 		"@astrojs/check": "0.9.12",
 		"@astrojs/sitemap": "3.7.4",
-		"@astrojs/ts-plugin": "1.10.12",
+		"@astrojs/ts-plugin": "1.11.0",
 		"@hexadrop/eslint-config": "0.1.19",
 		"@hexadrop/tsconfig": "0.0.5",
 		"@playform/compress": "0.2.5",
