@@ -2,8 +2,8 @@
 import Footer from '@features/footer.astro';
 import Nav from '@features/nav.astro';
 import Layout from '@layout';
-import Heading from '@mariomh/heading/astro';
-import Paragraph from '@mariomh/paragraph/astro';
+import Heading from '@mariomh8/heading/astro';
+import Paragraph from '@mariomh8/paragraph/astro';
 import { Image } from 'astro:assets';
 import { getCollection, render } from 'astro:content';
 
@@ -11,7 +11,7 @@ export async function getStaticPaths() {
 	const collectionEntries = await getCollection('post');
 
 	return collectionEntries.map(entry => ({
-		params: { slug: entry.slug },
+		params: { slug: entry.id },
 		props: { entry },
 	}));
 }

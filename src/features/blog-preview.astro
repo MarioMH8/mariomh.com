@@ -1,7 +1,7 @@
 ---
-import Badge from '@mariomh/badge/astro';
-import fontCn from '@mariomh/font/class-name';
-import Link from '@mariomh/link/astro';
+import Badge from '@mariomh8/badge/astro';
+import fontCn from '@mariomh8/font/class-name';
+import Link from '@mariomh8/link/astro';
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 
@@ -14,7 +14,7 @@ const titleCn = [fontCn({ dimension: 'xl' }), 'uppercase text-balance'];
 
 const { direction = 'vertical', post } = Astro.props;
 
-const vertical = direction === 'vertical';
+const isVertical = direction === 'vertical';
 ---
 
 <article
@@ -26,9 +26,9 @@ const vertical = direction === 'vertical';
 		'[&_a:focus_img]:backdrop-blur-2xl [&_a:focus_img]:brightness-[.25] [&_a:focus_span]:opacity-100',
 	]}>
 	<Link
-		className={`rounded-2xl relative text-lg ${vertical ? 'aspect-[10/13]' : 'aspect-[7/5]'}`}
+		className={`rounded-2xl relative text-lg ${isVertical ? 'aspect-[10/13]' : 'aspect-[7/5]'}`}
 		family='secondary'
-		href={`/blog/post/${post.slug}`}
+		href={`/blog/post/${post.id}`}
 		title={`Leer artículo '${post.data.title}'`}>
 		<Image
 			alt={post.data.imageAlt}
