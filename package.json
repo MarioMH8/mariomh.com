@@ -59,13 +59,13 @@
 		"@hexadrop/eslint-config": "0.1.19",
 		"@hexadrop/tsconfig": "0.0.5",
 		"@playform/compress": "0.2.5",
-		"@tailwindcss/vite": "4.3.3",
+		"@tailwindcss/vite": "4.3.5",
 		"@types/bun": "1.4.4",
 		"astro-mail-obfuscation": "2.3.4",
 		"astro-robots-txt": "1.0.0",
 		"astro-webmanifest": "1.0.0",
 		"eslint": "9.39.5",
-		"tailwindcss": "4.3.3",
+		"tailwindcss": "4.3.5",
 		"typescript": "5.9.3"
 	}
 }
