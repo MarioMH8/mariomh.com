@@ -46,7 +46,7 @@
 		"@mariomh8/heading": "0.3.0",
 		"@mariomh8/link": "0.3.0",
 		"@mariomh8/logo": "0.3.0",
-		"@mariomh8/navigation-menu": "0.4.0",
+		"@mariomh8/navigation-menu": "0.4.1",
 		"@mariomh8/paragraph": "0.3.0",
 		"@mariomh8/resume": "0.1.0",
 		"@mariomh8/round": "0.2.0",
@@ -55,8 +55,7 @@
 		"astro": "7.4.8",
 		"astro-seo": "1.2.0",
 		"embla-carousel": "8.6.0",
-		"embla-carousel-autoplay": "8.6.0",
-		"lucide-astro": "0.556.0"
+		"embla-carousel-autoplay": "8.6.0"
 	},
 	"devDependencies": {
 		"@astrojs/check": "0.9.12",
