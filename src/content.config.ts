@@ -1,11 +1,14 @@
-import resume from '@mariomh/resume';
-import { defineCollection, z } from 'astro:content';
+import resume from '@mariomh8/resume';
+import { glob } from 'astro/loaders';
+import { z } from 'astro/zod';
+import { defineCollection } from 'astro:content';
 
 const project = defineCollection({
+	loader: glob({ base: './src/content/project', pattern: '**/*.md' }),
 	schema: ({ image }) =>
 		z.object({
 			category: z.union([z.literal('portfolio'), z.literal('app'), z.literal('lib')]),
-			href: z.string().url(),
+			href: z.url(),
 			image: image(),
 			imageAlt: z.string(),
 			resume: z.string(),
@@ -15,6 +18,7 @@ const project = defineCollection({
 });
 
 const post = defineCollection({
+	loader: glob({ base: './src/content/post', pattern: '**/*.md' }),
 	schema: ({ image }) =>
 		z.object({
 			image: image(),
@@ -35,7 +39,7 @@ const testimonial = defineCollection({
 		name: z.string().optional(),
 		position: z.string().optional(),
 		reference: z.string(),
-		url: z.string().url().optional(),
+		url: z.url().optional(),
 	}),
 });
 
