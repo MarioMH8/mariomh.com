@@ -2,16 +2,16 @@
 	"extends": "@hexadrop/tsconfig",
 	"compilerOptions": {
 		"emitDecoratorMetadata": false,
-		"baseUrl": ".",
 		"paths": {
-			"@assets/*": ["src/assets/*"],
-			"@features/*": ["src/features/*"],
-			"@layout": ["src/layouts/layout.astro"]
+			"@assets/*": ["./src/assets/*"],
+			"@features/*": ["./src/features/*"],
+			"@layout": ["./src/layouts/layout.astro"]
 		},
 		"plugins": [
 			{
 				"name": "@astrojs/ts-plugin"
 			}
 		]
-	}
+	},
+	"exclude": ["dist", ".astro", "node_modules"]
 }

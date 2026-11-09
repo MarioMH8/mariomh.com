@@ -1,5 +1,5 @@
 import sitemap from '@astrojs/sitemap';
-import resume from '@mariomh/resume';
+import resume from '@mariomh8/resume';
 import compress from '@playform/compress';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
