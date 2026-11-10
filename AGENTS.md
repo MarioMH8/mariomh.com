@@ -1,6 +1,6 @@
 # Agent guide for mariomh.com
 
-Private Astro + Tailwind CSS portfolio. `develop` is the default branch; `main` holds stable releases.
+Astro + Tailwind CSS portfolio. `develop` is the default branch; `main` holds stable releases.
 
 - **Package manager:** Bun 1.4.4 (`bun`)
 - **Build:** `bun run build`
