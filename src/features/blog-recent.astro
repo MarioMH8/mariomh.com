@@ -44,6 +44,8 @@ const posts = allPosts.toSorted((a, b) => b.id.localeCompare(a.id)).slice(0, 6);
 			'scrollbar-thin scrollbar-thumb-primary scrollbar-thumb-rounded',
 			'scrollbar-track-primary-background dark:scrollbar-track-primary-dark-background',
 		]}>
-		{posts.map(post => <BlogPreview post={post} />)}
+		{posts.map(post => (
+			<BlogPreview post={post} />
+		))}
 	</div>
 </Container>

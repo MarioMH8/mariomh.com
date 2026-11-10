@@ -30,23 +30,21 @@ const posts = allPosts.toSorted((a, b) => b.id.localeCompare(a.id));
 				Aquí comparto proyectos, ideas y aprendizajes sobre desarrollo y tecnología.
 			</Paragraph>
 		</header>
-		{
-			posts.length > 0 ? (
-				<ul class='grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 xl:grid-cols-3'>
-					{posts.map(post => (
-						<li>
-							<BlogPreview
-								layout='grid'
-								post={post}
-								titleHeading='h2'
-							/>
-						</li>
-					))}
-				</ul>
-			) : (
-				<Paragraph family='secondary'>Todavía no hay artículos publicados.</Paragraph>
-			)
-		}
+		{posts.length > 0 ? (
+			<ul class='grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 xl:grid-cols-3'>
+				{posts.map(post => (
+					<li>
+						<BlogPreview
+							layout='grid'
+							post={post}
+							titleHeading='h2'
+						/>
+					</li>
+				))}
+			</ul>
+		) : (
+			<Paragraph family='secondary'>Todavía no hay artículos publicados.</Paragraph>
+		)}
 	</main>
 	<Footer />
 </Layout>

@@ -34,16 +34,14 @@ const { Content } = await render(entry);
 			class='w-screen mx-auto blog-image'
 			src={data.image}
 		/>
-		{
-			data.resume && (
-				<Paragraph
-					class='max-w-3xl text-center mx-auto mb-12 md:mb-18 lg:mb-24 !leading-5xl'
-					dimension='3xl'
-					family='secondary'>
-					{data.resume}
-				</Paragraph>
-			)
-		}
+		{data.resume && (
+			<Paragraph
+				class='max-w-3xl text-center mx-auto mb-12 md:mb-18 lg:mb-24 !leading-5xl'
+				dimension='3xl'
+				family='secondary'>
+				{data.resume}
+			</Paragraph>
+		)}
 		<div class='max-w-[75ch] mx-auto article'>
 			<Content />
 		</div>

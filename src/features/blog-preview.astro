@@ -53,16 +53,14 @@ const isGrid = layout === 'grid';
 		</span>
 	</Link>
 	<div class='flex flex-row flex-wrap gap-4'>
-		{
-			post.data.tags.map(tag => (
-				<Badge
-					className='w-min'
-					dimension='sm'
-					family='secondary'>
-					{tag}
-				</Badge>
-			))
-		}
+		{post.data.tags.map(tag => (
+			<Badge
+				className='w-min'
+				dimension='sm'
+				family='secondary'>
+				{tag}
+			</Badge>
+		))}
 	</div>
 	<header class:list={titleCn}>
 		<TitleTag class='text-inherit'>

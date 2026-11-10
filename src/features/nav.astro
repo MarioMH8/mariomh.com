@@ -10,25 +10,23 @@ const { blog } = Astro.props;
 ---
 
 <NavigationMenu class='py-4'>
-	{
-		blog ? (
+	{blog ? (
+		<NavigationMenuLI>
+			<NavigationMenuLink href='/'>Inicio</NavigationMenuLink>
+		</NavigationMenuLI>
+	) : (
+		<>
 			<NavigationMenuLI>
-				<NavigationMenuLink href='/'>Inicio</NavigationMenuLink>
+				<NavigationMenuLink href={blog ? '/#sobre-mi' : '#sobre-mi'}>Sobre mi</NavigationMenuLink>
 			</NavigationMenuLI>
-		) : (
-			<>
-				<NavigationMenuLI>
-					<NavigationMenuLink href={blog ? '/#sobre-mi' : '#sobre-mi'}>Sobre mi</NavigationMenuLink>
-				</NavigationMenuLI>
-				<NavigationMenuLI>
-					<NavigationMenuLink href={blog ? '/#portfolio' : '#portfolio'}>Portfolio</NavigationMenuLink>
-				</NavigationMenuLI>
-				<NavigationMenuLI>
-					<NavigationMenuLink href={blog ? '/#servicios' : '#servicios'}>Servicios</NavigationMenuLink>
-				</NavigationMenuLI>
-			</>
-		)
-	}
+			<NavigationMenuLI>
+				<NavigationMenuLink href={blog ? '/#portfolio' : '#portfolio'}>Portfolio</NavigationMenuLink>
+			</NavigationMenuLI>
+			<NavigationMenuLI>
+				<NavigationMenuLink href={blog ? '/#servicios' : '#servicios'}>Servicios</NavigationMenuLink>
+			</NavigationMenuLI>
+		</>
+	)}
 	<NavigationMenuLI>
 		<NavigationMenuLink
 			active={blog === true}
