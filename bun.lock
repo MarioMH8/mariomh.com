@@ -20,7 +20,7 @@
         "@mariomh8/logo": "0.3.1",
         "@mariomh8/navigation-menu": "0.4.1",
         "@mariomh8/paragraph": "0.3.1",
-        "@mariomh8/resume": "0.1.1",
+        "@mariomh8/resume": "0.1.2",
         "@mariomh8/round": "0.2.1",
         "@mariomh8/span": "0.3.1",
         "@mariomh8/tailwind": "0.3.0",
@@ -400,7 +400,7 @@
 
     "@mariomh8/paragraph": ["@mariomh8/paragraph@0.3.1", "https://npm.pkg.github.com/download/@mariomh8/paragraph/0.3.1/7b06cf9597d81d903aa6751e7bc272cb82cb084d", { "dependencies": { "@mariomh8/cva": "0.3.0" }, "peerDependencies": { "@mariomh8/font": ">=0.0.0 <1.0.0", "astro": "^7", "radix-ui": "^1", "react": "^19" } }, "sha512-BpTeC128HIku41txQR1IootJP/oJ969epgqZG+R5RSY3aAknO8kQd4aDbblu0IUJmAQdPeA/qj1NwCFjl+HLEg=="],
 
-    "@mariomh8/resume": ["@mariomh8/resume@0.1.1", "https://npm.pkg.github.com/download/@mariomh8/resume/0.1.1/2b90ec9ff53de628e63949594aaae5ca74258196", {}, "sha512-Frhf7ResH4gLy39lsHzUdWrU2QeNXDDKW0LAep4XUIUPI/Pnzfdm8Lh9gduyVaEsW6Rqxj/41TKOYyixvGhHmg=="],
+    "@mariomh8/resume": ["@mariomh8/resume@0.1.2", "https://npm.pkg.github.com/download/@mariomh8/resume/0.1.2/41057e3c40ac01c3cf8a74f4f983cbbfaad97daf", {}, "sha512-XRHWTvNXFDxIrxHhdYseakLF+DR18cQSSNn31wRblA4ioASofryeUMn7rvowy9atnYKziLyupvd/921ChOMElA=="],
 
     "@mariomh8/round": ["@mariomh8/round@0.2.1", "https://npm.pkg.github.com/download/@mariomh8/round/0.2.1/c2bd913692343832051eff6716bd034c5a0227b3", { "dependencies": { "@mariomh8/cva": "0.3.0" }, "peerDependencies": { "radix-ui": "^1", "react": "^19" } }, "sha512-LSGATGUbZ/6PJ2469qmRs83JA0hxGl+KguXCCzE6XXSK/miSky7NzULUfAwTiwyLGnpeCKK+b/lS7AwuCJYz9w=="],
 
