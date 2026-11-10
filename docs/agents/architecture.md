@@ -2,7 +2,7 @@
 
 ## Surfaces
 
-- `src/` is the private Astro + Tailwind CSS site deployed to `https://mariomh.com`.
+- `src/` is the Astro + Tailwind CSS site deployed to `https://mariomh.com`.
 - `.github/` contains the shared CI, deploy, label and sync workflows.
 - `docs/` contains the agent and repository documentation.
 
