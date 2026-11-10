@@ -4,5 +4,4 @@ export default await hexadrop({
 	rules: {
 		'import/no-unresolved': 'off',
 	},
-	typescript: ['./tsconfig.json'],
 });
