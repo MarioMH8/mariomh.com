@@ -1,7 +1,6 @@
 ---
 import Badge from '@mariomh8/badge/astro';
 import fontCn from '@mariomh8/font/class-name';
-import Heading from '@mariomh8/heading/astro';
 import Link from '@mariomh8/link/astro';
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
@@ -17,6 +16,7 @@ const titleCn = [fontCn({ dimension: 'xl' }), 'uppercase text-balance'];
 
 const { direction = 'vertical', layout = 'carousel', post, titleHeading = 'h4' } = Astro.props;
 
+const TitleTag = titleHeading;
 const isVertical = direction === 'vertical';
 const isGrid = layout === 'grid';
 ---
@@ -65,17 +65,13 @@ const isGrid = layout === 'grid';
 		}
 	</div>
 	<header class:list={titleCn}>
-		<Heading
-			className='text-inherit'
-			heading={titleHeading}
-			weight='medium'>
-			<Link
-				className='text-inherit no-underline'
-				family='secondary'
+		<TitleTag class='text-inherit'>
+			<a
+				class='text-inherit no-underline'
 				href={`/blog/post/${post.id}`}
 				title={`Leer artículo: ${post.data.title}`}>
 				{post.data.title}
-			</Link>
-		</Heading>
+			</a>
+		</TitleTag>
 	</header>
 </article>
