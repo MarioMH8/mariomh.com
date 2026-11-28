@@ -6,7 +6,7 @@
       "name": "mariomh.com",
       "dependencies": {
         "@fontsource/dm-sans": "5.3.0",
-        "@lucide/astro": "1.70.0",
+        "@lucide/astro": "1.73.0",
         "@mariomh8/archia": "0.1.0",
         "@mariomh8/badge": "0.3.1",
         "@mariomh8/box": "0.3.1",
@@ -370,7 +370,7 @@
 
     "@keyv/serialize": ["@keyv/serialize@1.1.1", "", {}, "sha512-dXn3FZhPv0US+7dtJsIi2R+c7qWYiReoEh5zUntWCf4oSpMNib8FDhSoed6m3QyZdx5hK7iLFkYk3rNxwt8vTA=="],
 
-    "@lucide/astro": ["@lucide/astro@1.70.0", "", { "peerDependencies": { "astro": "^4 || ^5 || ^6 || ^7" } }, "sha512-GkD59zeFP350rqF+Rc/k1Yc92tuSTG8duXZ1d5BK5xT3wLPiMqKpqFtosQxopYvP/tBHW9D1mqdhzGjoRSLsYA=="],
+    "@lucide/astro": ["@lucide/astro@1.73.0", "", { "peerDependencies": { "astro": "^4 || ^5 || ^6 || ^7" } }, "sha512-FpCBGh0D4yc3uFxcJ/qcBaEq2MzG70DHavYbbPjMYLVadAuFVM4CNcgdGKxanvFR5TS050+aF7gIAEVjfXyOcQ=="],
 
     "@mariomh8/archia": ["@mariomh8/archia@0.1.0", "https://npm.pkg.github.com/download/@mariomh8/archia/0.1.0/4715ecc763bd002d51293deb6f9923279816af9a", {}, "sha512-JXLG70Ojk3EYqlLiQ9fmoeLNeBlprEO1SEhMwkax/CoXa8+1TmXsmqK2dD64GOgZ5xdNKcCh7SDhPMcx+l0/8A=="],
 

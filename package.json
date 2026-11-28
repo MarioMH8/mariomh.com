@@ -34,7 +34,7 @@
 	},
 	"dependencies": {
 		"@fontsource/dm-sans": "5.3.0",
-		"@lucide/astro": "1.70.0",
+		"@lucide/astro": "1.73.0",
 		"@mariomh8/archia": "0.1.0",
 		"@mariomh8/badge": "0.3.1",
 		"@mariomh8/box": "0.3.1",
